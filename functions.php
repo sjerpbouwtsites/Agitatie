@@ -14,6 +14,8 @@ define('IMG_URI', THEME_URI . "/afb");
 define('JS_DIR', THEME_DIR . "/js");
 define('JS_URI', THEME_URI . "/js");
 
+define( 'GITHUB_UPDATER_OVERRIDE_DOT_ORG', true );
+
 ///////////////////////////////////////////////////////////
 
 //include al deze bestanaden uit INC_DIR
