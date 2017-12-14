@@ -1,0 +1,50 @@
+/*!
+Theme Name: Agitatie
+Theme URI: http://lizgrandcafe.nl/
+Author: Sjerp van Wouden
+Author URI: http://sjerpbouwtsites.nl
+Description: Een thema door Sjerp
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sjerpbouwtsites
+Version: 1.0
+!*/
+
+
+@import 'basis/normalise';
+@import 'basis/typografie';
+@import 'basis/els';
+@import 'basis/formulieren';
+@import 'basis/menu';
+@import 'basis/inhoud';
+@import 'basis/mixins';
+
+@import 'variabelen';
+@import 'generiek';
+@import 'generiek-teksten';
+
+/* @import 'ext/slick';
+@import 'ext/leaflet';
+@import 'ext/classic.date';
+@import 'ext/classic';
+@import 'ext/classic.time';
+@import 'ext/restaurant-reservations'; */
+//@import 'ext/facebook';
+
+/* @import 'onderdelen/carousel';
+@import 'onderdelen/paginering';
+@import 'onderdelen/tax-blok';
+@import 'onderdelen/art_class';*/
+@import 'onderdelen/viddoos';
+@import 'onderdelen/knop';
+
+@import 'header';
+@import 'voorpagina';
+@import 'agenda';
+@import 'zoeken';
+@import 'single';
+@import 'archive';
+@import 'footer';
+
+
+

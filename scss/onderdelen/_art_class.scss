@@ -1,0 +1,51 @@
+.art-c {
+	position: relative;
+	padding-bottom: 0;
+	max-width: 400px;
+	&:hover {
+		cursor: pointer;
+	}
+	img {
+		filter: brightness(80%) saturate(140%) blur(0.8px) sepia(10%);
+	}
+	& ~ .art-c {
+		margin-top: 20px;
+	}
+	.art-links {
+		a, img {
+			display: block;
+		}
+		img {
+			min-height: 200px;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+	.art-rechts {
+		padding: 20px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		p {
+			color: white;
+			font-weight: 400;
+			margin: 0 0 .5em;
+			line-height: 1.2;
+			font-size: .85em;
+			a {
+				color: white;
+				text-decoration: underline;
+			}
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+		}
+	}
+	a:hover {
+		text-decoration: none;
+	}
+	h3 {
+		color: $viesgeel2;
+		margin-top: 0;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+		text-transform: uppercase;
+	}
+}

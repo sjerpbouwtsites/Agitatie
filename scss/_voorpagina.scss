@@ -1,0 +1,382 @@
+.home {
+	h2 {
+		color: $rustig_rood;
+		font-size: 2.25em;
+    	margin-bottom: .6em;
+	}
+}
+
+#vp-boven {
+	height: calc(100vh - 70px);
+	.verpakking {
+		display: flex;
+		justify-content: center;
+		height: 100%;
+		.flex {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			height: 100%;
+			* {
+				text-align: center;
+			}
+			#vp-kontekst-logo {
+				max-width: 400px;
+				margin: 0 auto;
+				@media (max-width: 900px) {
+					max-width: 200px
+				}
+			}
+			#vp-leus {
+				position: relative;
+				padding-top: 30px;
+				margin-top: 30px;
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 620px;
+				&::after {
+					position: absolute;
+					content:'';
+					display: block;
+					width: 120px;
+					top: -1.5px;
+					left: 230px;
+					border-top: 3px solid $rustig_rood;
+				}
+				font-size: 36px;
+				color: white;
+				font-style: italic;
+				@media (max-width: 900px) {
+					max-width: 360px;
+					font-size: 20px;
+					padding-top: 15px;
+					margin-top: 15px;
+					&::after {
+						width: 80px;
+						left: 140px;
+					}
+				}
+			}
+		}
+	}
+			#vp-boven-drie-afb {
+				display: flex;
+				justify-content: center;
+				img {
+					width: 130px;
+					margin-right: 25px;
+					margin-left: 25px;
+					@media (max-width: 900px) {
+						width: 80px;
+						margin-right: 15px;
+						margin-left: 15px;
+					}
+					@media (max-width: 450px) {
+						width: 60px;
+						margin-right: 5px;
+						margin-left: 5px;
+					}
+				}
+			}
+}
+
+.vid-doos {
+	height: 100%;
+}
+#ingredienten {
+	height: 100vh;
+	#vp-vid {
+		//height: 50vh;
+		//margin-bottom: 50vh;
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		@media (max-width: 900px) {
+			margin-bottom: 0;
+		}
+	}
+	.vid-onder-buiten {
+		bottom: 240px;
+		@extend .verpakking;
+		@media (max-width: 900px) {
+			//position: static;
+			bottom: 30px;
+			left: auto;
+			transform: translate(0,0);
+			//margin: 30px 0;
+
+		}
+	}
+	.flex {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+		article {
+			flex-basis: calc(33% - 10px);
+			@media (max-width: 600px) {
+				flex-basis: calc(50% - 10px);
+				&:last-child {
+					flex-basis: calc(100%);
+					 margin-top: 1em;
+				}
+			}
+			@media (max-width: 600px) {
+				flex-basis: 100%;
+				margin-top: 1em;
+			}
+		}
+			h3 {
+				color: blue;
+				margin-bottom: .25em;
+				color: $lichtblauw;
+				& + p {
+					margin-top: 0;
+				}
+			}
+}
+
+#portfolio {
+	padding: 50px 0;
+	background-repeat: repeat;
+	background-image: url('afb/Studio-Vlaflip-3.png');
+	background-size: 600px 600px;
+	#tax-blok {
+		margin-bottom: 40px;
+		h2 {
+			margin-top: 0;
+			margin-bottom: 1em;
+		}
+		ul, li, {
+			@include ul-li-reset();
+		}
+		ul {
+			margin-bottom: -20px;
+		}
+		li {
+			display: inline-block;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		@media (max-width: 600px) {
+			ul {
+				margin-bottom: -10px;
+			}
+			li {
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}
+		}
+			a {
+				display: block;
+				padding: .2em .6em;
+				font-weight: bold;
+				text-transform: capitalize;
+				color: white;
+				background-color: $donkergrijs;
+				min-width: 100px;
+				text-align: center;
+				@media (max-width: 600px) {
+					padding: .4em 1em;
+					font-size: 1.4em;
+				}
+			}
+				.animatie a {
+					background-color: $vlageel;
+				}
+				.illustratie a {
+					background-color: $roze;
+				}
+				.infographic a {
+					background-color: $lichtblauw
+				}
+
+	}//taxblok
+}
+	#port-arts {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		article {
+			flex-basis: calc(33.33%);
+			position: relative;
+			&:hover {
+				cursor: pointer;
+				.art-links a img {
+					transition: 0.4s cubic-bezier(.65,.05,.36,1) 0s;
+					filter: brightness(100%) saturate(100%) !important;
+				}
+				.art-rechts p {
+					opacity: 1;
+					transition: 1.2s ease 0.8s;
+				}
+				.art-rechts a {
+					background: linear-gradient(to bottom, rgba(0,0,0,0.8),rgba(0,0,0,0));
+				}
+			}
+			&:nth-child(4n) .art-links a img{
+				filter: brightness(60%) saturate(00%);
+			}
+			&:nth-child(4n + 1) .art-links a img{
+				filter: brightness(100%) saturate(00%);
+			}
+			&:nth-child(4n + 2) .art-links a img{
+				filter: brightness(80%) saturate(00%);
+			}
+			&:nth-child(4n + 3) .art-links a img{
+				filter: brightness(110%) saturate(00%);
+			}
+			@media (min-width: 1400px) {
+				flex-basis: calc(25%);
+				&:nth-child(5n) .art-links a img{
+					filter: brightness(60%) saturate(00%);
+				}
+				&:nth-child(5n + 1) .art-links a img{
+					filter: brightness(100%) saturate(00%);
+				}
+				&:nth-child(5n + 2) .art-links a img{
+					filter: brightness(80%) saturate(00%);
+				}
+				&:nth-child(5n + 3) .art-links a img{
+					filter: brightness(110%) saturate(00%);
+				}
+				&:nth-child(5n + 4) .art-links a img{
+					filter: brightness(70%) saturate(00%);
+				}
+				.art-links {
+					height: calc(25vw - 4.5px);
+				}
+			}
+			@media (max-width: 700px) {
+				flex-basis: calc(50%);
+				&:nth-child(3n) .art-links a img{
+					filter: brightness(60%) saturate(00%);
+				}
+				&:nth-child(3n + 1) .art-links a img{
+					filter: brightness(100%) saturate(00%);
+				}
+				&:nth-child(3n + 2) .art-links a img{
+					filter: brightness(80%) saturate(00%);
+				}
+				.art-links {
+					height: calc(50vw);
+				}
+			}
+
+			@media (max-width: 400px) {
+				flex-basis: calc(100%);
+				.art-links {
+					height: calc(100vw);
+				}
+			}
+
+		}
+			.art-links {
+				height: calc(33.33vw - 6px);
+				width: 100%;
+				a {
+					display: block;
+					height: 100%;
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit:cover;
+						transition: 0.2s cubic-bezier(.86,0,.07,1) 0.4s;
+					}
+				}
+			}
+
+			.art-rechts {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				padding: 20px;
+				a {
+					color: white;
+					margin: -20px;
+					display: block;
+					padding: 20px 20px 100px 20px;
+					background: linear-gradient(to bottom, rgba(0,0,0,0.0),rgba(0,0,0,0));
+					transition: 2s ease-in-out 3s;
+					&:hover {
+						text-decoration: none;
+					}
+					h3 {
+						margin-top: 0;
+					}
+					p {
+						opacity: 0;
+						transition: 0.5s ease 0.2s;
+					}
+					h3, p {
+						font-weight: bold;
+						text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+						color: white;
+					}
+				}
+			}
+	}
+
+#vp-contact {
+	padding: 50px 0;
+	background-image: url('afb/Studio-Vlaflip-4.png');
+	background-size: 600px 600px;
+	@media (max-width: 900px) {
+		padding: 30px 0;
+	}
+	@media (max-width: 600px) {
+		padding-top: 0
+	}
+	.verpakking {
+		display: flex;
+		@media (max-width: 600px) {
+			flex-wrap: wrap;
+		}
+	}
+	.links {
+		flex-basis: calc(50% - 150px);
+		margin-right: 150px;
+		@media (max-width: 900px) {
+			flex-basis: calc(60% - 50px);
+			margin-right: 50px;
+		}
+		@media (max-width: 600px) {
+			flex-basis: calc(100%);
+			margin-right: 0;
+		}
+		h2 {
+			margin-top: 0;
+		}
+	}
+	.rechts {
+		flex-basis: 50%;
+		@media (max-width: 600px) {
+			flex-basis: calc(100%);
+			margin-top: 20px;
+		}
+	}
+		.soc-media-links {
+			img {
+				margin-right: 8px;
+				width: 50px;
+				transition: 0.4s linear 1s;
+				@media (max-width: 900px) {
+					margin-right: 4px;
+					width: 30px;
+				}
+				&:hover {
+					filter: hue-rotate(-80deg);
+				}
+			}
+			a:last-child img {
+				margin-right: 0
+			}
+		}
+}

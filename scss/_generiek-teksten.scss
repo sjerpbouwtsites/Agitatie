@@ -1,0 +1,66 @@
+
+body {
+	color: $zwart;
+	-webkit-text-size-adjust: 100%;
+}
+body, button {
+	font-family: 'Lato', sans-serif;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: $rustig_rood;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a, a:visited {
+	color: $rustig_rood;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+#stek-voet h3 a,
+#kop-nav li > a,
+#kop-nav .menu-stuk a {
+	//font-family: 'Rubik Mono One', sans-serif;
+	//font-family: 'Rammetto One', sans-serif;
+	line-height: 1;
+	//color: $zwartgroenrood;
+	font-weight: 900;
+	color: $rustig_rood;
+	-webkit-font-smoothing: antialiased;
+	//letter-spacing: .004em;
+}
+
+
+p, span {
+	line-height: 1.2;
+}
+
+main blockquote {
+	line-height: 1.5625em;
+	text-transform: none;
+	font-size: 31px;
+	letter-spacing: normal;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+	p {
+		display: inline-block;
+		vertical-align: top;
+		max-width: calc(100% - 40px);
+		margin-left: 10px;
+		font-size: inherit;
+	}
+	&::before {
+		content: "\F756";
+		display: inline-block;
+		font: normal normal normal 24px/1 "Material Design Icons";
+		text-rendering: auto;
+		line-height: inherit;
+	}
+}

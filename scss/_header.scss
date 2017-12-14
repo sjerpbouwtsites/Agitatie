@@ -1,0 +1,81 @@
+
+#stek-kop {
+	background-color: white;
+ 	width: 100%;
+	height: 70px;
+	z-index: 2;
+	.rel > .verpakking {
+		display: flex;
+		justify-content: space-between;
+	}
+	.stek-kop-links {
+		flex-basis: 210px;
+		.custom-logo-link img {
+			display: block;
+			margin-top: 7px;
+			margin-bottom: -100px;
+		}
+		h1 {
+			margin: 0;
+		}
+		@media (max-width: 600px) {
+			display: none;
+		}
+	}
+
+
+	.stek-kop-rechts {
+	}
+
+}
+
+
+.single #stek-kop {
+	@media (max-width: 600px) {
+		.stek-kop-links {
+			display: block;
+		}
+		.menu-stuk {
+			display: none;
+			& + .menu-stuk {
+				display: block;
+				& + .menu-stuk {
+					display: none;
+				}
+			}
+		}
+	}
+	@media (max-width: 400px) {
+		.stek-kop-links {
+			flex-basis: 100px;
+			.custom-logo-link img {
+				display: block;
+				margin-top: 20px;
+				margin-bottom: -100px;
+			}
+		}
+	}
+}
+
+	#kop-nav {
+		display: flex;
+		p {
+			margin-left: 15px;
+			&:first-child {
+				margin-left: 0;
+			}
+			margin-top: 0;
+			margin-bottom: 0;
+			line-height: 1em;
+			a {
+				padding-top: calc(35px - .5em);
+				padding-bottom: calc(35px - .5em);
+				display: block;
+			}
+			@media (max-width: 900px) {
+				font-size: 1.4em;
+			}
+		}
+	}
+
+

@@ -1,0 +1,15 @@
+.scroll.schakel.back-to-top {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	top: auto;
+	span {
+		margin: 0;
+	}
+	&:hover {
+		top: auto;
+	}
+	&.open i {
+		display: inline;
+	}
+}

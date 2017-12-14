@@ -1,0 +1,2746 @@
+/*!
+Theme Name: Agitatie
+Theme URI: https://github.com/sjerpbouwtsites/Agitatie
+Author: Sjerp van Wouden
+Author URI: http://sjerpbouwtsites.nl
+Description: Een thema door Sjerp
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sjerpbouwtsites
+Version: 1.0
+!*/
+/* line 2, scss/basis/_normalise.scss */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 8, scss/basis/_normalise.scss */
+body {
+  margin: 0;
+}
+
+/* line 12, scss/basis/_normalise.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 27, scss/basis/_normalise.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 35, scss/basis/_normalise.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 40, scss/basis/_normalise.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 45, scss/basis/_normalise.scss */
+a {
+  background-color: transparent;
+}
+
+/* line 49, scss/basis/_normalise.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 54, scss/basis/_normalise.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 58, scss/basis/_normalise.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 63, scss/basis/_normalise.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 67, scss/basis/_normalise.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 72, scss/basis/_normalise.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 77, scss/basis/_normalise.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 81, scss/basis/_normalise.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 89, scss/basis/_normalise.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 93, scss/basis/_normalise.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 97, scss/basis/_normalise.scss */
+img {
+  border: 0;
+}
+
+/* line 101, scss/basis/_normalise.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 105, scss/basis/_normalise.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 109, scss/basis/_normalise.scss */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 114, scss/basis/_normalise.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 118, scss/basis/_normalise.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 126, scss/basis/_normalise.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* line 136, scss/basis/_normalise.scss */
+button {
+  overflow: visible;
+}
+
+/* line 140, scss/basis/_normalise.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 145, scss/basis/_normalise.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 153, scss/basis/_normalise.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 158, scss/basis/_normalise.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 164, scss/basis/_normalise.scss */
+input {
+  line-height: normal;
+}
+
+/* line 168, scss/basis/_normalise.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 174, scss/basis/_normalise.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 179, scss/basis/_normalise.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 184, scss/basis/_normalise.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 190, scss/basis/_normalise.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 195, scss/basis/_normalise.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 199, scss/basis/_normalise.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 203, scss/basis/_normalise.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 208, scss/basis/_normalise.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* line 213, scss/basis/_normalise.scss */
+a {
+  color: royalblue;
+}
+
+/* line 217, scss/basis/_normalise.scss */
+a:visited {
+  color: purple;
+}
+
+/* line 221, scss/basis/_normalise.scss */
+a:hover,
+a:focus,
+a:active {
+  color: midnightblue;
+}
+
+/* line 231, scss/basis/_normalise.scss */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* line 1, scss/basis/_typografie.scss */
+body,
+button,
+input,
+select,
+textarea {
+  color: #404040;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* line 13, scss/basis/_typografie.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+}
+
+/* line 22, scss/basis/_typografie.scss */
+h1 {
+  line-height: 1.2;
+}
+
+/* line 26, scss/basis/_typografie.scss */
+p {
+  margin-bottom: 1.5em;
+}
+
+/* line 30, scss/basis/_typografie.scss */
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+/* line 37, scss/basis/_typografie.scss */
+blockquote {
+  margin: 0 1.5em;
+}
+
+/* line 41, scss/basis/_typografie.scss */
+address {
+  margin: 0 0 1.5em;
+}
+
+/* line 45, scss/basis/_typografie.scss */
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375em;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+/* line 57, scss/basis/_typografie.scss */
+code,
+kbd,
+tt,
+var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375em;
+}
+
+/* line 66, scss/basis/_typografie.scss */
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+/* line 72, scss/basis/_typografie.scss */
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+/* line 78, scss/basis/_typografie.scss */
+big {
+  font-size: 125%;
+}
+
+/* line 1, scss/basis/_els.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 5, scss/basis/_els.scss */
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+
+/* line 11, scss/basis/_els.scss */
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */
+}
+
+/* line 15, scss/basis/_els.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+
+/* line 22, scss/basis/_els.scss */
+blockquote,
+q {
+  quotes: "" "";
+}
+
+/* line 27, scss/basis/_els.scss */
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+/* line 34, scss/basis/_els.scss */
+ul,
+ol {
+  margin: 0 0 1.5em 3em;
+}
+
+/* line 39, scss/basis/_els.scss */
+ul {
+  list-style: disc;
+}
+
+/* line 43, scss/basis/_els.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 47, scss/basis/_els.scss */
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+/* line 53, scss/basis/_els.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 57, scss/basis/_els.scss */
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+/* line 61, scss/basis/_els.scss */
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
+}
+
+/* line 66, scss/basis/_els.scss */
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+/* line 1, scss/basis/_formulieren.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 2px;
+  background: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 12px;
+  font-size: 0.75em;
+  line-height: 1;
+  padding: .6em 1em .4em;
+}
+
+/* line 17, scss/basis/_formulieren.scss */
+input {
+  max-width: 100%;
+}
+
+/*
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}*/
+/* line 42, scss/basis/_formulieren.scss */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  padding: 3px;
+  text-indent: 5px;
+}
+
+/* line 65, scss/basis/_formulieren.scss */
+select {
+  border: 1px solid #ccc;
+}
+
+/* line 69, scss/basis/_formulieren.scss */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* line 89, scss/basis/_formulieren.scss */
+textarea {
+  width: 100%;
+}
+
+/* line 1, scss/basis/_menu.scss */
+.main-navigation {
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+/* line 8, scss/basis/_menu.scss */
+.main-navigation ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* line 15, scss/basis/_menu.scss */
+.main-navigation li {
+  float: left;
+  position: relative;
+}
+
+/* line 20, scss/basis/_menu.scss */
+.main-navigation a {
+  /*	display: block;*/
+  text-decoration: none;
+}
+
+/* line 25, scss/basis/_menu.scss */
+.main-navigation ul ul {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  float: left;
+  position: absolute;
+  top: 1.5em;
+  left: -999em;
+  z-index: 99999;
+}
+
+/* line 34, scss/basis/_menu.scss */
+.main-navigation ul ul ul {
+  left: -999em;
+  top: 0;
+}
+
+/* line 39, scss/basis/_menu.scss */
+.main-navigation ul ul a {
+  width: 200px;
+}
+
+/* line 59, scss/basis/_menu.scss */
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  left: auto;
+}
+
+/* line 64, scss/basis/_menu.scss */
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+  left: 100%;
+}
+
+/* Small menu. */
+/* line 76, scss/basis/_menu.scss */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block;
+}
+
+/*
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}*/
+/* line 90, scss/basis/_menu.scss */
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+  margin: 0 0 1.5em;
+  overflow: hidden;
+}
+
+/* line 97, scss/basis/_menu.scss */
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%;
+}
+
+/* line 104, scss/basis/_menu.scss */
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/* line 4, scss/basis/_inhoud.scss */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+/* line 10, scss/basis/_inhoud.scss */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+/* line 16, scss/basis/_inhoud.scss */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/* line 26, scss/basis/_inhoud.scss */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+/* line 43, scss/basis/_inhoud.scss */
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/* line 55, scss/basis/_inhoud.scss */
+.widget {
+  margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+/* line 60, scss/basis/_inhoud.scss */
+.widget select {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+/* line 70, scss/basis/_inhoud.scss */
+.sticky {
+  display: block;
+}
+
+/* line 74, scss/basis/_inhoud.scss */
+.hentry {
+  margin: 0 0 1.5em;
+}
+
+/* line 78, scss/basis/_inhoud.scss */
+.byline,
+.updated:not(.published) {
+  display: none;
+}
+
+/* line 83, scss/basis/_inhoud.scss */
+.single .byline,
+.group-blog .byline {
+  display: inline;
+}
+
+/* line 88, scss/basis/_inhoud.scss */
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+
+/* line 94, scss/basis/_inhoud.scss */
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+/* line 102, scss/basis/_inhoud.scss */
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+/* line 110, scss/basis/_inhoud.scss */
+.comment-content a {
+  word-wrap: break-word;
+}
+
+/* line 114, scss/basis/_inhoud.scss */
+.bypostauthor {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+/* line 122, scss/basis/_inhoud.scss */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+/* line 128, scss/basis/_inhoud.scss */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/* line 135, scss/basis/_inhoud.scss */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+/* line 145, scss/basis/_inhoud.scss */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+/* line 154, scss/basis/_inhoud.scss */
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+
+/* line 159, scss/basis/_inhoud.scss */
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 165, scss/basis/_inhoud.scss */
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+/* line 169, scss/basis/_inhoud.scss */
+.wp-caption-text {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+/* line 176, scss/basis/_inhoud.scss */
+.gallery {
+  margin-bottom: 1.5em;
+}
+
+/* line 180, scss/basis/_inhoud.scss */
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+
+/* line 187, scss/basis/_inhoud.scss */
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+
+/* line 191, scss/basis/_inhoud.scss */
+.gallery-columns-3 .gallery-item {
+  max-width: 33.33%;
+}
+
+/* line 195, scss/basis/_inhoud.scss */
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+
+/* line 199, scss/basis/_inhoud.scss */
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+
+/* line 203, scss/basis/_inhoud.scss */
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+
+/* line 207, scss/basis/_inhoud.scss */
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+
+/* line 211, scss/basis/_inhoud.scss */
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+
+/* line 215, scss/basis/_inhoud.scss */
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+/* line 219, scss/basis/_inhoud.scss */
+.gallery-caption {
+  display: block;
+}
+
+/*voorbeeld in code bovenstaande mixin
+
+div::after {
+    @include pseudo;
+    top: -1em; left: -1em;
+    width: 1em; height: 1em;
+}
+*/
+/* voorbeeld in code bovenstaande mixin
+
+div {
+    @include responsive-ratio(16,9);
+}
+
+*/
+/*voorbeeld van gebruik:
+
+input,
+textarea {
+    @include input-placeholder {
+        color: $grey;
+    }
+}
+*/
+/*voorbeeld in gebruik:
+
+a {
+  color: gray;
+  @include transition(color .3s ease);
+  &:hover {
+    color: black;
+  }
+}
+
+*/
+/*gebruik
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+*/
+/*gebruik:
+.button {
+  @include border-radius(5px);
+}
+
+
+*/
+/* line 1, scss/_generiek.scss */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  /* line 1, scss/_generiek.scss */
+  html {
+    font-size: 12px;
+  }
+}
+
+/* line 9, scss/_generiek.scss */
+.klaar::after, section::after, article::after, .float::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 21, scss/_generiek.scss */
+.verpakking, #ingredienten .vid-onder-buiten {
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 1200px;
+  max-width: 100%;
+}
+
+/* line 30, scss/_generiek.scss */
+section > *:first-child, article > *:first-child, main > *:first-child {
+  margin-top: 0;
+}
+
+/* line 33, scss/_generiek.scss */
+section > *:last-child, article > *:last-child, main > *:last-child {
+  margin-bottom: 0;
+}
+
+/* line 37, scss/_generiek.scss */
+#primary {
+  min-height: calc(100vh - 230px);
+}
+
+/* line 41, scss/_generiek.scss */
+.paddingveld {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* line 46, scss/_generiek.scss */
+.blok {
+  background-color: white;
+  box-shadow: 0 1px 2px #666;
+  color: #616160;
+}
+
+/* line 54, scss/_generiek.scss */
+article footer, section footer {
+  text-align: right;
+}
+
+/* line 60, scss/_generiek.scss */
+.schakel i + i {
+  display: none;
+}
+
+/* line 64, scss/_generiek.scss */
+.schakel.open i {
+  display: none;
+}
+
+/* line 66, scss/_generiek.scss */
+.schakel.open i + i {
+  display: inline;
+}
+
+/* line 70, scss/_generiek.scss */
+.schakel.open.scroll i {
+  display: inline;
+}
+
+/* line 76, scss/_generiek.scss */
+.bg-geel {
+  background-color: #F9E6B1;
+}
+
+/* line 79, scss/_generiek.scss */
+.bg-wit {
+  background-color: #fdfdfd;
+}
+
+/* line 83, scss/_generiek.scss */
+ul.reset, ul.reset li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* line 87, scss/_generiek.scss */
+.uitgelichte-afbeelding-buiten {
+  position: relative;
+  height: 50vh;
+}
+
+/* line 90, scss/_generiek.scss */
+.uitgelichte-afbeelding-buiten h1 {
+  margin: 0;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #F9E6B1;
+  text-shadow: 1px 1px 1px black;
+}
+
+@media (max-width: 400px) {
+  /* line 90, scss/_generiek.scss */
+  .uitgelichte-afbeelding-buiten h1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 90, scss/_generiek.scss */
+  .uitgelichte-afbeelding-buiten h1 {
+    left: calc(50% - 580px);
+  }
+}
+
+/* line 104, scss/_generiek.scss */
+.uitgelichte-afbeelding-buiten img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* line 2, scss/_generiek-teksten.scss */
+body {
+  color: #252525;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 6, scss/_generiek-teksten.scss */
+body, button {
+  font-family: 'Lato', sans-serif;
+}
+
+/* line 10, scss/_generiek-teksten.scss */
+a:hover,
+a:focus,
+a:active {
+  color: #E53C62;
+}
+
+/* line 16, scss/_generiek-teksten.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 20, scss/_generiek-teksten.scss */
+a, a:visited {
+  color: #E53C62;
+  text-decoration: none;
+}
+
+/* line 25, scss/_generiek-teksten.scss */
+h1, h2, h3, h4, h5, h6,
+#stek-voet h3 a,
+#kop-nav li > a,
+#kop-nav .menu-stuk a {
+  line-height: 1;
+  font-weight: 900;
+  color: #E53C62;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 40, scss/_generiek-teksten.scss */
+p, span {
+  line-height: 1.2;
+}
+
+/* line 44, scss/_generiek-teksten.scss */
+main blockquote {
+  line-height: 1.5625em;
+  text-transform: none;
+  font-size: 31px;
+  letter-spacing: normal;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 52, scss/_generiek-teksten.scss */
+main blockquote p {
+  display: inline-block;
+  vertical-align: top;
+  max-width: calc(100% - 40px);
+  margin-left: 10px;
+  font-size: inherit;
+}
+
+/* line 59, scss/_generiek-teksten.scss */
+main blockquote::before {
+  content: "\F756";
+  display: inline-block;
+  font: normal normal normal 24px/1 "Material Design Icons";
+  text-rendering: auto;
+  line-height: inherit;
+}
+
+/* @import 'ext/slick';
+@import 'ext/leaflet';
+@import 'ext/classic.date';
+@import 'ext/classic';
+@import 'ext/classic.time';
+@import 'ext/restaurant-reservations'; */
+/* @import 'onderdelen/carousel';
+@import 'onderdelen/paginering';
+@import 'onderdelen/tax-blok';
+@import 'onderdelen/art_class';*/
+/*******************
+* V 1.01
+* LIZ > VlAFLIP
+*******************/
+/* line 6, scss/onderdelen/_viddoos.scss */
+.vid-doos {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  /* 			.knop {
+				height: 34px;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				top: auto !important;
+				box-shadow: none !important;
+				&:hover {
+					bottom: 0;
+				}
+				&.speel-video {
+					left: 0;
+					right: auto;
+				}
+			} */
+  /* 			.vid-onder-binnen > * {
+				padding: 20px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			} */
+}
+
+/* line 10, scss/onderdelen/_viddoos.scss */
+.vid-doos video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 15, scss/onderdelen/_viddoos.scss */
+.vid-doos .vid-onder-buiten {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+/* line 21, scss/onderdelen/_viddoos.scss */
+.vid-doos .vid-onder-binnen {
+  position: relative;
+}
+
+/* line 47, scss/onderdelen/_viddoos.scss */
+video[autoplay] ~ .vid-onder-buiten .speel-video {
+  display: none;
+}
+
+/* line 50, scss/onderdelen/_viddoos.scss */
+video[autoplay].pause ~ .vid-onder-buiten .speel-video {
+  display: inline-block;
+}
+
+/* line 54, scss/onderdelen/_viddoos.scss */
+video.speelt ~ .vid-onder-buiten .speel-video {
+  display: none;
+}
+
+/* line 1, scss/onderdelen/_knop.scss */
+.knop, #agenda-filter [type='submit'], input.wpcf7-submit {
+  display: inline-block;
+  padding: 0.3em 1em;
+  font-weight: bold;
+  background-color: #f9f9f9;
+  box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-out 0.2s;
+  position: relative;
+  color: #E53C62;
+  top: 0;
+  font-size: 1rem;
+  text-transform: lowercase;
+  border-radius: 0;
+  font-family: inherit;
+  border: 0;
+}
+
+/* line 16, scss/onderdelen/_knop.scss */
+.knop:hover, #agenda-filter [type='submit']:hover, .knop:visited, #agenda-filter [type='submit']:visited, .knop:active, #agenda-filter [type='submit']:active, input.wpcf7-submit:hover, input.wpcf7-submit:visited, input.wpcf7-submit:active {
+  color: #E53C62;
+  text-decoration: none;
+}
+
+/* line 20, scss/onderdelen/_knop.scss */
+.knop:hover, #agenda-filter [type='submit']:hover, input.wpcf7-submit:hover {
+  transition: all 0.15s ease-out;
+  box-shadow: 0.5px 1px 0 rgba(0, 0, 0, 0.4);
+  top: 3px;
+}
+
+/* line 25, scss/onderdelen/_knop.scss */
+.knop span, #agenda-filter [type='submit'] span, input.wpcf7-submit span {
+  margin-right: 8px;
+  color: #E53C62 !important;
+  line-height: inherit  !important;
+  position: relative;
+  top: -1px;
+}
+
+/* line 32, scss/onderdelen/_knop.scss */
+.knop i, #agenda-filter [type='submit'] i, input.wpcf7-submit i {
+  color: #E53C62 !important;
+}
+
+/* line 35, scss/onderdelen/_knop.scss */
+.knop.in-wit, #agenda-filter .in-wit[type='submit'], input.wpcf7-submit.in-wit {
+  background-color: #E53C62;
+  box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
+  color: white !important;
+}
+
+/* line 39, scss/onderdelen/_knop.scss */
+.knop.in-wit:hover, #agenda-filter .in-wit[type='submit']:hover, input.wpcf7-submit.in-wit:hover {
+  box-shadow: 0.5px 1px 0 rgba(0, 0, 0, 0.4);
+  top: 3px;
+}
+
+/* line 43, scss/onderdelen/_knop.scss */
+.knop.in-wit span, #agenda-filter .in-wit[type='submit'] span, .knop.in-wit i, #agenda-filter .in-wit[type='submit'] i, input.wpcf7-submit.in-wit span, input.wpcf7-submit.in-wit i {
+  color: white !important;
+}
+
+/* line 47, scss/onderdelen/_knop.scss */
+.knop.ikoon-links, #agenda-filter .ikoon-links[type='submit'], input.wpcf7-submit.ikoon-links {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  margin-right: 10px;
+}
+
+/* line 51, scss/onderdelen/_knop.scss */
+.knop.ikoon-links span, #agenda-filter .ikoon-links[type='submit'] span, input.wpcf7-submit.ikoon-links span {
+  -ms-flex-order: 2;
+      order: 2;
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+/* line 56, scss/onderdelen/_knop.scss */
+.knop.ikoon-links i, #agenda-filter .ikoon-links[type='submit'] i, input.wpcf7-submit.ikoon-links i {
+  margin-left: -2px;
+}
+
+/* line 61, scss/onderdelen/_knop.scss */
+input.wpcf7-submit {
+  height: 34px;
+}
+
+/* line 65, scss/onderdelen/_knop.scss */
+.knoppen-doos {
+  margin-bottom: -10px;
+}
+
+/* line 67, scss/onderdelen/_knop.scss */
+.knoppen-doos .knop, .knoppen-doos #agenda-filter [type='submit'], #agenda-filter .knoppen-doos [type='submit'] {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+/* line 71, scss/onderdelen/_knop.scss */
+.knoppen-doos hr {
+  background-color: transparent;
+  position: relative;
+}
+
+/* line 74, scss/onderdelen/_knop.scss */
+.knoppen-doos hr::after {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  display: block;
+  content: '';
+  border-bottom: 1px solid #CAC8C8;
+  width: 290px;
+  max-width: 80%;
+}
+
+/* line 2, scss/_header.scss */
+#stek-kop {
+  background-color: white;
+  width: 100%;
+  height: 70px;
+  z-index: 2;
+}
+
+/* line 7, scss/_header.scss */
+#stek-kop .rel > .verpakking, #stek-kop #ingredienten .rel > .vid-onder-buiten, #ingredienten #stek-kop .rel > .vid-onder-buiten {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+/* line 11, scss/_header.scss */
+#stek-kop .stek-kop-links {
+  -ms-flex-preferred-size: 210px;
+      flex-basis: 210px;
+}
+
+/* line 13, scss/_header.scss */
+#stek-kop .stek-kop-links .custom-logo-link img {
+  display: block;
+  margin-top: 7px;
+  margin-bottom: -100px;
+}
+
+/* line 18, scss/_header.scss */
+#stek-kop .stek-kop-links h1 {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  /* line 11, scss/_header.scss */
+  #stek-kop .stek-kop-links {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 35, scss/_header.scss */
+  .single #stek-kop .stek-kop-links {
+    display: block;
+  }
+  /* line 38, scss/_header.scss */
+  .single #stek-kop .menu-stuk {
+    display: none;
+  }
+  /* line 40, scss/_header.scss */
+  .single #stek-kop .menu-stuk + .menu-stuk {
+    display: block;
+  }
+  /* line 42, scss/_header.scss */
+  .single #stek-kop .menu-stuk + .menu-stuk + .menu-stuk {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  /* line 49, scss/_header.scss */
+  .single #stek-kop .stek-kop-links {
+    -ms-flex-preferred-size: 100px;
+        flex-basis: 100px;
+  }
+  /* line 51, scss/_header.scss */
+  .single #stek-kop .stek-kop-links .custom-logo-link img {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: -100px;
+  }
+}
+
+/* line 60, scss/_header.scss */
+#kop-nav {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 62, scss/_header.scss */
+#kop-nav p {
+  margin-left: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1em;
+}
+
+/* line 64, scss/_header.scss */
+#kop-nav p:first-child {
+  margin-left: 0;
+}
+
+/* line 70, scss/_header.scss */
+#kop-nav p a {
+  padding-top: calc(35px - .5em);
+  padding-bottom: calc(35px - .5em);
+  display: block;
+}
+
+@media (max-width: 900px) {
+  /* line 62, scss/_header.scss */
+  #kop-nav p {
+    font-size: 1.4em;
+  }
+}
+
+/* line 2, scss/_voorpagina.scss */
+.home h2 {
+  color: #E53C62;
+  font-size: 2.25em;
+  margin-bottom: .6em;
+}
+
+/* line 9, scss/_voorpagina.scss */
+#vp-boven {
+  height: calc(100vh - 70px);
+}
+
+/* line 11, scss/_voorpagina.scss */
+#vp-boven .verpakking, #vp-boven #ingredienten .vid-onder-buiten, #ingredienten #vp-boven .vid-onder-buiten {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 100%;
+}
+
+/* line 15, scss/_voorpagina.scss */
+#vp-boven .verpakking .flex, #vp-boven #ingredienten .vid-onder-buiten .flex, #ingredienten #vp-boven .vid-onder-buiten .flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 100%;
+}
+
+/* line 20, scss/_voorpagina.scss */
+#vp-boven .verpakking .flex *, #vp-boven #ingredienten .vid-onder-buiten .flex *, #ingredienten #vp-boven .vid-onder-buiten .flex * {
+  text-align: center;
+}
+
+/* line 23, scss/_voorpagina.scss */
+#vp-boven .verpakking .flex #vp-kontekst-logo, #vp-boven #ingredienten .vid-onder-buiten .flex #vp-kontekst-logo, #ingredienten #vp-boven .vid-onder-buiten .flex #vp-kontekst-logo {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  /* line 23, scss/_voorpagina.scss */
+  #vp-boven .verpakking .flex #vp-kontekst-logo, #vp-boven #ingredienten .vid-onder-buiten .flex #vp-kontekst-logo, #ingredienten #vp-boven .vid-onder-buiten .flex #vp-kontekst-logo {
+    max-width: 200px;
+  }
+}
+
+/* line 30, scss/_voorpagina.scss */
+#vp-boven .verpakking .flex #vp-leus, #vp-boven #ingredienten .vid-onder-buiten .flex #vp-leus, #ingredienten #vp-boven .vid-onder-buiten .flex #vp-leus {
+  position: relative;
+  padding-top: 30px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 620px;
+  font-size: 36px;
+  color: white;
+  font-style: italic;
+}
+
+/* line 37, scss/_voorpagina.scss */
+#vp-boven .verpakking .flex #vp-leus::after, #vp-boven #ingredienten .vid-onder-buiten .flex #vp-leus::after, #ingredienten #vp-boven .vid-onder-buiten .flex #vp-leus::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 120px;
+  top: -1.5px;
+  left: 230px;
+  border-top: 3px solid #E53C62;
+}
+
+@media (max-width: 900px) {
+  /* line 30, scss/_voorpagina.scss */
+  #vp-boven .verpakking .flex #vp-leus, #vp-boven #ingredienten .vid-onder-buiten .flex #vp-leus, #ingredienten #vp-boven .vid-onder-buiten .flex #vp-leus {
+    max-width: 360px;
+    font-size: 20px;
+    padding-top: 15px;
+    margin-top: 15px;
+  }
+  /* line 54, scss/_voorpagina.scss */
+  #vp-boven .verpakking .flex #vp-leus::after, #vp-boven #ingredienten .vid-onder-buiten .flex #vp-leus::after, #ingredienten #vp-boven .vid-onder-buiten .flex #vp-leus::after {
+    width: 80px;
+    left: 140px;
+  }
+}
+
+/* line 62, scss/_voorpagina.scss */
+#vp-boven #vp-boven-drie-afb {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+/* line 65, scss/_voorpagina.scss */
+#vp-boven #vp-boven-drie-afb img {
+  width: 130px;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+@media (max-width: 900px) {
+  /* line 65, scss/_voorpagina.scss */
+  #vp-boven #vp-boven-drie-afb img {
+    width: 80px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  /* line 65, scss/_voorpagina.scss */
+  #vp-boven #vp-boven-drie-afb img {
+    width: 60px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+
+/* line 83, scss/_voorpagina.scss */
+.vid-doos {
+  height: 100%;
+}
+
+/* line 86, scss/_voorpagina.scss */
+#ingredienten {
+  height: 100vh;
+}
+
+/* line 88, scss/_voorpagina.scss */
+#ingredienten #vp-vid {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 900px) {
+  /* line 88, scss/_voorpagina.scss */
+  #ingredienten #vp-vid {
+    margin-bottom: 0;
+  }
+}
+
+/* line 99, scss/_voorpagina.scss */
+#ingredienten .vid-onder-buiten {
+  bottom: 240px;
+}
+
+@media (max-width: 900px) {
+  /* line 99, scss/_voorpagina.scss */
+  #ingredienten .vid-onder-buiten {
+    bottom: 30px;
+    left: auto;
+    transform: translate(0, 0);
+  }
+}
+
+/* line 111, scss/_voorpagina.scss */
+#ingredienten .flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* line 117, scss/_voorpagina.scss */
+#ingredienten article {
+  -ms-flex-preferred-size: calc(33% - 10px);
+      flex-basis: calc(33% - 10px);
+}
+
+@media (max-width: 600px) {
+  /* line 117, scss/_voorpagina.scss */
+  #ingredienten article {
+    -ms-flex-preferred-size: calc(50% - 10px);
+        flex-basis: calc(50% - 10px);
+  }
+  /* line 121, scss/_voorpagina.scss */
+  #ingredienten article:last-child {
+    -ms-flex-preferred-size: calc(100%);
+        flex-basis: calc(100%);
+    margin-top: 1em;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 117, scss/_voorpagina.scss */
+  #ingredienten article {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-top: 1em;
+  }
+}
+
+/* line 131, scss/_voorpagina.scss */
+#ingredienten h3 {
+  color: blue;
+  margin-bottom: .25em;
+  color: #B5DEE8;
+}
+
+/* line 135, scss/_voorpagina.scss */
+#ingredienten h3 + p {
+  margin-top: 0;
+}
+
+/* line 141, scss/_voorpagina.scss */
+#portfolio {
+  padding: 50px 0;
+  background-repeat: repeat;
+  background-image: url("afb/Studio-Vlaflip-3.png");
+  background-size: 600px 600px;
+}
+
+/* line 146, scss/_voorpagina.scss */
+#portfolio #tax-blok {
+  margin-bottom: 40px;
+}
+
+/* line 148, scss/_voorpagina.scss */
+#portfolio #tax-blok h2 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+/* line 152, scss/_voorpagina.scss */
+#portfolio #tax-blok ul, #portfolio #tax-blok li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* line 155, scss/_voorpagina.scss */
+#portfolio #tax-blok ul {
+  margin-bottom: -20px;
+}
+
+/* line 158, scss/_voorpagina.scss */
+#portfolio #tax-blok li {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 162, scss/_voorpagina.scss */
+#portfolio #tax-blok li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 600px) {
+  /* line 167, scss/_voorpagina.scss */
+  #portfolio #tax-blok ul {
+    margin-bottom: -10px;
+  }
+  /* line 170, scss/_voorpagina.scss */
+  #portfolio #tax-blok li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* line 175, scss/_voorpagina.scss */
+#portfolio #tax-blok a {
+  display: block;
+  padding: .2em .6em;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: white;
+  background-color: #616160;
+  min-width: 100px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  /* line 175, scss/_voorpagina.scss */
+  #portfolio #tax-blok a {
+    padding: .4em 1em;
+    font-size: 1.4em;
+  }
+}
+
+/* line 189, scss/_voorpagina.scss */
+#portfolio #tax-blok .animatie a {
+  background-color: #F9E6B1;
+}
+
+/* line 192, scss/_voorpagina.scss */
+#portfolio #tax-blok .illustratie a {
+  background-color: #F7CBCE;
+}
+
+/* line 195, scss/_voorpagina.scss */
+#portfolio #tax-blok .infographic a {
+  background-color: #B5DEE8;
+}
+
+/* line 201, scss/_voorpagina.scss */
+#port-arts {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+/* line 205, scss/_voorpagina.scss */
+#port-arts article {
+  -ms-flex-preferred-size: calc(33.33%);
+      flex-basis: calc(33.33%);
+  position: relative;
+}
+
+/* line 208, scss/_voorpagina.scss */
+#port-arts article:hover {
+  cursor: pointer;
+}
+
+/* line 210, scss/_voorpagina.scss */
+#port-arts article:hover .art-links a img {
+  transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
+  filter: brightness(100%) saturate(100%) !important;
+}
+
+/* line 214, scss/_voorpagina.scss */
+#port-arts article:hover .art-rechts p {
+  opacity: 1;
+  transition: 1.2s ease 0.8s;
+}
+
+/* line 218, scss/_voorpagina.scss */
+#port-arts article:hover .art-rechts a {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+}
+
+/* line 222, scss/_voorpagina.scss */
+#port-arts article:nth-child(4n) .art-links a img {
+  filter: brightness(60%) saturate(0%);
+}
+
+/* line 225, scss/_voorpagina.scss */
+#port-arts article:nth-child(4n + 1) .art-links a img {
+  filter: brightness(100%) saturate(0%);
+}
+
+/* line 228, scss/_voorpagina.scss */
+#port-arts article:nth-child(4n + 2) .art-links a img {
+  filter: brightness(80%) saturate(0%);
+}
+
+/* line 231, scss/_voorpagina.scss */
+#port-arts article:nth-child(4n + 3) .art-links a img {
+  filter: brightness(110%) saturate(0%);
+}
+
+@media (min-width: 1400px) {
+  /* line 205, scss/_voorpagina.scss */
+  #port-arts article {
+    -ms-flex-preferred-size: calc(25%);
+        flex-basis: calc(25%);
+  }
+  /* line 236, scss/_voorpagina.scss */
+  #port-arts article:nth-child(5n) .art-links a img {
+    filter: brightness(60%) saturate(0%);
+  }
+  /* line 239, scss/_voorpagina.scss */
+  #port-arts article:nth-child(5n + 1) .art-links a img {
+    filter: brightness(100%) saturate(0%);
+  }
+  /* line 242, scss/_voorpagina.scss */
+  #port-arts article:nth-child(5n + 2) .art-links a img {
+    filter: brightness(80%) saturate(0%);
+  }
+  /* line 245, scss/_voorpagina.scss */
+  #port-arts article:nth-child(5n + 3) .art-links a img {
+    filter: brightness(110%) saturate(0%);
+  }
+  /* line 248, scss/_voorpagina.scss */
+  #port-arts article:nth-child(5n + 4) .art-links a img {
+    filter: brightness(70%) saturate(0%);
+  }
+  /* line 251, scss/_voorpagina.scss */
+  #port-arts article .art-links {
+    height: calc(25vw - 4.5px);
+  }
+}
+
+@media (max-width: 700px) {
+  /* line 205, scss/_voorpagina.scss */
+  #port-arts article {
+    -ms-flex-preferred-size: calc(50%);
+        flex-basis: calc(50%);
+  }
+  /* line 257, scss/_voorpagina.scss */
+  #port-arts article:nth-child(3n) .art-links a img {
+    filter: brightness(60%) saturate(0%);
+  }
+  /* line 260, scss/_voorpagina.scss */
+  #port-arts article:nth-child(3n + 1) .art-links a img {
+    filter: brightness(100%) saturate(0%);
+  }
+  /* line 263, scss/_voorpagina.scss */
+  #port-arts article:nth-child(3n + 2) .art-links a img {
+    filter: brightness(80%) saturate(0%);
+  }
+  /* line 266, scss/_voorpagina.scss */
+  #port-arts article .art-links {
+    height: calc(50vw);
+  }
+}
+
+@media (max-width: 400px) {
+  /* line 205, scss/_voorpagina.scss */
+  #port-arts article {
+    -ms-flex-preferred-size: calc(100%);
+        flex-basis: calc(100%);
+  }
+  /* line 273, scss/_voorpagina.scss */
+  #port-arts article .art-links {
+    height: calc(100vw);
+  }
+}
+
+/* line 279, scss/_voorpagina.scss */
+#port-arts .art-links {
+  height: calc(33.33vw - 6px);
+  width: 100%;
+}
+
+/* line 282, scss/_voorpagina.scss */
+#port-arts .art-links a {
+  display: block;
+  height: 100%;
+}
+
+/* line 285, scss/_voorpagina.scss */
+#port-arts .art-links a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0.4s;
+}
+
+/* line 294, scss/_voorpagina.scss */
+#port-arts .art-rechts {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
+
+/* line 301, scss/_voorpagina.scss */
+#port-arts .art-rechts a {
+  color: white;
+  margin: -20px;
+  display: block;
+  padding: 20px 20px 100px 20px;
+  background: linear-gradient(to bottom, transparent, transparent);
+  transition: 2s ease-in-out 3s;
+}
+
+/* line 308, scss/_voorpagina.scss */
+#port-arts .art-rechts a:hover {
+  text-decoration: none;
+}
+
+/* line 311, scss/_voorpagina.scss */
+#port-arts .art-rechts a h3 {
+  margin-top: 0;
+}
+
+/* line 314, scss/_voorpagina.scss */
+#port-arts .art-rechts a p {
+  opacity: 0;
+  transition: 0.5s ease 0.2s;
+}
+
+/* line 318, scss/_voorpagina.scss */
+#port-arts .art-rechts a h3, #port-arts .art-rechts a p {
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* line 327, scss/_voorpagina.scss */
+#vp-contact {
+  padding: 50px 0;
+  background-image: url("afb/Studio-Vlaflip-4.png");
+  background-size: 600px 600px;
+}
+
+@media (max-width: 900px) {
+  /* line 327, scss/_voorpagina.scss */
+  #vp-contact {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 327, scss/_voorpagina.scss */
+  #vp-contact {
+    padding-top: 0;
+  }
+}
+
+/* line 337, scss/_voorpagina.scss */
+#vp-contact .verpakking, #vp-contact #ingredienten .vid-onder-buiten, #ingredienten #vp-contact .vid-onder-buiten {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  /* line 337, scss/_voorpagina.scss */
+  #vp-contact .verpakking, #vp-contact #ingredienten .vid-onder-buiten, #ingredienten #vp-contact .vid-onder-buiten {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+/* line 343, scss/_voorpagina.scss */
+#vp-contact .links {
+  -ms-flex-preferred-size: calc(50% - 150px);
+      flex-basis: calc(50% - 150px);
+  margin-right: 150px;
+}
+
+@media (max-width: 900px) {
+  /* line 343, scss/_voorpagina.scss */
+  #vp-contact .links {
+    -ms-flex-preferred-size: calc(60% - 50px);
+        flex-basis: calc(60% - 50px);
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 343, scss/_voorpagina.scss */
+  #vp-contact .links {
+    -ms-flex-preferred-size: calc(100%);
+        flex-basis: calc(100%);
+    margin-right: 0;
+  }
+}
+
+/* line 354, scss/_voorpagina.scss */
+#vp-contact .links h2 {
+  margin-top: 0;
+}
+
+/* line 358, scss/_voorpagina.scss */
+#vp-contact .rechts {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+@media (max-width: 600px) {
+  /* line 358, scss/_voorpagina.scss */
+  #vp-contact .rechts {
+    -ms-flex-preferred-size: calc(100%);
+        flex-basis: calc(100%);
+    margin-top: 20px;
+  }
+}
+
+/* line 366, scss/_voorpagina.scss */
+#vp-contact .soc-media-links img {
+  margin-right: 8px;
+  width: 50px;
+  transition: 0.4s linear 1s;
+}
+
+@media (max-width: 900px) {
+  /* line 366, scss/_voorpagina.scss */
+  #vp-contact .soc-media-links img {
+    margin-right: 4px;
+    width: 30px;
+  }
+}
+
+/* line 374, scss/_voorpagina.scss */
+#vp-contact .soc-media-links img:hover {
+  filter: hue-rotate(-80deg);
+}
+
+/* line 378, scss/_voorpagina.scss */
+#vp-contact .soc-media-links a:last-child img {
+  margin-right: 0;
+}
+
+/* line 1, scss/_agenda.scss */
+.agenda .flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+/* line 6, scss/_agenda.scss */
+#agenda-filter {
+  padding: 20px;
+  background-color: #E53C62;
+  color: white;
+}
+
+/* line 10, scss/_agenda.scss */
+#agenda-filter h3 {
+  color: white;
+  text-transform: capitalize;
+}
+
+/* line 14, scss/_agenda.scss */
+#agenda-filter > .flex {
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+@media (max-width: 700px) {
+  /* line 14, scss/_agenda.scss */
+  #agenda-filter > .flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: -20px;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-pack: start;
+        justify-content: start;
+  }
+  /* line 22, scss/_agenda.scss */
+  #agenda-filter > .flex > * {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  /* line 27, scss/_agenda.scss */
+  #agenda-filter > .flex > *:last-child {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 440px) {
+  /* line 32, scss/_agenda.scss */
+  #agenda-filter > .flex > * {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  /* line 36, scss/_agenda.scss */
+  #agenda-filter > .flex > *:last-child {
+    margin-top: 0;
+  }
+}
+
+/* line 43, scss/_agenda.scss */
+#agenda-filter section {
+  margin-right: 40px;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+/* line 45, scss/_agenda.scss */
+#agenda-filter section h3 {
+  margin-bottom: 10px;
+}
+
+/* line 52, scss/_agenda.scss */
+#agenda-filter select {
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  background-image: url("afb/chevron-down.png");
+  background-position: 97% center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  height: 34px;
+  padding-top: 0;
+  padding-right: 20px;
+  padding-left: 6px;
+  transition: color 0.2s ease-in-out;
+  border-radius: 1px;
+  border: 0;
+  font-size: 12px;
+  background-color: #fff;
+  font-family: "Asap", sans-serif;
+  font-weight: bold;
+  color: #666;
+}
+
+/* line 72, scss/_agenda.scss */
+#agenda-filter select.geklikt, #agenda-filter select:hover {
+  color: #616160;
+}
+
+/* line 75, scss/_agenda.scss */
+#agenda-filter select:hover {
+  cursor: pointer;
+}
+
+/* line 80, scss/_agenda.scss */
+#agenda-filter [type='submit'] {
+  font-size: 1em;
+  border: 0;
+  border-radius: 0;
+  height: calc(2em + 2px);
+}
+
+/* line 89, scss/_agenda.scss */
+.agenda {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+/* line 92, scss/_agenda.scss */
+.agenda ul, .agenda li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 97, scss/_agenda.scss */
+.agenda span, .agenda h2, .agenda a span {
+  color: #666;
+}
+
+/* line 100, scss/_agenda.scss */
+.agenda ul {
+  font-size: .8em;
+}
+
+/* line 103, scss/_agenda.scss */
+.agenda li {
+  border-bottom: 1px solid rgba(33, 33, 33, 0.1);
+}
+
+/* line 105, scss/_agenda.scss */
+.agenda li:last-child {
+  border-bottom: 0;
+}
+
+/* line 109, scss/_agenda.scss */
+.agenda span {
+  line-height: 1em;
+}
+
+/* line 112, scss/_agenda.scss */
+.agenda li > a.flex {
+  padding: 15px 10px;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  /* line 112, scss/_agenda.scss */
+  .agenda li > a.flex {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* line 119, scss/_agenda.scss */
+.agenda li > a.flex span {
+  transition: 0.4s color ease;
+}
+
+/* line 122, scss/_agenda.scss */
+.agenda li > a.flex .agenda-links span {
+  transition: 0.5s color ease-in-out 0.5s;
+  color: #252525;
+  font-weight: bold;
+}
+
+/* line 127, scss/_agenda.scss */
+.agenda li > a.flex .agenda-links span.met-streepje {
+  display: block;
+  padding-top: 5px;
+  margin-top: 5px;
+  position: relative;
+}
+
+/* line 132, scss/_agenda.scss */
+.agenda li > a.flex .agenda-links span.met-streepje::after {
+  position: absolute;
+  left: 0;
+  top: -0.5px;
+  content: '';
+  display: block;
+  width: 30px;
+  border-top: 1px solid rgba(33, 33, 33, 0.1);
+}
+
+/* line 143, scss/_agenda.scss */
+.agenda li > a.flex .agenda-rechts {
+  padding-left: 10px;
+}
+
+@media (max-width: 600px) {
+  /* line 143, scss/_agenda.scss */
+  .agenda li > a.flex .agenda-rechts {
+    padding-left: 0;
+  }
+}
+
+/* line 149, scss/_agenda.scss */
+.agenda li > a.flex:after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0%;
+  transition: 0.6s width ease-in 0.1s;
+  z-index: -1;
+  height: calc(100% + 0.5px);
+  background-color: #E53C62;
+}
+
+@media (min-width: 600px) {
+  /* line 162, scss/_agenda.scss */
+  .agenda li > a.flex:hover {
+    text-decoration: none;
+  }
+  /* line 164, scss/_agenda.scss */
+  .agenda li > a.flex:hover span {
+    color: #252525;
+  }
+  /* line 167, scss/_agenda.scss */
+  .agenda li > a.flex:hover .agenda-links span {
+    color: white;
+  }
+  /* line 171, scss/_agenda.scss */
+  .agenda li > a.flex:hover::after {
+    width: 60px;
+    transition: 0.5s width ease-in-out 0.4s;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 112, scss/_agenda.scss */
+  .agenda li > a.flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  /* line 180, scss/_agenda.scss */
+  .agenda li > a.flex .agenda-rechts {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* line 186, scss/_agenda.scss */
+.agenda .flex {
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+/* line 188, scss/_agenda.scss */
+.agenda .flex span {
+  display: block;
+}
+
+/* line 191, scss/_agenda.scss */
+.agenda .flex .agenda-links {
+  -ms-flex-preferred-size: 90px;
+      flex-basis: 90px;
+}
+
+/* line 194, scss/_agenda.scss */
+.agenda .flex .agenda-midden.flex {
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-preferred-size: 240px;
+      flex-basis: 240px;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+
+@media (max-width: 400px) {
+  /* line 194, scss/_agenda.scss */
+  .agenda .flex .agenda-midden.flex {
+    -ms-flex-preferred-size: 170px;
+        flex-basis: 170px;
+  }
+}
+
+/* line 202, scss/_agenda.scss */
+.agenda .flex .locatie {
+  font-size: .6em;
+  line-height: .8rem;
+}
+
+@media (max-width: 440px) {
+  /* line 202, scss/_agenda.scss */
+  .agenda .flex .locatie {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+/* line 210, scss/_agenda.scss */
+.agenda .flex .titel {
+  color: #252525;
+  font-size: 1em;
+}
+
+/* line 215, scss/_agenda.scss */
+.agenda time {
+  display: none;
+}
+
+/* line 218, scss/_agenda.scss */
+.agenda .knoppen-doos {
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  /* line 223, scss/_agenda.scss */
+  #agenda-filter {
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  /* line 226, scss/_agenda.scss */
+  .agenda.pagina {
+    -ms-flex-order: 2;
+        order: 2;
+  }
+}
+
+/* line 231, scss/_agenda.scss */
+.agenda-los .agenda-data {
+  padding: 20px;
+  background-color: #E53C62;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-right: 20px;
+}
+
+/* line 237, scss/_agenda.scss */
+.agenda-los .agenda-data span, .agenda-los .agenda-data h1 {
+  display: block;
+  font-family: "Merriweather";
+  font-weight: 600;
+  color: white;
+}
+
+/* line 243, scss/_agenda.scss */
+.agenda-los .agenda-data span {
+  font-size: 1.2em;
+}
+
+/* line 248, scss/_agenda.scss */
+.agenda-los .niet-volle-breedte {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+/* line 251, scss/_agenda.scss */
+.agenda-los .niet-volle-breedte .single-footer {
+  -ms-flex-order: 3;
+      order: 3;
+}
+
+/* line 254, scss/_agenda.scss */
+.agenda-los .niet-volle-breedte #agenda-kaart {
+  -ms-flex-order: 4;
+      order: 4;
+}
+
+/* line 257, scss/_agenda.scss */
+.agenda-los .niet-volle-breedte .jp-relatedposts {
+  -ms-flex-order: 5;
+      order: 5;
+}
+
+/* line 263, scss/_agenda.scss */
+#agenda-kaart {
+  height: 350px;
+  margin-top: 20px;
+}
+
+/* line 2, scss/_single.scss */
+.single .tekstveld {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 5, scss/_single.scss */
+.single .tekstveld p:first-child {
+  margin-top: 0;
+}
+
+/* line 8, scss/_single.scss */
+.single .tekstveld p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 14, scss/_single.scss */
+.single .uitgelichte-afbeelding-buiten {
+  height: calc(100vh - 70px);
+}
+
+/* line 17, scss/_single.scss */
+#single-knop {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+/* line 21, scss/_single.scss */
+#single-knop a {
+  font-size: 1.4em;
+}
+
+@media (max-width: 400px) {
+  /* line 17, scss/_single.scss */
+  #single-knop {
+    display: none;
+  }
+}
+
+/* line 29, scss/_single.scss */
+#single-hoofd.met-gallerij {
+  margin-top: 120px;
+}
+
+@media (max-width: 900px) {
+  /* line 29, scss/_single.scss */
+  #single-hoofd.met-gallerij {
+    margin-top: 20px;
+  }
+}
+
+/* line 36, scss/_single.scss */
+#single-hoofd.flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+/* line 40, scss/_single.scss */
+#single-hoofd.flex .links {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+
+/* line 43, scss/_single.scss */
+#single-hoofd.flex .rechts {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  /* line 43, scss/_single.scss */
+  #single-hoofd.flex .rechts {
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+  }
+}
+
+@media (max-width: 400px) {
+  /* line 36, scss/_single.scss */
+  #single-hoofd.flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  /* line 53, scss/_single.scss */
+  #single-hoofd.flex .links, #single-hoofd.flex .rechts {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  /* line 56, scss/_single.scss */
+  #single-hoofd.flex .links {
+    margin-top: 20px;
+    -ms-flex-order: 2;
+        order: 2;
+  }
+}
+
+/* line 66, scss/_single.scss */
+#single-hoofd h1, #single-hoofd h2 {
+  margin-bottom: 0;
+}
+
+@media (max-width: 400px) {
+  /* line 65, scss/_single.scss */
+  #single-hoofd {
+    margin-top: 0;
+  }
+}
+
+/* line 74, scss/_single.scss */
+.single-article-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 30px;
+}
+
+/* line 77, scss/_single.scss */
+.single-article-sticky h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 400px) {
+  /* line 74, scss/_single.scss */
+  .single-article-sticky {
+    position: static;
+  }
+  /* line 82, scss/_single.scss */
+  .single-article-sticky h2 {
+    margin-top: .5em;
+  }
+}
+
+/* line 88, scss/_single.scss */
+.single-meta {
+  margin: 30px 0;
+}
+
+@media (max-width: 900px) {
+  /* line 88, scss/_single.scss */
+  .single-meta {
+    margin: 15px 0;
+  }
+}
+
+/* line 93, scss/_single.scss */
+.single-meta span {
+  display: block;
+}
+
+/* line 96, scss/_single.scss */
+.single-meta strong {
+  color: #B5DEE8;
+  font-size: 1.2em;
+  margin-right: .05em;
+}
+
+/* line 104, scss/_single.scss */
+.single-art-hoofd > strong:first-child {
+  color: #B5DEE8;
+  font-size: 1.2em;
+}
+
+/* line 107, scss/_single.scss */
+.single-art-hoofd > strong:first-child + p {
+  margin-top: 0;
+}
+
+/* line 111, scss/_single.scss */
+.single-art-hoofd + footer {
+  margin-top: 30px;
+}
+
+/* line 117, scss/_single.scss */
+.single .gallerij img, .single .gallerij .vid-doos {
+  margin-bottom: 2em;
+}
+
+/* line 120, scss/_single.scss */
+.single .gallerij .vid-doos {
+  height: auto;
+}
+
+/* line 123, scss/_single.scss */
+.single .gallerij video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 126, scss/_single.scss */
+.single .gallerij video:hover {
+  cursor: pointer;
+}
+
+/* line 1, scss/_archive.scss */
+.archive h1 span {
+  font-size: .6em;
+  display: block;
+}
+
+/* line 5, scss/_archive.scss */
+.archive main > footer {
+  padding-top: 20px;
+}
+
+/* line 9, scss/_archive.scss */
+#archief-lijst {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* line 13, scss/_archive.scss */
+#archief-lijst .art-c {
+  max-width: none;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-top: 0;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+
+@media (min-width: 600px) {
+  /* line 13, scss/_archive.scss */
+  #archief-lijst .art-c {
+    max-width: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media (min-width: 800px) {
+  /* line 13, scss/_archive.scss */
+  #archief-lijst .art-c {
+    -ms-flex-preferred-size: 33.33%;
+        flex-basis: 33.33%;
+  }
+}
+
+/* line 1, scss/_footer.scss */
+#stek-voet {
+  color: white;
+  font-size: .8em;
+  padding: 0;
+  background-color: #f4cf6a;
+  padding: 10px 0;
+}
+
+/* line 7, scss/_footer.scss */
+#stek-voet .verpakking, #stek-voet #ingredienten .vid-onder-buiten, #ingredienten #stek-voet .vid-onder-buiten {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+  /* line 7, scss/_footer.scss */
+  #stek-voet .verpakking, #stek-voet #ingredienten .vid-onder-buiten, #ingredienten #stek-voet .vid-onder-buiten {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=maps/style.css.map */
