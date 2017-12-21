@@ -15,14 +15,19 @@
 	height: calc(100vh - 70px);
 }
 	#single-knop {
-		position: absolute;
-		right: 20px;
-		bottom: 20px;
 		a {
-			font-size: 1.4em;
+			//font-size: 1.4em;
 		}
 		@media (max-width: 400px) {
 			display: none;
+		}
+		@media (min-width: 1200px) {
+			right: calc(50% - 420px);
+		}
+		right: calc(30% + 10px);
+		transform: translate(100%, 0%);
+		@media (max-width: 900px) {
+			right: calc(35% + 5px);
 		}
 	}
 

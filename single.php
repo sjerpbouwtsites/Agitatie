@@ -58,7 +58,9 @@ get_template_part('/sja/open-main');
 
 						if ($gallerij) : foreach ($gallerij as $g) :
 
-							if ($g['mime_type'] === "image/jpeg") {
+							$m = $g['mime_type'];
+
+							if ($m === "image/jpeg" || $m === "image/png" || $m === "image/gif") {
 								echo "<img src='{$g['sizes']['medium_large']}' alt='{$g['alt']}' title='{$g['title']}' width='{$g['sizes']['medium_large-width']}' height='{$g['sizes']['medium_large-height']}'/>";
 							} else {
 								array_naar_queryvars(array(

@@ -46,6 +46,7 @@
 				font-size: 36px;
 				color: white;
 				font-style: italic;
+				text-shadow: 1px 1px 1px #a27c1299;
 				@media (max-width: 900px) {
 					max-width: 360px;
 					font-size: 20px;
@@ -178,7 +179,6 @@
 				font-weight: bold;
 				text-transform: capitalize;
 				color: white;
-				background-color: $donkergrijs;
 				min-width: 100px;
 				text-align: center;
 				@media (max-width: 600px) {
@@ -186,15 +186,10 @@
 					font-size: 1.4em;
 				}
 			}
-				.animatie a {
-					background-color: $vlageel;
-				}
-				.illustratie a {
-					background-color: $roze;
-				}
-				.infographic a {
-					background-color: $lichtblauw
-				}
+			li:first-child a {
+				background-color: $donkergrijs;
+			}
+
 
 	}//taxblok
 }
@@ -204,49 +199,53 @@
 		flex-direction: row;
 		article {
 			flex-basis: calc(33.33%);
+			flex-grow:1;
 			position: relative;
 			&:hover {
 				cursor: pointer;
 				.art-links a img {
 					transition: 0.4s cubic-bezier(.65,.05,.36,1) 0s;
-					filter: brightness(100%) saturate(100%) !important;
+//					filter: brightness(100%);
 				}
 				.art-rechts p {
 					opacity: 1;
 					transition: 1.2s ease 0.8s;
 				}
 				.art-rechts a {
-					background: linear-gradient(to bottom, rgba(0,0,0,0.8),rgba(0,0,0,0));
+					background: linear-gradient(to bottom, rgba(0,0,0,0.6),rgba(0,0,0,0));
+				}
+				.kleurlaag {
+					background-color: transparent !important;
 				}
 			}
 			&:nth-child(4n) .art-links a img{
-				filter: brightness(60%) saturate(00%);
+//				filter: brightness(60%);
 			}
 			&:nth-child(4n + 1) .art-links a img{
-				filter: brightness(100%) saturate(00%);
+//				filter: brightness(100%);
 			}
 			&:nth-child(4n + 2) .art-links a img{
-				filter: brightness(80%) saturate(00%);
+//				filter: brightness(80%);
 			}
 			&:nth-child(4n + 3) .art-links a img{
-				filter: brightness(110%) saturate(00%);
+//				filter: brightness(110%);
 			}
 			@media (min-width: 1400px) {
 				flex-basis: calc(25%);
 				&:nth-child(5n) .art-links a img{
-					filter: brightness(60%) saturate(00%);
+//					filter: brightness(60%);
 				}
 				&:nth-child(5n + 1) .art-links a img{
-					filter: brightness(100%) saturate(00%);
+//					filter: brightness(100%);
 				}
 				&:nth-child(5n + 2) .art-links a img{
-					filter: brightness(80%) saturate(00%);
+//					filter: brightness(80%);
 				}
 				&:nth-child(5n + 3) .art-links a img{
-					filter: brightness(110%) saturate(00%);
+//					filter: brightness(110%);
 				}
 				&:nth-child(5n + 4) .art-links a img{
-					filter: brightness(70%) saturate(00%);
+//					filter: brightness(70%);
 				}
 				.art-links {
 					height: calc(25vw - 4.5px);
@@ -255,19 +254,18 @@
 			@media (max-width: 700px) {
 				flex-basis: calc(50%);
 				&:nth-child(3n) .art-links a img{
-					filter: brightness(60%) saturate(00%);
+//					filter: brightness(60%);
 				}
 				&:nth-child(3n + 1) .art-links a img{
-					filter: brightness(100%) saturate(00%);
+//					filter: brightness(100%);
 				}
 				&:nth-child(3n + 2) .art-links a img{
-					filter: brightness(80%) saturate(00%);
+//					filter: brightness(80%);
 				}
 				.art-links {
 					height: calc(50vw);
 				}
 			}
-
 			@media (max-width: 400px) {
 				flex-basis: calc(100%);
 				.art-links {
@@ -290,6 +288,14 @@
 					}
 				}
 			}
+				.kleurlaag {
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					transition: 0.4s cubic-bezier(.65,.05,.36,1) 0s;
+				}
 
 			.art-rechts {
 				position: absolute;

@@ -60,8 +60,6 @@ $ingredienten = get_field('ingredienten');
 ob_start();
 ?>
 
-
-
 <section>
 	<h2><?=get_field('vid_titel')?></h2>
 	<div class='flex'>
@@ -74,8 +72,6 @@ ob_start();
 	</div>
 </section>
 
-
-
 <?php $vid_onder = ob_get_clean();
 
 //config voor viddoos
@@ -85,7 +81,7 @@ array_naar_queryvars(array(
 	'vid'		=> $vp_vid,
 	'poster'	=> $vp_poster['sizes']['hele-breedte'],
 	'vid_attr'	=> 'preload autoplay muted loop',
-	'vid_onder'	=> $vid_onder,
+	'vid_onder'	=> $vid_onder
 ));
 get_template_part('sja/viddoos');
 
@@ -117,7 +113,7 @@ if ($port_query->have_posts()) :
 
 		if (!$port_init) :
 			$port_init = true;
-			$tax_blok = new Tax_blok(array(
+			$tax_blok = new Vla_tax_blok(array(
 				'post'			=> $post,
 				'titel'			=> "Portfolio" . (array_key_exists('_soort', $_GET) ? " - " . $_GET['_soort'] : ""),
 				'basis'			=> site_url(),
@@ -127,7 +123,7 @@ if ($port_query->have_posts()) :
 
 			echo "</div><div id='port-arts'>"; //einde verpakking
 
-			$port_c = new Article_c(array(
+			$port_c = new Vla_port(array(
 				'afb_formaat' => "large"
 			), $post);
 

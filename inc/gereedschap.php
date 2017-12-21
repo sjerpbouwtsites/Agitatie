@@ -109,3 +109,8 @@ function mdi($a = '', $echo = true) {
 		return $r;
 	}
 }
+
+function naar_rgb($hex = '#FFFFFF') {
+	list($r, $g, $b) = sscanf($hex, "#%02x%02x%02x");
+	return array($r, $g, $b);
+}

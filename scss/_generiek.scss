@@ -100,6 +100,14 @@ ul.reset, ul.reset li {
 		@media (min-width: 1200px) {
 			left: calc(50% - 580px);
 		}
+		& + * {
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+			@media (min-width: 1200px) {
+				right: calc(50% - 580px);
+			}
+		}
 	}
 	img {
 		display: block;

@@ -1087,7 +1087,21 @@ ul.reset, ul.reset li {
   }
 }
 
-/* line 104, scss/_generiek.scss */
+/* line 103, scss/_generiek.scss */
+.uitgelichte-afbeelding-buiten h1 + * {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+  /* line 103, scss/_generiek.scss */
+  .uitgelichte-afbeelding-buiten h1 + * {
+    right: calc(50% - 580px);
+  }
+}
+
+/* line 112, scss/_generiek.scss */
 .uitgelichte-afbeelding-buiten img {
   display: block;
   width: 100%;
@@ -1533,6 +1547,7 @@ input.wpcf7-submit {
   font-size: 36px;
   color: white;
   font-style: italic;
+  text-shadow: 1px 1px 1px #a27c1299;
 }
 
 /* line 37, scss/_voorpagina.scss */
@@ -1554,14 +1569,14 @@ input.wpcf7-submit {
     padding-top: 15px;
     margin-top: 15px;
   }
-  /* line 54, scss/_voorpagina.scss */
+  /* line 55, scss/_voorpagina.scss */
   #vp-boven .verpakking .flex #vp-leus::after, #vp-boven #ingredienten .vid-onder-buiten .flex #vp-leus::after, #ingredienten #vp-boven .vid-onder-buiten .flex #vp-leus::after {
     width: 80px;
     left: 140px;
   }
 }
 
-/* line 62, scss/_voorpagina.scss */
+/* line 63, scss/_voorpagina.scss */
 #vp-boven #vp-boven-drie-afb {
   display: -ms-flexbox;
   display: flex;
@@ -1569,7 +1584,7 @@ input.wpcf7-submit {
       justify-content: center;
 }
 
-/* line 65, scss/_voorpagina.scss */
+/* line 66, scss/_voorpagina.scss */
 #vp-boven #vp-boven-drie-afb img {
   width: 130px;
   margin-right: 25px;
@@ -1577,7 +1592,7 @@ input.wpcf7-submit {
 }
 
 @media (max-width: 900px) {
-  /* line 65, scss/_voorpagina.scss */
+  /* line 66, scss/_voorpagina.scss */
   #vp-boven #vp-boven-drie-afb img {
     width: 80px;
     margin-right: 15px;
@@ -1586,7 +1601,7 @@ input.wpcf7-submit {
 }
 
 @media (max-width: 450px) {
-  /* line 65, scss/_voorpagina.scss */
+  /* line 66, scss/_voorpagina.scss */
   #vp-boven #vp-boven-drie-afb img {
     width: 60px;
     margin-right: 5px;
@@ -1594,17 +1609,17 @@ input.wpcf7-submit {
   }
 }
 
-/* line 83, scss/_voorpagina.scss */
+/* line 84, scss/_voorpagina.scss */
 .vid-doos {
   height: 100%;
 }
 
-/* line 86, scss/_voorpagina.scss */
+/* line 87, scss/_voorpagina.scss */
 #ingredienten {
   height: 100vh;
 }
 
-/* line 88, scss/_voorpagina.scss */
+/* line 89, scss/_voorpagina.scss */
 #ingredienten #vp-vid {
   position: absolute;
   width: 100%;
@@ -1613,19 +1628,19 @@ input.wpcf7-submit {
 }
 
 @media (max-width: 900px) {
-  /* line 88, scss/_voorpagina.scss */
+  /* line 89, scss/_voorpagina.scss */
   #ingredienten #vp-vid {
     margin-bottom: 0;
   }
 }
 
-/* line 99, scss/_voorpagina.scss */
+/* line 100, scss/_voorpagina.scss */
 #ingredienten .vid-onder-buiten {
   bottom: 240px;
 }
 
 @media (max-width: 900px) {
-  /* line 99, scss/_voorpagina.scss */
+  /* line 100, scss/_voorpagina.scss */
   #ingredienten .vid-onder-buiten {
     bottom: 30px;
     left: auto;
@@ -1633,7 +1648,7 @@ input.wpcf7-submit {
   }
 }
 
-/* line 111, scss/_voorpagina.scss */
+/* line 112, scss/_voorpagina.scss */
 #ingredienten .flex {
   display: -ms-flexbox;
   display: flex;
@@ -1645,19 +1660,19 @@ input.wpcf7-submit {
       flex-wrap: wrap;
 }
 
-/* line 117, scss/_voorpagina.scss */
+/* line 118, scss/_voorpagina.scss */
 #ingredienten article {
   -ms-flex-preferred-size: calc(33% - 10px);
       flex-basis: calc(33% - 10px);
 }
 
 @media (max-width: 600px) {
-  /* line 117, scss/_voorpagina.scss */
+  /* line 118, scss/_voorpagina.scss */
   #ingredienten article {
     -ms-flex-preferred-size: calc(50% - 10px);
         flex-basis: calc(50% - 10px);
   }
-  /* line 121, scss/_voorpagina.scss */
+  /* line 122, scss/_voorpagina.scss */
   #ingredienten article:last-child {
     -ms-flex-preferred-size: calc(100%);
         flex-basis: calc(100%);
@@ -1666,7 +1681,7 @@ input.wpcf7-submit {
 }
 
 @media (max-width: 600px) {
-  /* line 117, scss/_voorpagina.scss */
+  /* line 118, scss/_voorpagina.scss */
   #ingredienten article {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -1674,19 +1689,19 @@ input.wpcf7-submit {
   }
 }
 
-/* line 131, scss/_voorpagina.scss */
+/* line 132, scss/_voorpagina.scss */
 #ingredienten h3 {
   color: blue;
   margin-bottom: .25em;
   color: #B5DEE8;
 }
 
-/* line 135, scss/_voorpagina.scss */
+/* line 136, scss/_voorpagina.scss */
 #ingredienten h3 + p {
   margin-top: 0;
 }
 
-/* line 141, scss/_voorpagina.scss */
+/* line 142, scss/_voorpagina.scss */
 #portfolio {
   padding: 50px 0;
   background-repeat: repeat;
@@ -1694,67 +1709,66 @@ input.wpcf7-submit {
   background-size: 600px 600px;
 }
 
-/* line 146, scss/_voorpagina.scss */
+/* line 147, scss/_voorpagina.scss */
 #portfolio #tax-blok {
   margin-bottom: 40px;
 }
 
-/* line 148, scss/_voorpagina.scss */
+/* line 149, scss/_voorpagina.scss */
 #portfolio #tax-blok h2 {
   margin-top: 0;
   margin-bottom: 1em;
 }
 
-/* line 152, scss/_voorpagina.scss */
+/* line 153, scss/_voorpagina.scss */
 #portfolio #tax-blok ul, #portfolio #tax-blok li {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-/* line 155, scss/_voorpagina.scss */
+/* line 156, scss/_voorpagina.scss */
 #portfolio #tax-blok ul {
   margin-bottom: -20px;
 }
 
-/* line 158, scss/_voorpagina.scss */
+/* line 159, scss/_voorpagina.scss */
 #portfolio #tax-blok li {
   display: inline-block;
   margin-right: 20px;
   margin-bottom: 20px;
 }
 
-/* line 162, scss/_voorpagina.scss */
+/* line 163, scss/_voorpagina.scss */
 #portfolio #tax-blok li:last-child {
   margin-right: 0;
 }
 
 @media (max-width: 600px) {
-  /* line 167, scss/_voorpagina.scss */
+  /* line 168, scss/_voorpagina.scss */
   #portfolio #tax-blok ul {
     margin-bottom: -10px;
   }
-  /* line 170, scss/_voorpagina.scss */
+  /* line 171, scss/_voorpagina.scss */
   #portfolio #tax-blok li {
     margin-right: 10px;
     margin-bottom: 10px;
   }
 }
 
-/* line 175, scss/_voorpagina.scss */
+/* line 176, scss/_voorpagina.scss */
 #portfolio #tax-blok a {
   display: block;
   padding: .2em .6em;
   font-weight: bold;
   text-transform: capitalize;
   color: white;
-  background-color: #616160;
   min-width: 100px;
   text-align: center;
 }
 
 @media (max-width: 600px) {
-  /* line 175, scss/_voorpagina.scss */
+  /* line 176, scss/_voorpagina.scss */
   #portfolio #tax-blok a {
     padding: .4em 1em;
     font-size: 1.4em;
@@ -1762,21 +1776,11 @@ input.wpcf7-submit {
 }
 
 /* line 189, scss/_voorpagina.scss */
-#portfolio #tax-blok .animatie a {
-  background-color: #F9E6B1;
+#portfolio #tax-blok li:first-child a {
+  background-color: #616160;
 }
 
-/* line 192, scss/_voorpagina.scss */
-#portfolio #tax-blok .illustratie a {
-  background-color: #F7CBCE;
-}
-
-/* line 195, scss/_voorpagina.scss */
-#portfolio #tax-blok .infographic a {
-  background-color: #B5DEE8;
-}
-
-/* line 201, scss/_voorpagina.scss */
+/* line 196, scss/_voorpagina.scss */
 #port-arts {
   display: -ms-flexbox;
   display: flex;
@@ -1786,136 +1790,90 @@ input.wpcf7-submit {
       flex-direction: row;
 }
 
-/* line 205, scss/_voorpagina.scss */
+/* line 200, scss/_voorpagina.scss */
 #port-arts article {
   -ms-flex-preferred-size: calc(33.33%);
       flex-basis: calc(33.33%);
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   position: relative;
 }
 
-/* line 208, scss/_voorpagina.scss */
+/* line 204, scss/_voorpagina.scss */
 #port-arts article:hover {
   cursor: pointer;
 }
 
-/* line 210, scss/_voorpagina.scss */
+/* line 206, scss/_voorpagina.scss */
 #port-arts article:hover .art-links a img {
   transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
-  filter: brightness(100%) saturate(100%) !important;
 }
 
-/* line 214, scss/_voorpagina.scss */
+/* line 210, scss/_voorpagina.scss */
 #port-arts article:hover .art-rechts p {
   opacity: 1;
   transition: 1.2s ease 0.8s;
 }
 
-/* line 218, scss/_voorpagina.scss */
+/* line 214, scss/_voorpagina.scss */
 #port-arts article:hover .art-rechts a {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
 }
 
-/* line 222, scss/_voorpagina.scss */
-#port-arts article:nth-child(4n) .art-links a img {
-  filter: brightness(60%) saturate(0%);
-}
-
-/* line 225, scss/_voorpagina.scss */
-#port-arts article:nth-child(4n + 1) .art-links a img {
-  filter: brightness(100%) saturate(0%);
-}
-
-/* line 228, scss/_voorpagina.scss */
-#port-arts article:nth-child(4n + 2) .art-links a img {
-  filter: brightness(80%) saturate(0%);
-}
-
-/* line 231, scss/_voorpagina.scss */
-#port-arts article:nth-child(4n + 3) .art-links a img {
-  filter: brightness(110%) saturate(0%);
+/* line 217, scss/_voorpagina.scss */
+#port-arts article:hover .kleurlaag {
+  background-color: transparent !important;
 }
 
 @media (min-width: 1400px) {
-  /* line 205, scss/_voorpagina.scss */
+  /* line 200, scss/_voorpagina.scss */
   #port-arts article {
     -ms-flex-preferred-size: calc(25%);
         flex-basis: calc(25%);
   }
-  /* line 236, scss/_voorpagina.scss */
-  #port-arts article:nth-child(5n) .art-links a img {
-    filter: brightness(60%) saturate(0%);
-  }
-  /* line 239, scss/_voorpagina.scss */
-  #port-arts article:nth-child(5n + 1) .art-links a img {
-    filter: brightness(100%) saturate(0%);
-  }
-  /* line 242, scss/_voorpagina.scss */
-  #port-arts article:nth-child(5n + 2) .art-links a img {
-    filter: brightness(80%) saturate(0%);
-  }
-  /* line 245, scss/_voorpagina.scss */
-  #port-arts article:nth-child(5n + 3) .art-links a img {
-    filter: brightness(110%) saturate(0%);
-  }
-  /* line 248, scss/_voorpagina.scss */
-  #port-arts article:nth-child(5n + 4) .art-links a img {
-    filter: brightness(70%) saturate(0%);
-  }
-  /* line 251, scss/_voorpagina.scss */
+  /* line 250, scss/_voorpagina.scss */
   #port-arts article .art-links {
     height: calc(25vw - 4.5px);
   }
 }
 
 @media (max-width: 700px) {
-  /* line 205, scss/_voorpagina.scss */
+  /* line 200, scss/_voorpagina.scss */
   #port-arts article {
     -ms-flex-preferred-size: calc(50%);
         flex-basis: calc(50%);
   }
-  /* line 257, scss/_voorpagina.scss */
-  #port-arts article:nth-child(3n) .art-links a img {
-    filter: brightness(60%) saturate(0%);
-  }
-  /* line 260, scss/_voorpagina.scss */
-  #port-arts article:nth-child(3n + 1) .art-links a img {
-    filter: brightness(100%) saturate(0%);
-  }
-  /* line 263, scss/_voorpagina.scss */
-  #port-arts article:nth-child(3n + 2) .art-links a img {
-    filter: brightness(80%) saturate(0%);
-  }
-  /* line 266, scss/_voorpagina.scss */
+  /* line 265, scss/_voorpagina.scss */
   #port-arts article .art-links {
     height: calc(50vw);
   }
 }
 
 @media (max-width: 400px) {
-  /* line 205, scss/_voorpagina.scss */
+  /* line 200, scss/_voorpagina.scss */
   #port-arts article {
     -ms-flex-preferred-size: calc(100%);
         flex-basis: calc(100%);
   }
-  /* line 273, scss/_voorpagina.scss */
+  /* line 271, scss/_voorpagina.scss */
   #port-arts article .art-links {
     height: calc(100vw);
   }
 }
 
-/* line 279, scss/_voorpagina.scss */
+/* line 277, scss/_voorpagina.scss */
 #port-arts .art-links {
   height: calc(33.33vw - 6px);
   width: 100%;
 }
 
-/* line 282, scss/_voorpagina.scss */
+/* line 280, scss/_voorpagina.scss */
 #port-arts .art-links a {
   display: block;
   height: 100%;
 }
 
-/* line 285, scss/_voorpagina.scss */
+/* line 283, scss/_voorpagina.scss */
 #port-arts .art-links a img {
   width: 100%;
   height: 100%;
@@ -1923,7 +1881,17 @@ input.wpcf7-submit {
   transition: 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0.4s;
 }
 
-/* line 294, scss/_voorpagina.scss */
+/* line 291, scss/_voorpagina.scss */
+#port-arts .kleurlaag {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
+}
+
+/* line 300, scss/_voorpagina.scss */
 #port-arts .art-rechts {
   position: absolute;
   height: 100%;
@@ -1933,7 +1901,7 @@ input.wpcf7-submit {
   padding: 20px;
 }
 
-/* line 301, scss/_voorpagina.scss */
+/* line 307, scss/_voorpagina.scss */
 #port-arts .art-rechts a {
   color: white;
   margin: -20px;
@@ -1943,30 +1911,30 @@ input.wpcf7-submit {
   transition: 2s ease-in-out 3s;
 }
 
-/* line 308, scss/_voorpagina.scss */
+/* line 314, scss/_voorpagina.scss */
 #port-arts .art-rechts a:hover {
   text-decoration: none;
 }
 
-/* line 311, scss/_voorpagina.scss */
+/* line 317, scss/_voorpagina.scss */
 #port-arts .art-rechts a h3 {
   margin-top: 0;
 }
 
-/* line 314, scss/_voorpagina.scss */
+/* line 320, scss/_voorpagina.scss */
 #port-arts .art-rechts a p {
   opacity: 0;
   transition: 0.5s ease 0.2s;
 }
 
-/* line 318, scss/_voorpagina.scss */
+/* line 324, scss/_voorpagina.scss */
 #port-arts .art-rechts a h3, #port-arts .art-rechts a p {
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   color: white;
 }
 
-/* line 327, scss/_voorpagina.scss */
+/* line 333, scss/_voorpagina.scss */
 #vp-contact {
   padding: 50px 0;
   background-image: url("afb/Studio-Vlaflip-4.png");
@@ -1974,34 +1942,34 @@ input.wpcf7-submit {
 }
 
 @media (max-width: 900px) {
-  /* line 327, scss/_voorpagina.scss */
+  /* line 333, scss/_voorpagina.scss */
   #vp-contact {
     padding: 30px 0;
   }
 }
 
 @media (max-width: 600px) {
-  /* line 327, scss/_voorpagina.scss */
+  /* line 333, scss/_voorpagina.scss */
   #vp-contact {
     padding-top: 0;
   }
 }
 
-/* line 337, scss/_voorpagina.scss */
+/* line 343, scss/_voorpagina.scss */
 #vp-contact .verpakking, #vp-contact #ingredienten .vid-onder-buiten, #ingredienten #vp-contact .vid-onder-buiten {
   display: -ms-flexbox;
   display: flex;
 }
 
 @media (max-width: 600px) {
-  /* line 337, scss/_voorpagina.scss */
+  /* line 343, scss/_voorpagina.scss */
   #vp-contact .verpakking, #vp-contact #ingredienten .vid-onder-buiten, #ingredienten #vp-contact .vid-onder-buiten {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
 
-/* line 343, scss/_voorpagina.scss */
+/* line 349, scss/_voorpagina.scss */
 #vp-contact .links {
   -ms-flex-preferred-size: calc(50% - 150px);
       flex-basis: calc(50% - 150px);
@@ -2009,7 +1977,7 @@ input.wpcf7-submit {
 }
 
 @media (max-width: 900px) {
-  /* line 343, scss/_voorpagina.scss */
+  /* line 349, scss/_voorpagina.scss */
   #vp-contact .links {
     -ms-flex-preferred-size: calc(60% - 50px);
         flex-basis: calc(60% - 50px);
@@ -2018,7 +1986,7 @@ input.wpcf7-submit {
 }
 
 @media (max-width: 600px) {
-  /* line 343, scss/_voorpagina.scss */
+  /* line 349, scss/_voorpagina.scss */
   #vp-contact .links {
     -ms-flex-preferred-size: calc(100%);
         flex-basis: calc(100%);
@@ -2026,19 +1994,19 @@ input.wpcf7-submit {
   }
 }
 
-/* line 354, scss/_voorpagina.scss */
+/* line 360, scss/_voorpagina.scss */
 #vp-contact .links h2 {
   margin-top: 0;
 }
 
-/* line 358, scss/_voorpagina.scss */
+/* line 364, scss/_voorpagina.scss */
 #vp-contact .rechts {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
 
 @media (max-width: 600px) {
-  /* line 358, scss/_voorpagina.scss */
+  /* line 364, scss/_voorpagina.scss */
   #vp-contact .rechts {
     -ms-flex-preferred-size: calc(100%);
         flex-basis: calc(100%);
@@ -2046,7 +2014,7 @@ input.wpcf7-submit {
   }
 }
 
-/* line 366, scss/_voorpagina.scss */
+/* line 372, scss/_voorpagina.scss */
 #vp-contact .soc-media-links img {
   margin-right: 8px;
   width: 50px;
@@ -2054,19 +2022,19 @@ input.wpcf7-submit {
 }
 
 @media (max-width: 900px) {
-  /* line 366, scss/_voorpagina.scss */
+  /* line 372, scss/_voorpagina.scss */
   #vp-contact .soc-media-links img {
     margin-right: 4px;
     width: 30px;
   }
 }
 
-/* line 374, scss/_voorpagina.scss */
+/* line 380, scss/_voorpagina.scss */
 #vp-contact .soc-media-links img:hover {
   filter: hue-rotate(-80deg);
 }
 
-/* line 378, scss/_voorpagina.scss */
+/* line 384, scss/_voorpagina.scss */
 #vp-contact .soc-media-links a:last-child img {
   margin-right: 0;
 }
@@ -2493,14 +2461,8 @@ input.wpcf7-submit {
 
 /* line 17, scss/_single.scss */
 #single-knop {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-}
-
-/* line 21, scss/_single.scss */
-#single-knop a {
-  font-size: 1.4em;
+  right: calc(30% + 10px);
+  transform: translate(100%, 0%);
 }
 
 @media (max-width: 400px) {
@@ -2510,19 +2472,33 @@ input.wpcf7-submit {
   }
 }
 
-/* line 29, scss/_single.scss */
+@media (min-width: 1200px) {
+  /* line 17, scss/_single.scss */
+  #single-knop {
+    right: calc(50% - 420px);
+  }
+}
+
+@media (max-width: 900px) {
+  /* line 17, scss/_single.scss */
+  #single-knop {
+    right: calc(35% + 5px);
+  }
+}
+
+/* line 34, scss/_single.scss */
 #single-hoofd.met-gallerij {
   margin-top: 120px;
 }
 
 @media (max-width: 900px) {
-  /* line 29, scss/_single.scss */
+  /* line 34, scss/_single.scss */
   #single-hoofd.met-gallerij {
     margin-top: 20px;
   }
 }
 
-/* line 36, scss/_single.scss */
+/* line 41, scss/_single.scss */
 #single-hoofd.flex {
   display: -ms-flexbox;
   display: flex;
@@ -2532,13 +2508,13 @@ input.wpcf7-submit {
       justify-content: space-between;
 }
 
-/* line 40, scss/_single.scss */
+/* line 45, scss/_single.scss */
 #single-hoofd.flex .links {
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
 }
 
-/* line 43, scss/_single.scss */
+/* line 48, scss/_single.scss */
 #single-hoofd.flex .rechts {
   -ms-flex-preferred-size: 30%;
       flex-basis: 30%;
@@ -2549,7 +2525,7 @@ input.wpcf7-submit {
 }
 
 @media (max-width: 900px) {
-  /* line 43, scss/_single.scss */
+  /* line 48, scss/_single.scss */
   #single-hoofd.flex .rechts {
     -ms-flex-preferred-size: 35%;
         flex-basis: 35%;
@@ -2557,17 +2533,17 @@ input.wpcf7-submit {
 }
 
 @media (max-width: 400px) {
-  /* line 36, scss/_single.scss */
+  /* line 41, scss/_single.scss */
   #single-hoofd.flex {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  /* line 53, scss/_single.scss */
+  /* line 58, scss/_single.scss */
   #single-hoofd.flex .links, #single-hoofd.flex .rechts {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  /* line 56, scss/_single.scss */
+  /* line 61, scss/_single.scss */
   #single-hoofd.flex .links {
     margin-top: 20px;
     -ms-flex-order: 2;
@@ -2575,98 +2551,98 @@ input.wpcf7-submit {
   }
 }
 
-/* line 66, scss/_single.scss */
+/* line 71, scss/_single.scss */
 #single-hoofd h1, #single-hoofd h2 {
   margin-bottom: 0;
 }
 
 @media (max-width: 400px) {
-  /* line 65, scss/_single.scss */
+  /* line 70, scss/_single.scss */
   #single-hoofd {
     margin-top: 0;
   }
 }
 
-/* line 74, scss/_single.scss */
+/* line 79, scss/_single.scss */
 .single-article-sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 30px;
 }
 
-/* line 77, scss/_single.scss */
+/* line 82, scss/_single.scss */
 .single-article-sticky h2 {
   margin-top: 0;
 }
 
 @media (max-width: 400px) {
-  /* line 74, scss/_single.scss */
+  /* line 79, scss/_single.scss */
   .single-article-sticky {
     position: static;
   }
-  /* line 82, scss/_single.scss */
+  /* line 87, scss/_single.scss */
   .single-article-sticky h2 {
     margin-top: .5em;
   }
 }
 
-/* line 88, scss/_single.scss */
+/* line 93, scss/_single.scss */
 .single-meta {
   margin: 30px 0;
 }
 
 @media (max-width: 900px) {
-  /* line 88, scss/_single.scss */
+  /* line 93, scss/_single.scss */
   .single-meta {
     margin: 15px 0;
   }
 }
 
-/* line 93, scss/_single.scss */
+/* line 98, scss/_single.scss */
 .single-meta span {
   display: block;
 }
 
-/* line 96, scss/_single.scss */
+/* line 101, scss/_single.scss */
 .single-meta strong {
   color: #B5DEE8;
   font-size: 1.2em;
   margin-right: .05em;
 }
 
-/* line 104, scss/_single.scss */
+/* line 109, scss/_single.scss */
 .single-art-hoofd > strong:first-child {
   color: #B5DEE8;
   font-size: 1.2em;
 }
 
-/* line 107, scss/_single.scss */
+/* line 112, scss/_single.scss */
 .single-art-hoofd > strong:first-child + p {
   margin-top: 0;
 }
 
-/* line 111, scss/_single.scss */
+/* line 116, scss/_single.scss */
 .single-art-hoofd + footer {
   margin-top: 30px;
 }
 
-/* line 117, scss/_single.scss */
+/* line 122, scss/_single.scss */
 .single .gallerij img, .single .gallerij .vid-doos {
   margin-bottom: 2em;
 }
 
-/* line 120, scss/_single.scss */
+/* line 125, scss/_single.scss */
 .single .gallerij .vid-doos {
   height: auto;
 }
 
-/* line 123, scss/_single.scss */
+/* line 128, scss/_single.scss */
 .single .gallerij video {
   max-width: 100%;
   height: auto;
 }
 
-/* line 126, scss/_single.scss */
+/* line 131, scss/_single.scss */
 .single .gallerij video:hover {
   cursor: pointer;
 }

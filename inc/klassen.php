@@ -108,17 +108,6 @@ class Zijbalk_Posts extends Widget_M {
 
 class Article_c extends Array_constr{
 
-		//VOORBEELD
-		//$art = new Article_c(
-		//	array(
-		//		'class' => "in-lijst blok",
-		//		'h_type' => 2,
-		//		'exc_lim' => 300
-		//	),
-		//$post);
-		//
-		//$art->print();
-
 	public $art, $gecontroleerd, $data_src;
 
 	public function __construct ($config, $post) {
@@ -220,63 +209,40 @@ class Article_c extends Array_constr{
 	}
 }
 
-class Menu_art extends Article_c {
 
-	public function __construct ($config = array(), $post) {
-		parent::__construct($config, $post);
-		$this->art = $post;
-	}
-
-	public function bereken() {
-
-		$this->gerechten = get_field('gerechten', $this->art->ID);
-
-		$this->korting = get_field('korting', $this->art->ID);
-		if ($this->korting)	$this->korting = $this->korting * -1;
-		if (!$this->korting) $this->korting = 0;
-
-		$this->prijs = 0;
-
-		$this->gerechtlinks = array();
-
-		if ($this->gerechten) : foreach ($this->gerechten as $gerecht_a) :
-			$gerecht = $gerecht_a['gerecht'];
-			$this->prijs += get_field('prijs', $gerecht->ID);
-			$this->gerechtlinks[] = "<a href='".get_the_permalink($gerecht->ID)."'>{$gerecht->post_title}</a>";
-		endforeach; endif;
-
-		$this->totaal_prijs = $this->prijs + $this->korting;
-
-	}
-
-	public function maak_tekst(){
-
-		$this->bereken();
-
-		$r = "<p>". maak_excerpt($this->art, $this->exc_lim) . "</p>";
-		$r .= "</a>";
-		$r .= "<p>".implode(' | ', $this->gerechtlinks) . "</p>";
-		$r .= "<p>Prijs: €".number_format($this->totaal_prijs, 2, ',', '.')."</p>";
-
-		return $r;
-	}
-}
-
-class Gerecht_art extends Article_c {
+class Vla_port extends Article_c {
 
 	public function __construct ($config, $post) {
 		parent::__construct($config, $post);
 		$this->art = $post;
 	}
 
-	public function maak_tekst(){
+	public function maak_tekst (){
+		return "<p>". maak_excerpt($this->art, $this->exc_lim) . " Lees meer ".mdi('arrow-right-thick', false)."</p>";
+	}
 
-		$prijs = get_field('prijs', $this->art->ID);
+	public function print_afb(){
 
-		$r = "<p>". maak_excerpt($this->art, $this->exc_lim) . "</p>";
-		$r .= "<p>Prijs: €".number_format($prijs, 2, ',', '.')."</p>";
+		$img = '';
+		$img .= get_the_post_thumbnail($this->art, $this->afb_formaat);
+		$terms = get_the_terms($this->art, 'soort');
 
-		return $r;
+		$kleur = '';
+
+		foreach ($terms as $t) {
+
+			$kleur = get_field('kleur', 'soort_'.$t->term_id);
+			$kleurintensiteit = get_field('kleurintensiteit', 'soort_'.$t->term_id);
+
+			break;
+			# code...
+		}
+
+		$rgb = implode(',', naar_rgb($kleur));
+
+		$img .= "<div class='kleurlaag' style='background-color: rgba(".$rgb.",".$kleurintensiteit.")'></div>";
+
+		echo $img;
 	}
 }
 
@@ -612,12 +578,6 @@ class Pag_fam extends Zijbalk_Posts{
 
 class Tax_blok extends Array_constr {
 
-	/*************************
-	* V 1.1
-	* LIZ > VLAFLIP
-	*************************/
-
-
 	public function __construct ($a = array()) {
 		parent::__construct($a);
 	}
@@ -641,6 +601,12 @@ class Tax_blok extends Array_constr {
 		} else {
 			return "_$a";
 		}
+	}
+
+	public function maak_li ($tax_term, $naam){
+
+		$href = $this->basis.$this->verwerk_tax_naam($naam)."=".$tax_term->slug."#tax-blok";
+		return "<li class='$tax_term->slug'><a href='$href'>$tax_term->name</a></li>";
 	}
 
 	public function maak() {
@@ -669,7 +635,7 @@ class Tax_blok extends Array_constr {
 					$linkblokken .= "<li><a href='{$this->basis}#tax-blok'>alles</a></li>";
 				}
 				foreach ($waarden as $tax_term) {
-					$linkblokken .= "<li class='$tax_term->slug'><a href='{$this->basis}?{$this->verwerk_tax_naam($naam)}=$tax_term->slug#tax-blok'>{$tax_term->name}</a></li>";
+					$linkblokken .= $this->maak_li($tax_term, $naam);
 				}
 				$linkblokken .= "</ul>";
 			endif;
@@ -698,4 +664,20 @@ class Tax_blok extends Array_constr {
 		echo $this->html;
 	}
 
+}
+
+class Vla_tax_blok extends Tax_blok {
+	public function __construct ($a = array()) {
+		parent::__construct($a);
+	}
+
+	public function maak_li ($tax_term, $naam){
+
+
+		$kleur = get_field('kleur', 'soort_'.$tax_term->term_id);
+		$kleurintensiteit = get_field('kleurintensiteit', 'soort_'.$tax_term->term_id);
+		$rgb = implode(',', naar_rgb($kleur));
+		$href = $this->basis.$this->verwerk_tax_naam($naam)."=".$tax_term->slug."#tax-blok";
+		return "<li style='background-color: rgb(".$rgb.")' class='$tax_term->slug'><a href='$href'>$tax_term->name LOL</a></li>";
+	}
 }
