@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900,900i" rel="stylesheet">
 <link href="<?=THEME_URI?>/lettertypen/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
 <?php wp_head(); ?>
 <link rel="stylesheet" href="<?=THEME_URI?>/style.css">
