@@ -269,7 +269,7 @@
 	}
 .leaflet-bar a,
 .leaflet-bar a:hover {
-	background-color: #fff;
+	background-color: $wit;
 	border-bottom: 1px solid #ccc;
 	width: 26px;
 	height: 26px;
@@ -334,7 +334,7 @@
 
 .leaflet-control-layers {
 	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
-	background: #fff;
+	background: $wit;
 	border-radius: 5px;
 	}
 .leaflet-control-layers-toggle {
@@ -361,7 +361,7 @@
 .leaflet-control-layers-expanded {
 	padding: 6px 10px 6px 6px;
 	color: #333;
-	background: #fff;
+	background: $wit;
 	}
 .leaflet-control-layers-scrollbar {
 	overflow-y: scroll;
@@ -391,7 +391,7 @@
 /* attribution and scale controls */
 
 .leaflet-container .leaflet-control-attribution {
-	background: #fff;
+	background: $wit;
 	background: rgba(255, 255, 255, 0.7);
 	margin: 0;
 	}
@@ -427,7 +427,7 @@
 	-moz-box-sizing: border-box;
 	     box-sizing: border-box;
 
-	background: #fff;
+	background: $wit;
 	background: rgba(255, 255, 255, 0.5);
 	}
 .leaflet-control-scale-line:not(:first-child) {
@@ -495,7 +495,7 @@
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
 	background: $hoofdkleur;
-	color: white;
+	color: $wit;
 	box-shadow: none;
 		h3 {
 			font-family: "Merriweather", serif;
@@ -513,7 +513,7 @@
 	width: 18px;
 	height: 14px;
 	font: 16px/14px Tahoma, Verdana, sans-serif;
-	color: white;
+	color: $wit;
 	text-decoration: none;
 	font-weight: bold;
 	background: transparent;
@@ -553,7 +553,7 @@
 /* div icon */
 
 .leaflet-div-icon {
-	background: #fff;
+	background: $wit;
 	border: 1px solid #666;
 	}
 
@@ -563,8 +563,8 @@
 .leaflet-tooltip {
 	position: absolute;
 	padding: 6px;
-	background-color: #fff;
-	border: 1px solid #fff;
+	background-color: $wit;
+	border: 1px solid $wit;
 	border-radius: 3px;
 	color: #222;
 	white-space: nowrap;
@@ -606,13 +606,13 @@
 .leaflet-tooltip-top:before {
 	bottom: 0;
 	margin-bottom: -12px;
-	border-top-color: #fff;
+	border-top-color: $wit;
 	}
 .leaflet-tooltip-bottom:before {
 	top: 0;
 	margin-top: -12px;
 	margin-left: -6px;
-	border-bottom-color: #fff;
+	border-bottom-color: $wit;
 	}
 .leaflet-tooltip-left {
 	margin-left: -6px;
@@ -628,10 +628,10 @@
 .leaflet-tooltip-left:before {
 	right: 0;
 	margin-right: -12px;
-	border-left-color: #fff;
+	border-left-color: $wit;
 	}
 .leaflet-tooltip-right:before {
 	left: 0;
 	margin-left: -12px;
-	border-right-color: #fff;
+	border-right-color: $wit;
 	}

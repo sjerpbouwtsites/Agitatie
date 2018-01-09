@@ -3,11 +3,11 @@ aside .agenda {
 	background-color: $hoofdkleur;
 	padding: 10px;
 	span, h2, a span {
-		color: white;
+		color: $wit;
 	}
 	li {
 		border-bottom: 1px solid white;
-		font-family: "Asap", sans-serif;
+		font-family: $kleine_letter;
 		& > a.flex {
 			justify-content: flex-start;
 			&:hover {
@@ -20,7 +20,7 @@ aside .agenda {
 			.agenda-links span,
 			span,
 			&:hover span {
-				color: white;
+				color: $wit;
 			}
 			.agenda-links {
 				flex-basis: 50px
@@ -34,7 +34,7 @@ aside .agenda {
 	}
 	.flex {
 		.titel {
-			color: white;
+			color: $wit;
 			font-size: 1em;
 			font-weight: 600;
 		}

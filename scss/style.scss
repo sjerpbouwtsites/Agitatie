@@ -13,6 +13,7 @@ GitHub Theme URI: sjerpbouwtsites/agitatie
 GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 !*/
 
+@import 'inst/bundel';
 
 @import 'basis/normalise';
 @import 'basis/typografie';
@@ -21,8 +22,6 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 @import 'basis/menu';
 @import 'basis/inhoud';
 @import 'basis/mixins';
-
-@import 'inst/bundel';
 
 @import 'generiek';
 @import 'generiek-teksten';

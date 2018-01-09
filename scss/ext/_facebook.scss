@@ -5,7 +5,7 @@
 }
 .mfp-container.mfp-ajax-holder .efbl_loader{
     font-size: 40px;
-    color: #fff;
+    color: $wit;
 }
 .efbl-like-box {
 	position: relative;
@@ -45,7 +45,7 @@ img.efbl-loader {
 	font-size: 100px;
 	position: absolute;
     top: 38%;
-    color: white;
+    color: $wit;
 }
 #efblcf_holder .efbl_popup_left_container a.efbl-popup-next i{
 	right: 25px;
@@ -95,7 +95,7 @@ img.efbl-loader {
 
 .efbl_read_more_link .efbl_links_container a .fa
 	{
-	color:#fff;
+	color:$wit;
 	margin-right: 9px;
 	margin-left: 9px;
 	}
@@ -150,7 +150,7 @@ img.efbl-loader {
 #efblcf .efbl_info span
 	{
 	margin-right:3px;
-	color: #FFF;
+	color: $wit;
 	}
 /*custom facebook feed styling starts form here*/
 .efbl_feed_wraper{
@@ -259,7 +259,7 @@ img.efbl-loader {
 #efblcf .efbl_story_photo a .fa-plus
 		{
 	font-size: 45px;
-    color: #fff;
+    color: $wit;
   	position: absolute;
 	text-align: center;
     top: 45%;
@@ -398,7 +398,7 @@ img.efbl-loader {
 }
 #efblcf_holder .efbl_popupp_footer{
 	padding:10px;
-	background: #fff;
+	background: $wit;
     border-radius: 5px;
 }
 #efblcf_holder .efbl_popupp_footer p{
@@ -453,7 +453,7 @@ line-height: 1.3em;
 #efblcf .efbl_comments_footer {
   float: left;
   margin-top: 5px;
-  border-top: 1px solid #fff;
+  border-top: 1px solid $wit;
   width: 100%;
   padding-top: 5px;
 }
@@ -461,7 +461,7 @@ line-height: 1.3em;
 	{
 	float: left;
   margin-bottom: 5px;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid $wit;
   width: 100%;
   padding-bottom: 5px;
 	}
