@@ -43,9 +43,9 @@ $raster = array(
 );
 
 
-function geen_px($a) {
+if(!function_exists('grid_geen_px')) : function grid_geen_px($a) {
 	return str_replace('px', '', $a);
-}
+} endif;
 
 
 $stijl = '';
@@ -103,7 +103,7 @@ echo "<button id='toon-raster'>RASTER</button>";
 		position: absolute;
 		top: 0;
 		<?php
-			$db = geen_px($breedtes['desktop']);
+			$db = grid_geen_px($breedtes['desktop']);
 			echo "left: calc(50% - ".($db/2)."px);";
 		?>
 		height: 1200vh;
@@ -118,7 +118,7 @@ echo "<button id='toon-raster'>RASTER</button>";
 		#raster-verpakking {
 			width: <?=$breedtes['tablet']?>;
 			<?php
-			$tb = geen_px($breedtes['tablet']);
+			$tb = grid_geen_px($breedtes['tablet']);
 				echo "left: calc(50% - ".($tb/2)."px);";
 			?>
 		}

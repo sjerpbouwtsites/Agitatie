@@ -1,11 +1,11 @@
 <?php
-function pre_dump($a){
+if(!function_exists('pre_dump')) : function pre_dump($a){
 	echo "<pre>";
 	var_dump($a);
 	echo "</pre>";
-}
+} endif;
 
-function maak_excerpt($post, $lim = 300){
+if(!function_exists('maak_excerpt')) : function maak_excerpt($post, $lim = 300){
 
 	if (property_exists($post, 'post_excerpt') and $post->post_excerpt !== "") {
 		return $post->post_excerpt;
@@ -16,9 +16,9 @@ function maak_excerpt($post, $lim = 300){
 	} else {
 		return '';
 	}
-}
+} endif;
 
-function beperk_woordental($lim = 300, $tekst = ''){
+if(!function_exists('beperk_woordental')) : function beperk_woordental($lim = 300, $tekst = ''){
 
 	$charlength = $lim;
 	$r = "";
@@ -39,32 +39,32 @@ function beperk_woordental($lim = 300, $tekst = ''){
 	} else {
 		return $tekst;
 	}
-}
+} endif;
 
-function appendChildBefore($orig, $child) {
+if(!function_exists('appendChildBefore')) : function appendChildBefore($orig, $child) {
 	//werk alleen bij HTML één niveau diep.
     $expl = explode('>', $orig);
     $tag_naam = substr($expl[0], 1);
 	return $expl[0] . ">$child</$tag_naam>";
-}
+} endif;
 
-function array_naar_queryvars($ar = array()) {
+if(!function_exists('array_naar_queryvars')) : function array_naar_queryvars($ar = array()) {
 	foreach ($ar as $naam => $waarde) {
 		set_query_var($naam, $waarde);
 	}
-}
+} endif;
 
-function pak_template_naam() {
+if(!function_exists('pak_template_naam')) : function pak_template_naam() {
 	$n = get_page_template();
 	return str_replace('.php', '', str_replace(THEME_DIR . "/", '', $n));
-}
+} endif;
 
-function underscore_naar_spatie_met_hoofdletter($str) {
+if(!function_exists('underscore_naar_spatie_met_hoofdletter')) : function underscore_naar_spatie_met_hoofdletter($str) {
 	$r = str_replace('_', " ", $str);
 	return ucfirst($r);
-}
+} endif;
 
-function cp_bestaat_niet_leeg ($eigenschap, $klas) {
+if(!function_exists('cp_truthy')) : function cp_truthy ($eigenschap, $klas) {
 	if (!property_exists($klas, $eigenschap)) {
 		return false;
 	} else if (empty($klas->$eigenschap)) {
@@ -72,45 +72,60 @@ function cp_bestaat_niet_leeg ($eigenschap, $klas) {
 	} else {
 		return true;
 	}
-}
+} endif;
 
-function apostrophe_weg ($a) {
+if(!function_exists('apostrophe_weg')) : function apostrophe_weg ($a) {
 	$r = str_replace("'", '&apos;', $a);
 	$r = str_replace('"', '&apos;', $r);
 	return $r;
-}
+} endif;
 
-function voeg_attr_in ($orig='', $invoeging='') {
+if(!function_exists('voeg_attr_in')) : function voeg_attr_in ($orig='', $invoeging='') {
 
 	$e = explode(' ', $orig);
 	$e[0] = $e[0] . " " . $invoeging;
 	return implode(' ', $e);
 
-}
+} endif;
 
-function mooie_cpt_url($url){
+if(!function_exists('mooie_cpt_url')) : function mooie_cpt_url($url){
 	$e = explode('?', $url);
 	$e2 = explode('=', $e[1]);
 	$post_type = $e2[0];
 
 	return str_replace("?$post_type=", "$post_type/", $url);
-}
+} endif;
 
 
-function maak_slug($str){
+if(!function_exists('maak_slug')) : function maak_slug($str){
     return strtolower(preg_replace('/[^A-Za-z0-9]/', "", $str));
-}
+} endif;
 
-function mdi($a = '', $echo = true) {
+if(!function_exists('mdi')) : function mdi($a = '', $echo = true) {
 	$r = "<i class='mdi mdi-$a'></i>";
 	if ($echo) {
 		echo $r;
 	} else {
 		return $r;
 	}
-}
+} endif;
 
-function naar_rgb($hex = '#FFFFFF') {
+if(!function_exists('naar_rgb')) : function naar_rgb($hex = '#FFFFFF') {
 	list($r, $g, $b) = sscanf($hex, "#%02x%02x%02x");
 	return array($r, $g, $b);
-}
+} endif;
+
+if(!function_exists('haal_uit_get')) : 
+
+	function haal_uit_get($sleutel = '', $geef_waarde = false) {
+		if (!array_key_exists($sleutel, $_GET) or $_GET[$sleutel] === '') {
+			return false;
+		} else {
+			if ($geef_waarde) {
+				return $_GET[$sleutel];
+			} else {
+				return true;
+			}
+		}
+	} 
+endif; // functie bestaat niet

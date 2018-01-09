@@ -1,15 +1,2 @@
-#stek-voet {
-	color: white;
-	font-size: .8em;
-	padding: 0;
-	background-color: darken($vlageel, 15%);
-	padding: 10px 0;
-	.verpakking {
-		display: flex;
-		justify-content: space-between;
-		@media (max-width: 900px) {
-			flex-direction: column;
-			text-align: center;
-		}
-	}
-}
+//parent
+

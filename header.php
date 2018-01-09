@@ -27,14 +27,7 @@
 				$nav_b = $fp ? "" : SITE_URI;
 				$scr = $fp ? "schakel scroll" : "";
 			?>
-			<div class='stek-kop-rechts flex'>
-				<nav id='kop-nav' class='stek-nav'>
-					<p class='menu-stuk'><a href='<?=$nav_b?>#ingredienten' class='<?=$scr?>'>Ingredi&euml;nten</a></p>
-					<p class='menu-stuk'><a href='<?=$nav_b?>#portfolio' class='<?=$scr?>'>Portfolio</a></p>
-					<p class='menu-stuk'><a href='<?=$nav_b?>#vp-contact' class='<?=$scr?>'>Contact</a></p>
-				</nav>
-
-			</div>
+			<?php kop_menu_ctrl(); ?>
 
 		</div><!--verpakking-->
 

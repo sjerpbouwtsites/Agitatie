@@ -26,19 +26,17 @@ echo "<h1>$archief_titel</h1>";
 
 echo apply_filters('the_content', $pag_intro);
 
-//als niet op algemene archief pagina maar op archief + tax, dan geen promo
-if ($promo_t && $promo_p && $promo_t !== '' && $promo_p !== '' && count($_GET) < 2) {
-	echo "<section class='menu-gerecht-promo'>";
-	echo "<h2>$promo_t</h2>";
-	//maakt post type objs aan en print @ controllers
-	archief_generiek_loop($promo_p, 'hele-breedte');
-	echo "</section>";
-}
+echo "<section>";
+echo "<h2>$promo_t</h2>";
+//maakt post type objs aan en print @ controllers
+archief_generiek_loop($promo_p, 'hele-breedte');
+echo "</section>";
+
 
 //generiek taxonomy blok @ klassen
 $tax_blok = new Tax_blok(array(
 	'post'		=> $post,
-	'titel'		=> "Vind jouw ".$pt_mv,
+	'titel'		=> $pt_mv,
 	'basis'		=> $pt_arch_link,
 ));
 $tax_blok->print();

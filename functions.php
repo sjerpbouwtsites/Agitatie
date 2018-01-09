@@ -1,5 +1,8 @@
 <?php
 
+define('WP_HOME','https://sjerpbouwtsites.nl/');
+define('WP_SITEURL','https://sjerpbouwtsites.nl/');
+
 ///////////////////////////////////////////////////////////
 
 define('SITE_URI', get_site_url());
@@ -15,6 +18,16 @@ define('JS_DIR', THEME_DIR . "/js");
 define('JS_URI', THEME_URI . "/js");
 
 define( 'GITHUB_UPDATER_OVERRIDE_DOT_ORG', true );
+
+///////////////////////////////////////////////////////////
+
+function agitatie_stijl_en_script() {
+    wp_enqueue_style( 'agitatie-stijl', THEME_URI.'/style.css', array(), null );
+    wp_enqueue_script( 'agitatie-script', JS_URI.'/all.js', array(), null, true );
+}
+add_action( 'wp_enqueue_scripts', 'agitatie_stijl_en_script' );
+
+
 
 ///////////////////////////////////////////////////////////
 

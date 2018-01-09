@@ -21,8 +21,8 @@ class Knop extends Array_constr{
 	}
 
 	public function nalopen () {
-		if (!cp_bestaat_niet_leeg('ikoon', $this)) $this->ikoon = "arrow-right-thick";
-		if (!cp_bestaat_niet_leeg('link', $this)) $this->link = "#";
+		if (!cp_truthy('ikoon', $this)) $this->ikoon = "arrow-right-thick";
+		if (!cp_truthy('link', $this)) $this->link = "#";
 	}
 
 	public function maak() {
@@ -131,9 +131,9 @@ class Article_c extends Array_constr{
 		$this->zet_permalink();
 		$this->maak_titel();
 
-		$this->htype = cp_bestaat_niet_leeg('htype',$this) ? $this->htype : "3";
-		$this->exc_lim = cp_bestaat_niet_leeg('exc_lim',$this) ? $this->exc_lim : "300";
-		$this->afb_formaat = cp_bestaat_niet_leeg('afb_formaat',$this) ? $this->afb_formaat : "lijst";
+		$this->htype = cp_truthy('htype',$this) ? $this->htype : "3";
+		$this->exc_lim = cp_truthy('exc_lim',$this) ? $this->exc_lim : "300";
+		$this->afb_formaat = cp_truthy('afb_formaat',$this) ? $this->afb_formaat : "lijst";
 	}
 
 	public function maak_titel () {
@@ -210,41 +210,6 @@ class Article_c extends Array_constr{
 }
 
 
-class Vla_port extends Article_c {
-
-	public function __construct ($config, $post) {
-		parent::__construct($config, $post);
-		$this->art = $post;
-	}
-
-	public function maak_tekst (){
-		return "<p>". maak_excerpt($this->art, $this->exc_lim) . " Lees meer ".mdi('arrow-right-thick', false)."</p>";
-	}
-
-	public function print_afb(){
-
-		$img = '';
-		$img .= get_the_post_thumbnail($this->art, $this->afb_formaat);
-		$terms = get_the_terms($this->art, 'soort');
-
-		$kleur = '';
-
-		foreach ($terms as $t) {
-
-			$kleur = get_field('kleur', 'soort_'.$t->term_id);
-			$kleurintensiteit = get_field('kleurintensiteit', 'soort_'.$t->term_id);
-
-			break;
-			# code...
-		}
-
-		$rgb = implode(',', naar_rgb($kleur));
-
-		$img .= "<div class='kleurlaag' style='background-color: rgba(".$rgb.",".$kleurintensiteit.")'></div>";
-
-		echo $img;
-	}
-}
 
 class Agenda extends Array_constr {
 
@@ -346,8 +311,8 @@ class Agenda extends Array_constr {
 	}
 
 	public function nalopen () {
-		if (!cp_bestaat_niet_leeg('aantal', $this)) $this->aantal = 5;
-		if (!cp_bestaat_niet_leeg('agenda_link', $this)) $this->agenda_link = get_post_type_archive_link('agenda');
+		if (!cp_truthy('aantal', $this)) $this->aantal = 5;
+		if (!cp_truthy('agenda_link', $this)) $this->agenda_link = get_post_type_archive_link('agenda');
 	}
 
 	public function zet_totaal_aantal() {
@@ -583,12 +548,12 @@ class Tax_blok extends Array_constr {
 	}
 
 	public function nalopen () {
-		if (!cp_bestaat_niet_leeg('post', $this)) die();
-		if (!cp_bestaat_niet_leeg('titel', $this)) $this->titel = "";
-		if (!cp_bestaat_niet_leeg('html', $this)) $this->html = "";
-		if (!cp_bestaat_niet_leeg('basis', $this)) $this->basis = $this->zet_basis();
-		if (!cp_bestaat_niet_leeg('reset', $this)) $this->reset = true;
-		if (!cp_bestaat_niet_leeg('archief', $this)) $this->archief = is_archive();
+		if (!cp_truthy('post', $this)) die();
+		if (!cp_truthy('titel', $this)) $this->titel = "";
+		if (!cp_truthy('html', $this)) $this->html = "";
+		if (!cp_truthy('basis', $this)) $this->basis = $this->zet_basis();
+		if (!cp_truthy('reset', $this)) $this->reset = true;
+		if (!cp_truthy('archief', $this)) $this->archief = is_archive();
 	}
 
 	public function zet_basis() {
@@ -630,7 +595,7 @@ class Tax_blok extends Array_constr {
 				$linkblokken .= "<h3>$naam</h3>";
 			}
 			if (count($waarden)) :
-				$linkblokken .= "<ul>";
+				$linkblokken .= "<ul class='reset'>";
 				if ($this->reset) {
 					$linkblokken .= "<li><a href='{$this->basis}#tax-blok'>alles</a></li>";
 				}
@@ -655,10 +620,12 @@ class Tax_blok extends Array_constr {
 			";
 		}
 
+
+
 	}
 
 	public function print() {
-		if (!cp_bestaat_niet_leeg('html', $this)) {
+		if (!cp_truthy('html', $this)) {
 			$this->maak();
 		}
 		echo $this->html;
@@ -666,18 +633,3 @@ class Tax_blok extends Array_constr {
 
 }
 
-class Vla_tax_blok extends Tax_blok {
-	public function __construct ($a = array()) {
-		parent::__construct($a);
-	}
-
-	public function maak_li ($tax_term, $naam){
-
-
-		$kleur = get_field('kleur', 'soort_'.$tax_term->term_id);
-		$kleurintensiteit = get_field('kleurintensiteit', 'soort_'.$tax_term->term_id);
-		$rgb = implode(',', naar_rgb($kleur));
-		$href = $this->basis.$this->verwerk_tax_naam($naam)."=".$tax_term->slug."#tax-blok";
-		return "<li style='background-color: rgb(".$rgb.")' class='$tax_term->slug'><a href='$href'>$tax_term->name LOL</a></li>";
-	}
-}

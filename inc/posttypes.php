@@ -25,27 +25,31 @@
 
 
 
-function registreer_posttypes(){
+if(!function_exists('registreer_posttypes')) : function registreer_posttypes(){
 
-	$portfolio = new Posttype_voorb('portfolio', 'portfolio');
-	$portfolio->pas_args_aan(array(
+	$project = new Posttype_voorb('project', 'project');
+	$project->pas_args_aan(array(
 		'has_archive' => true,
 		'public' => true,
 		'show_in_nav_menus' => true,
 		'menu_icon' => 'dashicons-art',
 	));
 
-	$portfolio->maak_taxonomie('soort');
-	$portfolio->registreer();
+	$project->maak_taxonomie('cms');
+	$project->maak_taxonomie('techniek');
+	$project->registreer();
 
-}
-
-
+} 
 
 add_action('init', 'registreer_posttypes');
 
+endif;
 
-class Posttype_voorb {
+
+
+
+
+if (!class_exists('Posttype_voorb')) : class Posttype_voorb {
 
 	function __construct($enkelvoud, $meervoud = ''){
 
@@ -126,4 +130,4 @@ class Posttype_voorb {
 		);
 	}
 
-}
+} endif;

@@ -1,6 +1,6 @@
 <?php
 
-function registreer_sidebars(){
+if(!function_exists('registreer_sidebars')) : function registreer_sidebars(){
 	register_sidebar(array(
 	    'name'          => __( 'footer' ),
 	    'id'            => 'footer',
@@ -10,7 +10,7 @@ function registreer_sidebars(){
 	    'before_title'  => '<h3 class="widget-title">',
 	    'after_title'   => '</h3>',
 	));
-}
+} endif;
 
 //add_action( 'widgets_init', 'registreer_sidebars' );
 

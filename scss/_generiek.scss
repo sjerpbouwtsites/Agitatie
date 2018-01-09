@@ -1,3 +1,4 @@
+//parent
 html {
 	font-size: 16px;
 	@media (max-width: 900px) {
@@ -5,16 +6,12 @@ html {
 	}
 }
 
-.klaar, .float {
+.klaar, .float, section, article {
 	&::after {
 		content: '';
 		display: block;
 		clear: both;
 	}
-}
-
-section, article {
-	@extend .klaar;
 }
 
 
@@ -26,7 +23,7 @@ section, article {
 	max-width: 100%;
 }
 
-section, article, main {
+.heeft-padding {
 	& > *:first-child {
 		margin-top: 0;
 	}
@@ -34,9 +31,7 @@ section, article, main {
 		margin-bottom: 0;
 	}
 }
-#primary {
-	min-height: calc(100vh - 230px);
-}
+
 
 .paddingveld {
 	padding-top: 50px;
@@ -50,70 +45,7 @@ section, article, main {
 }
 
 
-article, section {
-	footer {
-		text-align: right;
-	}
-}
-
-.schakel {
-	i + i {
-		display: none;
-	}
-	&.open {
-		i {
-			display: none;
-			& + i {
-				display: inline;
-			}
-		}
-		&.scroll i {
-			display: inline;
-		}
-	}
-}
-
-.bg-geel {
-	background-color: $vlageel;
-}
-.bg-wit {
-	background-color: #fdfdfd;
-}
-
 ul.reset, ul.reset li {
 	@include ul-li-reset();
 }
 
-.uitgelichte-afbeelding-buiten {
-	position: relative;
-	height: 50vh;
-	h1 {
-		margin: 0;
-		position: absolute;
-		left: 20px;
-		bottom: 20px;
-		color: $vlageel;
-		text-shadow: 1px 1px 1px black;
-		@media (max-width: 400px) {
-			font-size: 24px;
-		}
-		@media (min-width: 1200px) {
-			left: calc(50% - 580px);
-		}
-		& + * {
-			position: absolute;
-			right: 20px;
-			bottom: 20px;
-			@media (min-width: 1200px) {
-				right: calc(50% - 580px);
-			}
-		}
-	}
-	img {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-
-}

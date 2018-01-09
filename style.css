@@ -284,7 +284,7 @@ a:active {
   outline: 0;
 }
 
-/* line 1, scss/basis/_typografie.scss */
+/* line 2, scss/basis/_typografie.scss */
 body,
 button,
 input,
@@ -297,7 +297,7 @@ textarea {
   line-height: 1.5;
 }
 
-/* line 13, scss/basis/_typografie.scss */
+/* line 14, scss/basis/_typografie.scss */
 h1,
 h2,
 h3,
@@ -307,17 +307,17 @@ h6 {
   clear: both;
 }
 
-/* line 22, scss/basis/_typografie.scss */
+/* line 23, scss/basis/_typografie.scss */
 h1 {
   line-height: 1.2;
 }
 
-/* line 26, scss/basis/_typografie.scss */
+/* line 27, scss/basis/_typografie.scss */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 30, scss/basis/_typografie.scss */
+/* line 31, scss/basis/_typografie.scss */
 dfn,
 cite,
 em,
@@ -325,17 +325,17 @@ i {
   font-style: italic;
 }
 
-/* line 37, scss/basis/_typografie.scss */
+/* line 38, scss/basis/_typografie.scss */
 blockquote {
   margin: 0 1.5em;
 }
 
-/* line 41, scss/basis/_typografie.scss */
+/* line 42, scss/basis/_typografie.scss */
 address {
   margin: 0 0 1.5em;
 }
 
-/* line 45, scss/basis/_typografie.scss */
+/* line 46, scss/basis/_typografie.scss */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -348,7 +348,7 @@ pre {
   padding: 1.6em;
 }
 
-/* line 57, scss/basis/_typografie.scss */
+/* line 58, scss/basis/_typografie.scss */
 code,
 kbd,
 tt,
@@ -358,31 +358,31 @@ var {
   font-size: 0.9375em;
 }
 
-/* line 66, scss/basis/_typografie.scss */
+/* line 67, scss/basis/_typografie.scss */
 abbr,
 acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-/* line 72, scss/basis/_typografie.scss */
+/* line 73, scss/basis/_typografie.scss */
 mark,
 ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
-/* line 78, scss/basis/_typografie.scss */
+/* line 79, scss/basis/_typografie.scss */
 big {
   font-size: 125%;
 }
 
-/* line 1, scss/basis/_els.scss */
+/* line 2, scss/basis/_els.scss */
 html {
   box-sizing: border-box;
 }
 
-/* line 5, scss/basis/_els.scss */
+/* line 6, scss/basis/_els.scss */
 *,
 *:before,
 *:after {
@@ -390,13 +390,13 @@ html {
   box-sizing: inherit;
 }
 
-/* line 11, scss/basis/_els.scss */
+/* line 12, scss/basis/_els.scss */
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
 }
 
-/* line 15, scss/basis/_els.scss */
+/* line 16, scss/basis/_els.scss */
 blockquote:before,
 blockquote:after,
 q:before,
@@ -404,13 +404,13 @@ q:after {
   content: "";
 }
 
-/* line 22, scss/basis/_els.scss */
+/* line 23, scss/basis/_els.scss */
 blockquote,
 q {
   quotes: "" "";
 }
 
-/* line 27, scss/basis/_els.scss */
+/* line 28, scss/basis/_els.scss */
 hr {
   background-color: #ccc;
   border: 0;
@@ -418,40 +418,40 @@ hr {
   margin-bottom: 1.5em;
 }
 
-/* line 34, scss/basis/_els.scss */
+/* line 35, scss/basis/_els.scss */
 ul,
 ol {
   margin: 0 0 1.5em 3em;
 }
 
-/* line 39, scss/basis/_els.scss */
+/* line 40, scss/basis/_els.scss */
 ul {
   list-style: disc;
 }
 
-/* line 43, scss/basis/_els.scss */
+/* line 44, scss/basis/_els.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 47, scss/basis/_els.scss */
+/* line 48, scss/basis/_els.scss */
 li > ul,
 li > ol {
   margin-bottom: 0;
   margin-left: 1.5em;
 }
 
-/* line 53, scss/basis/_els.scss */
+/* line 54, scss/basis/_els.scss */
 dt {
   font-weight: bold;
 }
 
-/* line 57, scss/basis/_els.scss */
+/* line 58, scss/basis/_els.scss */
 dd {
   margin: 0 1.5em 1.5em;
 }
 
-/* line 61, scss/basis/_els.scss */
+/* line 62, scss/basis/_els.scss */
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -459,13 +459,13 @@ img {
   /* Adhere to container width. */
 }
 
-/* line 66, scss/basis/_els.scss */
+/* line 67, scss/basis/_els.scss */
 table {
   margin: 0 0 1.5em;
   width: 100%;
 }
 
-/* line 1, scss/basis/_formulieren.scss */
+/* line 2, scss/basis/_formulieren.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -481,7 +481,7 @@ input[type="submit"] {
   padding: .6em 1em .4em;
 }
 
-/* line 17, scss/basis/_formulieren.scss */
+/* line 18, scss/basis/_formulieren.scss */
 input {
   max-width: 100%;
 }
@@ -494,7 +494,7 @@ input[type="submit"]:hover {
 	border-color: #ccc #bbb #aaa;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }*/
-/* line 42, scss/basis/_formulieren.scss */
+/* line 43, scss/basis/_formulieren.scss */
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -518,12 +518,12 @@ textarea {
   text-indent: 5px;
 }
 
-/* line 65, scss/basis/_formulieren.scss */
+/* line 66, scss/basis/_formulieren.scss */
 select {
   border: 1px solid #ccc;
 }
 
-/* line 69, scss/basis/_formulieren.scss */
+/* line 70, scss/basis/_formulieren.scss */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -543,12 +543,12 @@ textarea:focus {
   outline: none;
 }
 
-/* line 89, scss/basis/_formulieren.scss */
+/* line 90, scss/basis/_formulieren.scss */
 textarea {
   width: 100%;
 }
 
-/* line 1, scss/basis/_menu.scss */
+/* line 2, scss/basis/_menu.scss */
 .main-navigation {
   clear: both;
   display: block;
@@ -556,7 +556,7 @@ textarea {
   width: 100%;
 }
 
-/* line 8, scss/basis/_menu.scss */
+/* line 9, scss/basis/_menu.scss */
 .main-navigation ul {
   display: none;
   list-style: none;
@@ -564,19 +564,19 @@ textarea {
   padding-left: 0;
 }
 
-/* line 15, scss/basis/_menu.scss */
+/* line 16, scss/basis/_menu.scss */
 .main-navigation li {
   float: left;
   position: relative;
 }
 
-/* line 20, scss/basis/_menu.scss */
+/* line 21, scss/basis/_menu.scss */
 .main-navigation a {
   /*	display: block;*/
   text-decoration: none;
 }
 
-/* line 25, scss/basis/_menu.scss */
+/* line 26, scss/basis/_menu.scss */
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
@@ -586,31 +586,31 @@ textarea {
   z-index: 99999;
 }
 
-/* line 34, scss/basis/_menu.scss */
+/* line 35, scss/basis/_menu.scss */
 .main-navigation ul ul ul {
   left: -999em;
   top: 0;
 }
 
-/* line 39, scss/basis/_menu.scss */
+/* line 40, scss/basis/_menu.scss */
 .main-navigation ul ul a {
   width: 200px;
 }
 
-/* line 59, scss/basis/_menu.scss */
+/* line 60, scss/basis/_menu.scss */
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
   left: auto;
 }
 
-/* line 64, scss/basis/_menu.scss */
+/* line 65, scss/basis/_menu.scss */
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
   left: 100%;
 }
 
 /* Small menu. */
-/* line 76, scss/basis/_menu.scss */
+/* line 77, scss/basis/_menu.scss */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
@@ -625,7 +625,7 @@ textarea {
 		display: block;
 	}
 }*/
-/* line 90, scss/basis/_menu.scss */
+/* line 91, scss/basis/_menu.scss */
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -633,7 +633,7 @@ textarea {
   overflow: hidden;
 }
 
-/* line 97, scss/basis/_menu.scss */
+/* line 98, scss/basis/_menu.scss */
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
@@ -641,7 +641,7 @@ textarea {
   width: 50%;
 }
 
-/* line 104, scss/basis/_menu.scss */
+/* line 105, scss/basis/_menu.scss */
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -653,21 +653,21 @@ textarea {
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-/* line 4, scss/basis/_inhoud.scss */
+/* line 5, scss/basis/_inhoud.scss */
 .alignleft {
   display: inline;
   float: left;
   margin-right: 1.5em;
 }
 
-/* line 10, scss/basis/_inhoud.scss */
+/* line 11, scss/basis/_inhoud.scss */
 .alignright {
   display: inline;
   float: right;
   margin-left: 1.5em;
 }
 
-/* line 16, scss/basis/_inhoud.scss */
+/* line 17, scss/basis/_inhoud.scss */
 .aligncenter {
   clear: both;
   display: block;
@@ -678,7 +678,7 @@ textarea {
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-/* line 26, scss/basis/_inhoud.scss */
+/* line 27, scss/basis/_inhoud.scss */
 .clear:before,
 .clear:after,
 .entry-content:before,
@@ -696,7 +696,7 @@ textarea {
   table-layout: fixed;
 }
 
-/* line 43, scss/basis/_inhoud.scss */
+/* line 44, scss/basis/_inhoud.scss */
 .clear:after,
 .entry-content:after,
 .comment-content:after,
@@ -709,13 +709,13 @@ textarea {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-/* line 55, scss/basis/_inhoud.scss */
+/* line 56, scss/basis/_inhoud.scss */
 .widget {
   margin: 0 0 1.5em;
 }
 
 /* Make sure select elements fit in widgets. */
-/* line 60, scss/basis/_inhoud.scss */
+/* line 61, scss/basis/_inhoud.scss */
 .widget select {
   max-width: 100%;
 }
@@ -726,36 +726,36 @@ textarea {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-/* line 70, scss/basis/_inhoud.scss */
+/* line 71, scss/basis/_inhoud.scss */
 .sticky {
   display: block;
 }
 
-/* line 74, scss/basis/_inhoud.scss */
+/* line 75, scss/basis/_inhoud.scss */
 .hentry {
   margin: 0 0 1.5em;
 }
 
-/* line 78, scss/basis/_inhoud.scss */
+/* line 79, scss/basis/_inhoud.scss */
 .byline,
 .updated:not(.published) {
   display: none;
 }
 
-/* line 83, scss/basis/_inhoud.scss */
+/* line 84, scss/basis/_inhoud.scss */
 .single .byline,
 .group-blog .byline {
   display: inline;
 }
 
-/* line 88, scss/basis/_inhoud.scss */
+/* line 89, scss/basis/_inhoud.scss */
 .page-content,
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
 }
 
-/* line 94, scss/basis/_inhoud.scss */
+/* line 95, scss/basis/_inhoud.scss */
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
@@ -764,7 +764,7 @@ textarea {
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
-/* line 102, scss/basis/_inhoud.scss */
+/* line 103, scss/basis/_inhoud.scss */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none;
@@ -773,12 +773,12 @@ textarea {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-/* line 110, scss/basis/_inhoud.scss */
+/* line 111, scss/basis/_inhoud.scss */
 .comment-content a {
   word-wrap: break-word;
 }
 
-/* line 114, scss/basis/_inhoud.scss */
+/* line 115, scss/basis/_inhoud.scss */
 .bypostauthor {
   display: block;
 }
@@ -787,7 +787,7 @@ textarea {
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-/* line 122, scss/basis/_inhoud.scss */
+/* line 123, scss/basis/_inhoud.scss */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
   /* Theme Footer (when set to scrolling) */
@@ -795,7 +795,7 @@ textarea {
 }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-/* line 128, scss/basis/_inhoud.scss */
+/* line 129, scss/basis/_inhoud.scss */
 .infinity-end.neverending .site-footer {
   display: block;
 }
@@ -803,7 +803,7 @@ textarea {
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-/* line 135, scss/basis/_inhoud.scss */
+/* line 136, scss/basis/_inhoud.scss */
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -814,7 +814,7 @@ textarea {
 }
 
 /* Make sure embeds and iframes fit their containers. */
-/* line 145, scss/basis/_inhoud.scss */
+/* line 146, scss/basis/_inhoud.scss */
 embed,
 iframe,
 object {
@@ -824,25 +824,25 @@ object {
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
-/* line 154, scss/basis/_inhoud.scss */
+/* line 155, scss/basis/_inhoud.scss */
 .wp-caption {
   margin-bottom: 1.5em;
   max-width: 100%;
 }
 
-/* line 159, scss/basis/_inhoud.scss */
+/* line 160, scss/basis/_inhoud.scss */
 .wp-caption img[class*="wp-image-"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 165, scss/basis/_inhoud.scss */
+/* line 166, scss/basis/_inhoud.scss */
 .wp-caption .wp-caption-text {
   margin: 0.8075em 0;
 }
 
-/* line 169, scss/basis/_inhoud.scss */
+/* line 170, scss/basis/_inhoud.scss */
 .wp-caption-text {
   text-align: center;
 }
@@ -850,12 +850,12 @@ object {
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
-/* line 176, scss/basis/_inhoud.scss */
+/* line 177, scss/basis/_inhoud.scss */
 .gallery {
   margin-bottom: 1.5em;
 }
 
-/* line 180, scss/basis/_inhoud.scss */
+/* line 181, scss/basis/_inhoud.scss */
 .gallery-item {
   display: inline-block;
   text-align: center;
@@ -863,47 +863,47 @@ object {
   width: 100%;
 }
 
-/* line 187, scss/basis/_inhoud.scss */
+/* line 188, scss/basis/_inhoud.scss */
 .gallery-columns-2 .gallery-item {
   max-width: 50%;
 }
 
-/* line 191, scss/basis/_inhoud.scss */
+/* line 192, scss/basis/_inhoud.scss */
 .gallery-columns-3 .gallery-item {
   max-width: 33.33%;
 }
 
-/* line 195, scss/basis/_inhoud.scss */
+/* line 196, scss/basis/_inhoud.scss */
 .gallery-columns-4 .gallery-item {
   max-width: 25%;
 }
 
-/* line 199, scss/basis/_inhoud.scss */
+/* line 200, scss/basis/_inhoud.scss */
 .gallery-columns-5 .gallery-item {
   max-width: 20%;
 }
 
-/* line 203, scss/basis/_inhoud.scss */
+/* line 204, scss/basis/_inhoud.scss */
 .gallery-columns-6 .gallery-item {
   max-width: 16.66%;
 }
 
-/* line 207, scss/basis/_inhoud.scss */
+/* line 208, scss/basis/_inhoud.scss */
 .gallery-columns-7 .gallery-item {
   max-width: 14.28%;
 }
 
-/* line 211, scss/basis/_inhoud.scss */
+/* line 212, scss/basis/_inhoud.scss */
 .gallery-columns-8 .gallery-item {
   max-width: 12.5%;
 }
 
-/* line 215, scss/basis/_inhoud.scss */
+/* line 216, scss/basis/_inhoud.scss */
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%;
 }
 
-/* line 219, scss/basis/_inhoud.scss */
+/* line 220, scss/basis/_inhoud.scss */
 .gallery-caption {
   display: block;
 }
@@ -959,27 +959,27 @@ a {
 
 
 */
-/* line 1, scss/_generiek.scss */
+/* line 2, scss/_generiek.scss */
 html {
   font-size: 16px;
 }
 
 @media (max-width: 900px) {
-  /* line 1, scss/_generiek.scss */
+  /* line 2, scss/_generiek.scss */
   html {
     font-size: 12px;
   }
 }
 
-/* line 9, scss/_generiek.scss */
-.klaar::after, section::after, article::after, .float::after {
+/* line 10, scss/_generiek.scss */
+.klaar::after, .float::after, section::after, article::after {
   content: '';
   display: block;
   clear: both;
 }
 
-/* line 21, scss/_generiek.scss */
-.verpakking, #ingredienten .vid-onder-buiten {
+/* line 18, scss/_generiek.scss */
+.verpakking {
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
@@ -987,174 +987,66 @@ html {
   max-width: 100%;
 }
 
-/* line 30, scss/_generiek.scss */
-section > *:first-child, article > *:first-child, main > *:first-child {
+/* line 27, scss/_generiek.scss */
+.heeft-padding > *:first-child {
   margin-top: 0;
 }
 
-/* line 33, scss/_generiek.scss */
-section > *:last-child, article > *:last-child, main > *:last-child {
+/* line 30, scss/_generiek.scss */
+.heeft-padding > *:last-child {
   margin-bottom: 0;
 }
 
-/* line 37, scss/_generiek.scss */
-#primary {
-  min-height: calc(100vh - 230px);
-}
-
-/* line 41, scss/_generiek.scss */
+/* line 36, scss/_generiek.scss */
 .paddingveld {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-/* line 46, scss/_generiek.scss */
+/* line 41, scss/_generiek.scss */
 .blok {
   background-color: white;
   box-shadow: 0 1px 2px #666;
   color: #616160;
 }
 
-/* line 54, scss/_generiek.scss */
-article footer, section footer {
-  text-align: right;
-}
-
-/* line 60, scss/_generiek.scss */
-.schakel i + i {
-  display: none;
-}
-
-/* line 64, scss/_generiek.scss */
-.schakel.open i {
-  display: none;
-}
-
-/* line 66, scss/_generiek.scss */
-.schakel.open i + i {
-  display: inline;
-}
-
-/* line 70, scss/_generiek.scss */
-.schakel.open.scroll i {
-  display: inline;
-}
-
-/* line 76, scss/_generiek.scss */
-.bg-geel {
-  background-color: #F9E6B1;
-}
-
-/* line 79, scss/_generiek.scss */
-.bg-wit {
-  background-color: #fdfdfd;
-}
-
-/* line 83, scss/_generiek.scss */
+/* line 48, scss/_generiek.scss */
 ul.reset, ul.reset li {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-/* line 87, scss/_generiek.scss */
-.uitgelichte-afbeelding-buiten {
-  position: relative;
-  height: 50vh;
-}
-
-/* line 90, scss/_generiek.scss */
-.uitgelichte-afbeelding-buiten h1 {
-  margin: 0;
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-  color: #F9E6B1;
-  text-shadow: 1px 1px 1px black;
-}
-
-@media (max-width: 400px) {
-  /* line 90, scss/_generiek.scss */
-  .uitgelichte-afbeelding-buiten h1 {
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* line 90, scss/_generiek.scss */
-  .uitgelichte-afbeelding-buiten h1 {
-    left: calc(50% - 580px);
-  }
-}
-
-/* line 103, scss/_generiek.scss */
-.uitgelichte-afbeelding-buiten h1 + * {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-}
-
-@media (min-width: 1200px) {
-  /* line 103, scss/_generiek.scss */
-  .uitgelichte-afbeelding-buiten h1 + * {
-    right: calc(50% - 580px);
-  }
-}
-
-/* line 112, scss/_generiek.scss */
-.uitgelichte-afbeelding-buiten img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* line 2, scss/_generiek-teksten.scss */
+/* line 3, scss/_generiek-teksten.scss */
 body {
   color: #252525;
   -webkit-text-size-adjust: 100%;
 }
 
-/* line 6, scss/_generiek-teksten.scss */
-body, button {
-  font-family: 'Lato', sans-serif;
-}
-
-/* line 10, scss/_generiek-teksten.scss */
+/* line 8, scss/_generiek-teksten.scss */
 a:hover,
 a:focus,
 a:active {
   color: #E53C62;
 }
 
-/* line 16, scss/_generiek-teksten.scss */
+/* line 14, scss/_generiek-teksten.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 20, scss/_generiek-teksten.scss */
+/* line 18, scss/_generiek-teksten.scss */
 a, a:visited {
   color: #E53C62;
   text-decoration: none;
 }
 
-/* line 25, scss/_generiek-teksten.scss */
-h1, h2, h3, h4, h5, h6,
-#stek-voet h3 a,
-#kop-nav li > a,
-#kop-nav .menu-stuk a {
-  line-height: 1;
-  font-weight: 900;
-  color: #E53C62;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* line 40, scss/_generiek-teksten.scss */
+/* line 26, scss/_generiek-teksten.scss */
 p, span {
   line-height: 1.2;
 }
 
-/* line 44, scss/_generiek-teksten.scss */
+/* line 30, scss/_generiek-teksten.scss */
 main blockquote {
   line-height: 1.5625em;
   text-transform: none;
@@ -1165,7 +1057,7 @@ main blockquote {
   margin: 0;
 }
 
-/* line 52, scss/_generiek-teksten.scss */
+/* line 38, scss/_generiek-teksten.scss */
 main blockquote p {
   display: inline-block;
   vertical-align: top;
@@ -1174,7 +1066,7 @@ main blockquote p {
   font-size: inherit;
 }
 
-/* line 59, scss/_generiek-teksten.scss */
+/* line 45, scss/_generiek-teksten.scss */
 main blockquote::before {
   content: "\F756";
   display: inline-block;
@@ -1183,21 +1075,2082 @@ main blockquote::before {
   line-height: inherit;
 }
 
-/* @import 'ext/slick';
-@import 'ext/leaflet';
-@import 'ext/classic.date';
-@import 'ext/classic';
-@import 'ext/classic.time';
-@import 'ext/restaurant-reservations'; */
-/* @import 'onderdelen/carousel';
-@import 'onderdelen/paginering';
-@import 'onderdelen/tax-blok';
-@import 'onderdelen/art_class';*/
+/* Slider */
+/* line 4, scss/ext/_slick.scss */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 18, scss/ext/_slick.scss */
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 25, scss/ext/_slick.scss */
+.slick-list:focus {
+  outline: none;
+}
+
+/* line 29, scss/ext/_slick.scss */
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 34, scss/ext/_slick.scss */
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 43, scss/ext/_slick.scss */
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+}
+
+/* line 49, scss/ext/_slick.scss */
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+/* line 55, scss/ext/_slick.scss */
+.slick-track:after {
+  clear: both;
+}
+
+/* line 59, scss/ext/_slick.scss */
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+/* line 63, scss/ext/_slick.scss */
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+/* line 67, scss/ext/_slick.scss */
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+/* line 70, scss/ext/_slick.scss */
+.slick-slide img {
+  display: block;
+}
+
+/* line 73, scss/ext/_slick.scss */
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+/* line 79, scss/ext/_slick.scss */
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+/* line 83, scss/ext/_slick.scss */
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+/* line 87, scss/ext/_slick.scss */
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+/* line 91, scss/ext/_slick.scss */
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* line 97, scss/ext/_slick.scss */
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* line 2, scss/ext/_leaflet.scss */
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > svg,
+.leaflet-pane > canvas,
+.leaflet-zoom-box,
+.leaflet-image-layer,
+.leaflet-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 16, scss/ext/_leaflet.scss */
+.leaflet-container {
+  overflow: hidden;
+}
+
+/* line 19, scss/ext/_leaflet.scss */
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Safari renders non-retina tile on retina better with this, but Chrome is worse */
+/* line 28, scss/ext/_leaflet.scss */
+.leaflet-safari .leaflet-tile {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* hack that prevents hw layers "stretching" when loading new tiles */
+/* line 32, scss/ext/_leaflet.scss */
+.leaflet-safari .leaflet-tile-container {
+  width: 1600px;
+  height: 1600px;
+  -webkit-transform-origin: 0 0;
+}
+
+/* line 37, scss/ext/_leaflet.scss */
+.leaflet-marker-icon,
+.leaflet-marker-shadow {
+  display: block;
+}
+
+/* .leaflet-container svg: reset svg max-width decleration shipped in Joomla! (joomla.org) 3.x */
+/* .leaflet-container img: map is broken in FF if you have max-width: 100% on tiles */
+/* line 43, scss/ext/_leaflet.scss */
+.leaflet-container .leaflet-overlay-pane svg,
+.leaflet-container .leaflet-marker-pane img,
+.leaflet-container .leaflet-shadow-pane img,
+.leaflet-container .leaflet-tile-pane img,
+.leaflet-container img.leaflet-image-layer {
+  max-width: none !important;
+}
+
+/* line 51, scss/ext/_leaflet.scss */
+.leaflet-container.leaflet-touch-zoom {
+  -ms-touch-action: pan-x pan-y;
+  touch-action: pan-x pan-y;
+}
+
+/* line 55, scss/ext/_leaflet.scss */
+.leaflet-container.leaflet-touch-drag {
+  -ms-touch-action: pinch-zoom;
+}
+
+/* line 58, scss/ext/_leaflet.scss */
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+/* line 62, scss/ext/_leaflet.scss */
+.leaflet-container {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 65, scss/ext/_leaflet.scss */
+.leaflet-container a {
+  -webkit-tap-highlight-color: rgba(51, 181, 229, 0.4);
+}
+
+/* line 68, scss/ext/_leaflet.scss */
+.leaflet-tile {
+  filter: inherit;
+  visibility: hidden;
+}
+
+/* line 72, scss/ext/_leaflet.scss */
+.leaflet-tile-loaded {
+  visibility: inherit;
+}
+
+/* line 75, scss/ext/_leaflet.scss */
+.leaflet-zoom-box {
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  z-index: 800;
+}
+
+/* workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=888319 */
+/* line 83, scss/ext/_leaflet.scss */
+.leaflet-overlay-pane svg {
+  -moz-user-select: none;
+}
+
+/* line 87, scss/ext/_leaflet.scss */
+.leaflet-pane {
+  z-index: 400;
+}
+
+/* line 89, scss/ext/_leaflet.scss */
+.leaflet-tile-pane {
+  z-index: 200;
+}
+
+/* line 90, scss/ext/_leaflet.scss */
+.leaflet-overlay-pane {
+  z-index: 400;
+}
+
+/* line 91, scss/ext/_leaflet.scss */
+.leaflet-shadow-pane {
+  z-index: 500;
+}
+
+/* line 92, scss/ext/_leaflet.scss */
+.leaflet-marker-pane {
+  z-index: 600;
+}
+
+/* line 93, scss/ext/_leaflet.scss */
+.leaflet-tooltip-pane {
+  z-index: 650;
+}
+
+/* line 94, scss/ext/_leaflet.scss */
+.leaflet-popup-pane {
+  z-index: 700;
+}
+
+/* line 96, scss/ext/_leaflet.scss */
+.leaflet-map-pane canvas {
+  z-index: 100;
+}
+
+/* line 97, scss/ext/_leaflet.scss */
+.leaflet-map-pane svg {
+  z-index: 200;
+}
+
+/* line 99, scss/ext/_leaflet.scss */
+.leaflet-vml-shape {
+  width: 1px;
+  height: 1px;
+}
+
+/* line 103, scss/ext/_leaflet.scss */
+.lvml {
+  behavior: url(#default#VML);
+  display: inline-block;
+  position: absolute;
+}
+
+/* control positioning */
+/* line 112, scss/ext/_leaflet.scss */
+.leaflet-control {
+  position: relative;
+  z-index: 800;
+  pointer-events: visiblePainted;
+  /* IE 9-10 doesn't have auto */
+  pointer-events: auto;
+}
+
+/* line 118, scss/ext/_leaflet.scss */
+.leaflet-top,
+.leaflet-bottom {
+  position: absolute;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* line 124, scss/ext/_leaflet.scss */
+.leaflet-top {
+  top: 0;
+}
+
+/* line 127, scss/ext/_leaflet.scss */
+.leaflet-right {
+  right: 0;
+}
+
+/* line 130, scss/ext/_leaflet.scss */
+.leaflet-bottom {
+  bottom: 0;
+}
+
+/* line 133, scss/ext/_leaflet.scss */
+.leaflet-left {
+  left: 0;
+}
+
+/* line 136, scss/ext/_leaflet.scss */
+.leaflet-control {
+  float: left;
+  clear: both;
+}
+
+/* line 140, scss/ext/_leaflet.scss */
+.leaflet-right .leaflet-control {
+  float: right;
+}
+
+/* line 143, scss/ext/_leaflet.scss */
+.leaflet-top .leaflet-control {
+  margin-top: 10px;
+}
+
+/* line 146, scss/ext/_leaflet.scss */
+.leaflet-bottom .leaflet-control {
+  margin-bottom: 10px;
+}
+
+/* line 149, scss/ext/_leaflet.scss */
+.leaflet-left .leaflet-control {
+  margin-left: 10px;
+}
+
+/* line 152, scss/ext/_leaflet.scss */
+.leaflet-right .leaflet-control {
+  margin-right: 10px;
+}
+
+/* zoom and fade animations */
+/* line 159, scss/ext/_leaflet.scss */
+.leaflet-fade-anim .leaflet-tile {
+  will-change: opacity;
+}
+
+/* line 162, scss/ext/_leaflet.scss */
+.leaflet-fade-anim .leaflet-popup {
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+/* line 169, scss/ext/_leaflet.scss */
+.leaflet-fade-anim .leaflet-map-pane .leaflet-popup {
+  opacity: 1;
+}
+
+/* line 172, scss/ext/_leaflet.scss */
+.leaflet-zoom-animated {
+  transform-origin: 0 0;
+}
+
+/* line 177, scss/ext/_leaflet.scss */
+.leaflet-zoom-anim .leaflet-zoom-animated {
+  will-change: transform;
+}
+
+/* line 180, scss/ext/_leaflet.scss */
+.leaflet-zoom-anim .leaflet-zoom-animated {
+  transition: transform 0.25s cubic-bezier(0, 0, 0.25, 1);
+}
+
+/* line 186, scss/ext/_leaflet.scss */
+.leaflet-zoom-anim .leaflet-tile,
+.leaflet-pan-anim .leaflet-tile {
+  transition: none;
+}
+
+/* line 194, scss/ext/_leaflet.scss */
+.leaflet-zoom-anim .leaflet-zoom-hide {
+  visibility: hidden;
+}
+
+/* cursors */
+/* line 201, scss/ext/_leaflet.scss */
+.leaflet-interactive {
+  cursor: pointer;
+}
+
+/* line 204, scss/ext/_leaflet.scss */
+.leaflet-grab {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+}
+
+/* line 208, scss/ext/_leaflet.scss */
+.leaflet-crosshair,
+.leaflet-crosshair .leaflet-interactive {
+  cursor: crosshair;
+}
+
+/* line 212, scss/ext/_leaflet.scss */
+.leaflet-popup-pane,
+.leaflet-control {
+  cursor: auto;
+}
+
+/* line 216, scss/ext/_leaflet.scss */
+.leaflet-dragging .leaflet-grab,
+.leaflet-dragging .leaflet-grab .leaflet-interactive,
+.leaflet-dragging .leaflet-marker-draggable {
+  cursor: move;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+}
+
+/* marker & overlays interactivity */
+/* line 225, scss/ext/_leaflet.scss */
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-image-layer,
+.leaflet-pane > svg path,
+.leaflet-tile-container {
+  pointer-events: none;
+}
+
+/* line 233, scss/ext/_leaflet.scss */
+.leaflet-marker-icon.leaflet-interactive,
+.leaflet-image-layer.leaflet-interactive,
+.leaflet-pane > svg path.leaflet-interactive {
+  pointer-events: visiblePainted;
+  /* IE 9-10 doesn't have auto */
+  pointer-events: auto;
+}
+
+/* visual tweaks */
+/* line 242, scss/ext/_leaflet.scss */
+.leaflet-container {
+  background: #ddd;
+  outline: 0;
+}
+
+/* line 246, scss/ext/_leaflet.scss */
+.leaflet-container a {
+  color: #0078A8;
+}
+
+/* line 249, scss/ext/_leaflet.scss */
+.leaflet-container a.leaflet-active {
+  outline: 2px solid orange;
+}
+
+/* line 252, scss/ext/_leaflet.scss */
+.leaflet-zoom-box {
+  border: 2px dotted #38f;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* general typography */
+/* line 259, scss/ext/_leaflet.scss */
+.leaflet-container {
+  font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+/* general toolbar styles */
+/* line 266, scss/ext/_leaflet.scss */
+.leaflet-bar {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+  border-radius: 4px;
+}
+
+/* line 270, scss/ext/_leaflet.scss */
+.leaflet-bar a,
+.leaflet-bar a:hover {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+/* line 282, scss/ext/_leaflet.scss */
+.leaflet-bar a,
+.leaflet-control-layers-toggle {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+/* line 288, scss/ext/_leaflet.scss */
+.leaflet-bar a:hover {
+  background-color: #f4f4f4;
+}
+
+/* line 291, scss/ext/_leaflet.scss */
+.leaflet-bar a:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* line 295, scss/ext/_leaflet.scss */
+.leaflet-bar a:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom: none;
+}
+
+/* line 300, scss/ext/_leaflet.scss */
+.leaflet-bar a.leaflet-disabled {
+  cursor: default;
+  background-color: #f4f4f4;
+  color: #bbb;
+}
+
+/* line 306, scss/ext/_leaflet.scss */
+.leaflet-touch .leaflet-bar a {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+/* line 311, scss/ext/_leaflet.scss */
+.leaflet-touch .leaflet-bar a:first-child {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+/* line 315, scss/ext/_leaflet.scss */
+.leaflet-touch .leaflet-bar a:last-child {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+/* zoom control */
+/* line 322, scss/ext/_leaflet.scss */
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  font: bold 18px 'Lucida Console', Monaco, monospace;
+  text-indent: 1px;
+}
+
+/* line 328, scss/ext/_leaflet.scss */
+.leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out {
+  font-size: 22px;
+}
+
+/* layers control */
+/* line 335, scss/ext/_leaflet.scss */
+.leaflet-control-layers {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  background: #fff;
+  border-radius: 5px;
+}
+
+/* line 340, scss/ext/_leaflet.scss */
+.leaflet-control-layers-toggle {
+  background-image: url(images/layers.png);
+  width: 36px;
+  height: 36px;
+}
+
+/* line 345, scss/ext/_leaflet.scss */
+.leaflet-retina .leaflet-control-layers-toggle {
+  background-image: url(images/layers-2x.png);
+  background-size: 26px 26px;
+}
+
+/* line 349, scss/ext/_leaflet.scss */
+.leaflet-touch .leaflet-control-layers-toggle {
+  width: 44px;
+  height: 44px;
+}
+
+/* line 353, scss/ext/_leaflet.scss */
+.leaflet-control-layers .leaflet-control-layers-list,
+.leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+  display: none;
+}
+
+/* line 357, scss/ext/_leaflet.scss */
+.leaflet-control-layers-expanded .leaflet-control-layers-list {
+  display: block;
+  position: relative;
+}
+
+/* line 361, scss/ext/_leaflet.scss */
+.leaflet-control-layers-expanded {
+  padding: 6px 10px 6px 6px;
+  color: #333;
+  background: #fff;
+}
+
+/* line 366, scss/ext/_leaflet.scss */
+.leaflet-control-layers-scrollbar {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 5px;
+}
+
+/* line 371, scss/ext/_leaflet.scss */
+.leaflet-control-layers-selector {
+  margin-top: 2px;
+  position: relative;
+  top: 1px;
+}
+
+/* line 376, scss/ext/_leaflet.scss */
+.leaflet-control-layers label {
+  display: block;
+}
+
+/* line 379, scss/ext/_leaflet.scss */
+.leaflet-control-layers-separator {
+  height: 0;
+  border-top: 1px solid #ddd;
+  margin: 5px -10px 5px -6px;
+}
+
+/* Default icon URLs */
+/* line 386, scss/ext/_leaflet.scss */
+.leaflet-default-icon-path {
+  background-image: url(images/marker-icon.png);
+}
+
+/* attribution and scale controls */
+/* line 393, scss/ext/_leaflet.scss */
+.leaflet-container .leaflet-control-attribution {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* line 398, scss/ext/_leaflet.scss */
+.leaflet-control-attribution,
+.leaflet-control-scale-line {
+  padding: 0 5px;
+  color: #333;
+}
+
+/* line 403, scss/ext/_leaflet.scss */
+.leaflet-control-attribution a {
+  text-decoration: none;
+}
+
+/* line 406, scss/ext/_leaflet.scss */
+.leaflet-control-attribution a:hover {
+  text-decoration: underline;
+}
+
+/* line 409, scss/ext/_leaflet.scss */
+.leaflet-container .leaflet-control-attribution,
+.leaflet-container .leaflet-control-scale {
+  font-size: 11px;
+}
+
+/* line 413, scss/ext/_leaflet.scss */
+.leaflet-left .leaflet-control-scale {
+  margin-left: 5px;
+}
+
+/* line 416, scss/ext/_leaflet.scss */
+.leaflet-bottom .leaflet-control-scale {
+  margin-bottom: 5px;
+}
+
+/* line 419, scss/ext/_leaflet.scss */
+.leaflet-control-scale-line {
+  border: 2px solid #777;
+  border-top: none;
+  line-height: 1.1;
+  padding: 2px 5px 1px;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 433, scss/ext/_leaflet.scss */
+.leaflet-control-scale-line:not(:first-child) {
+  border-top: 2px solid #777;
+  border-bottom: none;
+  margin-top: -2px;
+}
+
+/* line 438, scss/ext/_leaflet.scss */
+.leaflet-control-scale-line:not(:first-child):not(:last-child) {
+  border-bottom: 2px solid #777;
+}
+
+/* line 442, scss/ext/_leaflet.scss */
+.leaflet-touch .leaflet-control-attribution,
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+  box-shadow: none;
+}
+
+/* line 447, scss/ext/_leaflet.scss */
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+}
+
+/* popup */
+/* line 456, scss/ext/_leaflet.scss */
+.leaflet-popup {
+  position: absolute;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* line 461, scss/ext/_leaflet.scss */
+.leaflet-popup-content-wrapper {
+  padding: 1px;
+  text-align: left;
+  text-align: center;
+}
+
+/* line 466, scss/ext/_leaflet.scss */
+.leaflet-popup-content {
+  margin: 13px 19px;
+  line-height: 1.4;
+}
+
+/* line 470, scss/ext/_leaflet.scss */
+.leaflet-popup-content p {
+  margin: 18px 0;
+}
+
+/* line 473, scss/ext/_leaflet.scss */
+.leaflet-popup-tip-container {
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* line 482, scss/ext/_leaflet.scss */
+.leaflet-popup-tip {
+  width: 17px;
+  height: 17px;
+  padding: 1px;
+  margin: -10px auto 0;
+  transform: rotate(45deg);
+}
+
+/* line 495, scss/ext/_leaflet.scss */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #E53C62;
+  color: white;
+  box-shadow: none;
+  font-family: "Asap", sans-serif;
+}
+
+/* line 500, scss/ext/_leaflet.scss */
+.leaflet-popup-content-wrapper h3,
+.leaflet-popup-tip h3 {
+  font-family: "Merriweather", serif;
+  margin-bottom: 0;
+}
+
+/* line 506, scss/ext/_leaflet.scss */
+.leaflet-container a.leaflet-popup-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 4px 0 0;
+  border: none;
+  text-align: center;
+  width: 18px;
+  height: 14px;
+  font: 16px/14px Tahoma, Verdana, sans-serif;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background: transparent;
+}
+
+/* line 521, scss/ext/_leaflet.scss */
+.leaflet-container a.leaflet-popup-close-button:hover {
+  color: #999;
+}
+
+/* line 524, scss/ext/_leaflet.scss */
+.leaflet-popup-scrolled {
+  overflow: auto;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+/* line 530, scss/ext/_leaflet.scss */
+.leaflet-oldie .leaflet-popup-content-wrapper {
+  zoom: 1;
+}
+
+/* line 534, scss/ext/_leaflet.scss */
+.leaflet-oldie .leaflet-popup-tip {
+  width: 24px;
+  margin: 0 auto;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)";
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
+}
+
+/* line 541, scss/ext/_leaflet.scss */
+.leaflet-oldie .leaflet-popup-tip-container {
+  margin-top: -1px;
+}
+
+/* line 545, scss/ext/_leaflet.scss */
+.leaflet-oldie .leaflet-control-zoom,
+.leaflet-oldie .leaflet-control-layers,
+.leaflet-oldie .leaflet-popup-content-wrapper,
+.leaflet-oldie .leaflet-popup-tip {
+  border: 1px solid #999;
+}
+
+/* div icon */
+/* line 555, scss/ext/_leaflet.scss */
+.leaflet-div-icon {
+  background: #fff;
+  border: 1px solid #666;
+}
+
+/* Tooltip */
+/* Base styles for the element that has a tooltip */
+/* line 563, scss/ext/_leaflet.scss */
+.leaflet-tooltip {
+  position: absolute;
+  padding: 6px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #222;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* line 578, scss/ext/_leaflet.scss */
+.leaflet-tooltip.leaflet-clickable {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* line 582, scss/ext/_leaflet.scss */
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+  position: absolute;
+  pointer-events: none;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+}
+
+/* Directions */
+/* line 595, scss/ext/_leaflet.scss */
+.leaflet-tooltip-bottom {
+  margin-top: 6px;
+}
+
+/* line 598, scss/ext/_leaflet.scss */
+.leaflet-tooltip-top {
+  margin-top: -6px;
+}
+
+/* line 601, scss/ext/_leaflet.scss */
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-top:before {
+  left: 50%;
+  margin-left: -6px;
+}
+
+/* line 606, scss/ext/_leaflet.scss */
+.leaflet-tooltip-top:before {
+  bottom: 0;
+  margin-bottom: -12px;
+  border-top-color: #fff;
+}
+
+/* line 611, scss/ext/_leaflet.scss */
+.leaflet-tooltip-bottom:before {
+  top: 0;
+  margin-top: -12px;
+  margin-left: -6px;
+  border-bottom-color: #fff;
+}
+
+/* line 617, scss/ext/_leaflet.scss */
+.leaflet-tooltip-left {
+  margin-left: -6px;
+}
+
+/* line 620, scss/ext/_leaflet.scss */
+.leaflet-tooltip-right {
+  margin-left: 6px;
+}
+
+/* line 623, scss/ext/_leaflet.scss */
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+  top: 50%;
+  margin-top: -6px;
+}
+
+/* line 628, scss/ext/_leaflet.scss */
+.leaflet-tooltip-left:before {
+  right: 0;
+  margin-right: -12px;
+  border-left-color: #fff;
+}
+
+/* line 633, scss/ext/_leaflet.scss */
+.leaflet-tooltip-right:before {
+  left: 0;
+  margin-left: -12px;
+  border-right-color: #fff;
+}
+
+/* This stylesheet is used to style the public-facing components of the plugin. */
+/* line 3, scss/ext/_facebook.scss */
+#fb-root {
+  display: none;
+}
+
+/* line 6, scss/ext/_facebook.scss */
+.mfp-container.mfp-ajax-holder .efbl_loader {
+  font-size: 40px;
+  color: #fff;
+}
+
+/* line 10, scss/ext/_facebook.scss */
+.efbl-like-box {
+  position: relative;
+}
+
+/* line 13, scss/ext/_facebook.scss */
+img.efbl-loader {
+  position: absolute;
+  left: 35%;
+  top: 35%;
+  width: 10%;
+}
+
+/* line 19, scss/ext/_facebook.scss */
+#efblcf_holder .efbl_popup_left_container {
+  position: relative;
+}
+
+/* line 22, scss/ext/_facebook.scss */
+#efblcf_holder .efbl_popup_left_container a {
+  outline: none;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  bottom: 35px;
+  height: auto;
+  width: 25%;
+  opacity: 0;
+  cursor: pointer;
+  transition: all ease-in-out .5s;
+}
+
+/* line 37, scss/ext/_facebook.scss */
+#efblcf_holder .efbl_popup_left_container a:hover {
+  opacity: 1;
+  transition: all ease-in-out .5s;
+}
+
+/* line 44, scss/ext/_facebook.scss */
+#efblcf_holder .efbl_popup_left_container a i {
+  font-size: 100px;
+  position: absolute;
+  top: 38%;
+  color: white;
+}
+
+/* line 50, scss/ext/_facebook.scss */
+#efblcf_holder .efbl_popup_left_container a.efbl-popup-next i {
+  right: 25px;
+}
+
+/* line 53, scss/ext/_facebook.scss */
+#efblcf_holder .efbl_popup_left_container a.efbl-popup-prev i {
+  left: 25px;
+}
+
+/* line 56, scss/ext/_facebook.scss */
+#efblcf_holder a.efbl-popup-next {
+  right: 0;
+}
+
+/* line 60, scss/ext/_facebook.scss */
+.efbl_popup_image {
+  width: auto;
+  display: block;
+  margin: 0px auto;
+}
+
+/* To fill the container and nothing else */
+/* line 68, scss/ext/_facebook.scss */
+.responsive, .responsive span, .responsive span iframe[style], .responsive span img {
+  width: 100% !important;
+}
+
+/*Magnific popup CSS*/
+/* line 73, scss/ext/_facebook.scss */
+.white-popup {
+  position: relative;
+  background: #000;
+  width: auto;
+  max-width: 720px;
+  margin: 20px auto;
+}
+
+/* line 81, scss/ext/_facebook.scss */
+.mfp-close {
+  top: -18px !important;
+  right: -18px !important;
+  background: url(../images/popup_close.png) !important;
+  width: 36px !important;
+  height: 37px !important;
+  font-size: 0px !important;
+  background: transparent;
+}
+
+/* line 90, scss/ext/_facebook.scss */
+.mfp-close:hover, .mfp-close:active, .mfp-close:focus {
+  background: transparent;
+}
+
+/*icon css*/
+/* line 96, scss/ext/_facebook.scss */
+.efbl_read_more_link .efbl_links_container a .fa {
+  color: #fff;
+  margin-right: 9px;
+  margin-left: 9px;
+}
+
+/* line 102, scss/ext/_facebook.scss */
+.efbl_read_more_link .efbl_links_container a .fa-facebook {
+  float: left;
+  display: inline-block;
+}
+
+/* line 108, scss/ext/_facebook.scss */
+.efbl_read_more_link .efbl_links_container a .fa-facebook:hover {
+  color: #3b5998;
+}
+
+/* line 112, scss/ext/_facebook.scss */
+.efbl_read_more_link .efbl_links_container a .fa-twitter {
+  background-repeat: no-repeat;
+  float: left;
+  display: inline-block;
+}
+
+/* line 118, scss/ext/_facebook.scss */
+.efbl_read_more_link .efbl_links_container a .fa-twitter:hover {
+  color: #00aced;
+}
+
+/* line 122, scss/ext/_facebook.scss */
+.efbl_read_more_link .efbl_links_container a .fa-linkedin {
+  background-repeat: no-repeat;
+  float: left;
+  display: inline-block;
+}
+
+/* line 128, scss/ext/_facebook.scss */
+.efbl_read_more_link .efbl_links_container a .fa-linkedin:hover {
+  color: #007bb6;
+}
+
+/* line 132, scss/ext/_facebook.scss */
+.efbl_read_more_link .efbl_links_container a .fa-google-plus {
+  background-repeat: no-repeat;
+  float: left;
+  display: inline-block;
+}
+
+/* line 138, scss/ext/_facebook.scss */
+.efbl_read_more_link .efbl_links_container a .fa-google-plus:hover {
+  color: #dd4b39;
+}
+
+/* line 142, scss/ext/_facebook.scss */
+#efblcf .efbl_story_meta .efbl_read_more_link {
+  position: relative;
+}
+
+/* line 146, scss/ext/_facebook.scss */
+.efbl_links_container {
+  right: 0px;
+}
+
+/* line 150, scss/ext/_facebook.scss */
+#efblcf .efbl_info span {
+  margin-right: 3px;
+  color: #FFF;
+}
+
+/*custom facebook feed styling starts form here*/
+/* line 156, scss/ext/_facebook.scss */
+.efbl_feed_wraper {
+  float: left;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+/* line 163, scss/ext/_facebook.scss */
+#efblcf {
+  float: left;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+/* line 170, scss/ext/_facebook.scss */
+#efblcf .efbl_story_photo {
+  position: relative;
+  float: left;
+}
+
+/* line 174, scss/ext/_facebook.scss */
+#efblcf.fullwidth .efbl_post_content, #efblcf.fullwidth .efbl_story_photo {
+  width: 100%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 180, scss/ext/_facebook.scss */
+#efblcf .efbl_story_photo img, #efblcf .efbl_story_photo video {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  float: left;
+}
+
+/* line 187, scss/ext/_facebook.scss */
+#efblcf .efbl_story_photo iframe {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 191, scss/ext/_facebook.scss */
+#efblcf.fullwidth .efbl_youtube_video, #efblcf.fullwidth .efbl_vimeo_video {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 0px;
+}
+
+/* line 197, scss/ext/_facebook.scss */
+#efblcf.halfwidth .efbl_story_photo {
+  width: 45%;
+  margin-right: 10px;
+  position: relative;
+}
+
+/* line 203, scss/ext/_facebook.scss */
+#efblcf .efbl_story_photo .efbl_iframe_popup_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 210, scss/ext/_facebook.scss */
+#efblcf .efbl_story_photo a {
+  float: left;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  text-decoration: none;
+  box-shadow: none;
+  transition: all ease-in-out .5s;
+}
+
+/* line 226, scss/ext/_facebook.scss */
+#efblcf .efbl_story_photo:hover a {
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all ease-in-out .5s;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+/* line 238, scss/ext/_facebook.scss */
+#efblcf .efbl_story_photo a .efbl_hover {
+  transition: all ease-in-out .5s;
+}
+
+/* line 245, scss/ext/_facebook.scss */
+#efblcf .efbl_story_photo:hover a .efbl_hover {
+  top: 0px;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 99999;
+  transition: all ease-in-out .5s;
+}
+
+/* line 259, scss/ext/_facebook.scss */
+#efblcf .efbl_story_photo a .fa-plus {
+  font-size: 45px;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  transform: translate(0, -45%);
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: all ease-in-out .5s;
+}
+
+/* line 275, scss/ext/_facebook.scss */
+#efblcf .efbl_story_photo a:hover .fa-plus {
+  opacity: 1;
+  transition: all ease-in-out .2s;
+}
+
+/* line 284, scss/ext/_facebook.scss */
+#efblcf.halfwidth .efbl_post_content {
+  float: left;
+  width: 53%;
+  margin-top: 10px;
+}
+
+/* line 290, scss/ext/_facebook.scss */
+#efblcf.thumbnail .efbl_story_photo {
+  float: left;
+  width: 21%;
+  margin-right: 10px;
+}
+
+/* line 295, scss/ext/_facebook.scss */
+#efblcf.thumbnail .efbl_post_content {
+  float: left;
+  width: 77%;
+}
+
+/* line 299, scss/ext/_facebook.scss */
+#efblcf .efbl_post_content .efbl_author_info {
+  float: left;
+  width: 100%;
+}
+
+/* line 303, scss/ext/_facebook.scss */
+#efblcf .efbl_post_content .efbl_author_info .efbl_auth_logo {
+  float: left;
+  margin-right: 5px;
+}
+
+/* line 307, scss/ext/_facebook.scss */
+#efblcf .efbl_post_content .efbl_author_info p {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  line-height: 1.2;
+}
+
+/* line 312, scss/ext/_facebook.scss */
+#efblcf .efbl_post_content .efbl_author_info p a {
+  color: inherit;
+  text-decoration: none;
+  border: 0px;
+}
+
+/* line 317, scss/ext/_facebook.scss */
+#efblcf .efbl_post_content .efbl_author_info .efbl_story_time {
+  font-size: 11px;
+  color: #eeee;
+}
+
+/* line 322, scss/ext/_facebook.scss */
+#efblcf .efbl_post_content .efbl_content_wraper {
+  float: left;
+  width: 100%;
+}
+
+/* line 327, scss/ext/_facebook.scss */
+#efblcf .efbl_story_meta {
+  float: left;
+  margin-bottom: 10px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* line 334, scss/ext/_facebook.scss */
+#efblcf .efbl_story_meta .efbl_read_more_link {
+  float: right;
+  margin-top: 5px;
+}
+
+/* line 338, scss/ext/_facebook.scss */
+#efblcf .efbl_shared_story {
+  padding: 10px;
+  float: left;
+  width: 100%;
+  background-color: #f7f7f7;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+/* line 348, scss/ext/_facebook.scss */
+#efblcf .efbl_shared_story.efbl_has_link_image .efbl_link_image {
+  float: left;
+  width: 25%;
+  margin-right: 10px;
+  height: auto;
+}
+
+/* line 354, scss/ext/_facebook.scss */
+#efblcf .efbl_shared_story .efbl_link_text {
+  width: 100%;
+  float: left;
+}
+
+/* line 358, scss/ext/_facebook.scss */
+#efblcf .efbl_shared_story.efbl_has_link_image .efbl_link_text {
+  float: left;
+  width: 73%;
+}
+
+/* line 362, scss/ext/_facebook.scss */
+#efblcf .efbl_shared_story .efbl_link_text p {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+/* line 366, scss/ext/_facebook.scss */
+#efblcf .efbl_info {
+  float: left;
+  padding: 5px 0px 5px 7px;
+  background: #333;
+  transition: all ease-in-out .5s;
+}
+
+/* line 375, scss/ext/_facebook.scss */
+#efblcf .efbl_info:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transition: all ease-in-out .5s;
+}
+
+/* line 383, scss/ext/_facebook.scss */
+.efbl_feed_wraper .efbl_custom_likebox {
+  margin-left: -10px;
+  float: left;
+}
+
+/*Ppopup CSS*/
+/* line 389, scss/ext/_facebook.scss */
+#efblcf_holder video, #efblcf_holder iframe {
+  width: 100%;
+  height: auto;
+}
+
+/* line 393, scss/ext/_facebook.scss */
+#efblcf_holder video {
+  height: 100%;
+}
+
+/* line 396, scss/ext/_facebook.scss */
+#efblcf_holder .efbl_popup_image, #efblcf_holder .efbl_popup_if_video, #efblcf_holder .efbl_popup_video, #efblcf_holder .efbl_popupp_footer {
+  display: none;
+}
+
+/* line 399, scss/ext/_facebook.scss */
+#efblcf_holder .efbl_popupp_footer {
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+/* line 404, scss/ext/_facebook.scss */
+#efblcf_holder .efbl_popupp_footer p {
+  line-height: 1.3em;
+}
+
+/* line 407, scss/ext/_facebook.scss */
+#efblcf_holder {
+  border-radius: 5px;
+  transition: all ease-in-out .5s;
+}
+
+/* line 418, scss/ext/_facebook.scss */
+.efbl_links_container {
+  display: none;
+  position: absolute;
+  background: #333;
+  padding: 10px;
+}
+
+/* line 425, scss/ext/_facebook.scss */
+.efbl_read_full_story {
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 429, scss/ext/_facebook.scss */
+.efbl_links_container.efbl_slideIn {
+  display: block;
+  float: left;
+}
+
+/* line 434, scss/ext/_facebook.scss */
+#efblcf .efbl_comments_wraper {
+  float: left;
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  background: #eee;
+  box-sizing: border-box;
+  display: none;
+}
+
+/* line 445, scss/ext/_facebook.scss */
+#efblcf .efbl_comments_wraper.efbl_cwraper_slide {
+  display: block;
+}
+
+/* line 448, scss/ext/_facebook.scss */
+#efblcf .efbl_comments_wraper .efbl_comments {
+  margin-bottom: 10px;
+  float: left;
+  width: 100%;
+}
+
+/* line 453, scss/ext/_facebook.scss */
+#efblcf .efbl_comments_footer {
+  float: left;
+  margin-top: 5px;
+  border-top: 1px solid #fff;
+  width: 100%;
+  padding-top: 5px;
+}
+
+/* line 460, scss/ext/_facebook.scss */
+.efbl_comments_header {
+  float: left;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+/* line 468, scss/ext/_facebook.scss */
+#efblcf .efbl_comments_wraper .efbl_commenter_image {
+  float: left;
+  width: 32px;
+  margin-right: 10px;
+  margin-top: 7px;
+}
+
+/* line 474, scss/ext/_facebook.scss */
+#efblcf .efbl_comments_wraper .efbl_commenter_image a img {
+  border: 0px;
+}
+
+/* line 477, scss/ext/_facebook.scss */
+#efblcf .efbl_comments_wraper .efbl_comment_text {
+  width: 88%;
+  float: left;
+}
+
+/* line 481, scss/ext/_facebook.scss */
+#efblcf .efbl_comments_wraper p {
+  margin: 0px;
+  padding: 0px;
+}
+
+/**
+   * Fade-zoom animation for first dialog
+   */
+/* start state */
+/* line 492, scss/ext/_facebook.scss */
+.my-mfp-zoom-in .zoom-anim-dialog {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.8);
+}
+
+/* animate in */
+/* line 510, scss/ext/_facebook.scss */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* animate out */
+/* line 521, scss/ext/_facebook.scss */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+/* Dark overlay, start state */
+/* line 532, scss/ext/_facebook.scss */
+.my-mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+/* animate in */
+/* line 540, scss/ext/_facebook.scss */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+/* animate out */
+/* line 544, scss/ext/_facebook.scss */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+/**
+   * Fade animation for first dialog
+   */
+/* line 552, scss/ext/_facebook.scss */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  transition: all 0.15s ease-out;
+}
+
+/* overlay animate in */
+/* line 560, scss/ext/_facebook.scss */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+
+/* overlay animate out */
+/* line 564, scss/ext/_facebook.scss */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+/* line 569, scss/ext/_facebook.scss */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  transition: all 0.15s ease-out;
+}
+
+/* content animate it */
+/* line 577, scss/ext/_facebook.scss */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+/* content animate out */
+/* line 581, scss/ext/_facebook.scss */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 586, scss/ext/_facebook.scss */
+  #efblcf.thumbnail .efbl_story_photo, #efblcf.thumbnail .efbl_post_content, #efblcf.halfwidth .efbl_story_photo, #efblcf.halfwidth .efbl_post_content {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  /* line 591, scss/ext/_facebook.scss */
+  #efbl_popup {
+    width: auto !important;
+    height: auto !important;
+    display: table;
+  }
+  /* line 596, scss/ext/_facebook.scss */
+  #efblcf .efbl_shared_story.efbl_has_link_image .efbl_link_text {
+    width: 100%;
+  }
+  /* line 600, scss/ext/_facebook.scss */
+  #efblcf .efbl_shared_story {
+    text-align: center;
+  }
+  /* line 604, scss/ext/_facebook.scss */
+  #efblcf .efbl_shared_story.efbl_has_link_image .efbl_link_image {
+    float: none;
+  }
+  /* line 609, scss/ext/_facebook.scss */
+  .efbl_links_container {
+    bottom: -30px;
+  }
+}
+
+/* line 2, scss/onderdelen/_art_class.scss */
+.art-c {
+  position: relative;
+  padding-bottom: 0;
+  max-width: 400px;
+}
+
+/* line 6, scss/onderdelen/_art_class.scss */
+.art-c:hover {
+  cursor: pointer;
+}
+
+/* line 9, scss/onderdelen/_art_class.scss */
+.art-c img {
+  filter: brightness(80%) saturate(140%) blur(0.8px) sepia(10%);
+}
+
+/* line 12, scss/onderdelen/_art_class.scss */
+.art-c ~ .art-c {
+  margin-top: 20px;
+}
+
+/* line 16, scss/onderdelen/_art_class.scss */
+.art-c .art-links a, .art-c .art-links img {
+  display: block;
+}
+
+/* line 19, scss/onderdelen/_art_class.scss */
+.art-c .art-links img {
+  min-height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* line 25, scss/onderdelen/_art_class.scss */
+.art-c .art-rechts {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* line 30, scss/onderdelen/_art_class.scss */
+.art-c .art-rechts p {
+  color: white;
+  font-weight: 400;
+  margin: 0 0 .5em;
+  line-height: 1.2;
+  font-size: .85em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* line 36, scss/onderdelen/_art_class.scss */
+.art-c .art-rechts p a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* line 43, scss/onderdelen/_art_class.scss */
+.art-c a:hover {
+  text-decoration: none;
+}
+
+/* line 46, scss/onderdelen/_art_class.scss */
+.art-c h3 {
+  color: yellow;
+  margin-top: 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+}
+
+/* line 2, scss/onderdelen/_back-to-top.scss */
+.scroll.schakel.back-to-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  top: auto;
+}
+
+/* line 7, scss/onderdelen/_back-to-top.scss */
+.scroll.schakel.back-to-top span {
+  margin: 0;
+}
+
+/* line 10, scss/onderdelen/_back-to-top.scss */
+.scroll.schakel.back-to-top:hover {
+  top: auto;
+}
+
+/* line 13, scss/onderdelen/_back-to-top.scss */
+.scroll.schakel.back-to-top.open i {
+  display: inline;
+}
+
+/* line 3, scss/onderdelen/_carousel.scss */
+.carousel article {
+  margin-top: 0 !important;
+}
+
+/* line 6, scss/onderdelen/_carousel.scss */
+.carousel .mdi {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  z-index: 5;
+  font-size: 1.5em;
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+}
+
+/* line 17, scss/onderdelen/_carousel.scss */
+.carousel .mdi.mdi-chevron-right {
+  transform: translate(50%, -50%);
+  left: auto;
+  right: 0;
+}
+
+/* line 22, scss/onderdelen/_carousel.scss */
+.carousel .mdi:hover {
+  cursor: pointer;
+}
+
+/* line 26, scss/onderdelen/_carousel.scss */
+.carousel ~ footer {
+  padding-top: 20px;
+}
+
+/* line 2, scss/onderdelen/_foto-video-gallerij.scss */
+.foto-video-gallerij img, .foto-video-gallerij .vid-doos {
+  margin-bottom: 2em;
+}
+
+/* line 5, scss/onderdelen/_foto-video-gallerij.scss */
+.foto-video-gallerij .vid-doos {
+  height: auto;
+}
+
+/* line 8, scss/onderdelen/_foto-video-gallerij.scss */
+.foto-video-gallerij video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 11, scss/onderdelen/_foto-video-gallerij.scss */
+.foto-video-gallerij video:hover {
+  cursor: pointer;
+}
+
+/* line 2, scss/onderdelen/_knop.scss */
+.knop, .navigation a, #agenda-filter [type='submit'], input.wpcf7-submit {
+  display: inline-block;
+  padding: 0.3em 1em;
+  font-weight: bold;
+  background-color: #f9f9f9;
+  box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-out 0.2s;
+  position: relative;
+  color: #E53C62;
+  top: 0;
+  font-size: 1rem;
+  text-transform: lowercase;
+  border-radius: 0;
+  font-family: inherit;
+  border: 0;
+}
+
+/* line 17, scss/onderdelen/_knop.scss */
+.knop:hover, .navigation a:hover, #agenda-filter [type='submit']:hover, .knop:visited, .navigation a:visited, #agenda-filter [type='submit']:visited, .knop:active, .navigation a:active, #agenda-filter [type='submit']:active, input.wpcf7-submit:hover, input.wpcf7-submit:visited, input.wpcf7-submit:active {
+  color: #E53C62;
+  text-decoration: none;
+}
+
+/* line 21, scss/onderdelen/_knop.scss */
+.knop:hover, .navigation a:hover, #agenda-filter [type='submit']:hover, input.wpcf7-submit:hover {
+  transition: all 0.15s ease-out;
+  box-shadow: 0.5px 1px 0 rgba(0, 0, 0, 0.4);
+  top: 3px;
+}
+
+/* line 26, scss/onderdelen/_knop.scss */
+.knop span, .navigation a span, #agenda-filter [type='submit'] span, input.wpcf7-submit span {
+  margin-right: 8px;
+  color: #E53C62 !important;
+  line-height: inherit  !important;
+  position: relative;
+  top: -1px;
+}
+
+/* line 33, scss/onderdelen/_knop.scss */
+.knop i, .navigation a i, #agenda-filter [type='submit'] i, input.wpcf7-submit i {
+  color: #E53C62 !important;
+}
+
+/* line 36, scss/onderdelen/_knop.scss */
+.knop.in-wit, .navigation a.in-wit, #agenda-filter .in-wit[type='submit'], input.wpcf7-submit.in-wit {
+  background-color: #E53C62;
+  box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
+  color: white !important;
+}
+
+/* line 40, scss/onderdelen/_knop.scss */
+.knop.in-wit:hover, .navigation a.in-wit:hover, #agenda-filter .in-wit[type='submit']:hover, input.wpcf7-submit.in-wit:hover {
+  box-shadow: 0.5px 1px 0 rgba(0, 0, 0, 0.4);
+  top: 3px;
+}
+
+/* line 44, scss/onderdelen/_knop.scss */
+.knop.in-wit span, .navigation a.in-wit span, #agenda-filter .in-wit[type='submit'] span, .knop.in-wit i, .navigation a.in-wit i, #agenda-filter .in-wit[type='submit'] i, input.wpcf7-submit.in-wit span, input.wpcf7-submit.in-wit i {
+  color: white !important;
+}
+
+/* line 48, scss/onderdelen/_knop.scss */
+.knop.ikoon-links, .navigation a.ikoon-links, #agenda-filter .ikoon-links[type='submit'], input.wpcf7-submit.ikoon-links {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  margin-right: 10px;
+}
+
+/* line 52, scss/onderdelen/_knop.scss */
+.knop.ikoon-links span, .navigation a.ikoon-links span, #agenda-filter .ikoon-links[type='submit'] span, input.wpcf7-submit.ikoon-links span {
+  -ms-flex-order: 2;
+      order: 2;
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+/* line 57, scss/onderdelen/_knop.scss */
+.knop.ikoon-links i, .navigation a.ikoon-links i, #agenda-filter .ikoon-links[type='submit'] i, input.wpcf7-submit.ikoon-links i {
+  margin-left: -2px;
+}
+
+/* line 62, scss/onderdelen/_knop.scss */
+input.wpcf7-submit {
+  height: 34px;
+}
+
+/* line 66, scss/onderdelen/_knop.scss */
+.knoppen-doos {
+  margin-bottom: -10px;
+}
+
+/* line 68, scss/onderdelen/_knop.scss */
+.knoppen-doos .knop, .knoppen-doos .navigation a, .navigation .knoppen-doos a, .knoppen-doos #agenda-filter [type='submit'], #agenda-filter .knoppen-doos [type='submit'] {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+/* line 72, scss/onderdelen/_knop.scss */
+.knoppen-doos hr {
+  background-color: transparent;
+  position: relative;
+}
+
+/* line 75, scss/onderdelen/_knop.scss */
+.knoppen-doos hr::after {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  display: block;
+  content: '';
+  border-bottom: 1px solid #CAC8C8;
+  width: 290px;
+  max-width: 80%;
+}
+
+/* line 2, scss/onderdelen/_paginering.scss */
+.navigation {
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+/* line 6, scss/onderdelen/_paginering.scss */
+.navigation ul, .navigation li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* line 9, scss/onderdelen/_paginering.scss */
+.navigation ul {
+  text-align: center;
+}
+
+/* line 12, scss/onderdelen/_paginering.scss */
+.navigation li {
+  display: inline-block;
+}
+
+/* line 18, scss/onderdelen/_paginering.scss */
+.navigation .active a {
+  background-color: #E53C62;
+  box-shadow: 2px 4px 0 darkred;
+  color: white !important;
+}
+
+/* line 23, scss/onderdelen/_paginering.scss */
+.navigation .active a:hover {
+  box-shadow: 0.5px 1px 0 darkred;
+  top: 3px;
+}
+
+/* line 27, scss/onderdelen/_paginering.scss */
+.navigation .active a span, .navigation .active a i {
+  color: white !important;
+}
+
+/* line 3, scss/onderdelen/_schakel.scss */
+.schakel i + i {
+  display: none;
+}
+
+/* line 7, scss/onderdelen/_schakel.scss */
+.schakel.open i {
+  display: none;
+}
+
+/* line 9, scss/onderdelen/_schakel.scss */
+.schakel.open i + i {
+  display: inline;
+}
+
+/* line 13, scss/onderdelen/_schakel.scss */
+.schakel.open.scroll i {
+  display: inline;
+}
+
+/* line 2, scss/onderdelen/_tax-blok.scss */
+#tax-blok {
+  background-color: #fdfdfd;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* line 6, scss/onderdelen/_tax-blok.scss */
+#tax-blok section {
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+/* line 9, scss/onderdelen/_tax-blok.scss */
+#tax-blok section:last-child {
+  padding-bottom: 0;
+}
+
+/* line 13, scss/onderdelen/_tax-blok.scss */
+#tax-blok h2 {
+  margin-top: 0;
+}
+
+/* line 16, scss/onderdelen/_tax-blok.scss */
+#tax-blok h3 {
+  margin-bottom: 0;
+}
+
+/* line 19, scss/onderdelen/_tax-blok.scss */
+#tax-blok ul, #tax-blok li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* line 22, scss/onderdelen/_tax-blok.scss */
+#tax-blok ul {
+  -moz-columns: 2;
+       columns: 2;
+  -moz-column-rule: 1px solid #CAC8C8;
+       column-rule: 1px solid #CAC8C8;
+}
+
+@media (min-width: 600px) {
+  /* line 22, scss/onderdelen/_tax-blok.scss */
+  #tax-blok ul {
+    -moz-columns: 3;
+         columns: 3;
+  }
+}
+
+@media (min-width: 900px) {
+  /* line 22, scss/onderdelen/_tax-blok.scss */
+  #tax-blok ul {
+    -moz-columns: 4;
+         columns: 4;
+  }
+}
+
+/* line 1, scss/onderdelen/_uitgelichte-afbeelding.scss */
+.uitgelichte-afbeelding-buiten {
+  position: relative;
+  height: 50vh;
+}
+
+/* line 4, scss/onderdelen/_uitgelichte-afbeelding.scss */
+.uitgelichte-afbeelding-buiten h1 {
+  margin: 0;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #F9E6B1;
+  text-shadow: 1px 1px 1px black;
+}
+
+@media (max-width: 400px) {
+  /* line 4, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  .uitgelichte-afbeelding-buiten h1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 4, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  .uitgelichte-afbeelding-buiten h1 {
+    left: calc(50% - 580px);
+  }
+}
+
+/* line 17, scss/onderdelen/_uitgelichte-afbeelding.scss */
+.uitgelichte-afbeelding-buiten h1 + * {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+  /* line 17, scss/onderdelen/_uitgelichte-afbeelding.scss */
+  .uitgelichte-afbeelding-buiten h1 + * {
+    right: calc(50% - 580px);
+  }
+}
+
+/* line 26, scss/onderdelen/_uitgelichte-afbeelding.scss */
+.uitgelichte-afbeelding-buiten img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /*******************
 * V 1.01
 * LIZ > VlAFLIP
 *******************/
-/* line 6, scss/onderdelen/_viddoos.scss */
+/* line 7, scss/onderdelen/_viddoos.scss */
 .vid-doos {
   height: 50vh;
   width: 100%;
@@ -1225,14 +3178,14 @@ main blockquote::before {
 			} */
 }
 
-/* line 10, scss/onderdelen/_viddoos.scss */
+/* line 11, scss/onderdelen/_viddoos.scss */
 .vid-doos video {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-/* line 15, scss/onderdelen/_viddoos.scss */
+/* line 16, scss/onderdelen/_viddoos.scss */
 .vid-doos .vid-onder-buiten {
   position: absolute;
   bottom: 50%;
@@ -1240,806 +3193,27 @@ main blockquote::before {
   transform: translate(-50%, 50%);
 }
 
-/* line 21, scss/onderdelen/_viddoos.scss */
+/* line 22, scss/onderdelen/_viddoos.scss */
 .vid-doos .vid-onder-binnen {
   position: relative;
 }
 
-/* line 47, scss/onderdelen/_viddoos.scss */
+/* line 48, scss/onderdelen/_viddoos.scss */
 video[autoplay] ~ .vid-onder-buiten .speel-video {
   display: none;
 }
 
-/* line 50, scss/onderdelen/_viddoos.scss */
+/* line 51, scss/onderdelen/_viddoos.scss */
 video[autoplay].pause ~ .vid-onder-buiten .speel-video {
   display: inline-block;
 }
 
-/* line 54, scss/onderdelen/_viddoos.scss */
+/* line 55, scss/onderdelen/_viddoos.scss */
 video.speelt ~ .vid-onder-buiten .speel-video {
   display: none;
 }
 
-/* line 1, scss/onderdelen/_knop.scss */
-.knop, #agenda-filter [type='submit'], input.wpcf7-submit {
-  display: inline-block;
-  padding: 0.3em 1em;
-  font-weight: bold;
-  background-color: #f9f9f9;
-  box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
-  transition: all 0.2s ease-out 0.2s;
-  position: relative;
-  color: #E53C62;
-  top: 0;
-  font-size: 1rem;
-  text-transform: lowercase;
-  border-radius: 0;
-  font-family: inherit;
-  border: 0;
-}
-
-/* line 16, scss/onderdelen/_knop.scss */
-.knop:hover, #agenda-filter [type='submit']:hover, .knop:visited, #agenda-filter [type='submit']:visited, .knop:active, #agenda-filter [type='submit']:active, input.wpcf7-submit:hover, input.wpcf7-submit:visited, input.wpcf7-submit:active {
-  color: #E53C62;
-  text-decoration: none;
-}
-
-/* line 20, scss/onderdelen/_knop.scss */
-.knop:hover, #agenda-filter [type='submit']:hover, input.wpcf7-submit:hover {
-  transition: all 0.15s ease-out;
-  box-shadow: 0.5px 1px 0 rgba(0, 0, 0, 0.4);
-  top: 3px;
-}
-
-/* line 25, scss/onderdelen/_knop.scss */
-.knop span, #agenda-filter [type='submit'] span, input.wpcf7-submit span {
-  margin-right: 8px;
-  color: #E53C62 !important;
-  line-height: inherit  !important;
-  position: relative;
-  top: -1px;
-}
-
-/* line 32, scss/onderdelen/_knop.scss */
-.knop i, #agenda-filter [type='submit'] i, input.wpcf7-submit i {
-  color: #E53C62 !important;
-}
-
-/* line 35, scss/onderdelen/_knop.scss */
-.knop.in-wit, #agenda-filter .in-wit[type='submit'], input.wpcf7-submit.in-wit {
-  background-color: #E53C62;
-  box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
-  color: white !important;
-}
-
-/* line 39, scss/onderdelen/_knop.scss */
-.knop.in-wit:hover, #agenda-filter .in-wit[type='submit']:hover, input.wpcf7-submit.in-wit:hover {
-  box-shadow: 0.5px 1px 0 rgba(0, 0, 0, 0.4);
-  top: 3px;
-}
-
-/* line 43, scss/onderdelen/_knop.scss */
-.knop.in-wit span, #agenda-filter .in-wit[type='submit'] span, .knop.in-wit i, #agenda-filter .in-wit[type='submit'] i, input.wpcf7-submit.in-wit span, input.wpcf7-submit.in-wit i {
-  color: white !important;
-}
-
-/* line 47, scss/onderdelen/_knop.scss */
-.knop.ikoon-links, #agenda-filter .ikoon-links[type='submit'], input.wpcf7-submit.ikoon-links {
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  margin-right: 10px;
-}
-
-/* line 51, scss/onderdelen/_knop.scss */
-.knop.ikoon-links span, #agenda-filter .ikoon-links[type='submit'] span, input.wpcf7-submit.ikoon-links span {
-  -ms-flex-order: 2;
-      order: 2;
-  margin-right: 0;
-  margin-left: 10px;
-}
-
-/* line 56, scss/onderdelen/_knop.scss */
-.knop.ikoon-links i, #agenda-filter .ikoon-links[type='submit'] i, input.wpcf7-submit.ikoon-links i {
-  margin-left: -2px;
-}
-
-/* line 61, scss/onderdelen/_knop.scss */
-input.wpcf7-submit {
-  height: 34px;
-}
-
-/* line 65, scss/onderdelen/_knop.scss */
-.knoppen-doos {
-  margin-bottom: -10px;
-}
-
-/* line 67, scss/onderdelen/_knop.scss */
-.knoppen-doos .knop, .knoppen-doos #agenda-filter [type='submit'], #agenda-filter .knoppen-doos [type='submit'] {
-  margin-bottom: 10px;
-  margin-right: 10px;
-}
-
-/* line 71, scss/onderdelen/_knop.scss */
-.knoppen-doos hr {
-  background-color: transparent;
-  position: relative;
-}
-
-/* line 74, scss/onderdelen/_knop.scss */
-.knoppen-doos hr::after {
-  position: absolute;
-  left: 0;
-  top: 4px;
-  display: block;
-  content: '';
-  border-bottom: 1px solid #CAC8C8;
-  width: 290px;
-  max-width: 80%;
-}
-
-/* line 2, scss/_header.scss */
-#stek-kop {
-  background-color: white;
-  width: 100%;
-  height: 70px;
-  z-index: 2;
-}
-
-/* line 7, scss/_header.scss */
-#stek-kop .rel > .verpakking, #stek-kop #ingredienten .rel > .vid-onder-buiten, #ingredienten #stek-kop .rel > .vid-onder-buiten {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-}
-
-/* line 11, scss/_header.scss */
-#stek-kop .stek-kop-links {
-  -ms-flex-preferred-size: 210px;
-      flex-basis: 210px;
-}
-
-/* line 13, scss/_header.scss */
-#stek-kop .stek-kop-links .custom-logo-link img {
-  display: block;
-  margin-top: 7px;
-  margin-bottom: -100px;
-}
-
-/* line 18, scss/_header.scss */
-#stek-kop .stek-kop-links h1 {
-  margin: 0;
-}
-
-@media (max-width: 600px) {
-  /* line 11, scss/_header.scss */
-  #stek-kop .stek-kop-links {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  /* line 35, scss/_header.scss */
-  .single #stek-kop .stek-kop-links {
-    display: block;
-  }
-  /* line 38, scss/_header.scss */
-  .single #stek-kop .menu-stuk {
-    display: none;
-  }
-  /* line 40, scss/_header.scss */
-  .single #stek-kop .menu-stuk + .menu-stuk {
-    display: block;
-  }
-  /* line 42, scss/_header.scss */
-  .single #stek-kop .menu-stuk + .menu-stuk + .menu-stuk {
-    display: none;
-  }
-}
-
-@media (max-width: 400px) {
-  /* line 49, scss/_header.scss */
-  .single #stek-kop .stek-kop-links {
-    -ms-flex-preferred-size: 100px;
-        flex-basis: 100px;
-  }
-  /* line 51, scss/_header.scss */
-  .single #stek-kop .stek-kop-links .custom-logo-link img {
-    display: block;
-    margin-top: 20px;
-    margin-bottom: -100px;
-  }
-}
-
-/* line 60, scss/_header.scss */
-#kop-nav {
-  display: -ms-flexbox;
-  display: flex;
-}
-
-/* line 62, scss/_header.scss */
-#kop-nav p {
-  margin-left: 15px;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 1em;
-}
-
-/* line 64, scss/_header.scss */
-#kop-nav p:first-child {
-  margin-left: 0;
-}
-
-/* line 70, scss/_header.scss */
-#kop-nav p a {
-  padding-top: calc(35px - .5em);
-  padding-bottom: calc(35px - .5em);
-  display: block;
-}
-
-@media (max-width: 900px) {
-  /* line 62, scss/_header.scss */
-  #kop-nav p {
-    font-size: 1.4em;
-  }
-}
-
-/* line 2, scss/_voorpagina.scss */
-.home h2 {
-  color: #E53C62;
-  font-size: 2.25em;
-  margin-bottom: .6em;
-}
-
-/* line 9, scss/_voorpagina.scss */
-#vp-boven {
-  height: calc(100vh - 70px);
-}
-
-/* line 11, scss/_voorpagina.scss */
-#vp-boven .verpakking, #vp-boven #ingredienten .vid-onder-buiten, #ingredienten #vp-boven .vid-onder-buiten {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  height: 100%;
-}
-
-/* line 15, scss/_voorpagina.scss */
-#vp-boven .verpakking .flex, #vp-boven #ingredienten .vid-onder-buiten .flex, #ingredienten #vp-boven .vid-onder-buiten .flex {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: column nowrap;
-      flex-flow: column nowrap;
-  -ms-flex-pack: center;
-      justify-content: center;
-  height: 100%;
-}
-
-/* line 20, scss/_voorpagina.scss */
-#vp-boven .verpakking .flex *, #vp-boven #ingredienten .vid-onder-buiten .flex *, #ingredienten #vp-boven .vid-onder-buiten .flex * {
-  text-align: center;
-}
-
-/* line 23, scss/_voorpagina.scss */
-#vp-boven .verpakking .flex #vp-kontekst-logo, #vp-boven #ingredienten .vid-onder-buiten .flex #vp-kontekst-logo, #ingredienten #vp-boven .vid-onder-buiten .flex #vp-kontekst-logo {
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-@media (max-width: 900px) {
-  /* line 23, scss/_voorpagina.scss */
-  #vp-boven .verpakking .flex #vp-kontekst-logo, #vp-boven #ingredienten .vid-onder-buiten .flex #vp-kontekst-logo, #ingredienten #vp-boven .vid-onder-buiten .flex #vp-kontekst-logo {
-    max-width: 200px;
-  }
-}
-
-/* line 30, scss/_voorpagina.scss */
-#vp-boven .verpakking .flex #vp-leus, #vp-boven #ingredienten .vid-onder-buiten .flex #vp-leus, #ingredienten #vp-boven .vid-onder-buiten .flex #vp-leus {
-  position: relative;
-  padding-top: 30px;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 620px;
-  font-size: 36px;
-  color: white;
-  font-style: italic;
-  text-shadow: 1px 1px 1px #a27c1299;
-}
-
-/* line 37, scss/_voorpagina.scss */
-#vp-boven .verpakking .flex #vp-leus::after, #vp-boven #ingredienten .vid-onder-buiten .flex #vp-leus::after, #ingredienten #vp-boven .vid-onder-buiten .flex #vp-leus::after {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 120px;
-  top: -1.5px;
-  left: 230px;
-  border-top: 3px solid #E53C62;
-}
-
-@media (max-width: 900px) {
-  /* line 30, scss/_voorpagina.scss */
-  #vp-boven .verpakking .flex #vp-leus, #vp-boven #ingredienten .vid-onder-buiten .flex #vp-leus, #ingredienten #vp-boven .vid-onder-buiten .flex #vp-leus {
-    max-width: 360px;
-    font-size: 20px;
-    padding-top: 15px;
-    margin-top: 15px;
-  }
-  /* line 55, scss/_voorpagina.scss */
-  #vp-boven .verpakking .flex #vp-leus::after, #vp-boven #ingredienten .vid-onder-buiten .flex #vp-leus::after, #ingredienten #vp-boven .vid-onder-buiten .flex #vp-leus::after {
-    width: 80px;
-    left: 140px;
-  }
-}
-
-/* line 63, scss/_voorpagina.scss */
-#vp-boven #vp-boven-drie-afb {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-
-/* line 66, scss/_voorpagina.scss */
-#vp-boven #vp-boven-drie-afb img {
-  width: 130px;
-  margin-right: 25px;
-  margin-left: 25px;
-}
-
-@media (max-width: 900px) {
-  /* line 66, scss/_voorpagina.scss */
-  #vp-boven #vp-boven-drie-afb img {
-    width: 80px;
-    margin-right: 15px;
-    margin-left: 15px;
-  }
-}
-
-@media (max-width: 450px) {
-  /* line 66, scss/_voorpagina.scss */
-  #vp-boven #vp-boven-drie-afb img {
-    width: 60px;
-    margin-right: 5px;
-    margin-left: 5px;
-  }
-}
-
-/* line 84, scss/_voorpagina.scss */
-.vid-doos {
-  height: 100%;
-}
-
-/* line 87, scss/_voorpagina.scss */
-#ingredienten {
-  height: 100vh;
-}
-
-/* line 89, scss/_voorpagina.scss */
-#ingredienten #vp-vid {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-@media (max-width: 900px) {
-  /* line 89, scss/_voorpagina.scss */
-  #ingredienten #vp-vid {
-    margin-bottom: 0;
-  }
-}
-
-/* line 100, scss/_voorpagina.scss */
-#ingredienten .vid-onder-buiten {
-  bottom: 240px;
-}
-
-@media (max-width: 900px) {
-  /* line 100, scss/_voorpagina.scss */
-  #ingredienten .vid-onder-buiten {
-    bottom: 30px;
-    left: auto;
-    transform: translate(0, 0);
-  }
-}
-
-/* line 112, scss/_voorpagina.scss */
-#ingredienten .flex {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-/* line 118, scss/_voorpagina.scss */
-#ingredienten article {
-  -ms-flex-preferred-size: calc(33% - 10px);
-      flex-basis: calc(33% - 10px);
-}
-
-@media (max-width: 600px) {
-  /* line 118, scss/_voorpagina.scss */
-  #ingredienten article {
-    -ms-flex-preferred-size: calc(50% - 10px);
-        flex-basis: calc(50% - 10px);
-  }
-  /* line 122, scss/_voorpagina.scss */
-  #ingredienten article:last-child {
-    -ms-flex-preferred-size: calc(100%);
-        flex-basis: calc(100%);
-    margin-top: 1em;
-  }
-}
-
-@media (max-width: 600px) {
-  /* line 118, scss/_voorpagina.scss */
-  #ingredienten article {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    margin-top: 1em;
-  }
-}
-
-/* line 132, scss/_voorpagina.scss */
-#ingredienten h3 {
-  color: blue;
-  margin-bottom: .25em;
-  color: #B5DEE8;
-}
-
-/* line 136, scss/_voorpagina.scss */
-#ingredienten h3 + p {
-  margin-top: 0;
-}
-
-/* line 142, scss/_voorpagina.scss */
-#portfolio {
-  padding: 50px 0;
-  background-repeat: repeat;
-  background-image: url("afb/Studio-Vlaflip-3.png");
-  background-size: 600px 600px;
-}
-
-/* line 147, scss/_voorpagina.scss */
-#portfolio #tax-blok {
-  margin-bottom: 40px;
-}
-
-/* line 149, scss/_voorpagina.scss */
-#portfolio #tax-blok h2 {
-  margin-top: 0;
-  margin-bottom: 1em;
-}
-
-/* line 153, scss/_voorpagina.scss */
-#portfolio #tax-blok ul, #portfolio #tax-blok li {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-/* line 156, scss/_voorpagina.scss */
-#portfolio #tax-blok ul {
-  margin-bottom: -20px;
-}
-
-/* line 159, scss/_voorpagina.scss */
-#portfolio #tax-blok li {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-/* line 163, scss/_voorpagina.scss */
-#portfolio #tax-blok li:last-child {
-  margin-right: 0;
-}
-
-@media (max-width: 600px) {
-  /* line 168, scss/_voorpagina.scss */
-  #portfolio #tax-blok ul {
-    margin-bottom: -10px;
-  }
-  /* line 171, scss/_voorpagina.scss */
-  #portfolio #tax-blok li {
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-}
-
-/* line 176, scss/_voorpagina.scss */
-#portfolio #tax-blok a {
-  display: block;
-  padding: .2em .6em;
-  font-weight: bold;
-  text-transform: capitalize;
-  color: white;
-  min-width: 100px;
-  text-align: center;
-}
-
-@media (max-width: 600px) {
-  /* line 176, scss/_voorpagina.scss */
-  #portfolio #tax-blok a {
-    padding: .4em 1em;
-    font-size: 1.4em;
-  }
-}
-
-/* line 189, scss/_voorpagina.scss */
-#portfolio #tax-blok li:first-child a {
-  background-color: #616160;
-}
-
-/* line 196, scss/_voorpagina.scss */
-#port-arts {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-direction: row;
-      flex-direction: row;
-}
-
-/* line 200, scss/_voorpagina.scss */
-#port-arts article {
-  -ms-flex-preferred-size: calc(33.33%);
-      flex-basis: calc(33.33%);
-  -ms-flex-positive: 1;
-      flex-grow: 1;
-  position: relative;
-}
-
-/* line 204, scss/_voorpagina.scss */
-#port-arts article:hover {
-  cursor: pointer;
-}
-
-/* line 206, scss/_voorpagina.scss */
-#port-arts article:hover .art-links a img {
-  transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
-}
-
-/* line 210, scss/_voorpagina.scss */
-#port-arts article:hover .art-rechts p {
-  opacity: 1;
-  transition: 1.2s ease 0.8s;
-}
-
-/* line 214, scss/_voorpagina.scss */
-#port-arts article:hover .art-rechts a {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
-}
-
-/* line 217, scss/_voorpagina.scss */
-#port-arts article:hover .kleurlaag {
-  background-color: transparent !important;
-}
-
-@media (min-width: 1400px) {
-  /* line 200, scss/_voorpagina.scss */
-  #port-arts article {
-    -ms-flex-preferred-size: calc(25%);
-        flex-basis: calc(25%);
-  }
-  /* line 250, scss/_voorpagina.scss */
-  #port-arts article .art-links {
-    height: calc(25vw - 4.5px);
-  }
-}
-
-@media (max-width: 700px) {
-  /* line 200, scss/_voorpagina.scss */
-  #port-arts article {
-    -ms-flex-preferred-size: calc(50%);
-        flex-basis: calc(50%);
-  }
-  /* line 265, scss/_voorpagina.scss */
-  #port-arts article .art-links {
-    height: calc(50vw);
-  }
-}
-
-@media (max-width: 400px) {
-  /* line 200, scss/_voorpagina.scss */
-  #port-arts article {
-    -ms-flex-preferred-size: calc(100%);
-        flex-basis: calc(100%);
-  }
-  /* line 271, scss/_voorpagina.scss */
-  #port-arts article .art-links {
-    height: calc(100vw);
-  }
-}
-
-/* line 277, scss/_voorpagina.scss */
-#port-arts .art-links {
-  height: calc(33.33vw - 6px);
-  width: 100%;
-}
-
-/* line 280, scss/_voorpagina.scss */
-#port-arts .art-links a {
-  display: block;
-  height: 100%;
-}
-
-/* line 283, scss/_voorpagina.scss */
-#port-arts .art-links a img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0.4s;
-}
-
-/* line 291, scss/_voorpagina.scss */
-#port-arts .kleurlaag {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: 0.4s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
-}
-
-/* line 300, scss/_voorpagina.scss */
-#port-arts .art-rechts {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 20px;
-}
-
-/* line 307, scss/_voorpagina.scss */
-#port-arts .art-rechts a {
-  color: white;
-  margin: -20px;
-  display: block;
-  padding: 20px 20px 100px 20px;
-  background: linear-gradient(to bottom, transparent, transparent);
-  transition: 2s ease-in-out 3s;
-}
-
-/* line 314, scss/_voorpagina.scss */
-#port-arts .art-rechts a:hover {
-  text-decoration: none;
-}
-
-/* line 317, scss/_voorpagina.scss */
-#port-arts .art-rechts a h3 {
-  margin-top: 0;
-}
-
-/* line 320, scss/_voorpagina.scss */
-#port-arts .art-rechts a p {
-  opacity: 0;
-  transition: 0.5s ease 0.2s;
-}
-
-/* line 324, scss/_voorpagina.scss */
-#port-arts .art-rechts a h3, #port-arts .art-rechts a p {
-  font-weight: bold;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  color: white;
-}
-
-/* line 333, scss/_voorpagina.scss */
-#vp-contact {
-  padding: 50px 0;
-  background-image: url("afb/Studio-Vlaflip-4.png");
-  background-size: 600px 600px;
-}
-
-@media (max-width: 900px) {
-  /* line 333, scss/_voorpagina.scss */
-  #vp-contact {
-    padding: 30px 0;
-  }
-}
-
-@media (max-width: 600px) {
-  /* line 333, scss/_voorpagina.scss */
-  #vp-contact {
-    padding-top: 0;
-  }
-}
-
-/* line 343, scss/_voorpagina.scss */
-#vp-contact .verpakking, #vp-contact #ingredienten .vid-onder-buiten, #ingredienten #vp-contact .vid-onder-buiten {
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media (max-width: 600px) {
-  /* line 343, scss/_voorpagina.scss */
-  #vp-contact .verpakking, #vp-contact #ingredienten .vid-onder-buiten, #ingredienten #vp-contact .vid-onder-buiten {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-/* line 349, scss/_voorpagina.scss */
-#vp-contact .links {
-  -ms-flex-preferred-size: calc(50% - 150px);
-      flex-basis: calc(50% - 150px);
-  margin-right: 150px;
-}
-
-@media (max-width: 900px) {
-  /* line 349, scss/_voorpagina.scss */
-  #vp-contact .links {
-    -ms-flex-preferred-size: calc(60% - 50px);
-        flex-basis: calc(60% - 50px);
-    margin-right: 50px;
-  }
-}
-
-@media (max-width: 600px) {
-  /* line 349, scss/_voorpagina.scss */
-  #vp-contact .links {
-    -ms-flex-preferred-size: calc(100%);
-        flex-basis: calc(100%);
-    margin-right: 0;
-  }
-}
-
-/* line 360, scss/_voorpagina.scss */
-#vp-contact .links h2 {
-  margin-top: 0;
-}
-
-/* line 364, scss/_voorpagina.scss */
-#vp-contact .rechts {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-}
-
-@media (max-width: 600px) {
-  /* line 364, scss/_voorpagina.scss */
-  #vp-contact .rechts {
-    -ms-flex-preferred-size: calc(100%);
-        flex-basis: calc(100%);
-    margin-top: 20px;
-  }
-}
-
-/* line 372, scss/_voorpagina.scss */
-#vp-contact .soc-media-links img {
-  margin-right: 8px;
-  width: 50px;
-  transition: 0.4s linear 1s;
-}
-
-@media (max-width: 900px) {
-  /* line 372, scss/_voorpagina.scss */
-  #vp-contact .soc-media-links img {
-    margin-right: 4px;
-    width: 30px;
-  }
-}
-
-/* line 380, scss/_voorpagina.scss */
-#vp-contact .soc-media-links img:hover {
-  filter: hue-rotate(-80deg);
-}
-
-/* line 384, scss/_voorpagina.scss */
-#vp-contact .soc-media-links a:last-child img {
-  margin-right: 0;
-}
-
-/* line 1, scss/_agenda.scss */
+/* line 2, scss/_agenda.scss */
 .agenda .flex {
   display: -ms-flexbox;
   display: flex;
@@ -2049,27 +3223,27 @@ input.wpcf7-submit {
       justify-content: space-between;
 }
 
-/* line 6, scss/_agenda.scss */
+/* line 7, scss/_agenda.scss */
 #agenda-filter {
   padding: 20px;
   background-color: #E53C62;
   color: white;
 }
 
-/* line 10, scss/_agenda.scss */
+/* line 11, scss/_agenda.scss */
 #agenda-filter h3 {
   color: white;
   text-transform: capitalize;
 }
 
-/* line 14, scss/_agenda.scss */
+/* line 15, scss/_agenda.scss */
 #agenda-filter > .flex {
   -ms-flex-align: end;
       align-items: flex-end;
 }
 
 @media (max-width: 700px) {
-  /* line 14, scss/_agenda.scss */
+  /* line 15, scss/_agenda.scss */
   #agenda-filter > .flex {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2079,46 +3253,46 @@ input.wpcf7-submit {
     -ms-flex-pack: start;
         justify-content: start;
   }
-  /* line 22, scss/_agenda.scss */
+  /* line 23, scss/_agenda.scss */
   #agenda-filter > .flex > * {
     margin-bottom: 20px;
   }
 }
 
 @media (max-width: 560px) {
-  /* line 27, scss/_agenda.scss */
+  /* line 28, scss/_agenda.scss */
   #agenda-filter > .flex > *:last-child {
     margin-top: 32px;
   }
 }
 
 @media (max-width: 440px) {
-  /* line 32, scss/_agenda.scss */
+  /* line 33, scss/_agenda.scss */
   #agenda-filter > .flex > * {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-right: 0;
     margin-bottom: 30px;
   }
-  /* line 36, scss/_agenda.scss */
+  /* line 37, scss/_agenda.scss */
   #agenda-filter > .flex > *:last-child {
     margin-top: 0;
   }
 }
 
-/* line 43, scss/_agenda.scss */
+/* line 44, scss/_agenda.scss */
 #agenda-filter section {
   margin-right: 40px;
   -ms-flex-direction: column;
       flex-direction: column;
 }
 
-/* line 45, scss/_agenda.scss */
+/* line 46, scss/_agenda.scss */
 #agenda-filter section h3 {
   margin-bottom: 10px;
 }
 
-/* line 52, scss/_agenda.scss */
+/* line 53, scss/_agenda.scss */
 #agenda-filter select {
   -webkit-appearance: none;
   appearance: none;
@@ -2141,17 +3315,17 @@ input.wpcf7-submit {
   color: #666;
 }
 
-/* line 72, scss/_agenda.scss */
+/* line 73, scss/_agenda.scss */
 #agenda-filter select.geklikt, #agenda-filter select:hover {
   color: #616160;
 }
 
-/* line 75, scss/_agenda.scss */
+/* line 76, scss/_agenda.scss */
 #agenda-filter select:hover {
   cursor: pointer;
 }
 
-/* line 80, scss/_agenda.scss */
+/* line 81, scss/_agenda.scss */
 #agenda-filter [type='submit'] {
   font-size: 1em;
   border: 0;
@@ -2159,7 +3333,7 @@ input.wpcf7-submit {
   height: calc(2em + 2px);
 }
 
-/* line 89, scss/_agenda.scss */
+/* line 90, scss/_agenda.scss */
 .agenda {
   display: -ms-flexbox;
   display: flex;
@@ -2167,65 +3341,65 @@ input.wpcf7-submit {
       flex-direction: column;
 }
 
-/* line 92, scss/_agenda.scss */
+/* line 93, scss/_agenda.scss */
 .agenda ul, .agenda li {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-/* line 97, scss/_agenda.scss */
+/* line 98, scss/_agenda.scss */
 .agenda span, .agenda h2, .agenda a span {
   color: #666;
 }
 
-/* line 100, scss/_agenda.scss */
+/* line 101, scss/_agenda.scss */
 .agenda ul {
   font-size: .8em;
 }
 
-/* line 103, scss/_agenda.scss */
+/* line 104, scss/_agenda.scss */
 .agenda li {
   border-bottom: 1px solid rgba(33, 33, 33, 0.1);
 }
 
-/* line 105, scss/_agenda.scss */
+/* line 106, scss/_agenda.scss */
 .agenda li:last-child {
   border-bottom: 0;
 }
 
-/* line 109, scss/_agenda.scss */
+/* line 110, scss/_agenda.scss */
 .agenda span {
   line-height: 1em;
 }
 
-/* line 112, scss/_agenda.scss */
+/* line 113, scss/_agenda.scss */
 .agenda li > a.flex {
   padding: 15px 10px;
   position: relative;
 }
 
 @media (max-width: 600px) {
-  /* line 112, scss/_agenda.scss */
+  /* line 113, scss/_agenda.scss */
   .agenda li > a.flex {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-/* line 119, scss/_agenda.scss */
+/* line 120, scss/_agenda.scss */
 .agenda li > a.flex span {
   transition: 0.4s color ease;
 }
 
-/* line 122, scss/_agenda.scss */
+/* line 123, scss/_agenda.scss */
 .agenda li > a.flex .agenda-links span {
   transition: 0.5s color ease-in-out 0.5s;
   color: #252525;
   font-weight: bold;
 }
 
-/* line 127, scss/_agenda.scss */
+/* line 128, scss/_agenda.scss */
 .agenda li > a.flex .agenda-links span.met-streepje {
   display: block;
   padding-top: 5px;
@@ -2233,7 +3407,7 @@ input.wpcf7-submit {
   position: relative;
 }
 
-/* line 132, scss/_agenda.scss */
+/* line 133, scss/_agenda.scss */
 .agenda li > a.flex .agenda-links span.met-streepje::after {
   position: absolute;
   left: 0;
@@ -2244,19 +3418,19 @@ input.wpcf7-submit {
   border-top: 1px solid rgba(33, 33, 33, 0.1);
 }
 
-/* line 143, scss/_agenda.scss */
+/* line 144, scss/_agenda.scss */
 .agenda li > a.flex .agenda-rechts {
   padding-left: 10px;
 }
 
 @media (max-width: 600px) {
-  /* line 143, scss/_agenda.scss */
+  /* line 144, scss/_agenda.scss */
   .agenda li > a.flex .agenda-rechts {
     padding-left: 0;
   }
 }
 
-/* line 149, scss/_agenda.scss */
+/* line 150, scss/_agenda.scss */
 .agenda li > a.flex:after {
   display: block;
   content: '';
@@ -2271,19 +3445,19 @@ input.wpcf7-submit {
 }
 
 @media (min-width: 600px) {
-  /* line 162, scss/_agenda.scss */
+  /* line 163, scss/_agenda.scss */
   .agenda li > a.flex:hover {
     text-decoration: none;
   }
-  /* line 164, scss/_agenda.scss */
+  /* line 165, scss/_agenda.scss */
   .agenda li > a.flex:hover span {
     color: #252525;
   }
-  /* line 167, scss/_agenda.scss */
+  /* line 168, scss/_agenda.scss */
   .agenda li > a.flex:hover .agenda-links span {
     color: white;
   }
-  /* line 171, scss/_agenda.scss */
+  /* line 172, scss/_agenda.scss */
   .agenda li > a.flex:hover::after {
     width: 60px;
     transition: 0.5s width ease-in-out 0.4s;
@@ -2291,12 +3465,12 @@ input.wpcf7-submit {
 }
 
 @media (max-width: 600px) {
-  /* line 112, scss/_agenda.scss */
+  /* line 113, scss/_agenda.scss */
   .agenda li > a.flex {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  /* line 180, scss/_agenda.scss */
+  /* line 181, scss/_agenda.scss */
   .agenda li > a.flex .agenda-rechts {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -2304,24 +3478,24 @@ input.wpcf7-submit {
   }
 }
 
-/* line 186, scss/_agenda.scss */
+/* line 187, scss/_agenda.scss */
 .agenda .flex {
   -ms-flex-direction: row;
       flex-direction: row;
 }
 
-/* line 188, scss/_agenda.scss */
+/* line 189, scss/_agenda.scss */
 .agenda .flex span {
   display: block;
 }
 
-/* line 191, scss/_agenda.scss */
+/* line 192, scss/_agenda.scss */
 .agenda .flex .agenda-links {
   -ms-flex-preferred-size: 90px;
       flex-basis: 90px;
 }
 
-/* line 194, scss/_agenda.scss */
+/* line 195, scss/_agenda.scss */
 .agenda .flex .agenda-midden.flex {
   -ms-flex-direction: column;
       flex-direction: column;
@@ -2332,57 +3506,57 @@ input.wpcf7-submit {
 }
 
 @media (max-width: 400px) {
-  /* line 194, scss/_agenda.scss */
+  /* line 195, scss/_agenda.scss */
   .agenda .flex .agenda-midden.flex {
     -ms-flex-preferred-size: 170px;
         flex-basis: 170px;
   }
 }
 
-/* line 202, scss/_agenda.scss */
+/* line 203, scss/_agenda.scss */
 .agenda .flex .locatie {
   font-size: .6em;
   line-height: .8rem;
 }
 
 @media (max-width: 440px) {
-  /* line 202, scss/_agenda.scss */
+  /* line 203, scss/_agenda.scss */
   .agenda .flex .locatie {
     margin-top: 5px;
     margin-bottom: 5px;
   }
 }
 
-/* line 210, scss/_agenda.scss */
+/* line 211, scss/_agenda.scss */
 .agenda .flex .titel {
   color: #252525;
   font-size: 1em;
 }
 
-/* line 215, scss/_agenda.scss */
+/* line 216, scss/_agenda.scss */
 .agenda time {
   display: none;
 }
 
-/* line 218, scss/_agenda.scss */
+/* line 219, scss/_agenda.scss */
 .agenda .knoppen-doos {
   margin-top: 20px;
 }
 
 @media (max-width: 600px) {
-  /* line 223, scss/_agenda.scss */
+  /* line 224, scss/_agenda.scss */
   #agenda-filter {
     -ms-flex-order: 3;
         order: 3;
   }
-  /* line 226, scss/_agenda.scss */
+  /* line 227, scss/_agenda.scss */
   .agenda.pagina {
     -ms-flex-order: 2;
         order: 2;
   }
 }
 
-/* line 231, scss/_agenda.scss */
+/* line 232, scss/_agenda.scss */
 .agenda-los .agenda-data {
   padding: 20px;
   background-color: #E53C62;
@@ -2393,7 +3567,7 @@ input.wpcf7-submit {
   margin-right: 20px;
 }
 
-/* line 237, scss/_agenda.scss */
+/* line 238, scss/_agenda.scss */
 .agenda-los .agenda-data span, .agenda-los .agenda-data h1 {
   display: block;
   font-family: "Merriweather";
@@ -2401,12 +3575,12 @@ input.wpcf7-submit {
   color: white;
 }
 
-/* line 243, scss/_agenda.scss */
+/* line 244, scss/_agenda.scss */
 .agenda-los .agenda-data span {
   font-size: 1.2em;
 }
 
-/* line 248, scss/_agenda.scss */
+/* line 249, scss/_agenda.scss */
 .agenda-los .niet-volle-breedte {
   display: -ms-flexbox;
   display: flex;
@@ -2414,251 +3588,42 @@ input.wpcf7-submit {
       flex-direction: column;
 }
 
-/* line 251, scss/_agenda.scss */
+/* line 252, scss/_agenda.scss */
 .agenda-los .niet-volle-breedte .single-footer {
   -ms-flex-order: 3;
       order: 3;
 }
 
-/* line 254, scss/_agenda.scss */
+/* line 255, scss/_agenda.scss */
 .agenda-los .niet-volle-breedte #agenda-kaart {
   -ms-flex-order: 4;
       order: 4;
 }
 
-/* line 257, scss/_agenda.scss */
+/* line 258, scss/_agenda.scss */
 .agenda-los .niet-volle-breedte .jp-relatedposts {
   -ms-flex-order: 5;
       order: 5;
 }
 
-/* line 263, scss/_agenda.scss */
+/* line 264, scss/_agenda.scss */
 #agenda-kaart {
   height: 350px;
   margin-top: 20px;
 }
 
-/* line 2, scss/_single.scss */
-.single .tekstveld {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-/* line 5, scss/_single.scss */
-.single .tekstveld p:first-child {
-  margin-top: 0;
-}
-
-/* line 8, scss/_single.scss */
-.single .tekstveld p:last-child {
-  margin-bottom: 0;
-}
-
-/* line 14, scss/_single.scss */
-.single .uitgelichte-afbeelding-buiten {
-  height: calc(100vh - 70px);
-}
-
-/* line 17, scss/_single.scss */
-#single-knop {
-  right: calc(30% + 10px);
-  transform: translate(100%, 0%);
-}
-
-@media (max-width: 400px) {
-  /* line 17, scss/_single.scss */
-  #single-knop {
-    display: none;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* line 17, scss/_single.scss */
-  #single-knop {
-    right: calc(50% - 420px);
-  }
-}
-
-@media (max-width: 900px) {
-  /* line 17, scss/_single.scss */
-  #single-knop {
-    right: calc(35% + 5px);
-  }
-}
-
-/* line 34, scss/_single.scss */
-#single-hoofd.met-gallerij {
-  margin-top: 120px;
-}
-
-@media (max-width: 900px) {
-  /* line 34, scss/_single.scss */
-  #single-hoofd.met-gallerij {
-    margin-top: 20px;
-  }
-}
-
-/* line 41, scss/_single.scss */
-#single-hoofd.flex {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-}
-
-/* line 45, scss/_single.scss */
-#single-hoofd.flex .links {
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
-}
-
-/* line 48, scss/_single.scss */
-#single-hoofd.flex .rechts {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-}
-
-@media (max-width: 900px) {
-  /* line 48, scss/_single.scss */
-  #single-hoofd.flex .rechts {
-    -ms-flex-preferred-size: 35%;
-        flex-basis: 35%;
-  }
-}
-
-@media (max-width: 400px) {
-  /* line 41, scss/_single.scss */
-  #single-hoofd.flex {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  /* line 58, scss/_single.scss */
-  #single-hoofd.flex .links, #single-hoofd.flex .rechts {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
-  /* line 61, scss/_single.scss */
-  #single-hoofd.flex .links {
-    margin-top: 20px;
-    -ms-flex-order: 2;
-        order: 2;
-  }
-}
-
-/* line 71, scss/_single.scss */
-#single-hoofd h1, #single-hoofd h2 {
-  margin-bottom: 0;
-}
-
-@media (max-width: 400px) {
-  /* line 70, scss/_single.scss */
-  #single-hoofd {
-    margin-top: 0;
-  }
-}
-
-/* line 79, scss/_single.scss */
-.single-article-sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 30px;
-}
-
-/* line 82, scss/_single.scss */
-.single-article-sticky h2 {
-  margin-top: 0;
-}
-
-@media (max-width: 400px) {
-  /* line 79, scss/_single.scss */
-  .single-article-sticky {
-    position: static;
-  }
-  /* line 87, scss/_single.scss */
-  .single-article-sticky h2 {
-    margin-top: .5em;
-  }
-}
-
-/* line 93, scss/_single.scss */
-.single-meta {
-  margin: 30px 0;
-}
-
-@media (max-width: 900px) {
-  /* line 93, scss/_single.scss */
-  .single-meta {
-    margin: 15px 0;
-  }
-}
-
-/* line 98, scss/_single.scss */
-.single-meta span {
-  display: block;
-}
-
-/* line 101, scss/_single.scss */
-.single-meta strong {
-  color: #B5DEE8;
-  font-size: 1.2em;
-  margin-right: .05em;
-}
-
-/* line 109, scss/_single.scss */
-.single-art-hoofd > strong:first-child {
-  color: #B5DEE8;
-  font-size: 1.2em;
-}
-
-/* line 112, scss/_single.scss */
-.single-art-hoofd > strong:first-child + p {
-  margin-top: 0;
-}
-
-/* line 116, scss/_single.scss */
-.single-art-hoofd + footer {
-  margin-top: 30px;
-}
-
-/* line 122, scss/_single.scss */
-.single .gallerij img, .single .gallerij .vid-doos {
-  margin-bottom: 2em;
-}
-
-/* line 125, scss/_single.scss */
-.single .gallerij .vid-doos {
-  height: auto;
-}
-
-/* line 128, scss/_single.scss */
-.single .gallerij video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* line 131, scss/_single.scss */
-.single .gallerij video:hover {
-  cursor: pointer;
-}
-
-/* line 1, scss/_archive.scss */
+/* line 2, scss/_archive.scss */
 .archive h1 span {
   font-size: .6em;
   display: block;
 }
 
-/* line 5, scss/_archive.scss */
+/* line 6, scss/_archive.scss */
 .archive main > footer {
   padding-top: 20px;
 }
 
-/* line 9, scss/_archive.scss */
+/* line 10, scss/_archive.scss */
 #archief-lijst {
   display: -ms-flexbox;
   display: flex;
@@ -2668,7 +3633,7 @@ input.wpcf7-submit {
       flex-wrap: wrap;
 }
 
-/* line 13, scss/_archive.scss */
+/* line 14, scss/_archive.scss */
 #archief-lijst .art-c {
   max-width: none;
   -ms-flex-preferred-size: 100%;
@@ -2679,7 +3644,7 @@ input.wpcf7-submit {
 }
 
 @media (min-width: 600px) {
-  /* line 13, scss/_archive.scss */
+  /* line 14, scss/_archive.scss */
   #archief-lijst .art-c {
     max-width: 50%;
     -ms-flex-preferred-size: 50%;
@@ -2688,37 +3653,33 @@ input.wpcf7-submit {
 }
 
 @media (min-width: 800px) {
-  /* line 13, scss/_archive.scss */
+  /* line 14, scss/_archive.scss */
   #archief-lijst .art-c {
     -ms-flex-preferred-size: 33.33%;
         flex-basis: 33.33%;
   }
 }
 
-/* line 1, scss/_footer.scss */
-#stek-voet {
-  color: white;
-  font-size: .8em;
-  padding: 0;
-  background-color: #f4cf6a;
-  padding: 10px 0;
+/* line 2, scss/_header.scss */
+#stek-kop {
+  background-color: #272822;
+  width: 100%;
+  height: 70px;
+  z-index: 2;
 }
 
-/* line 7, scss/_footer.scss */
-#stek-voet .verpakking, #stek-voet #ingredienten .vid-onder-buiten, #ingredienten #stek-voet .vid-onder-buiten {
+/* line 7, scss/_header.scss */
+#stek-kop .rel > .verpakking {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
 }
 
-@media (max-width: 900px) {
-  /* line 7, scss/_footer.scss */
-  #stek-voet .verpakking, #stek-voet #ingredienten .vid-onder-buiten, #ingredienten #stek-voet .vid-onder-buiten {
-    -ms-flex-direction: column;
-        flex-direction: column;
-    text-align: center;
-  }
+/* line 11, scss/_header.scss */
+#stek-kop .stek-kop-links {
+  -ms-flex-preferred-size: 210px;
+      flex-basis: 210px;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

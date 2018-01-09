@@ -1,7 +1,7 @@
 <?php
 
 //nee het niet is niet echt mvc. Weet ik. thx. stfu. bai.
-function logo_model($heading) {
+if(!function_exists('logo_model')) : function logo_model($heading) {
 	ob_start();
 	the_custom_logo();
 	$logo = ob_get_clean();
@@ -13,9 +13,9 @@ function logo_model($heading) {
 	$logo .= "</a>";
     if ($is_front && $heading) $logo .= "</h1>";
 	return $logo;
-}
+} endif;
 
-function paginering_model() {
+if(!function_exists('paginering_model')) : function paginering_model() {
 
     if( is_singular() && !is_search()) return false;
     global $wp_query;
@@ -54,9 +54,9 @@ function paginering_model() {
     if ($m['pagi_volgende_link']) $m['pagi_volgende_link_res'] = appendChildBefore($m['pagi_volgende_link'], "<i class='mdi mdi-arrow-right-thick'></i>");
 
     return $m;
-}
+} endif;
 
-function agenda_filter_model(){
+if(!function_exists('agenda_filter_model')) : function agenda_filter_model(){
 
     $agenda_taxen = get_terms(array('soort', 'locatie'));
     $filters_inst = array();
@@ -116,9 +116,9 @@ function agenda_filter_model(){
         'filters_actief' => $filters_actief,
         'filters_inst' => $filters_inst,
     );
-}
+} endif;
 
-function agenda_art_meta($post) {
+if(!function_exists('agenda_art_meta')) : function agenda_art_meta($post) {
     ob_start();
     $ID = $post->ID;
 
@@ -133,9 +133,9 @@ function agenda_art_meta($post) {
 
     </div>
 <?php return ob_get_clean();
-}
+} endif;
 
-function post_type_mv_model(){
+if(!function_exists('post_type_mv_model')) : function post_type_mv_model(){
 
     if (!defined('POST_TYPE_NAAM')) {
         global $post;
@@ -157,9 +157,9 @@ function post_type_mv_model(){
             break;
     }
     return $pt_mv;
-}
+} endif;
 
-function gezocht_naar_tax_waarde_model() {
+if(!function_exists('gezocht_naar_tax_waarde_model')) : function gezocht_naar_tax_waarde_model() {
     $tax_waarde = '';
     $t = 0;
 
@@ -171,4 +171,4 @@ function gezocht_naar_tax_waarde_model() {
         if ($t > 0) break;
         $t++;
     endforeach; endif;
-}
+} endif;

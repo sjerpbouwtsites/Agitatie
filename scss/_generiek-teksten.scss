@@ -1,10 +1,8 @@
+//parent
 
 body {
 	color: $zwart;
 	-webkit-text-size-adjust: 100%;
-}
-body, button {
-	font-family: 'Lato', sans-serif;
 }
 
 a:hover,
@@ -22,19 +20,7 @@ a, a:visited {
 	text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6,
-#stek-voet h3 a,
-#kop-nav li > a,
-#kop-nav .menu-stuk a {
-	//font-family: 'Rubik Mono One', sans-serif;
-	//font-family: 'Rammetto One', sans-serif;
-	line-height: 1;
-	//color: $zwartgroenrood;
-	font-weight: 900;
-	color: $rustig_rood;
-	-webkit-font-smoothing: antialiased;
-	//letter-spacing: .004em;
-}
+
 
 
 p, span {

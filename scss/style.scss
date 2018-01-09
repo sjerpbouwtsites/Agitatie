@@ -1,3 +1,4 @@
+//parent
 /*!
 Theme Name: Agitatie
 Theme URI: https://github.com/sjerpbouwtsites/Agitatie
@@ -25,28 +26,31 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 @import 'generiek';
 @import 'generiek-teksten';
 
-/* @import 'ext/slick';
+@import 'ext/slick';
 @import 'ext/leaflet';
-@import 'ext/classic.date';
-@import 'ext/classic';
-@import 'ext/classic.time';
-@import 'ext/restaurant-reservations'; */
-//@import 'ext/facebook';
+@import 'ext/facebook';
 
-/* @import 'onderdelen/carousel';
-@import 'onderdelen/paginering';
-@import 'onderdelen/tax-blok';
-@import 'onderdelen/art_class';*/
-@import 'onderdelen/viddoos';
+@import 'onderdelen/art_class';
+@import 'onderdelen/back-to-top';
+@import 'onderdelen/carousel';
+@import 'onderdelen/foto-video-gallerij';
 @import 'onderdelen/knop';
+@import 'onderdelen/paginering';
+@import 'onderdelen/schakel';
+@import 'onderdelen/tax-blok';
+@import 'onderdelen/uitgelichte-afbeelding';
+@import 'onderdelen/viddoos';
 
-@import 'header';
-@import 'voorpagina';
 @import 'agenda';
-@import 'zoeken';
-@import 'single';
 @import 'archive';
 @import 'footer';
+@import 'header';
+@import 'nav';
+@import 'single';
+@import 'voorpagina';
+@import 'zoeken';
+
+
 
 
 
