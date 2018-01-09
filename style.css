@@ -11,6 +11,7 @@ Version: 1.0
 GitHub Theme URI: sjerpbouwtsites/agitatie
 GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 !*/
+@import url("https://fonts.googleapis.com/css?family=PT+Serif|Raleway");
 /* line 2, scss/basis/_normalise.scss */
 html {
   font-family: sans-serif;
