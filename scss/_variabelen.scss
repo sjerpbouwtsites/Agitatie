@@ -1,19 +1,52 @@
 //parent
-$rustig_rood: 	#E53C62;
-$vlageel: 		#F9E6B1;
-$lichtblauw: 	#B5DEE8;
-$roze: 			#F7CBCE;
-$donkergrijs: 	#616160;
+
+//STANDAARDWAARDEN OPSLAAN
+
+$basis_lichtgrijs: 	#CAC8C8;
+$basis_grijs:		#666;
+$basis_donkergrijs: #414141;
+$basis_zwart: 		#252525;
+
+$basis_hoofdkleur:  #E53C62; //rood
+$basis_zijkleur:	#F9E6B1; //geel
+$basis_accentkleur: #B5DEE8; //lichtblauw
 
 
-$lichtgrijs: 	#CAC8C8;
-$grijs:			#666;
-//$donkergrijs: 	#414141;
-$zwart: 		#252525;
+//////////////////////////////////
+//////////////////////////////////
+
+
+//VARIABELEN INITIALISEREN MET STANDAARDWAARDEN
+
+$lichtgrijs: 		$basis_lichtgrijs;
+$grijs:				$basis_grijs;
+$donkergrijs: 		$basis_donkergrijs;
+$zwart: 			$basis_zwart;
+
+$hoofdkleur: 		$basis_hoofdkleur;
+$zijkleur: 			$basis_zijkleur;
+$accentkleur: 		$basis_accentkleur;
+
+$hoofdkleur_donker: darken($hoofdkleur, 5%);
+$zijkleur_donker: 	darken($zijkleur, 5%);
+$accentkleur_donker:darken($accentkleur, 5%);
+
+//////////////////////////////////
+//////////////////////////////////
+
+
+//OVERSCHRIJVEN WAAR NODIG
+
+
+
+
+
+
+
+
+
+
 $ease-out-snel: cubic-bezier(0,0,0,1.28);
 $dunlijntje: 1px solid rgba(33, 33, 33, 0.1);
 
-$viesgeel2: yellow;
-$roodgrijze-tint: darkred;
-
-
+//$roodgrijze-tint: darkred;

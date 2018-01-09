@@ -17,11 +17,11 @@
 	}
 	.active a{
 		//kopie van knop in wit
-		background-color: $rustig_rood;
-		box-shadow: 2px 4px 0 $roodgrijze_tint;
+		background-color: $hoofdkleur;
+		box-shadow: 2px 4px 0 $hoofdkleur_donker;
 		color: white !important;
 			&:hover {
-			box-shadow: 0.5px 1px 0 $roodgrijze_tint;
+			box-shadow: 0.5px 1px 0 $hoofdkleur_donker;
 			top: 3px;
 		}
 		span, i {

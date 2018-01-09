@@ -7,7 +7,7 @@
 	box-shadow: 2px 4px 0 rgba(0,0,0,0.4);
 	transition: all 0.2s ease-out 0.2s;
 	position: relative;
-	color: $rustig_rood;
+	color: $hoofdkleur;
 	top: 0;
 	font-size: 1rem;
 	text-transform: lowercase;
@@ -15,7 +15,7 @@
 	font-family: inherit;
 	border: 0;
 	&:hover, &:visited, &:active {
-		color: $rustig_rood;
+		color: $hoofdkleur;
 		text-decoration: none;
 	}
 	&:hover {
@@ -25,16 +25,16 @@
 	}
 	span {
 		margin-right: 8px;
-		color: $rustig_rood !important;
+		color: $hoofdkleur !important;
 		line-height: inherit  !important;
 		position: relative;
 		top: -1px;
 	}
 	i {
-		color: $rustig_rood !important;
+		color: $hoofdkleur !important;
 	}
 	&.in-wit {
-		background-color: $rustig_rood;
+		background-color: $hoofdkleur;
 		box-shadow: 2px 4px 0 rgba(0,0,0,0.4);
 		color: white !important;
 			&:hover {

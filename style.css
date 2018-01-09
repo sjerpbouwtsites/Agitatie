@@ -1007,7 +1007,7 @@ html {
 .blok {
   background-color: white;
   box-shadow: 0 1px 2px #666;
-  color: #616160;
+  color: #414141;
 }
 
 /* line 48, scss/_generiek.scss */
@@ -2768,7 +2768,7 @@ img.efbl-loader {
 
 /* line 46, scss/onderdelen/_art_class.scss */
 .art-c h3 {
-  color: yellow;
+  color: #F9E6B1;
   margin-top: 0;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
@@ -3000,13 +3000,13 @@ input.wpcf7-submit {
 /* line 18, scss/onderdelen/_paginering.scss */
 .navigation .active a {
   background-color: #E53C62;
-  box-shadow: 2px 4px 0 darkred;
+  box-shadow: 2px 4px 0 #e22650;
   color: white !important;
 }
 
 /* line 23, scss/onderdelen/_paginering.scss */
 .navigation .active a:hover {
-  box-shadow: 0.5px 1px 0 darkred;
+  box-shadow: 0.5px 1px 0 #e22650;
   top: 3px;
 }
 
@@ -3317,7 +3317,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 
 /* line 73, scss/_agenda.scss */
 #agenda-filter select.geklikt, #agenda-filter select:hover {
-  color: #616160;
+  color: #414141;
 }
 
 /* line 76, scss/_agenda.scss */
