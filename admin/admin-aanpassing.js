@@ -10,6 +10,14 @@ var i;
 jQuery(function($) {
 	$("#publish").on('click', function(e){
 
+    //EDIT EDIT EDIT
+    //EDIT EDIT EDIT
+    //EDIT EDIT EDIT
+    //EDIT EDIT EDIT
+    //EDIT EDIT EDIT
+    //EDIT EDIT EDIT
+    gaDoor = true;
+
 		if (!gaDoor) {
 
         var

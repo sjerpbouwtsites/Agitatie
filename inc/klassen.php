@@ -188,8 +188,8 @@ class Article_c extends Array_constr{
 			<?php endif;?>
 
 			<div class='art-rechts'>
-				<a href='<?=$this->permalink?>'>
-					<h<?=$this->htype?>>
+				<a class='tekst-wit' href='<?=$this->permalink?>'>
+					<h<?=$this->htype?> class='tekst-zijkleur'>
 					<?=$this->art->post_title?>
 					</h<?=$this->htype?>>
 

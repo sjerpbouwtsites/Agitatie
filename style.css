@@ -12,6 +12,126 @@ GitHub Theme URI: sjerpbouwtsites/agitatie
 GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 !*/
 @import url("https://fonts.googleapis.com/css?family=PT+Serif|Raleway");
+/* line 18, scss/inst/kleur/_initialisatie.scss */
+.tekst-wit {
+  color: #fff;
+}
+
+/* line 21, scss/inst/kleur/_initialisatie.scss */
+.tekst-wittig {
+  color: #f5f5f5;
+}
+
+/* line 24, scss/inst/kleur/_initialisatie.scss */
+.tekst-lichtgrijs {
+  color: #CAC8C8;
+}
+
+/* line 27, scss/inst/kleur/_initialisatie.scss */
+.tekst-grijs {
+  color: #666;
+}
+
+/* line 30, scss/inst/kleur/_initialisatie.scss */
+.tekst-donkergrijs {
+  color: #414141;
+}
+
+/* line 33, scss/inst/kleur/_initialisatie.scss */
+.tekst-zwart {
+  color: #252525;
+}
+
+/* line 36, scss/inst/kleur/_initialisatie.scss */
+.tekst-hoofdkleur {
+  color: #E53C62;
+}
+
+/* line 39, scss/inst/kleur/_initialisatie.scss */
+.tekst-zijkleur {
+  color: #F9E6B1;
+}
+
+/* line 42, scss/inst/kleur/_initialisatie.scss */
+.tekst-accentkleur {
+  color: #B5DEE8;
+}
+
+/* line 45, scss/inst/kleur/_initialisatie.scss */
+.tekst-hoofdkleur-donker {
+  color: #e22650;
+}
+
+/* line 48, scss/inst/kleur/_initialisatie.scss */
+.tekst-zijkleur-donker {
+  color: #f7de99;
+}
+
+/* line 51, scss/inst/kleur/_initialisatie.scss */
+.tekst-accentkleur-donker {
+  color: #a2d5e2;
+}
+
+/* line 55, scss/inst/kleur/_initialisatie.scss */
+.achtergrond-wit {
+  background-color: #fff;
+}
+
+/* line 58, scss/inst/kleur/_initialisatie.scss */
+.achtergrond-wittig {
+  background-color: #f5f5f5;
+}
+
+/* line 61, scss/inst/kleur/_initialisatie.scss */
+.achtergrond-lichtgrijs {
+  background-color: #CAC8C8;
+}
+
+/* line 64, scss/inst/kleur/_initialisatie.scss */
+.achtergrond-grijs {
+  background-color: #666;
+}
+
+/* line 67, scss/inst/kleur/_initialisatie.scss */
+.achtergrond-donkergrijs {
+  background-color: #414141;
+}
+
+/* line 70, scss/inst/kleur/_initialisatie.scss */
+.achtergrond-zwart {
+  background-color: #252525;
+}
+
+/* line 73, scss/inst/kleur/_initialisatie.scss */
+.achtergrond-hoofdkleur {
+  background-color: #E53C62;
+}
+
+/* line 76, scss/inst/kleur/_initialisatie.scss */
+.achtergrond-zijkleur {
+  background-color: #F9E6B1;
+}
+
+/* line 79, scss/inst/kleur/_initialisatie.scss */
+.achtergrond-accentkleur {
+  background-color: #B5DEE8;
+}
+
+/* line 82, scss/inst/kleur/_initialisatie.scss */
+.achtergrond-hoofdkleur-donker {
+  background-color: #e22650;
+}
+
+/* line 85, scss/inst/kleur/_initialisatie.scss */
+.achtergrond-zijkleur-donker {
+  background-color: #f7de99;
+}
+
+/* line 88, scss/inst/kleur/_initialisatie.scss */
+.achtergrond-accentkleur-donker {
+  background-color: #a2d5e2;
+}
+
 /* line 2, scss/basis/_normalise.scss */
 html {
   font-family: sans-serif;
@@ -2748,7 +2868,6 @@ img.efbl-loader {
 
 /* line 30, scss/onderdelen/_art_class.scss */
 .art-c .art-rechts p {
-  color: #fff;
   font-weight: 400;
   margin: 0 0 .5em;
   line-height: 1.2;
@@ -2758,7 +2877,6 @@ img.efbl-loader {
 
 /* line 36, scss/onderdelen/_art_class.scss */
 .art-c .art-rechts p a {
-  color: #fff;
   text-decoration: underline;
 }
 
@@ -2769,7 +2887,6 @@ img.efbl-loader {
 
 /* line 46, scss/onderdelen/_art_class.scss */
 .art-c h3 {
-  color: #F9E6B1;
   margin-top: 0;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
