@@ -69,3 +69,47 @@ if(!function_exists('foto_video_gallery_ctrl')) :  function foto_video_gallery_c
 
 	echo "</div>"; 
 } endif;
+
+if(!function_exists('tekstveld_ctrl')) :  function tekstveld_ctrl($invoer = array()){
+	
+	//als tekst leeg
+	if(!array_key_exists('tekst', $invoer)) {
+		global $post;
+		$invoer['tekst'] = $post->post_content;
+	}
+
+	//terugval opties
+	$basis_waarden = array(
+		'formaat'	=> 'groot',
+		'titel'		=> false,
+	);
+
+	//er in zetten
+	foreach ($basis_waarden as $k => $v) {
+		if (!array_key_exists($k, $invoer)) {
+			$invoer[$k] = $v;
+		}
+	}
+
+	//afgeleide gegevens
+	$toevoeving = array();
+
+	if (!$invoer['titel']) {
+		$toevoeving['veld_element'] = "div";
+		$toevoeving['header'] = '';
+	} else {
+		$toevoeving['veld_element'] = "section";
+		$toevoeving['header'] = "<h2>{$invoer['titel']}</h2>";
+	}
+
+	//
+	$invoer['verwerkte_tekst'] = apply_filters('the_content', $invoer['tekst']);
+
+	$template_args = array_merge($invoer, $toevoeving);
+
+	array_naar_queryvars($template_args);
+
+	get_template_part('sja/tekstveld');
+
+
+} endif;
