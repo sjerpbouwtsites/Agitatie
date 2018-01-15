@@ -3032,32 +3032,33 @@ img.efbl-loader {
   line-height: inherit  !important;
   position: relative;
   top: -1px;
+  font-weight: bold;
 }
 
-/* line 33, scss/onderdelen/_knop.scss */
+/* line 34, scss/onderdelen/_knop.scss */
 .knop i, .navigation a i, #agenda-filter [type='submit'] i, input.wpcf7-submit i {
   color: #E53C62 !important;
 }
 
-/* line 36, scss/onderdelen/_knop.scss */
+/* line 37, scss/onderdelen/_knop.scss */
 .knop.in-wit, .navigation a.in-wit, #agenda-filter .in-wit[type='submit'], input.wpcf7-submit.in-wit {
   background-color: #E53C62;
   box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
   color: white !important;
 }
 
-/* line 40, scss/onderdelen/_knop.scss */
+/* line 41, scss/onderdelen/_knop.scss */
 .knop.in-wit:hover, .navigation a.in-wit:hover, #agenda-filter .in-wit[type='submit']:hover, input.wpcf7-submit.in-wit:hover {
   box-shadow: 0.5px 1px 0 rgba(0, 0, 0, 0.4);
   top: 3px;
 }
 
-/* line 44, scss/onderdelen/_knop.scss */
+/* line 45, scss/onderdelen/_knop.scss */
 .knop.in-wit span, .navigation a.in-wit span, #agenda-filter .in-wit[type='submit'] span, .knop.in-wit i, .navigation a.in-wit i, #agenda-filter .in-wit[type='submit'] i, input.wpcf7-submit.in-wit span, input.wpcf7-submit.in-wit i {
   color: white !important;
 }
 
-/* line 48, scss/onderdelen/_knop.scss */
+/* line 49, scss/onderdelen/_knop.scss */
 .knop.ikoon-links, .navigation a.ikoon-links, #agenda-filter .ikoon-links[type='submit'], input.wpcf7-submit.ikoon-links {
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -3066,7 +3067,7 @@ img.efbl-loader {
   margin-right: 10px;
 }
 
-/* line 52, scss/onderdelen/_knop.scss */
+/* line 53, scss/onderdelen/_knop.scss */
 .knop.ikoon-links span, .navigation a.ikoon-links span, #agenda-filter .ikoon-links[type='submit'] span, input.wpcf7-submit.ikoon-links span {
   -ms-flex-order: 2;
       order: 2;
@@ -3074,34 +3075,34 @@ img.efbl-loader {
   margin-left: 10px;
 }
 
-/* line 57, scss/onderdelen/_knop.scss */
+/* line 58, scss/onderdelen/_knop.scss */
 .knop.ikoon-links i, .navigation a.ikoon-links i, #agenda-filter .ikoon-links[type='submit'] i, input.wpcf7-submit.ikoon-links i {
   margin-left: -2px;
 }
 
-/* line 62, scss/onderdelen/_knop.scss */
+/* line 63, scss/onderdelen/_knop.scss */
 input.wpcf7-submit {
   height: 34px;
 }
 
-/* line 66, scss/onderdelen/_knop.scss */
+/* line 67, scss/onderdelen/_knop.scss */
 .knoppen-doos {
   margin-bottom: -10px;
 }
 
-/* line 68, scss/onderdelen/_knop.scss */
+/* line 69, scss/onderdelen/_knop.scss */
 .knoppen-doos .knop, .knoppen-doos .navigation a, .navigation .knoppen-doos a, .knoppen-doos #agenda-filter [type='submit'], #agenda-filter .knoppen-doos [type='submit'] {
   margin-bottom: 10px;
   margin-right: 10px;
 }
 
-/* line 72, scss/onderdelen/_knop.scss */
+/* line 73, scss/onderdelen/_knop.scss */
 .knoppen-doos hr {
   background-color: transparent;
   position: relative;
 }
 
-/* line 75, scss/onderdelen/_knop.scss */
+/* line 76, scss/onderdelen/_knop.scss */
 .knoppen-doos hr::after {
   position: absolute;
   left: 0;
