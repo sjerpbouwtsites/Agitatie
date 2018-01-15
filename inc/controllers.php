@@ -67,11 +67,11 @@ if(!function_exists('foto_video_gallery_ctrl')) :  function foto_video_gallery_c
 		endforeach; endif;
 
 
-	echo "</div>"; 
+	echo "</div>";
 } endif;
 
 if(!function_exists('tekstveld_ctrl')) :  function tekstveld_ctrl($invoer = array()){
-	
+
 	//als tekst leeg
 	if(!array_key_exists('tekst', $invoer)) {
 		global $post;
@@ -82,6 +82,7 @@ if(!function_exists('tekstveld_ctrl')) :  function tekstveld_ctrl($invoer = arra
 	$basis_waarden = array(
 		'formaat'	=> 'groot',
 		'titel'		=> false,
+		'titel_el'	=> 'h1'
 	);
 
 	//er in zetten
@@ -99,7 +100,7 @@ if(!function_exists('tekstveld_ctrl')) :  function tekstveld_ctrl($invoer = arra
 		$toevoeving['header'] = '';
 	} else {
 		$toevoeving['veld_element'] = "section";
-		$toevoeving['header'] = "<h2>{$invoer['titel']}</h2>";
+		$toevoeving['header'] = "<{$invoer['titel_el']}>{$invoer['titel']}</{$invoer['titel_el']}>";
 	}
 
 	//
