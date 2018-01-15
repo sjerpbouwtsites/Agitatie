@@ -3037,7 +3037,7 @@ img.efbl-loader {
 
 /* line 34, scss/onderdelen/_knop.scss */
 .knop i, .navigation a i, #agenda-filter [type='submit'] i, input.wpcf7-submit i {
-  color: #E53C62 !important;
+  color: inherit !important;
 }
 
 /* line 37, scss/onderdelen/_knop.scss */
@@ -3055,7 +3055,7 @@ img.efbl-loader {
 
 /* line 45, scss/onderdelen/_knop.scss */
 .knop.in-wit span, .navigation a.in-wit span, #agenda-filter .in-wit[type='submit'] span, .knop.in-wit i, .navigation a.in-wit i, #agenda-filter .in-wit[type='submit'] i, input.wpcf7-submit.in-wit span, input.wpcf7-submit.in-wit i {
-  color: white !important;
+  color: inherit !important;
 }
 
 /* line 49, scss/onderdelen/_knop.scss */
