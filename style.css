@@ -2847,29 +2847,24 @@ img.efbl-loader {
   cursor: pointer;
 }
 
-/* line 9, scss/onderdelen/_art_class.scss */
-.art-c img {
-  filter: brightness(80%) saturate(140%) blur(0.8px) sepia(10%);
-}
-
-/* line 12, scss/onderdelen/_art_class.scss */
+/* line 11, scss/onderdelen/_art_class.scss */
 .art-c ~ .art-c {
   margin-top: 20px;
 }
 
-/* line 16, scss/onderdelen/_art_class.scss */
+/* line 15, scss/onderdelen/_art_class.scss */
 .art-c .art-links a, .art-c .art-links img {
   display: block;
 }
 
-/* line 19, scss/onderdelen/_art_class.scss */
+/* line 18, scss/onderdelen/_art_class.scss */
 .art-c .art-links img {
   min-height: 200px;
   object-fit: cover;
   width: 100%;
 }
 
-/* line 25, scss/onderdelen/_art_class.scss */
+/* line 24, scss/onderdelen/_art_class.scss */
 .art-c .art-rechts {
   padding: 20px;
   position: absolute;
@@ -2877,7 +2872,7 @@ img.efbl-loader {
   left: 0;
 }
 
-/* line 30, scss/onderdelen/_art_class.scss */
+/* line 29, scss/onderdelen/_art_class.scss */
 .art-c .art-rechts p {
   font-weight: 400;
   margin: 0 0 .5em;
@@ -2886,17 +2881,17 @@ img.efbl-loader {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-/* line 36, scss/onderdelen/_art_class.scss */
+/* line 35, scss/onderdelen/_art_class.scss */
 .art-c .art-rechts p a {
   text-decoration: underline;
 }
 
-/* line 43, scss/onderdelen/_art_class.scss */
+/* line 42, scss/onderdelen/_art_class.scss */
 .art-c a:hover {
   text-decoration: none;
 }
 
-/* line 46, scss/onderdelen/_art_class.scss */
+/* line 45, scss/onderdelen/_art_class.scss */
 .art-c h3 {
   margin-top: 0;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
