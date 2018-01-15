@@ -8,6 +8,7 @@
 <link href="<?=THEME_URI?>/lettertypen/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
 <?php wp_head(); ?>
 <link rel="stylesheet" href="<?=THEME_URI?>/style.css">
+<?php get_template_part('sja/header/google-fonts'); ?>
 <meta name="format-detection" content="telephone=no"/>
 </head>
 
