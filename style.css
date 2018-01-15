@@ -1108,30 +1108,41 @@ html {
   max-width: 100%;
 }
 
-/* line 27, scss/_generiek.scss */
+/* line 25, scss/_generiek.scss */
+.verpakking-klein {
+  width: 760px;
+}
+
+/* line 30, scss/_generiek.scss */
 .heeft-padding > *:first-child {
   margin-top: 0;
 }
 
-/* line 30, scss/_generiek.scss */
+/* line 33, scss/_generiek.scss */
 .heeft-padding > *:last-child {
   margin-bottom: 0;
 }
 
-/* line 36, scss/_generiek.scss */
+/* line 39, scss/_generiek.scss */
 .paddingveld {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-/* line 41, scss/_generiek.scss */
+/* line 44, scss/_generiek.scss */
+.marginveld {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* line 49, scss/_generiek.scss */
 .blok {
   background-color: #fff;
   box-shadow: 0 1px 2px #666;
   color: #272822;
 }
 
-/* line 48, scss/_generiek.scss */
+/* line 56, scss/_generiek.scss */
 ul.reset, ul.reset li {
   padding: 0;
   margin: 0;
