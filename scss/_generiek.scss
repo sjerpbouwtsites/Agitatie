@@ -22,6 +22,9 @@ html {
 	width: 1200px;
 	max-width: 100%;
 }
+	.verpakking-klein {
+		width: 760px;
+	}
 
 .heeft-padding {
 	& > *:first-child {
@@ -36,6 +39,11 @@ html {
 .paddingveld {
 	padding-top: 50px;
 	padding-bottom: 50px;
+}
+
+.marginveld {
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 .blok {
