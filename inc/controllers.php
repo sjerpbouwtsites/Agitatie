@@ -82,7 +82,7 @@ if(!function_exists('tekstveld_ctrl')) :  function tekstveld_ctrl($invoer = arra
 	$basis_waarden = array(
 		'formaat'	=> 'groot',
 		'titel'		=> false,
-		'titel_el'	=> 'h1'
+		'titel_el'	=> 'h2'
 	);
 
 	//er in zetten
@@ -91,6 +91,18 @@ if(!function_exists('tekstveld_ctrl')) :  function tekstveld_ctrl($invoer = arra
 			$invoer[$k] = $v;
 		}
 	}
+
+	if ($invoer['titel']) {
+		$id = preg_replace('/[^a-zA-Z0-9\']/', '-', $invoer['titel']);
+		$id = str_replace("'", '', $id);
+		$id = str_replace('"', '', $id);
+		$id = strtolower(rtrim($id, '-'));
+		$id = "id='$id'";
+	} else {
+		$id = '';
+	}
+
+	$invoer['tv_id'] = $id;
 
 	//afgeleide gegevens
 	$toevoeving = array();
