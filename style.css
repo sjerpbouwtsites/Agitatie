@@ -1173,12 +1173,28 @@ a, a:visited {
   text-decoration: none;
 }
 
-/* line 26, scss/_generiek-teksten.scss */
+/* line 23, scss/_generiek-teksten.scss */
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 27, scss/_generiek-teksten.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "PT Serif", serif;
+  font-weight: 900;
+}
+
+/* line 31, scss/_generiek-teksten.scss */
+h4, h5, h6 {
+  font-weight: 700;
+}
+
+/* line 35, scss/_generiek-teksten.scss */
 p, span {
   line-height: 1.2;
 }
 
-/* line 30, scss/_generiek-teksten.scss */
+/* line 39, scss/_generiek-teksten.scss */
 main blockquote {
   line-height: 1.5625em;
   text-transform: none;
@@ -1189,7 +1205,7 @@ main blockquote {
   margin: 0;
 }
 
-/* line 38, scss/_generiek-teksten.scss */
+/* line 47, scss/_generiek-teksten.scss */
 main blockquote p {
   display: inline-block;
   vertical-align: top;
@@ -1198,7 +1214,7 @@ main blockquote p {
   font-size: inherit;
 }
 
-/* line 45, scss/_generiek-teksten.scss */
+/* line 54, scss/_generiek-teksten.scss */
 main blockquote::before {
   content: "\F756";
   display: inline-block;
