@@ -3032,7 +3032,7 @@ img.efbl-loader {
   line-height: inherit  !important;
   position: relative;
   top: -1px;
-  font-weight: bold;
+  font-weight: inherit;
 }
 
 /* line 34, scss/onderdelen/_knop.scss */
