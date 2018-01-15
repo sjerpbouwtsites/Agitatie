@@ -21,11 +21,14 @@ define( 'GITHUB_UPDATER_OVERRIDE_DOT_ORG', true );
 
 ///////////////////////////////////////////////////////////
 
-function agitatie_stijl_en_script() {
-    wp_enqueue_style( 'agitatie-stijl', THEME_URI.'/style.css', array(), null );
-    wp_enqueue_script( 'agitatie-script', JS_URI.'/all.js', array(), null, true );
-}
-add_action( 'wp_enqueue_scripts', 'agitatie_stijl_en_script' );
+if (!function_exists('agitatie_stijl_en_script')) :
+	function agitatie_stijl_en_script() {
+	    wp_enqueue_style( 'agitatie-stijl', THEME_URI.'/style.css', array(), null );
+	    wp_enqueue_script( 'agitatie-script', JS_URI.'/all.js', array(), null, true );
+	}
+	add_action( 'wp_enqueue_scripts', 'agitatie_stijl_en_script' );
+endif;
+
 
 
 
