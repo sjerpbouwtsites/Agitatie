@@ -3,7 +3,18 @@
 	<div class='verpakking'>
 		<?php
 		foreach ($voet_velden as $v) :
-			echo "<span>{$v['veld']}</span>";
+
+			if (array_key_exists('titel', $v) and $v['titel'] !== '' ) {
+				echo "<section  class='footer-section'>
+					<h3>{$v['titel']}</h3>
+					".apply_filters('the_content', $v['veld'])."
+				</section>";
+			} else {
+				echo "<div class='footer-section'>
+					".apply_filters('the_content', $v['veld'])."
+				</div>";
+			}
+
 		endforeach;?>
 	</div>
 </footer>

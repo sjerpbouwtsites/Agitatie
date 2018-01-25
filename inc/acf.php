@@ -41,14 +41,33 @@ acf_add_local_field_group(array(
 			'collapsed' => '',
 			'min' => 0,
 			'max' => 0,
-			'layout' => 'table',
+			'layout' => 'box',
 			'button_label' => '',
 			'sub_fields' => array(
 				array(
 					'key' => 'field_5a2a881c30e08',
+					'label' => 'titel',
+					'name' => 'titel',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_footer_veld',
 					'label' => 'veld',
 					'name' => 'veld',
-					'type' => 'text',
+					'type' => 'wysiwyg',
 					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
@@ -65,6 +84,7 @@ acf_add_local_field_group(array(
 				),
 			),
 		),
+
 	),
 	'location' => array(
 		array(
