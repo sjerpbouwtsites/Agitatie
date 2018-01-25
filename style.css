@@ -3807,6 +3807,47 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   }
 }
 
+/* line 3, scss/_footer.scss */
+#stek-voet {
+  color: white;
+  font-size: .8em;
+  background-color: #f4cf6a;
+  padding: 20px 0;
+}
+
+/* line 8, scss/_footer.scss */
+#stek-voet .verpakking {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+  /* line 8, scss/_footer.scss */
+  #stek-voet .verpakking {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* line 19, scss/_footer.scss */
+.footer-section h3 {
+  margin-top: 0;
+}
+
+/* line 22, scss/_footer.scss */
+.footer-section a, .footer-section a:active, .footer-section a:visited {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* line 26, scss/_footer.scss */
+.footer-section *:last-child {
+  margin-bottom: 0;
+}
+
 /* line 2, scss/_header.scss */
 #stek-kop {
   background-color: #272822;

@@ -1,2 +1,29 @@
 //parent
 
+#stek-voet {
+	color: white;
+	font-size: .8em;
+	background-color: darken($zijkleur, 15%);
+	padding: 20px 0;
+	.verpakking {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 900px) {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+}
+		.footer-section {
+			h3 {
+				margin-top: 0;
+			}
+			a, a:active, a:visited {
+				color: inherit;
+				text-decoration: underline;
+			}
+			*:last-child {
+				margin-bottom: 0;
+			}
+		}
