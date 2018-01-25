@@ -10,7 +10,7 @@ if (!isset($expliciete_img)) {
 	echo $expliciete_img;
 }
 
-the_post_thumbnail($img_grootte);
+//the_post_thumbnail($img_grootte);
 $img = ob_get_clean();
 
 if ($img !== '') {
