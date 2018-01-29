@@ -50,9 +50,9 @@ if(!function_exists('foto_video_gallery_ctrl')) :  function foto_video_gallery_c
 			'ikoon'		=> 'play'
 		));
 
-		$thumb_id = get_post_thumbnail_id($post);
+/*		$thumb_id = get_post_thumbnail_id($post);
 		$thumb_url = wp_get_attachment_image_src($thumb_id,'large', true);
-		$thumb_url = $thumb_url[0];
+		$thumb_url = $thumb_url[0];*/
 
 		if ($gallerij) : foreach ($gallerij as $g) :
 
@@ -64,7 +64,7 @@ if(!function_exists('foto_video_gallery_ctrl')) :  function foto_video_gallery_c
 				array_naar_queryvars(array(
 					'vid'		=> $g,
 					'vid_attr'	=> 'loop',
-					'poster'	=> $thumb_url,
+					'poster'	=> false,
 					'vid_onder'	=> $speelknop->maak()
 				));
 				get_template_part('sja/viddoos');
