@@ -1,4 +1,4 @@
-<div class='vid-doos' <?=isset($doos_id)?"id='$doos_id'":""?>>
+<div class='vid-doos' <?=isset($doos_id)?"id='$doos_id'":""?> title='klik voor pauze/start'>
 	<video
 		<?=isset($vid_id)?"id='$vid_id'":""?>
 		width="<?=$vid['width']?>"
