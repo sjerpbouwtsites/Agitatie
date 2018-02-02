@@ -11,122 +11,122 @@ Version: 1.0
 GitHub Theme URI: sjerpbouwtsites/agitatie
 GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 !*/
-/* line 18, scss/inst/kleur/_initialisatie.scss */
+/* line 1, scss/inst/kleur/_zet-klassen.scss */
 .tekst-wit {
   color: #fff;
 }
 
-/* line 21, scss/inst/kleur/_initialisatie.scss */
+/* line 4, scss/inst/kleur/_zet-klassen.scss */
 .tekst-wittig {
   color: #f5f5f5;
 }
 
-/* line 24, scss/inst/kleur/_initialisatie.scss */
+/* line 7, scss/inst/kleur/_zet-klassen.scss */
 .tekst-lichtgrijs {
   color: #CAC8C8;
 }
 
-/* line 27, scss/inst/kleur/_initialisatie.scss */
+/* line 10, scss/inst/kleur/_zet-klassen.scss */
 .tekst-grijs {
   color: #666;
 }
 
-/* line 30, scss/inst/kleur/_initialisatie.scss */
+/* line 13, scss/inst/kleur/_zet-klassen.scss */
 .tekst-donkergrijs {
-  color: #414141;
+  color: #272822;
 }
 
-/* line 33, scss/inst/kleur/_initialisatie.scss */
+/* line 16, scss/inst/kleur/_zet-klassen.scss */
 .tekst-zwart {
   color: #252525;
 }
 
-/* line 36, scss/inst/kleur/_initialisatie.scss */
+/* line 19, scss/inst/kleur/_zet-klassen.scss */
 .tekst-hoofdkleur {
   color: #E53C62;
 }
 
-/* line 39, scss/inst/kleur/_initialisatie.scss */
+/* line 22, scss/inst/kleur/_zet-klassen.scss */
 .tekst-zijkleur {
   color: #F9E6B1;
 }
 
-/* line 42, scss/inst/kleur/_initialisatie.scss */
+/* line 25, scss/inst/kleur/_zet-klassen.scss */
 .tekst-accentkleur {
   color: #B5DEE8;
 }
 
-/* line 45, scss/inst/kleur/_initialisatie.scss */
+/* line 28, scss/inst/kleur/_zet-klassen.scss */
 .tekst-hoofdkleur-donker {
   color: #e22650;
 }
 
-/* line 48, scss/inst/kleur/_initialisatie.scss */
+/* line 31, scss/inst/kleur/_zet-klassen.scss */
 .tekst-zijkleur-donker {
   color: #f7de99;
 }
 
-/* line 51, scss/inst/kleur/_initialisatie.scss */
+/* line 34, scss/inst/kleur/_zet-klassen.scss */
 .tekst-accentkleur-donker {
   color: #a2d5e2;
 }
 
-/* line 55, scss/inst/kleur/_initialisatie.scss */
+/* line 38, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-wit {
   background-color: #fff;
 }
 
-/* line 58, scss/inst/kleur/_initialisatie.scss */
+/* line 41, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-wittig {
   background-color: #f5f5f5;
 }
 
-/* line 61, scss/inst/kleur/_initialisatie.scss */
+/* line 44, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-lichtgrijs {
   background-color: #CAC8C8;
 }
 
-/* line 64, scss/inst/kleur/_initialisatie.scss */
+/* line 47, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-grijs {
   background-color: #666;
 }
 
-/* line 67, scss/inst/kleur/_initialisatie.scss */
+/* line 50, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-donkergrijs {
-  background-color: #414141;
+  background-color: #272822;
 }
 
-/* line 70, scss/inst/kleur/_initialisatie.scss */
+/* line 53, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-zwart {
   background-color: #252525;
 }
 
-/* line 73, scss/inst/kleur/_initialisatie.scss */
+/* line 56, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-hoofdkleur {
   background-color: #E53C62;
 }
 
-/* line 76, scss/inst/kleur/_initialisatie.scss */
+/* line 59, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-zijkleur {
   background-color: #F9E6B1;
 }
 
-/* line 79, scss/inst/kleur/_initialisatie.scss */
+/* line 62, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-accentkleur {
   background-color: #B5DEE8;
 }
 
-/* line 82, scss/inst/kleur/_initialisatie.scss */
+/* line 65, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-hoofdkleur-donker {
   background-color: #e22650;
 }
 
-/* line 85, scss/inst/kleur/_initialisatie.scss */
+/* line 68, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-zijkleur-donker {
   background-color: #f7de99;
 }
 
-/* line 88, scss/inst/kleur/_initialisatie.scss */
+/* line 71, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-accentkleur-donker {
   background-color: #a2d5e2;
 }
