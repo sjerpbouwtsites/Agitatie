@@ -21,7 +21,7 @@ if(!function_exists('paginering_ctrl')) : function paginering_ctrl() {
     return $m;
 } endif;
 
-if(!function_exists('paginering_ctrl')) : function agenda_filter_ctrl() {
+if(!function_exists('agenda_filter_ctrl')) : function agenda_filter_ctrl() {
 
 	$m = agenda_filter_model();
 
@@ -34,9 +34,20 @@ if(!function_exists('paginering_ctrl')) : function agenda_filter_ctrl() {
 } endif;
 
 
-if(!function_exists('kop_menu_ctrl')) :  function kop_menu_ctrl(){
-	get_template_part('sja/header/dummy_menu');
+if(!function_exists('kop_menu_ctrl')) :  function kop_menu_ctrl($menu_klasse = ''){
+
+	$a = array(
+		'menu' 			=> 'kop',
+	);
+
+	if ($menu_klasse !== '') {
+		$a['menu_class'] = $menu_klasse;
+	}
+
+	wp_nav_menu($a);
+
 } endif;
+
 
 if(!function_exists('foto_video_gallery_ctrl')) :  function foto_video_gallery_ctrl($css_class = '', $gallerij = false) {
 
