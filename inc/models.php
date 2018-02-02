@@ -135,30 +135,6 @@ if(!function_exists('agenda_art_meta')) : function agenda_art_meta($post) {
 <?php return ob_get_clean();
 } endif;
 
-if(!function_exists('post_type_mv_model')) : function post_type_mv_model(){
-
-    if (!defined('POST_TYPE_NAAM')) {
-        global $post;
-        define('POST_TYPE_NAAM', $post->post_type);
-    }
-
-    switch (POST_TYPE_NAAM) {
-        case 'menu':
-            $pt_mv = 'menu\'s';
-            break;
-        case 'gerecht':
-            $pt_mv = 'gerechten';
-            break;
-        case 'vacature':
-            $pt_mv = 'vacatures';
-            break;
-        default:
-            $pt_mv = 'berichten';
-            break;
-    }
-    return $pt_mv;
-} endif;
-
 if(!function_exists('gezocht_naar_tax_waarde_model')) : function gezocht_naar_tax_waarde_model() {
     $tax_waarde = '';
     $t = 0;
@@ -171,4 +147,9 @@ if(!function_exists('gezocht_naar_tax_waarde_model')) : function gezocht_naar_ta
         if ($t > 0) break;
         $t++;
     endforeach; endif;
+} endif;
+
+if (!function_exists('archief_intro_model')) : function archief_intro_model($post_type = '', $tax_waarde = '') {
+    //@TODO
+    return false;
 } endif;
