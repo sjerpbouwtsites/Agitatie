@@ -17,7 +17,7 @@ define('IMG_URI', THEME_URI . "/afb");
 define('JS_DIR', THEME_DIR . "/js");
 define('JS_URI', THEME_URI . "/js");
 
-define( 'GITHUB_UPDATER_OVERRIDE_DOT_ORG', true );
+//define( 'GITHUB_UPDATER_OVERRIDE_DOT_ORG', true );
 
 ///////////////////////////////////////////////////////////
 
@@ -62,7 +62,7 @@ function remove_menu_pages() {
 
 	remove_menu_page( 'edit.php?post_type=feedback' );
 	remove_menu_page( 'edit-comments.php' );
-	remove_menu_page( 'edit.php' );
+	//remove_menu_page( 'edit.php' );
 
 	//verondersteld: programmeur = 1, opdrachtgever = 2, eindgebruiker > 2
 	// @OPLEVERING
