@@ -2,7 +2,8 @@
 
 get_header();
 
-define('POST_TYPE_NAAM', $wp_query->query['post_type']);
+define('POST_TYPE_NAAM', post_naam_model());
+
 $pt_mv = $wp_query->queried_object->label;
 
 echo "<script>console.dir(".json_encode($pt_mv).")</script>";

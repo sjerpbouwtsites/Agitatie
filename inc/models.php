@@ -153,3 +153,14 @@ if (!function_exists('archief_intro_model')) : function archief_intro_model($pos
     //@TODO
     return false;
 } endif;
+
+if (!function_exists('post_naam_model')) : function post_naam_model() {
+    global $wp_query;
+
+    //is query op post type?
+    if (array_key_exists('post_type', $wp_query->query)) {
+        return $wp_query->query['post_type'];
+    } else { //neem aan: query op tax
+        return $wp_query->posts[0]->post_type;
+    }
+} endif;
