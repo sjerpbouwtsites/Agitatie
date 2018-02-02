@@ -554,11 +554,8 @@ class Tax_blok extends Array_constr {
 		if (!cp_truthy('basis', $this)) $this->basis = $this->zet_basis();
 		if (!cp_truthy('reset', $this)) $this->reset = true;
 		if (!cp_truthy('archief', $this)) $this->archief = is_archive();
-		if (!cp_truthy('heeft_hash', $this)) {
-			$this->hash = '';
-		} else {
-			$this->hash = '#tax-blok';
-		}
+		if (!property_exists($this, 'hash')) $this->hash = '#tax-blok';
+
 	}
 
 
@@ -576,7 +573,7 @@ class Tax_blok extends Array_constr {
 
 	public function maak_li ($tax_term, $naam){
 
-		$href = $this->basis.$this->verwerk_tax_naam($naam)."=".$tax_term->slug."#tax-blok";
+		$href = $this->basis.'?'.$this->verwerk_tax_naam($naam)."=".$tax_term->slug.$this->hash;
 		return "<li class='$tax_term->slug'><a href='$href'>$tax_term->name</a></li>";
 	}
 
