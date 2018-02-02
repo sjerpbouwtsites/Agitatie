@@ -554,7 +554,13 @@ class Tax_blok extends Array_constr {
 		if (!cp_truthy('basis', $this)) $this->basis = $this->zet_basis();
 		if (!cp_truthy('reset', $this)) $this->reset = true;
 		if (!cp_truthy('archief', $this)) $this->archief = is_archive();
+		if (!cp_truthy('heeft_hash', $this)) {
+			$this->hash = '';
+		} else {
+			$this->hash = '#tax-blok';
+		}
 	}
+
 
 	public function zet_basis() {
 		$this->basis = get_post_type_archive_link($this->post->post_type);
@@ -597,7 +603,7 @@ class Tax_blok extends Array_constr {
 			if (count($waarden)) :
 				$linkblokken .= "<ul class='reset'>";
 				if ($this->reset) {
-					$linkblokken .= "<li><a href='{$this->basis}#tax-blok'>Alles</a></li>";
+					$linkblokken .= "<li><a href='{$this->basis}{$this->hash}'>Alles</a></li>";
 				}
 				foreach ($waarden as $tax_term) {
 					$linkblokken .= $this->maak_li($tax_term, $naam);
