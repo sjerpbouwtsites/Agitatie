@@ -143,10 +143,10 @@ if(!function_exists('gezocht_naar_tax_waarde_model')) : function gezocht_naar_ta
     if (count($_GET)) : foreach ($_GET as $n => $w) :
 
         $tax_waarde = str_replace('-', ' ', $w);
-
         if ($t > 0) break;
         $t++;
     endforeach; endif;
+    return $tax_waarde;
 } endif;
 
 if (!function_exists('archief_intro_model')) : function archief_intro_model($post_type = '', $tax_waarde = '') {
