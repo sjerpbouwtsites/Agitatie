@@ -133,3 +133,24 @@ if(!function_exists('tekstveld_ctrl')) :  function tekstveld_ctrl($invoer = arra
 
 
 } endif;
+
+if (!function_exists('archief_generiek_loop')) : function archief_generiek_loop($post, $afb_formaat = 'lijst', $exc_lim_o = false){
+
+	switch (POST_TYPE_NAAM) {
+		default:
+			$m_art = new Article_c( array('exc_lim' => $exc_lim_o ? $exc_lim_o : 230 ), $post);
+			break;
+	}
+
+	if (isset($m_art)) {
+		$m_art->afb_formaat	= $afb_formaat;
+		$m_art->print();
+	}
+
+} endif;
+
+if (!function_exists('archief_intro_ctrl')) : function archief_intro_ctrl($post_type = '', $tax_waarde = '') {
+	if ($archief_intro = archief_intro_model($post_type, $tax_waarde)){
+		echo apply_filters('the_content', $pag_intro);
+	}
+} endif;
