@@ -8,7 +8,7 @@ echo "<article class='bericht'>";
 
 get_template_part('sja/uitgelichte-afbeelding-buiten');
 	while ( have_posts() ) : the_post();
-		echo "<div class='verpakking'>";
+		echo "<div class='verpakking marginveld'>";
 			the_content();
 		echo "</div>";
 	endwhile; // End of the loop.
