@@ -597,7 +597,7 @@ class Tax_blok extends Array_constr {
 			if (count($waarden)) :
 				$linkblokken .= "<ul class='reset'>";
 				if ($this->reset) {
-					$linkblokken .= "<li><a href='{$this->basis}#tax-blok'>alles</a></li>";
+					$linkblokken .= "<li><a href='{$this->basis}#tax-blok'>Alles</a></li>";
 				}
 				foreach ($waarden as $tax_term) {
 					$linkblokken .= $this->maak_li($tax_term, $naam);
