@@ -166,7 +166,7 @@ class Article_c extends Array_constr{
 	}
 
 	public function maak_tekst (){
-		return "<p>". maak_excerpt($this->art, $this->exc_lim) . "</p>";
+		return "<p class='tekst-wit'>". maak_excerpt($this->art, $this->exc_lim) . "</p>";
 	}
 
 	public function maak_artikel () {
@@ -189,7 +189,7 @@ class Article_c extends Array_constr{
 
 			<div class='art-rechts'>
 				<a class='tekst-wit' href='<?=$this->permalink?>'>
-					<h<?=$this->htype?> class='tekst-zijkleur'>
+					<h<?=$this->htype?> class='tekst-wit'>
 					<?=$this->art->post_title?>
 					</h<?=$this->htype?>>
 
