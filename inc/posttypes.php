@@ -27,7 +27,7 @@
 
 if(!function_exists('registreer_posttypes')) : function registreer_posttypes(){
 
-	$project = new Posttype_voorb('project', 'project');
+	$project = new Posttype_voorb('project', 'projecten');
 	$project->pas_args_aan(array(
 		'has_archive' => true,
 		'public' => true,
@@ -39,7 +39,7 @@ if(!function_exists('registreer_posttypes')) : function registreer_posttypes(){
 	$project->maak_taxonomie('techniek');
 	$project->registreer();
 
-} 
+}
 
 add_action('init', 'registreer_posttypes');
 
