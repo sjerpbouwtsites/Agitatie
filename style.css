@@ -2884,19 +2884,24 @@ img.efbl-loader {
   margin-top: 20px;
 }
 
-/* line 15, scss/onderdelen/_art_class.scss */
+/* line 14, scss/onderdelen/_art_class.scss */
+.art-c h2, .art-c h3 {
+  margin-top: 0;
+}
+
+/* line 18, scss/onderdelen/_art_class.scss */
 .art-c .art-links a, .art-c .art-links img {
   display: block;
 }
 
-/* line 18, scss/onderdelen/_art_class.scss */
+/* line 21, scss/onderdelen/_art_class.scss */
 .art-c .art-links img {
   min-height: 200px;
   object-fit: cover;
   width: 100%;
 }
 
-/* line 24, scss/onderdelen/_art_class.scss */
+/* line 27, scss/onderdelen/_art_class.scss */
 .art-c .art-rechts {
   padding: 20px;
   position: absolute;
@@ -2904,7 +2909,7 @@ img.efbl-loader {
   left: 0;
 }
 
-/* line 29, scss/onderdelen/_art_class.scss */
+/* line 32, scss/onderdelen/_art_class.scss */
 .art-c .art-rechts p {
   font-weight: 400;
   margin: 0 0 .5em;
@@ -2913,17 +2918,22 @@ img.efbl-loader {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-/* line 35, scss/onderdelen/_art_class.scss */
+/* line 38, scss/onderdelen/_art_class.scss */
 .art-c .art-rechts p a {
   text-decoration: underline;
 }
 
-/* line 42, scss/onderdelen/_art_class.scss */
+/* line 43, scss/onderdelen/_art_class.scss */
+.art-c .art-rechts p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 48, scss/onderdelen/_art_class.scss */
 .art-c a:hover {
   text-decoration: none;
 }
 
-/* line 45, scss/onderdelen/_art_class.scss */
+/* line 51, scss/onderdelen/_art_class.scss */
 .art-c h3 {
   margin-top: 0;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
@@ -3856,18 +3866,35 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   }
 }
 
-/* line 19, scss/_footer.scss */
+/* line 15, scss/_footer.scss */
+#stek-voet .verpakking > * {
+  margin: 0 10px;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+}
+
+/* line 18, scss/_footer.scss */
+#stek-voet .verpakking > *:first-child {
+  margin-left: 0;
+}
+
+/* line 21, scss/_footer.scss */
+#stek-voet .verpakking > *:last-child {
+  margin-right: 0;
+}
+
+/* line 29, scss/_footer.scss */
 .footer-section h3 {
   margin-top: 0;
 }
 
-/* line 22, scss/_footer.scss */
+/* line 32, scss/_footer.scss */
 .footer-section a, .footer-section a:active, .footer-section a:visited {
   color: inherit;
   text-decoration: underline;
 }
 
-/* line 26, scss/_footer.scss */
+/* line 36, scss/_footer.scss */
 .footer-section *:last-child {
   margin-bottom: 0;
 }
@@ -3892,6 +3919,24 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 #stek-kop .stek-kop-links {
   -ms-flex-preferred-size: 210px;
       flex-basis: 210px;
+}
+
+/* line 3, scss/_nav.scss */
+.menu-kop-container ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* line 6, scss/_nav.scss */
+.menu-kop-container li {
+  display: inline-block;
+}
+
+/* line 9, scss/_nav.scss */
+.menu-kop-container a {
+  line-height: 70px;
+  font-family: "PT Serif", serif;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

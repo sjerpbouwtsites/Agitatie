@@ -11,6 +11,9 @@
 	& ~ .art-c {
 		margin-top: 20px;
 	}
+	h2, h3 {
+		margin-top: 0;
+	}
 	.art-links {
 		a, img {
 			display: block;
@@ -37,6 +40,9 @@
 				text-decoration: underline;
 			}
 			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 	a:hover {
