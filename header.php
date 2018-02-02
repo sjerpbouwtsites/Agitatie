@@ -15,7 +15,7 @@
 				$nav_b = $fp ? "" : SITE_URI;
 				$scr = $fp ? "schakel scroll" : "";
 			?>
-			<?php kop_menu_ctrl(); ?>
+			<?php kop_menu_ctrl('horizontaal'); ?>
 
 		</div><!--verpakking-->
 
