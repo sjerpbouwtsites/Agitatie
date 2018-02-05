@@ -55,3 +55,20 @@
 		text-transform: uppercase;
 	}
 }
+
+	.art-c.in-lijst {
+		display: inline-block;
+		width: calc(33% - 10px);
+		margin-right: 7px;
+		@media (max-width: 900px) {
+			width: calc(50% - 10px);
+		}
+		@media (max-width: 600px) {
+			width: 100%
+		}
+		margin-top: 0;
+		margin-bottom: 10px;
+		.wp-post-image {
+			filter: brightness(80%);
+		}
+	}
