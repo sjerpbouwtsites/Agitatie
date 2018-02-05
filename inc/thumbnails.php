@@ -21,7 +21,7 @@ if(!function_exists('mk_tmb_frm')) : function mk_tmb_frm($naam, $breedte, $hoogt
 $thumbnail_formaten = array(
     'lijst'                     => mk_tmb_frm( 'lijst', 500, 275 ),
     'hele-breedte'              => mk_tmb_frm( 'hele-breedte', 2000, 1400),
-    'portfolio'                 => mk_tmb_frm( 'portfolio', 400, 400),
+    'portfolio'                 => mk_tmb_frm( 'portfolio', 600, 600),
 );
 
 if(!function_exists('thumbnail_init')) : function thumbnail_init() {
