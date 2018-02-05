@@ -26,13 +26,15 @@ html {
 		width: 760px;
 	}
 	.verpakking-groot .tekst {
-		columns: 2;
-		 p:first-child {
-		 	margin-top: 0;
-		 }
-		 p:last-child {
-		 	margin-bottom: 0;
-		 }
+		@media (min-width: 900px) {
+			columns: 2;
+			 p:first-child {
+			 	margin-top: 0;
+			 }
+			 p:last-child {
+			 	margin-bottom: 0;
+			 }
+		}
 	}
 
 .heeft-padding {
