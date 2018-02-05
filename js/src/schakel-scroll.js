@@ -75,7 +75,11 @@ function scroll(e) {
 
 	}
 
+	var headerH = $('#stek-kop').is(':visible') ? $('#stek-kop').height() : 0;
+
+	var marginTop = Number($(scrollNaar).css('margin-top').replace('px', ''));
+
     $('html, body').animate({
-        scrollTop: $(scrollNaar).offset().top
+        scrollTop: $(scrollNaar).offset().top - headerH - marginTop
     }, 600);
 }
