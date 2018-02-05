@@ -46,13 +46,21 @@ html {
 
 
 .paddingveld {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	@media (min-width: 900px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 }
 
 .marginveld {
-	margin-top: 50px;
-	margin-bottom: 50px;
+		margin-top: 25px;
+		margin-bottom: 25px;
+	@media (min-width: 900px) {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
 }
 
 .blok {
