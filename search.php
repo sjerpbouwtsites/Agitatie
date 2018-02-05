@@ -4,7 +4,7 @@ get_header();
 $titel = ($_GET['s'] !== '' ? "Je zocht: ".$_GET['s'] : "Wat zoek je?");
 
 
-set_query_var('klassen_bij_primary', "zoeken verpakking");
+set_query_var('klassen_bij_primary', "zoeken verpakking marginveld");
 set_query_var('titel_hoog', "<h1>$titel</h1>");
 get_template_part('/sja/open-main');
 ?>
@@ -25,7 +25,7 @@ get_template_part('/sja/open-main');
 	<?php
 	// @TODO niet hier maar via filters toevoegen aan search query
 	$zoek_query_arg = array(
-		'posts_per_page' => 10,
+		'posts_per_page' => 12,
 		'post_type'		=> array('post', 'page', 'project'),
 	);
 
@@ -51,7 +51,9 @@ get_template_part('/sja/open-main');
 
 		endwhile;
 
-		paginering_ctrl();
+		$r = paginering_ctrl();
+
+		echo "<script>console.dir(".json_encode($r).")</script>";
 
 	else :
 
