@@ -4,7 +4,7 @@ get_header();
 $titel = ($_GET['s'] !== '' ? "Je zocht: ".$_GET['s'] : "Wat zoek je?");
 
 
-set_query_var('klassen_bij_primary', "zoeken");
+set_query_var('klassen_bij_primary', "zoeken verpakking");
 set_query_var('titel_hoog', "<h1>$titel</h1>");
 get_template_part('/sja/open-main');
 ?>
@@ -26,7 +26,7 @@ get_template_part('/sja/open-main');
 	// @TODO niet hier maar via filters toevoegen aan search query
 	$zoek_query_arg = array(
 		'posts_per_page' => 10,
-		'post_type'		=> array('post', 'page', 'menu', 'gerecht'),
+		'post_type'		=> array('post', 'page', 'project'),
 	);
 
 	if (array_key_exists('s', $_GET) and $_GET['s'] !== '') $zoek_query_arg['s'] = $_GET['s'];
@@ -40,7 +40,7 @@ get_template_part('/sja/open-main');
 			array(
 				'class' => "in-lijst blok",
 				'htype' => 2,
-				'exc_lim' => 300
+				'exc_lim' => 180
 			),
 		$post);
 

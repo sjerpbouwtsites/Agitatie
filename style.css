@@ -3954,4 +3954,32 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   font-family: "PT Serif", serif;
 }
 
+/* line 3, scss/_zoeken.scss */
+.search .art-c .wp-post-image {
+  filter: brightness(80%);
+}
+
+/* line 7, scss/_zoeken.scss */
+.search .art-c {
+  display: inline-block;
+  width: calc(33% - 10px);
+  margin-right: 7px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  /* line 7, scss/_zoeken.scss */
+  .search .art-c {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 7, scss/_zoeken.scss */
+  .search .art-c {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=maps/style.css.map */
