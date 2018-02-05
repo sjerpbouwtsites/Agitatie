@@ -1140,24 +1140,40 @@ html {
 
 /* line 48, scss/_generiek.scss */
 .paddingveld {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
-/* line 53, scss/_generiek.scss */
+@media (min-width: 900px) {
+  /* line 48, scss/_generiek.scss */
+  .paddingveld {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+/* line 57, scss/_generiek.scss */
 .marginveld {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
-/* line 58, scss/_generiek.scss */
+@media (min-width: 900px) {
+  /* line 57, scss/_generiek.scss */
+  .marginveld {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+/* line 66, scss/_generiek.scss */
 .blok {
   background-color: #fff;
   box-shadow: 0 1px 2px #666;
   color: #272822;
 }
 
-/* line 65, scss/_generiek.scss */
+/* line 73, scss/_generiek.scss */
 ul.reset, ul.reset li {
   padding: 0;
   margin: 0;
@@ -3215,7 +3231,6 @@ input.wpcf7-submit {
 /* line 2, scss/onderdelen/_tax-blok.scss */
 #tax-blok {
   background-color: #f5f5f5;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
 
