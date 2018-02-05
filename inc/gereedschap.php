@@ -8,7 +8,7 @@ if(!function_exists('pre_dump')) : function pre_dump($a){
 if(!function_exists('maak_excerpt')) : function maak_excerpt($post, $lim = 300){
 
 	if (property_exists($post, 'post_excerpt') and $post->post_excerpt !== "") {
-		return $post->post_excerpt;
+		return beperk_woordental($lim, $post->post_excerpt);
 	} else if (property_exists($post, 'post_content')) {
 		return strip_tags(beperk_woordental($lim, $post->post_content));
 	} else if (property_exists($post, 'description')) {
@@ -115,7 +115,7 @@ if(!function_exists('naar_rgb')) : function naar_rgb($hex = '#FFFFFF') {
 	return array($r, $g, $b);
 } endif;
 
-if(!function_exists('haal_uit_get')) : 
+if(!function_exists('haal_uit_get')) :
 
 	function haal_uit_get($sleutel = '', $geef_waarde = false) {
 		if (!array_key_exists($sleutel, $_GET) or $_GET[$sleutel] === '') {
@@ -127,5 +127,5 @@ if(!function_exists('haal_uit_get')) :
 				return true;
 			}
 		}
-	} 
+	}
 endif; // functie bestaat niet
