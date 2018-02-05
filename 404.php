@@ -1,7 +1,7 @@
 <?php
 
 get_header();
-set_query_var('klassen_bij_primary', "error-404 not-found");
+set_query_var('klassen_bij_primary', "error-404 not-found verpakking");
 get_template_part('/sja/open-main'); ?>
 
 	<header class="page-header">
