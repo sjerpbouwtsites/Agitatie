@@ -53,7 +53,7 @@ if(!function_exists('foto_video_gallery_ctrl')) :  function foto_video_gallery_c
 
 	global $post;
 
-	echo "<div class='$css_class gallerij'>";
+	echo "<div class='foto-video-gallerij $css_class gallerij'>";
 
 		$speelknop = new Knop(array(
 			'class'		=> 'speel-video',
