@@ -76,3 +76,15 @@ ul.reset, ul.reset li {
 	@include ul-li-reset();
 }
 
+.post-edit-link {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: .3em .6em;
+	font-weight: bold;
+	background-color: $zwart;
+	color: white;
+	font-size: 20px;
+	text-transform: uppercase;
+	z-index: 20;
+}

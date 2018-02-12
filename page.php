@@ -14,5 +14,7 @@ get_template_part('sja/uitgelichte-afbeelding-buiten');
 	endwhile; // End of the loop.
 echo "</article>";
 
+
+
 get_template_part('/sja/sluit-main');
 get_footer();

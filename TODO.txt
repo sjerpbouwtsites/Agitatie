@@ -1,7 +1,6 @@
 # bouw
-hallo
-nieuwste jquery erin
-favicon
+
+IOS: gallerij moet poster hebben
 
 # vlak voor opleveren
 
