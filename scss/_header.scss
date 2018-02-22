@@ -23,6 +23,14 @@
 
 
 	.stek-kop-rechts {
+		padding-left: 50px;
+		@media (max-width: 600px) {
+			padding-left: 20px;
+		}
+		div, ul {
+			height: 100%;
+			overflow: hidden;
+		}
 	}
 
 	.custom-logo-link {

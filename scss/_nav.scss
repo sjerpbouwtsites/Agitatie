@@ -1,8 +1,10 @@
 //parent
 .menu {
+	@include ul-li-reset();
 	ul {
 		@include ul-li-reset();
 	}
+
 	a {
 		line-height: $header-height;
 		font-family: $kopletter;

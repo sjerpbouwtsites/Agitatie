@@ -3994,30 +3994,55 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   margin: 0;
 }
 
-/* line 28, scss/_header.scss */
+/* line 25, scss/_header.scss */
+#stek-kop .stek-kop-rechts {
+  padding-left: 50px;
+}
+
+@media (max-width: 600px) {
+  /* line 25, scss/_header.scss */
+  #stek-kop .stek-kop-rechts {
+    padding-left: 20px;
+  }
+}
+
+/* line 30, scss/_header.scss */
+#stek-kop .stek-kop-rechts div, #stek-kop .stek-kop-rechts ul {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 36, scss/_header.scss */
 #stek-kop .custom-logo-link {
   display: block;
 }
 
-/* line 30, scss/_header.scss */
+/* line 38, scss/_header.scss */
 #stek-kop .custom-logo-link img {
   display: block;
 }
 
-/* line 3, scss/_nav.scss */
+/* line 2, scss/_nav.scss */
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* line 4, scss/_nav.scss */
 .menu ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-/* line 6, scss/_nav.scss */
+/* line 8, scss/_nav.scss */
 .menu a {
   line-height: 70px;
   font-family: "PT Serif", serif;
 }
 
-/* line 11, scss/_nav.scss */
+/* line 13, scss/_nav.scss */
 .menu.horizontaal li {
   display: inline-block;
 }
