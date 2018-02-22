@@ -10,12 +10,11 @@
 
 			</div><!--koplinks-->
 
-			<?php
-				$fp = is_front_page();
-				$nav_b = $fp ? "" : SITE_URI;
-				$scr = $fp ? "schakel scroll" : "";
-			?>
-			<?php kop_menu_ctrl('horizontaal'); ?>
+			<div class='stek-kop-rechts'>
+				<?php kop_menu_ctrl('horizontaal menu'); ?>
+			</div>
+
+
 
 		</div><!--verpakking-->
 

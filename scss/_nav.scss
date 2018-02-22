@@ -1,13 +1,15 @@
 //parent
-.menu-kop-container {
+.menu {
 	ul {
 		@include ul-li-reset();
 	}
-	li {
-		display: inline-block;
-	}
 	a {
-		line-height: 70px;
+		line-height: $header-height;
 		font-family: $kopletter;
+	}
+	&.horizontaal {
+		li {
+			display: inline-block;
+		}
 	}
 }

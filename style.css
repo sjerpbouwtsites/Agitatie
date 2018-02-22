@@ -3973,27 +3973,53 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 }
 
 /* line 11, scss/_header.scss */
+#stek-kop .rel, #stek-kop .verpakking, #stek-kop [class|='stek-kop'], #stek-kop .horizontaal {
+  height: 100%;
+}
+
+/* line 14, scss/_header.scss */
 #stek-kop .stek-kop-links {
   -ms-flex-preferred-size: 210px;
       flex-basis: 210px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+/* line 19, scss/_header.scss */
+#stek-kop .stek-kop-links h1 {
+  margin: 0;
+}
+
+/* line 28, scss/_header.scss */
+#stek-kop .custom-logo-link {
+  display: block;
+}
+
+/* line 30, scss/_header.scss */
+#stek-kop .custom-logo-link img {
+  display: block;
 }
 
 /* line 3, scss/_nav.scss */
-.menu-kop-container ul {
+.menu ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
 /* line 6, scss/_nav.scss */
-.menu-kop-container li {
-  display: inline-block;
-}
-
-/* line 9, scss/_nav.scss */
-.menu-kop-container a {
+.menu a {
   line-height: 70px;
   font-family: "PT Serif", serif;
+}
+
+/* line 11, scss/_nav.scss */
+.menu.horizontaal li {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=maps/style.css.map */
