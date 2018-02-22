@@ -4012,12 +4012,22 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   overflow: hidden;
 }
 
+/* line 34, scss/_header.scss */
+#stek-kop .stek-kop-rechts li {
+  margin-left: 20px;
+}
+
 /* line 36, scss/_header.scss */
+#stek-kop .stek-kop-rechts li:first-child {
+  margin-left: 0;
+}
+
+/* line 42, scss/_header.scss */
 #stek-kop .custom-logo-link {
   display: block;
 }
 
-/* line 38, scss/_header.scss */
+/* line 44, scss/_header.scss */
 #stek-kop .custom-logo-link img {
   display: block;
 }
