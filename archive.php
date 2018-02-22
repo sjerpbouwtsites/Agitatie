@@ -6,20 +6,14 @@ define('POST_TYPE_NAAM', post_naam_model());
 
 $pt_mv = $wp_query->queried_object->label;
 
-echo "<script>console.dir(".json_encode($pt_mv).")</script>";
-
 set_query_var('klassen_bij_primary', "archief archief-".POST_TYPE_NAAM);
 get_template_part('/sja/open-main');
 
 $pt_arch_link = get_post_type_archive_link(POST_TYPE_NAAM);
 
-//bv category -> mediterraans @ models
-$tax_waarde = gezocht_naar_tax_waarde_model();
-
-$archief_titel = $pt_mv . ($tax_waarde !== '' ? "<span>$tax_waarde</span>" : "");
-
 echo "<div class='verpakking'>";
-echo "<h1>$archief_titel</h1>";
+
+archief_titel_ctrl();
 
 //@TODO STANDAARD TEKST NEERKNALLEN
 archief_intro_ctrl();
@@ -58,6 +52,7 @@ if ($tax_waarde !== '') :
 
 	echo "<footer>";
 endif; //als tax
+
 echo "</div>";
 
 get_template_part('/sja/sluit-main');

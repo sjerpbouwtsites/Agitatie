@@ -165,3 +165,9 @@ if (!function_exists('archief_intro_ctrl')) : function archief_intro_ctrl($post_
 		echo apply_filters('the_content', $pag_intro);
 	}
 } endif;
+
+if (!function_exists('archief_titel_ctrl')) {
+	global $wp_query;
+	$archief_titel = $wp_query->queried_object->label . ($tax_waarde = gezocht_naar_tax_waarde_model() !== '' ? "<span>".$tax_waarde."</span>" : "");
+	echo "<h1>$archief_titel</h1>";
+}

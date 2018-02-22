@@ -1,8 +1,5 @@
 <?php
 
-define('WP_HOME','https://sjerpbouwtsites.nl/');
-define('WP_SITEURL','https://sjerpbouwtsites.nl/');
-
 ///////////////////////////////////////////////////////////
 
 define('SITE_URI', get_site_url());
