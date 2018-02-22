@@ -43,6 +43,7 @@ $include_funcs = array(
 	'thema-config',
 	'thumbnails',
 	'widgets',
+	'hooks'
 );
 
 $include_funcs_length = count($include_funcs);

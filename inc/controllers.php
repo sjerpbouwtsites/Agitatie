@@ -174,9 +174,5 @@ if (!function_exists('archief_titel_ctrl')) : function archief_titel_ctrl () {
 
 } endif;
 
-if (!function_exists('voorpagina_na_tekst_ctrl')) : function voorpagina_na_tekst_ctrl () {
 
-	//
-
-} endif;
 
