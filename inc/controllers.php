@@ -173,3 +173,10 @@ if (!function_exists('archief_titel_ctrl')) : function archief_titel_ctrl () {
 	echo "<h1>$archief_titel</h1>";
 
 } endif;
+
+if (!function_exists('voorpagina_na_tekst_ctrl')) : function voorpagina_na_tekst_ctrl () {
+
+	//
+
+} endif;
+
