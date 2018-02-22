@@ -1,6 +1,5 @@
 <?php
 
-
 if ( ! function_exists( 'zet_thema_ondersteuning' ) ) :
 
 	$thema_ondersteuning = array(
@@ -14,6 +13,15 @@ if ( ! function_exists( 'zet_thema_ondersteuning' ) ) :
 		   'flex-width' => true,
 		)
 	);
+
+	global $kind_config;
+
+	if ($kind_config and count($kind_config)) {
+		foreach ($kind_config as $k=>$w) {
+			$thema_ondersteuning[$k] = $w;
+		}
+	}
+
 	function zet_thema_ondersteuning(){
 		global $thema_ondersteuning;
 		if (count($thema_ondersteuning) > 0) {
