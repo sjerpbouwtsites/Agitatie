@@ -1,73 +1,40 @@
 <?php
 get_header();
 
-$titel = ($_GET['s'] !== '' ? "Je zocht: ".$_GET['s'] : "Wat zoek je?");
-
-
 set_query_var('klassen_bij_primary', "zoeken verpakking marginveld");
-set_query_var('titel_hoog', "<h1>$titel</h1>");
+set_query_var('titel_hoog', "<h1>".($_GET['s'] !== '' ? "Je zocht: ".$_GET['s'] : "Wat zoek je?")."</h1>");
 get_template_part('/sja/open-main');
-?>
 
-<div class='niet-volle-breedte'>
+get_search_form();
 
-	<!-- @TODO echte zoekwidget gebruiken -->
-	<div class="widget widget_search">
-		<form role="search" method="get" class="search-form" action="<?php echo site_url()?>">
-			<label>
-				<span class="screen-reader-text">Zoeken naar:</span>
-				<input class="search-field" placeholder="Zoekterm …" value="<?=$_GET['s']?>" name="s" type="search">
-			</label>
-			<input class="search-submit" value="Zoeken" type="submit">
-		</form>
-	</div>
+if (have_posts()) : while (have_posts()) : the_post();
 
-	<?php
-	// @TODO niet hier maar via filters toevoegen aan search query
-	$zoek_query_arg = array(
-		'posts_per_page' => 12,
-		'post_type'		=> array('post', 'page', 'project'),
-	);
+	$art = new Article_c(
+		array(
+			'class' => "in-lijst blok",
+			'htype' => 2,
+			'exc_lim' => 180
+		),
+	$post);
 
-	if (array_key_exists('s', $_GET) and $_GET['s'] !== '') $zoek_query_arg['s'] = $_GET['s'];
-	if ($paged = get_query_var( 'paged', 1 )) $zoek_query_arg['paged'] = $paged;
+	$art->print();
 
-	$zoek_query = new WP_Query($zoek_query_arg);
+	endwhile;
 
-	if ( $zoek_query->have_posts() ) :
+else :
 
-		$art = new Article_c(
-			array(
-				'class' => "in-lijst blok",
-				'htype' => 2,
-				'exc_lim' => 180
-			),
-		$post);
+	echo "<p>Niets gevonden! Sorry.</p>";
 
-		while ( $zoek_query->have_posts() ) : $zoek_query->the_post();
+	$voorpagina = new Knop(array(
+		'tekst'		=> 'Terug naar voorpagina',
+		'link'		=> SITE_URI,
+		'class'		=> 'in-wit',
+	));
+	$voorpagina->print();
 
-			$art->art = $post;
-			$art->print();
+endif;
 
-		endwhile;
+$r = paginering_ctrl();
 
-		$r = paginering_ctrl();
-
-		echo "<script>console.dir(".json_encode($r).")</script>";
-
-	else :
-
-		echo "<p>Niets gevonden! Sorry.</p>";
-
-		$voorpagina = new Knop(array(
-			'tekst'		=> 'Terug naar voorpagina',
-			'link'		=> SITE_URI,
-			'class'		=> 'in-wit',
-		));
-		$voorpagina->print();
-
-	endif; ?>
-</div>
-<?php
 get_template_part('/sja/sluit-main');
 get_footer();
