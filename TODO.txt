@@ -2,6 +2,8 @@
 
 IOS: gallerij moet poster hebben
 controllers conditioneel inladen
+tekst op archief pagina's
+tax blok aanpassen naar correcte routing
 
 # vlak voor opleveren
 

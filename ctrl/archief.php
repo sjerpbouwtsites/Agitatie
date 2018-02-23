@@ -27,3 +27,33 @@ if (!function_exists('archief_titel_ctrl')) : function archief_titel_ctrl () {
 	echo "<h1>$archief_titel</h1>";
 
 } endif;
+
+
+if(!function_exists('archief_content_ctrl')) : function archief_content_ctrl() {
+	global $post;
+	echo "<div id='archief-lijst' class='tekstveld'>";
+		if ( have_posts() ) : while ( have_posts() ) : the_post();
+
+			//maakt post type objs aan en print @ controllers
+			archief_generiek_loop($post);
+
+		endwhile; endif;
+	echo "</div>";
+} endif;
+
+if(!function_exists('archief_footer_ctrl')) : function archief_footer_ctrl() {
+	//indien er gezocht is op een tax val, geef dan knop terug naar archief algemeen.
+	if ($tax_waarde = gezocht_naar_tax_waarde_model() !== '') :
+		echo "<footer>";
+		$terug = new Knop(array(
+			'class' 	=> 'in-wit ikoon-links',
+			'link' 		=> get_post_type_archive_link(POST_TYPE_NAAM),
+			'tekst'		=> 'Alle '.$wp_query->queried_object->label,
+			'ikoon'		=> 'arrow-left-thick'
+		));
+
+		$terug->print();
+
+		echo "<footer>";
+	endif; //als tax
+} endif;
