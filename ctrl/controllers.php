@@ -145,6 +145,26 @@ if(!function_exists('tekstveld_ctrl')) :  function tekstveld_ctrl($invoer = arra
 
 } endif;
 
+if(!function_exists('print_lijst_ctrl')) : function print_lijst_ctrl($post, $htype = '2', $exc_lim = 140) {
+
+	if (!$post) return;
+
+	if (!isset($a)) {
+		$a = new Article_c(array(
+			'class' 	=> 'blok in-lijst',
+			'htype'		=> 2,
+			'exc_lim'	=> 140
+		), $post);
+	} else {
+		$a->art = $post;
+	}
+
+	$a->print();
+} endif;
 
 
+if(!function_exists('uitgelichte_afbeelding_ctrl')) : function uitgelichte_afbeelding_ctrl() {
 
+	get_template_part('sja/afb/uitgelichte-afbeelding-buiten');
+
+} endif;

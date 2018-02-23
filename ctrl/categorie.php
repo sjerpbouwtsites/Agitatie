@@ -1,6 +1,6 @@
 <?php
 
-if(!function_exist('categorie_ctrl')) : function categorie_ctrl() {
+if(!function_exists('categorie_ctrl')) : function categorie_ctrl() {
 	$cats = get_categories();
 
 	foreach ($cats as $c) {

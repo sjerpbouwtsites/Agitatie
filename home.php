@@ -9,25 +9,13 @@ echo "<div class='marginveld'>";
 
 echo "<h1>Nieuws</h1>";
 
-
 if (have_posts()) : while (have_posts()) : the_post();
 
-	if (!isset($a)) {
-		$a = new Article_c(array(
-			'class' 	=> 'blok in-lijst',
-			'htype'		=> 2,
-			'exc_lim'	=> 140
-		), $post);
-	} else {
-		$a->art = $post;
-	}
-
-
-	$a->print();
+	print_lijst_ctrl($post, '2', 140);
 
 endwhile; endif;
 
-echo "</div>";
+echo "</div>"; //marginveld
 
 get_template_part('/sja/sluit-main');
 get_footer();

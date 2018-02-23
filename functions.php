@@ -57,6 +57,7 @@ for ($i = 0; $i < $include_funcs_length; $i++) {
 $include_ctrl = array(
 	'controllers',
 	'archief',
+	'categorie',
 );
 
 $include_ctrl_length = count($include_ctrl);
