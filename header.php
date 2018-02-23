@@ -6,7 +6,7 @@
 		<div class='verpakking'>
 			<div class='stek-kop-links'>
 
-				<?php logo_contr(); ?>
+				<?php logo_ctrl(); ?>
 
 			</div><!--koplinks-->
 

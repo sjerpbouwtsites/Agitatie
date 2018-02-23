@@ -1,7 +1,7 @@
 <?php
 
 // print
-if(!function_exists('logo_contr')) : function logo_contr($print = true, $heading = true) {
+if(!function_exists('logo_ctrl')) : function logo_ctrl($print = true, $heading = true) {
 	if ($print) {
 		echo logo_model($heading);
 	} else {

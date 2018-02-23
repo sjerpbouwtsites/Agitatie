@@ -9,7 +9,7 @@ get_template_part('/sja/open-main');
 <article class='bericht'>
 
 		<?php
-			get_template_part('sja/uitgelichte-afbeelding-buiten');
+			uitgelichte_afbeelding_ctrl();
 		?>
 
 	<div class='verpakking'>
