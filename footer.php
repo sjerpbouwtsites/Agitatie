@@ -2,6 +2,9 @@
 <footer id='stek-voet'>
 	<div class='verpakking'>
 		<?php
+
+		logo_ctrl();
+
 		foreach ($voet_velden as $v) :
 
 			if (array_key_exists('titel', $v) and $v['titel'] !== '' ) {
