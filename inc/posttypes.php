@@ -41,12 +41,9 @@ if(!function_exists('registreer_posttypes')) : function registreer_posttypes(){
 
 }
 
-add_action('init', 'registreer_posttypes');
-
 endif;
 
-
-
+add_action('init', 'registreer_posttypes');
 
 
 if (!class_exists('Posttype_voorb')) : class Posttype_voorb {
@@ -89,6 +86,7 @@ if (!class_exists('Posttype_voorb')) : class Posttype_voorb {
 			'capability_type' 	=> 'post',
 			'hierarchical' 		=> false,
 			'public'			=> true,
+			'has_archive' => true,
 			'supports' => 		array(
 					'title',
 					'editor',
@@ -122,10 +120,13 @@ if (!class_exists('Posttype_voorb')) : class Posttype_voorb {
 		register_taxonomy(
 			$tax_enkelvoud,
 			$this->enkelvoud,
-			array(	'labels'=> array(
-				'name' 				=> _x($tax_meervoud, 'taxonomy general name'),
-				'singular_name' 	=> _x($tax_enkelvoud, 'taxonomy singular name'),
-				)
+			array(
+				'labels' => array(
+					'name' => _x($tax_meervoud, 'taxonomy general name'),
+					'singular_name' 	=> _x($tax_enkelvoud, 'taxonomy singular name'),
+				),
+				'public' => true,
+
 			)
 		);
 	}
