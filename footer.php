@@ -3,7 +3,7 @@
 	<div class='verpakking'>
 		<?php
 
-		footer_voor_velden_ctrl();
+		do_action('footer_voor_velden_ctrl');
 
 		foreach ($voet_velden as $v) :
 
@@ -20,7 +20,7 @@
 
 		endforeach;
 
-		footer_na_velden_ctrl();
+		do_action('footer_voor_velden_ctrl');
 
 		?>
 	</div>
