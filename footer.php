@@ -3,7 +3,7 @@
 	<div class='verpakking'>
 		<?php
 
-		logo_ctrl();
+		footer_voor_velden_ctrl();
 
 		foreach ($voet_velden as $v) :
 
@@ -18,7 +18,11 @@
 				</div>";
 			}
 
-		endforeach;?>
+		endforeach;
+
+		footer_na_velden_ctrl();
+
+		?>
 	</div>
 </footer>
 <?php

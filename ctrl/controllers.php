@@ -168,3 +168,11 @@ if(!function_exists('uitgelichte_afbeelding_ctrl')) : function uitgelichte_afbee
 	get_template_part('sja/afb/uitgelichte-afbeelding-buiten');
 
 } endif;
+
+if(!function_exists('footer_voor_velden_ctrl')) : function footer_voor_velden_ctrl() {
+		//
+} endif;
+
+if(!function_exists('footer_na_velden_ctrl')) : function footer_na_velden_ctrl() {
+		//
+} endif;
