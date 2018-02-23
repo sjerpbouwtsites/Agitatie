@@ -1,6 +1,7 @@
 # bouw
 
 IOS: gallerij moet poster hebben
+controllers conditioneel inladen
 
 # vlak voor opleveren
 

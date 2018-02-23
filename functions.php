@@ -7,6 +7,9 @@ define('THEME_DIR', get_template_directory());
 define('THEME_URI', get_template_directory_uri());
 define('INC_DIR', THEME_DIR . "/inc");
 define('INC_URI', THEME_URI . "/inc");
+define('CTRL_DIR', THEME_DIR . "/ctrl");
+define('CTRL_URI', THEME_URI . "/ctrl");
+
 define('VIEW_DIR', INC_DIR . "/view");
 define('VIEW_URI', INC_URI . "/view");
 define('IMG_DIR', THEME_DIR . "/afb");
@@ -34,7 +37,6 @@ endif;
 //include al deze bestanaden uit INC_DIR
 $include_funcs = array(
 	"acf",
-	'controllers',
 	'edit',
 	'gereedschap',
 	"klassen",
@@ -43,7 +45,7 @@ $include_funcs = array(
 	'thema-config',
 	'thumbnails',
 	'widgets',
-	'hooks'
+	'hooks',
 );
 
 $include_funcs_length = count($include_funcs);
@@ -51,6 +53,16 @@ for ($i = 0; $i < $include_funcs_length; $i++) {
 	include INC_DIR . "/" . $include_funcs[$i] . ".php";
 }
 
+//@TODO dit is lelijk
+$include_ctrl = array(
+	'controllers',
+	'archief',
+);
+
+$include_ctrl_length = count($include_ctrl);
+for ($i = 0; $i < $include_ctrl_length; $i++) {
+	include CTRL_DIR . "/" . $include_ctrl[$i] . ".php";
+}
 
 ///////////////////////////////////////////////////////////
 
