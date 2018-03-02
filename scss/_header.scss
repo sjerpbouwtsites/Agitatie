@@ -2,14 +2,14 @@
 #stek-kop {
 	background-color: $donkergrijs;
  	width: 100%;
-	height: $header-height;
+	//height: $header-height;
 	z-index: 2;
 	.rel > .verpakking {
 		display: flex;
 		justify-content: space-between;
 	}
 	.rel, .verpakking, [class|='stek-kop'], .horizontaal {
-		height: 100%;
+		//height: 100%;
 	}
 	.stek-kop-links {
 		flex-basis: 210px;
@@ -28,14 +28,10 @@
 			padding-left: 20px;
 		}
 		div, ul {
-			height: 100%;
-			overflow: hidden;
+			//height: 100%;
 		}
-		li {
-			margin-left: 20px;
-			&:first-child {
-				margin-left: 0
-			}
+		li ul li {
+			margin-left: 0;
 		}
 	}
 

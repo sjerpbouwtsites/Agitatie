@@ -24,6 +24,8 @@ $thumbnail_formaten = array(
     'portfolio'                 => mk_tmb_frm( 'portfolio', 600, 600),
 );
 
+$thumbnail_formaten = array_merge($thumbnail_formaten, $kind_thumbs);
+
 if(!function_exists('thumbnail_init')) : function thumbnail_init() {
 
     global $thumbnail_formaten;

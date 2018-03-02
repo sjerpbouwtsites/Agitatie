@@ -1,5 +1,11 @@
 <?php
 
-if (!function_exists('voorpagina_na_tekst_hook')) : function voorpagina_na_tekst_hook () {} endif;
+if (!function_exists('kop_rechts')) : function kop_rechts () {
+	echo "<div class='stek-kop-rechts'>";
+	kop_menu_ctrl('horizontaal menu'); 
+	echo "</div>";	
+} endif;
 
-if (!function_exists('voorpagina_voor_tekst_hook')) : function voorpagina_voor_tekst_hook () {} endif;
+add_action('kop_rechts_ctrl', 'kop_rechts');
+
+

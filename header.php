@@ -10,9 +10,7 @@
 
 			</div><!--koplinks-->
 
-			<div class='stek-kop-rechts'>
-				<?php kop_menu_ctrl('horizontaal menu'); ?>
-			</div>
+			<?php do_action('kop_rechts_ctrl'); ?>
 
 
 

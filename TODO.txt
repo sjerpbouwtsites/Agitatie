@@ -4,6 +4,7 @@ IOS: gallerij moet poster hebben
 controllers conditioneel inladen
 tekst op archief pagina's
 tax blok aanpassen naar correcte routing
+menu kan sub aan als dat expliciet wordt meegegeven. Maar dat zou opgepikt moeten worden. 
 
 # vlak voor opleveren
 

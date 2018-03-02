@@ -20,7 +20,7 @@
 
 		endforeach;
 
-		do_action('footer_voor_velden_ctrl');
+		do_action('footer_na_velden_ctrl');
 
 		?>
 	</div>

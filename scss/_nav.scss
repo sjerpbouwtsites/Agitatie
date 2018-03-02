@@ -8,10 +8,59 @@
 	a {
 		line-height: $header-height;
 		font-family: $kopletter;
+		padding: 0 10px;
+		display: block;
+		&:hover {
+			background-color: $hoofdkleur;
+			color: white;
+			text-decoration: none;
+		}
 	}
+	overflow: hidden;
 	&.horizontaal {
 		li {
 			display: inline-block;
 		}
+		& > li > ul {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			li {
+				display: block;
+			}
+		}
+	}
+	&.met-sub {
+		overflow: visible;
+		
+		li {
+			position: relative;
+		} ul {
+			display: none;
+
+		}
+		& > li > ul {
+			position: absolute;
+			top: calc(100% - 10px);
+			left: 0;
+			li, a {
+				line-height: 40px;
+			}
+			li:hover {
+				ul {
+					display: block;
+					right: 100%;
+					top: 0;
+					position: absolute;
+				}
+			}
+
+		}
+		& > li:hover > ul{
+			display: block;
+			& > li:hover > ul {
+				display: block;
+			}
+		}		
 	}
 }
