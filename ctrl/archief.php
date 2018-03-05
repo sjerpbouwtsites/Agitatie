@@ -3,7 +3,10 @@ if (!function_exists('archief_generiek_loop')) : function archief_generiek_loop(
 
 	switch (POST_TYPE_NAAM) {
 		default:
-			$m_art = new Article_c( array('exc_lim' => $exc_lim_o ? $exc_lim_o : 230 ), $post);
+			$m_art = new Article_c( array(
+				'exc_lim' 	=> $exc_lim_o ? $exc_lim_o : 230,
+				'class'		=> 'in-lijst'
+			), $post);
 			break;
 	}
 
@@ -23,7 +26,20 @@ if (!function_exists('archief_intro_ctrl')) : function archief_intro_ctrl($post_
 if (!function_exists('archief_titel_ctrl')) : function archief_titel_ctrl () {
 
 	global $wp_query;
-	$archief_titel = $wp_query->queried_object->label . ($tax_waarde = gezocht_naar_tax_waarde_model() !== '' ? "<span>".$tax_waarde."</span>" : "");
+
+	//is dit een taxonomy pagina?
+	if (!property_exists($wp_query->queried_object, 'label')) {
+
+		$tax_naam = $wp_query->queried_object->taxonomy;
+		if ($tax_naam === 'category') $tax_naam = 'categorie';
+		if ($tax_naam === 'post_tag') $tax_naam = 'tag';
+
+		$archief_titel = ucfirst($tax_naam) . ": ".strtolower($wp_query->queried_object->name);
+
+	} else {
+		$archief_titel = $wp_query->queried_object->label . ($tax_waarde = gezocht_naar_tax_waarde_model() !== '' ? "<span>".$tax_waarde."</span>" : "");
+	}
+
 	echo "<h1>$archief_titel</h1>";
 
 } endif;
@@ -31,7 +47,7 @@ if (!function_exists('archief_titel_ctrl')) : function archief_titel_ctrl () {
 
 if(!function_exists('archief_content_ctrl')) : function archief_content_ctrl() {
 	global $post;
-	echo "<div id='archief-lijst' class='tekstveld'>";
+	echo "<div id='archief-lijst' class='tekstveld art-lijst'>";
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 			//maakt post type objs aan en print @ controllers

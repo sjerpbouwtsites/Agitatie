@@ -4,7 +4,9 @@ IOS: gallerij moet poster hebben
 controllers conditioneel inladen
 tekst op archief pagina's
 tax blok aanpassen naar correcte routing
-menu kan sub aan als dat expliciet wordt meegegeven. Maar dat zou opgepikt moeten worden. 
+menu kan sub aan als dat expliciet wordt meegegeven. Maar dat zou opgepikt moeten worden.
+
+meervoud van taxonomieen via https://developer.wordpress.org/reference/functions/get_taxonomy_labels/ in art_c -> taxonomieen & posttypes.php
 
 # vlak voor opleveren
 

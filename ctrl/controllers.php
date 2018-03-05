@@ -151,9 +151,9 @@ if(!function_exists('print_lijst_ctrl')) : function print_lijst_ctrl($post, $hty
 
 	if (!isset($a)) {
 		$a = new Article_c(array(
-			'class' 	=> 'blok in-lijst',
-			'htype'		=> 2,
-			'exc_lim'	=> 140
+			'class' 	=> 'in-lijst',
+			'htype'		=> $htype,
+			'exc_lim'	=> $exc_lim
 		), $post);
 	} else {
 		$a->art = $post;

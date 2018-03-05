@@ -6,22 +6,3 @@
 .archive main > footer {
 	padding-top: 20px;
 }
-
-#archief-lijst {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	.art-c {
-		max-width: none;
-		flex-basis: 100%;
-		margin-top: 0;
-		flex-grow: 1;
-		@media (min-width: 600px) {
-			max-width: 50%;
-			flex-basis: 50%;
-		}
-		@media (min-width: 800px) {
-			flex-basis: 33.33%;
-		}
-	}
-}

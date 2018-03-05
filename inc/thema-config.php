@@ -38,9 +38,19 @@ endif;
 
 if ( ! function_exists( 'sjerpbouwtsites_setup' ) ) :
 	function sjerpbouwtsites_setup() {
+
+		// @TODO registratie menu's in één functie
+
 		//load_theme_textdomain( 'sjerpbouwtsites', get_template_directory() . '/languages' );
 		zet_thema_ondersteuning();
 		register_nav_menus( array('kop' => esc_html__( 'kop', 'sjerpbouwtsites' ),) );
+		register_nav_menus( array('footer' => esc_html__( 'footer', 'sjerpbouwtsites' ),) );
+
+		global $kind_menus;
+		if ($kind_menus and count($kind_menus)) : foreach ($kind_menus as $km) :
+			register_nav_menus( array($km => esc_html__( $km, 'sjerpbouwtsites' ),) );
+		endforeach; endif;
+
 	}
 
 endif;

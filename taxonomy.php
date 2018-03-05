@@ -1,5 +1,7 @@
 <?php
 
+//wordt niet gebruikt?
+
 get_header();
 set_query_var('klassen_bij_primary', "cats");
 set_query_var('titel_hoog', "<h1>".$post->post_title."</h1>");

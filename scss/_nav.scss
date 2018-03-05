@@ -4,44 +4,65 @@
 	ul {
 		@include ul-li-reset();
 	}
+}
 
+.menu#menu-kopmenu {
+	overflow: hidden;
 	a {
 		line-height: $header-height;
 		font-family: $kopletter;
-		padding: 0 10px;
+		padding: 0 .4em;
 		display: block;
+		font-family: $kopletter;
 		&:hover {
 			background-color: $hoofdkleur;
 			color: white;
 			text-decoration: none;
 		}
 	}
-	overflow: hidden;
+	.sub-menu {
+		a {
+			padding: 0.2em .7em;
+		}
+		li {
+			box-sizing: border-box;
+		}
+	}
+
 	&.horizontaal {
 		li {
 			display: inline-block;
 		}
-		& > li > ul {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			li {
-				display: block;
+		& > li {
+			& > ul {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: 3;
+				min-width: 100%;
+				li {
+					display: block;
+					min-width: 100%;
+					background-color: white;
+				}
+			}
+			&:last-child > ul {
+				left: auto;
+				right: 0;
 			}
 		}
 	}
 	&.met-sub {
 		overflow: visible;
-		
+
 		li {
 			position: relative;
 		} ul {
 			display: none;
-
 		}
 		& > li > ul {
 			position: absolute;
-			top: calc(100% - 10px);
+			top: 100%;
 			left: 0;
 			li, a {
 				line-height: 40px;
@@ -61,6 +82,12 @@
 			& > li:hover > ul {
 				display: block;
 			}
-		}		
+		}
+	}
+}
+
+footer .menu {
+	a:hover {
+		color: $hoofdkleur;
 	}
 }

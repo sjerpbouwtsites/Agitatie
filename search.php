@@ -7,19 +7,25 @@ get_template_part('/sja/open-main');
 
 get_search_form();
 
-if (have_posts()) : while (have_posts()) : the_post();
+if (have_posts()) :
 
-	$art = new Article_c(
-		array(
-			'class' => "in-lijst blok",
-			'htype' => 2,
-			'exc_lim' => 180
-		),
-	$post);
+	echo "<div class='art-lijst'>";
 
-	$art->print();
+	while (have_posts()) : the_post();
+
+		$art = new Article_c(
+			array(
+				'class' => "in-lijst",
+				'htype' => 3,
+				'exc_lim' => 350
+			),
+		$post);
+
+		$art->print();
 
 	endwhile;
+
+	echo "</div>"; // art lijst
 
 else :
 

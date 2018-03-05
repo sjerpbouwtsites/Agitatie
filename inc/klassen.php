@@ -123,7 +123,15 @@ class Article_c extends Array_constr{
 		if ($this->gecontroleerd) return;
 
 		//initialiseer negatieve waarden hier
-		$c = array('is_categorie', 'geen_afb', 'geen_tekst', 'class');
+		$c = array(
+			'is_categorie',
+			'geen_afb',
+			'geen_tekst',
+			'class',
+			'geen_datum',
+			'taxonomieen'
+		);
+
 		foreach ($c as $cc) {
 			$this->$cc = property_exists($this, $cc) ? $this->$cc : false;
 		}
@@ -158,7 +166,22 @@ class Article_c extends Array_constr{
 			$img_id = get_field('cat_afb', 'category_'.$this->art->term_id);
 			$img = wp_get_attachment_image($img_id, $this->afb_formaat);
 		} else {
-			$img = get_the_post_thumbnail($this->art, $this->afb_formaat);
+
+			if (has_post_thumbnail($this->art->id)) {
+				$img = get_the_post_thumbnail($this->art, $this->afb_formaat);
+			} else {
+				$img_f = get_field('ta_afbeelding', 'option');
+				$w = $this->afb_formaat.'-width';
+				$h = $this->afb_formaat.'-height';
+				$img = "
+					<img
+						src='{$img_f['sizes'][$this->afb_formaat]}'
+						alt='{$img_f['alt']}'
+						width='{$img_f['sizes'][$w]}'
+						height='{$img_f['sizes'][$h]}'
+					/>";
+			}
+
 		}
 
 		echo $img;
@@ -166,7 +189,87 @@ class Article_c extends Array_constr{
 	}
 
 	public function maak_tekst (){
-		return "<p class='tekst-wit'>". maak_excerpt($this->art, $this->exc_lim) . "</p>";
+		return "<p class='tekst-zwart'>". maak_excerpt($this->art, $this->exc_lim) . " <span class='lees-meer'> Lees meer.</span></p>";
+	}
+
+	public function datum() {
+		if ($this->geen_datum) return;
+
+		echo "<time class='post-datum tekst-zwart'>" . get_the_date(get_option('date_format'), $this->art->ID) . "</time>";
+	}
+
+	public function maak_taxlijst() {
+
+			$uitsluiten = array(
+				'post_format', 'post_tag'
+			);
+
+			$lijst = get_object_taxonomies($this->art);
+			$p_lijst = array();
+
+			foreach ($lijst as $l) {
+				if (!in_array($l, $uitsluiten)) {
+					$p_lijst[] = $l;
+				}
+			}
+
+			$GLOBALS[$this->art->post_type . '-taxlijst'] = $p_lijst;
+
+
+	}
+
+	public function taxonomieen() {
+
+		// slaat in globale variabele op hoe de taxonomieen heten van deze posttype, als dat niet reeds gedaan is
+		// bepaalde waarden worden opgeslagen
+		// verwerkt de taxonomieen tot bv "categorie"
+		// @TODO meervoud van taxonomieen dient nog correct ingesteld te worden in posttypes.php en die hier uitgedraaid te worden via
+		// https://developer.wordpress.org/reference/functions/get_taxonomy_labels/
+
+		if (!$this->taxonomieen) return;
+
+
+		$tl_str = $this->art->post_type . '-taxlijst';
+		//niet iedere keer opnieuw doen.
+		if (!array_key_exists($tl_str, $GLOBALS)) {
+			$this->maak_taxlijst();
+		}
+
+
+		$terms = wp_get_post_terms( $this->art->ID, $GLOBALS[$tl_str] );
+
+		$overslaan = array('Geen categorie');
+
+		$print_ar = array();
+
+		if (count($terms)) :
+
+			foreach ( $terms as $term ) :
+
+				if (in_array($term->name, $overslaan)) continue;
+
+				if (array_key_exists($term->taxonomy, $print_ar)) {
+					$print_ar[$term->taxonomy][] = $term->name;
+				} else {
+					$print_ar[$term->taxonomy] = array($term->name);
+				}
+
+			endforeach;
+
+			///
+
+			if (count($print_ar)) {
+
+				foreach ($print_ar as $tax_naam => $tax_waarden) {
+
+					if ($tax_naam === 'category') $tax_naam = 'categorie';
+
+					echo "<p class='tax'>{$tax_naam}: " . strtolower(implode(', ', $tax_waarden)) . "</p>";
+				}
+			}
+		endif; //als count terms
+
+
 	}
 
 	public function maak_artikel () {
@@ -177,7 +280,7 @@ class Article_c extends Array_constr{
 
 		?>
 
-		<article class="flex art-c <?=$this->class?>" <?=$this->data_src?> >
+		<article class="flex art-c <?=$this->class?>  <?=($this->geen_afb ? 'geen-afb' : '')?>" <?=$this->data_src?> >
 
 			<?php if (!$this->geen_afb) : ?>
 			<div class='art-links'>
@@ -188,12 +291,17 @@ class Article_c extends Array_constr{
 			<?php endif;?>
 
 			<div class='art-rechts'>
-				<a class='tekst-wit' href='<?=$this->permalink?>'>
-					<h<?=$this->htype?> class='tekst-wit'>
-					<?=$this->art->post_title?>
-					</h<?=$this->htype?>>
+				<a class='tekst-zwart' href='<?=$this->permalink?>'>
+					<header>
+						<h<?=$this->htype?> class='tekst-zwart'>
+							<?=$this->art->post_title?>
+						</h<?=$this->htype?>>
+						<?php $this->datum();
+						 $this->taxonomieen(); ?>
+					</header>
+					<?php
 
-					<?php if (!$this->geen_tekst) :
+					if (!$this->geen_tekst) :
 						echo $this->maak_tekst();
 					endif;  ?>
 				</a>
@@ -554,8 +662,6 @@ class Tax_blok extends Array_constr {
 		if (!cp_truthy('basis', $this)) $this->basis = $this->zet_basis();
 		if (!cp_truthy('reset', $this)) $this->reset = true;
 		if (!cp_truthy('archief', $this)) $this->archief = is_archive();
-		if (!property_exists($this, 'hash')) $this->hash = '#tax-blok';
-
 	}
 
 
@@ -564,6 +670,9 @@ class Tax_blok extends Array_constr {
 	}
 
 	public function verwerk_tax_naam($a) {
+
+		//LEGACY ?
+
 		if ($this->archief) {
 			return $a;
 		} else {
@@ -571,10 +680,26 @@ class Tax_blok extends Array_constr {
 		}
 	}
 
-	public function maak_li ($tax_term, $naam){
+	public function maak_li ($tax_term){
+		$href = get_term_link($tax_term->term_id);
+		return "<li><a href='$href'>".ucfirst($tax_term->name)."</a></li>";
+	}
 
-		$href = $this->basis.'?'.$this->verwerk_tax_naam($naam)."=".$tax_term->slug.$this->hash;
-		return "<li class='$tax_term->slug'><a href='$href'>$tax_term->name</a></li>";
+	public function controleer_tax_titel($str) {
+
+		//vervangt category en post_tag met categorie en tag
+
+		$controle = array(
+			'category'		=> 'categorie',
+			'post_tag'		=> 'tag',
+		);
+
+		if(array_key_exists($str, $controle)) {
+			return $controle[$str];
+		} else {
+			return $str;
+		}
+
 	}
 
 	public function maak() {
@@ -593,17 +718,20 @@ class Tax_blok extends Array_constr {
 		$linkblokken = '';
 
 		foreach ($tax_en_terms as $naam => $waarden) :
+
+			if ($naam === 'post_format') continue;
+
 			$linkblokken .= "<section>";
 			if (count($tax_en_terms) > 1) {
-				$linkblokken .= "<h3>$naam</h3>";
+				$linkblokken .= "<h3>".ucfirst($this->controleer_tax_titel($naam))."</h3>";
 			}
 			if (count($waarden)) :
 				$linkblokken .= "<ul class='reset'>";
 				if ($this->reset) {
-					$linkblokken .= "<li><a href='{$this->basis}{$this->hash}'>Alles</a></li>";
+					$linkblokken .= "<li><a href='{$this->basis}'>Alles</a></li>";
 				}
 				foreach ($waarden as $tax_term) {
-					$linkblokken .= $this->maak_li($tax_term, $naam);
+					$linkblokken .= $this->maak_li($tax_term);
 				}
 				$linkblokken .= "</ul>";
 			endif;
@@ -622,7 +750,6 @@ class Tax_blok extends Array_constr {
 
 			";
 		}
-
 
 
 	}
