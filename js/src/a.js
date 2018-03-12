@@ -19,17 +19,6 @@ function klikBaas(){
 
 }
 
-function kopieerShare(shareDaddy){
-	$s = shareDaddy.first();
-	if ($s.length) {
-		$("#footer-share-kopie").append($s.clone());
-		var a = $(".artikel-meta.blok");
-		if (a.length) a.after($s.clone());
-		$s.remove();
-	}
-}
-
-
 function init() {
 	doc = document;
 	body = doc.getElementsByTagName('body')[0] || null;
@@ -52,43 +41,6 @@ function verschrikkelijkeHacks(){
 }
 
 
-function bookingformAanpassing() {
-
-	//past HTML aan zodat ze conform andere knoppen zijn.
-
-	var nepKnoppen = [
-		{
-			sel: 		'.rtb-booking-form .add-message a',
-			mdiClass: 	'pencil',
-		},
-		{
-			sel: 		'.rtb-booking-form button[type="submit"]',
-			mdiClass: 	'check',
-		},
-		{
-			sel: 		'.rtb-booking-form .rtb-checkbox label:first-child',
-			mdiClass: 	'format-list-checks',
-		}
-	];
-
-	var k, $el, $elT;
-
-	for (var i = nepKnoppen.length - 1; i >= 0; i--) {
-		k = nepKnoppen[i];
-		$el = $(k.sel);
-		if ($el.length) {
-			$elT = $el.text();
-			$el.empty();
-			$el.append("<span>"+$elT+"</span>");
-			$el.append("<i class='mdi mdi-"+k.mdiClass+"'></i>");
-		}
-	}
-
-	$(".rtb-checkbox label:first-child").on('click', function(){
-		$(this).toggleClass('open');
-	});
-
-}
 
 function videoPlayer () {
 
@@ -127,35 +79,7 @@ function videoPlayer () {
 	});
 }
 
-function carouselInit(){
-	var
-	wi = window.innerWidth,
-	s = wi > 899 ? 3 : wi > 599 ? 2 : 1;
 
-	$('.menu-gerechten-carousel').slick({
-	  infinite: true,
-	  slidesToShow: s,
-	  slidesToScroll: 1,
-	  arrows: true,
-	  autoplay: true,
-	  autoplaySpeed: 2500,
-	  prevArrow: "<i class='mdi mdi-chevron-left'></i>",
-	  nextArrow: "<i class='mdi mdi-chevron-right'></i>",
-	});
-
-}
-
-function footerOpenSluit(){
-
-	var fbT = $(".widget_easy_facebook_feed h3 a").text() + " ";
-	$(".widget_easy_facebook_feed h3 a").remove();
-	$(".widget_easy_facebook_feed h3").text(fbT).append($("#stek-voet h3").first().find('i').clone());
-
-
-	$("#stek-voet").on('click', 'h3', function(){
-		this.parentNode.classList.toggle('open');
-	});
-}
 
 function artCLinkTrigger(){
 	$('.art-c').on('click', 'div', function(e){
@@ -167,6 +91,32 @@ function artCLinkTrigger(){
 	});
 }
 
+function kopmenuSubMobiel() {
+
+	if (!$('.kopmenu-mobiel:visible').length) {
+		return false;
+		//niet mobiel
+	}
+
+
+	$("#menu-kopmenu .menu-item-has-children > a").each(function(){
+		$(this).append($("<i class='mdi mdi-plus-circle-outline'></i>"));
+	});
+
+	$("#menu-kopmenu").on('click', 'i', function(e){
+		e.preventDefault();
+		if ($(this).hasClass('mdi-plus-circle-outline')) {
+			$(this).removeClass('mdi-plus-circle-outline');
+			$(this).addClass('mdi-minus-circle-outline');
+		} else {
+			$(this).removeClass('mdi-minus-circle-outline');
+			$(this).addClass('mdi-plus-circle-outline');
+		}
+		$(this).closest('.menu-item-has-children').find('ul').first().toggle();
+	});
+
+}
+
 
 window.onload = function(){
 
@@ -175,8 +125,6 @@ window.onload = function(){
 	klikBaas();
 
 	verschrikkelijkeHacks();
-
-	footerOpenSluit();
 
 	artCLinkTrigger();
 
@@ -189,7 +137,8 @@ window.onload = function(){
 
 	if (doc.getElementById('agenda-filter')) agendaFilter();
 
-	if (doc.querySelector('.rtb-booking-form')) bookingformAanpassing();
+	kopmenuSubMobiel();
+
 
 };
 

@@ -144,7 +144,3 @@ if(!function_exists('tekstveld_ctrl')) :  function tekstveld_ctrl($invoer = arra
 
 
 } endif;
-
-
-
-

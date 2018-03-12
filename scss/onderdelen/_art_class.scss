@@ -2,11 +2,10 @@
 .art-c {
 	position: relative;
 	padding-bottom: 0;
-	max-width: 400px;
+	//max-width: calc(50% - 20px);
+	//flex-grow: 1;
 	&:hover {
 		cursor: pointer;
-	}
-	img {
 	}
 	& ~ .art-c {
 		margin-top: 20px;
@@ -24,7 +23,7 @@
 			display: block;
 		}
 		img {
-			min-height: 200px;
+			height: 201.2px;
 			object-fit: cover;
 			width: 100%;
 		}
@@ -49,7 +48,7 @@
 			}
 		}
 	}
-	time {
+	time, .tax {
 		font-size: .85rem;
 		opacity: 0.8;
 	}
@@ -84,6 +83,9 @@
 	margin-bottom: -30px;
 	.art-rechts {
 		margin-top: 1em;
+	}
+	.geen-afb .art-rechts {
+		margin-top: 0;
 	}
 	.art-c {
 		flex-basis: calc(33% - 20px);

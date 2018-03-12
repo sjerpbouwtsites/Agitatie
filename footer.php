@@ -1,6 +1,13 @@
+<?php // die('nein in footer.php'); ?>
+
+
+
+
+
 <?php $voet_velden = get_field('footervelden', 'option'); if ($voet_velden and count($voet_velden)) : ?>
-<footer id='stek-voet'>
-	<div class='verpakking'>
+<footer id='stek-voet' class='stek-voet'>
+	<div class='verpakking logo-en-tekst'>
+		<div class='neg-marge'>
 		<?php
 
 		do_action('footer_voor_velden_action');
@@ -23,6 +30,13 @@
 		do_action('footer_na_velden_action');
 
 		?>
+		</div>
+	</div>
+
+	<div class='verpakking widgets'>
+		<div class='neg-marge'>
+			<?php dynamic_sidebar('footer'); ?>
+		</div>
 	</div>
 </footer>
 <?php

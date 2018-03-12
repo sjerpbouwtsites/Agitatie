@@ -29,9 +29,6 @@ if (!function_exists('agitatie_stijl_en_script')) :
 	add_action( 'wp_enqueue_scripts', 'agitatie_stijl_en_script' );
 endif;
 
-
-
-
 ///////////////////////////////////////////////////////////
 
 //include al deze bestanaden uit INC_DIR
@@ -46,6 +43,7 @@ $include_funcs = array(
 	'thumbnails',
 	'widgets',
 	'hooks',
+	//'strip_scripts',
 );
 
 $include_funcs_length = count($include_funcs);
@@ -58,6 +56,7 @@ $include_ctrl = array(
 	'controllers',
 	'archief',
 	'categorie',
+	'singular'
 );
 
 $include_ctrl_length = count($include_ctrl);

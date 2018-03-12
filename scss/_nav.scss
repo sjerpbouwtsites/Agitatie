@@ -6,23 +6,26 @@
 	}
 }
 
+@mixin kopmenu_letter(){
+	line-height: $header-height;
+	padding: 0 .4em;
+	display: block;
+	font-family: $kopletter;
+	&:hover {
+		background-color: $hoofdkleur;
+		color: white;
+		text-decoration: none;
+	}
+}
+
 .menu#menu-kopmenu {
 	overflow: hidden;
 	a {
-		line-height: $header-height;
-		font-family: $kopletter;
-		padding: 0 .4em;
-		display: block;
-		font-family: $kopletter;
-		&:hover {
-			background-color: $hoofdkleur;
-			color: white;
-			text-decoration: none;
-		}
+		@include kopmenu_letter();
 	}
 	.sub-menu {
 		a {
-			padding: 0.2em .7em;
+			padding: 0.4em .7em;
 		}
 		li {
 			box-sizing: border-box;
@@ -35,15 +38,20 @@
 		}
 		& > li {
 			& > ul {
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				z-index: 3;
-				min-width: 100%;
+				@media (min-width: 900px) {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					z-index: 3;
+					min-width: 100%;
+				}
 				li {
 					display: block;
 					min-width: 100%;
 					background-color: white;
+					@media (max-width: 900px) {
+						margin-left: 30px;
+					}
 				}
 			}
 			&:last-child > ul {
@@ -51,6 +59,7 @@
 				right: 0;
 			}
 		}
+
 	}
 	&.met-sub {
 		overflow: visible;
@@ -61,28 +70,83 @@
 			display: none;
 		}
 		& > li > ul {
-			position: absolute;
-			top: 100%;
-			left: 0;
-			li, a {
-				line-height: 40px;
+			@media (min-width: 900px) {
+				position: absolute;
+				top: 100%;
+				left: 0;
 			}
-			li:hover {
-				ul {
-					display: block;
-					right: 100%;
-					top: 0;
-					position: absolute;
+
+			li, a {
+				line-height: 1;
+				//padding: 0.4em 0.7em;
+				font-size: 0.8em;
+			}
+			@media (min-width: 900px) {
+				li:hover {
+					ul {
+						display: block;
+						right: 100%;
+						top: 0;
+						position: absolute;
+					}
 				}
 			}
 
 		}
-		& > li:hover > ul{
-			display: block;
-			& > li:hover > ul {
+		@media (min-width: 900px) {
+			& > li:hover > ul{
 				display: block;
+				& > li:hover > ul {
+					display: block;
+				}
 			}
 		}
+	}
+}
+
+	@media (max-width: 900px) {
+		.menu-kopmenu-container {
+			display: none;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			z-index: 2;
+			.menu#menu-kopmenu {
+				&.horizontaal {
+					& > li {
+						display: block;
+						& > a {
+							padding: 0 .8em;
+						}
+						a {
+							line-height: 40px;
+							padding-top: 0;
+							padding-bottom: 0;
+						}
+					}
+				}
+				.menu-item-has-children {
+					& > a i {
+						padding: 0 20px;
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+
+	}
+
+.kopmenu-mobiel {
+
+	@include kopmenu_letter();
+	display: none;
+	@media (max-width: 900px) {
+		display: block;
+	}
+	i {
+		position: relative;
+		top: 2px;
+		margin-left: 10px;
 	}
 }
 

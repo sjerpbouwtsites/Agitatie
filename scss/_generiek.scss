@@ -2,7 +2,7 @@
 html {
 	font-size: 16px;
 	@media (max-width: 900px) {
-		font-size: 12px;
+		font-size: 14px;
 	}
 }
 
@@ -95,4 +95,8 @@ ul.reset, ul.reset li {
 	font-size: 20px;
 	text-transform: uppercase;
 	z-index: 20;
+}
+
+.screen-reader-text {
+	display: none;
 }

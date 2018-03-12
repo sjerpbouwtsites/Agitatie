@@ -7,7 +7,7 @@ get_template_part('/sja/open-main');
 
 echo "<div class='marginveld veel'>";
 
-echo "<h1>Nieuws</h1>";
+do_action('ag_pagina_titel');
 
 echo "<div class='art-lijst'>";
 
@@ -21,13 +21,15 @@ echo "</div>";//art-lijst
 
 		//@ TODO @OPLEVERING ?
 
-		$tax_blok = new Tax_blok(array(
-			'post'		=> $post,
-			'titel'		=> 'Zoek sneller',
-		));
-		$tax_blok->print();
-
 paginering_ctrl();
+
+
+$tax_blok = new Tax_blok(array(
+	'post'		=> $post,
+	'titel'		=> 'Zoek sneller',
+));
+$tax_blok->print();
+
 
 echo "</div>"; //marginveld
 

@@ -24,4 +24,10 @@
 			}
 		}
 	}
+	.search-submit {
+		@extend .knop;
+		margin-left: 10px;
+		padding-top: calc(.3em - 1px);
+		padding-bottom: calc(.3em - 1px);
+	}
 }

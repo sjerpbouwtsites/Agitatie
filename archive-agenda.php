@@ -8,7 +8,7 @@ get_template_part('/sja/open-main');
 ?>
 <div class='verpakking'>
 	<div class='agenda'>
-		<h1>Agenda</h1>
+		<?php do_action('ag_pagina_titel'); ?>
 
 		<?php
 

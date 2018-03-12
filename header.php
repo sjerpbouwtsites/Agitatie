@@ -10,9 +10,7 @@
 
 			</div><!--koplinks-->
 
-			<?php do_action('kop_rechts_ctrl'); ?>
-
-
+			<?php do_action('kop_rechts_action'); ?>
 
 		</div><!--verpakking-->
 

@@ -8,12 +8,23 @@ echo "<article class='bericht'>";
 
 uitgelichte_afbeelding_ctrl();
 
-	while ( have_posts() ) : the_post();
-		echo "<div class='verpakking marginveld'>";
+while ( have_posts() ) : the_post();
+	echo "<div class='verpakking verpakking-klein marginveld'>";
+		
+		do_action('ag_pagina_titel');
+
+		do_action('ag_pagina_voor_tekst');
+
+		echo "<div class='bericht-tekst'>";
 			the_content();
 		echo "</div>";
-	endwhile; // End of the loop.
+
+	echo "</div>";
+endwhile; // End of the loop.
+
 echo "</article>";
+
+do_action('ag_singular_na_artikel');
 
 get_template_part('/sja/sluit-main');
 get_footer();

@@ -20,6 +20,7 @@
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+
 	&:hover, &:visited, &:active {
 		color: $hoofdkleur;
 		text-decoration: none;
@@ -42,6 +43,11 @@
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+	}
+	&.geen-ikoon {
+		span {
+			margin-right: 0 !important;
+		}
 	}
 	i {
 		color: inherit !important;

@@ -56,3 +56,18 @@ if ( ! function_exists( 'sjerpbouwtsites_setup' ) ) :
 endif;
 
 add_action( 'after_setup_theme', 'sjerpbouwtsites_setup' );
+
+
+function registreer_sidebars() {
+    register_sidebar( array(
+        'name' 			=> __( 'footer', 'sjerpbouwtsites' ),
+        'id' 			=> 'footer-sidebar',
+        'description' 	=> __( 'Widgets worden in de footer gezet', 'sjerpbouwtsites' ),
+        'before_widget' => '<section id="%1$s" class="footer-section %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'   => '</h3>',
+    ) );
+}
+
+add_action( 'widgets_init', 'registreer_sidebars' );

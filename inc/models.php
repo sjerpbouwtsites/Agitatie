@@ -18,7 +18,9 @@ if(!function_exists('logo_model')) : function logo_model($heading) {
 if(!function_exists('paginering_model')) : function paginering_model() {
 
     if( is_singular() && !is_search()) return false;
+
     global $wp_query;
+
     if( $wp_query->max_num_pages <= 1 ) return false;
 
     $m = array(
@@ -160,7 +162,10 @@ if (!function_exists('post_naam_model')) : function post_naam_model() {
     //is query op post type?
     if (array_key_exists('post_type', $wp_query->query)) {
         return $wp_query->query['post_type'];
-    } else { //neem aan: query op tax
+    } else if (count($wp_query->posts)) { //neem aan: query op tax
         return $wp_query->posts[0]->post_type;
+    } else { 
+        //lege query
+        return false;
     }
 } endif;

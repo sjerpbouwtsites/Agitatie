@@ -4,8 +4,9 @@ if (!function_exists('archief_generiek_loop')) : function archief_generiek_loop(
 	switch (POST_TYPE_NAAM) {
 		default:
 			$m_art = new Article_c( array(
-				'exc_lim' 	=> $exc_lim_o ? $exc_lim_o : 230,
-				'class'		=> 'in-lijst'
+				'exc_lim' 		=> $exc_lim_o ? $exc_lim_o : 230,
+				'class'			=> 'in-lijst',
+				'taxonomieen' 	=> true
 			), $post);
 			break;
 	}
@@ -23,9 +24,14 @@ if (!function_exists('archief_intro_ctrl')) : function archief_intro_ctrl($post_
 	}
 } endif;
 
-if (!function_exists('archief_titel_ctrl')) : function archief_titel_ctrl () {
+if (!function_exists('archief_titel_ctrl')) : function archief_titel_ctrl ($post_type = '') {
 
 	global $wp_query;
+
+	if ($post_type !== '') {
+		$obj = get_post_type_object($post_type);
+		$post_type = $obj->label;
+	}
 
 	//is dit een taxonomy pagina?
 	if (!property_exists($wp_query->queried_object, 'label')) {
@@ -34,13 +40,15 @@ if (!function_exists('archief_titel_ctrl')) : function archief_titel_ctrl () {
 		if ($tax_naam === 'category') $tax_naam = 'categorie';
 		if ($tax_naam === 'post_tag') $tax_naam = 'tag';
 
-		$archief_titel = ucfirst($tax_naam) . ": ".strtolower($wp_query->queried_object->name);
+		$archief_titel = ucfirst($post_type !== '' ? $post_type : $tax_naam) . ": ".strtolower($wp_query->queried_object->name);
 
 	} else {
-		$archief_titel = $wp_query->queried_object->label . ($tax_waarde = gezocht_naar_tax_waarde_model() !== '' ? "<span>".$tax_waarde."</span>" : "");
+
+		$archief_titel = ($post_type !== '' ? $post_type : $wp_query->queried_object->label)  . ($tax_waarde = gezocht_naar_tax_waarde_model() !== '' ? "<span>".$tax_waarde."</span>" : "");
+
 	}
 
-	echo "<h1>$archief_titel</h1>";
+	echo "<h1>".$archief_titel."</h1>";
 
 } endif;
 
@@ -53,7 +61,11 @@ if(!function_exists('archief_content_ctrl')) : function archief_content_ctrl() {
 			//maakt post type objs aan en print @ controllers
 			archief_generiek_loop($post);
 
-		endwhile; endif;
+		endwhile; else : 
+
+			get_template_part('sja/niets-gevonden');
+
+		endif;
 	echo "</div>";
 } endif;
 

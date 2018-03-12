@@ -8,6 +8,8 @@ menu kan sub aan als dat expliciet wordt meegegeven. Maar dat zou opgepikt moete
 
 meervoud van taxonomieen via https://developer.wordpress.org/reference/functions/get_taxonomy_labels/ in art_c -> taxonomieen & posttypes.php
 
+jquery wordt tweemaal ingeladen
+
 # vlak voor opleveren
 
 zoeken op @OPLEVERING

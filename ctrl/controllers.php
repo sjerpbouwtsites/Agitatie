@@ -12,6 +12,7 @@ if(!function_exists('logo_ctrl')) : function logo_ctrl($print = true, $heading =
 if(!function_exists('paginering_ctrl')) : function paginering_ctrl() {
 
 	$m = paginering_model();
+
 	if (!$m) {
         return; //zie model
     } else {
@@ -163,11 +164,6 @@ if(!function_exists('print_lijst_ctrl')) : function print_lijst_ctrl($post, $hty
 } endif;
 
 
-if(!function_exists('uitgelichte_afbeelding_ctrl')) : function uitgelichte_afbeelding_ctrl() {
-
-	get_template_part('sja/afb/uitgelichte-afbeelding-buiten');
-
-} endif;
 
 if(!function_exists('footer_voor_velden_ctrl')) : function footer_voor_velden_ctrl() {
 		//

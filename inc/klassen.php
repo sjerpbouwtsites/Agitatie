@@ -18,21 +18,32 @@ class Knop extends Array_constr{
 
 	public function __construct ($a = array()) {
 		parent::__construct($a);
+		$this->klaar = false;
 	}
 
 	public function nalopen () {
 		if (!cp_truthy('ikoon', $this)) $this->ikoon = "arrow-right-thick";
 		if (!cp_truthy('link', $this)) $this->link = "#";
+		if (!cp_truthy('geen_ikoon', $this)) $this->geen_ikoon = false;
+		$this->class = $this->class . ($this->geen_ikoon ? " geen-ikoon": "");
+		$this->klaar = true;
+	}
+
+	public function print_ikoon() {
+
+		return $this->geen_ikoon ? "" : "</span><i class='mdi mdi-{$this->ikoon}'></i>";
 	}
 
 	public function maak() {
-		$this->nalopen();
+
+		if (!$this->klaar) $this->nalopen();
+
 		$e = $this->extern ? " target='_blank' " : "";
 		$this->html = "<a {$e}
 				class='knop {$this->class}'
 				href='{$this->link}'
 				{$this->schakel}
-			><span>{$this->tekst}</span><i class='mdi mdi-{$this->ikoon}'></i></a>";
+			><span>{$this->tekst}{$this->print_ikoon()}</a>";
 		return $this->html;
 	}
 
@@ -264,7 +275,7 @@ class Article_c extends Array_constr{
 
 					if ($tax_naam === 'category') $tax_naam = 'categorie';
 
-					echo "<p class='tax'>{$tax_naam}: " . strtolower(implode(', ', $tax_waarden)) . "</p>";
+					echo "<span class='tax tekst-zwart'> - ". strtolower(implode(', ', $tax_waarden)) . "</span>";
 				}
 			}
 		endif; //als count terms
@@ -651,6 +662,9 @@ class Pag_fam extends Zijbalk_Posts{
 
 class Tax_blok extends Array_constr {
 
+	//aantal uitgesloten tax namen, post_tag en post_format
+	public $uitgesloten = array();
+
 	public function __construct ($a = array()) {
 		parent::__construct($a);
 	}
@@ -687,11 +701,10 @@ class Tax_blok extends Array_constr {
 
 	public function controleer_tax_titel($str) {
 
-		//vervangt category en post_tag met categorie en tag
+		//vervangt tax titel namen
 
 		$controle = array(
 			'category'		=> 'categorie',
-			'post_tag'		=> 'tag',
 		);
 
 		if(array_key_exists($str, $controle)) {
@@ -700,6 +713,18 @@ class Tax_blok extends Array_constr {
 			return $str;
 		}
 
+	}
+
+	public function uitsluiten ($naam) {
+
+		//sluit bepaalde namen uit en slaat dit op in uitgesloten.
+
+		if ($naam === 'post_format' || $naam === 'post_tag') {
+			if (!in_array($naam, $this->uitgesloten)) $this->uitgesloten[] = $naam;
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	public function maak() {
@@ -717,12 +742,17 @@ class Tax_blok extends Array_constr {
 
 		$linkblokken = '';
 
+		//eerst mogelijk maken te berekenen of we meer dan 1 tax krijgen...hoeveel sluiten we uit.
+		foreach ($tax_en_terms as $naam => $waarden) :
+			$this->uitsluiten($naam);
+		endforeach;
+
 		foreach ($tax_en_terms as $naam => $waarden) :
 
-			if ($naam === 'post_format') continue;
+			if ($this->uitsluiten($naam)) continue;
 
 			$linkblokken .= "<section>";
-			if (count($tax_en_terms) > 1) {
+			if ( (count($tax_en_terms) - count($this->uitgesloten) ) > 1) {
 				$linkblokken .= "<h3>".ucfirst($this->controleer_tax_titel($naam))."</h3>";
 			}
 			if (count($waarden)) :

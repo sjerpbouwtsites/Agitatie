@@ -2,8 +2,10 @@
 get_header();
 
 set_query_var('klassen_bij_primary', "zoeken verpakking marginveld");
-set_query_var('titel_hoog', "<h1>".($_GET['s'] !== '' ? "Je zocht: ".$_GET['s'] : "Wat zoek je?")."</h1>");
+//set_query_var('titel_hoog', "<h1>".()."</h1>");
 get_template_part('/sja/open-main');
+
+do_action('ag_pagina_titel');
 
 get_search_form();
 
