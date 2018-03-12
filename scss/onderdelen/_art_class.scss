@@ -4,6 +4,7 @@
 	padding-bottom: 0;
 	//max-width: calc(50% - 20px);
 	//flex-grow: 1;
+
 	&:hover {
 		cursor: pointer;
 	}
@@ -17,6 +18,12 @@
 	}
 	header {
 		margin-bottom: 1em;
+	}
+	&.geen-tekst {
+		margin-bottom: 2em;
+		header {
+			margin-bottom: 0;
+		}
 	}
 	.art-links {
 		a, img {
@@ -81,6 +88,8 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-bottom: -30px;
+	margin-left: -15px;
+	margin-right: -15px;
 	.art-rechts {
 		margin-top: 1em;
 	}
@@ -88,8 +97,13 @@
 		margin-top: 0;
 	}
 	.art-c {
-		flex-basis: calc(33% - 20px);
+		flex-basis: calc(33% - 30px);
 		margin-bottom: 30px;
+		margin-right: 15px;
+		margin-left: 15px;
+		flex-grow: 1;
+		min-width: 240px;
+		-webkit-flex: 1 1 auto;
 	}
 	.lees-meer {
 		&::before {

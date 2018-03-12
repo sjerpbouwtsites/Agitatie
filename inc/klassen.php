@@ -283,6 +283,16 @@ class Article_c extends Array_constr{
 
 	}
 
+	public function extra_class(){
+
+		$r = '';
+		if ($this->geen_afb) $r .= 'geen-afb ';
+		if ($this->geen_tekst) $r .= 'geen-tekst ';
+		if ($this->geen_datum) $r .= 'geen-datum ';
+		return trim($r);
+
+	}
+
 	public function maak_artikel () {
 
 		if (!$this->gecontroleerd) $this->controleer();
@@ -291,7 +301,7 @@ class Article_c extends Array_constr{
 
 		?>
 
-		<article class="flex art-c <?=$this->class?>  <?=($this->geen_afb ? 'geen-afb' : '')?>" <?=$this->data_src?> >
+		<article class="flex art-c <?=$this->class?> <?=$this->extra_class()?>" <?=$this->data_src?> >
 
 			<?php if (!$this->geen_afb) : ?>
 			<div class='art-links'>

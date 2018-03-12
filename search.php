@@ -9,40 +9,45 @@ do_action('ag_pagina_titel');
 
 get_search_form();
 
-if (have_posts()) :
+if ($_GET['s'] !== '') :
+	if (have_posts()) :
 
-	echo "<div class='art-lijst'>";
+		echo "<div class='art-lijst'>";
 
-	while (have_posts()) : the_post();
+		while (have_posts()) : the_post();
 
-		$art = new Article_c(
-			array(
-				'class' => "in-lijst",
-				'htype' => 3,
-				'exc_lim' => 350
-			),
-		$post);
+			$art = new Article_c(
+				array(
+					'class' => "in-lijst",
+					'htype' => 3,
+					'exc_lim' => 350
+				),
+			$post);
 
-		$art->print();
+			$art->print();
 
-	endwhile;
+		endwhile;
 
-	echo "</div>"; // art lijst
+		echo "</div>"; // art lijst
 
-else :
+	else :
 
-	echo "<p>Niets gevonden! Sorry.</p>";
+		echo "<p>Niets gevonden! Sorry.</p>";
 
-	$voorpagina = new Knop(array(
-		'tekst'		=> 'Terug naar voorpagina',
-		'link'		=> SITE_URI,
-		'class'		=> 'in-wit',
-	));
-	$voorpagina->print();
+		$voorpagina = new Knop(array(
+			'tekst'		=> 'Terug naar voorpagina',
+			'link'		=> SITE_URI,
+			'class'		=> 'in-wit',
+		));
+		$voorpagina->print();
 
-endif;
+	endif;
 
-$r = paginering_ctrl();
+	$r = paginering_ctrl();
+
+endif; //als iets gezocht
+
+
 
 get_template_part('/sja/sluit-main');
 get_footer();

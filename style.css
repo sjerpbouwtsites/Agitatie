@@ -2950,41 +2950,51 @@ img.efbl-loader {
   padding-bottom: 0;
 }
 
-/* line 7, scss/onderdelen/_art_class.scss */
+/* line 8, scss/onderdelen/_art_class.scss */
 .art-c:hover {
   cursor: pointer;
 }
 
-/* line 10, scss/onderdelen/_art_class.scss */
+/* line 11, scss/onderdelen/_art_class.scss */
 .art-c ~ .art-c {
   margin-top: 20px;
 }
 
-/* line 13, scss/onderdelen/_art_class.scss */
+/* line 14, scss/onderdelen/_art_class.scss */
 .art-c h2, .art-c h3 {
   margin-top: 0;
   font-size: 1em;
   margin-bottom: 0;
 }
 
-/* line 18, scss/onderdelen/_art_class.scss */
+/* line 19, scss/onderdelen/_art_class.scss */
 .art-c header {
   margin-bottom: 1em;
 }
 
 /* line 22, scss/onderdelen/_art_class.scss */
+.art-c.geen-tekst {
+  margin-bottom: 2em;
+}
+
+/* line 24, scss/onderdelen/_art_class.scss */
+.art-c.geen-tekst header {
+  margin-bottom: 0;
+}
+
+/* line 29, scss/onderdelen/_art_class.scss */
 .art-c .art-links a, .art-c .art-links img {
   display: block;
 }
 
-/* line 25, scss/onderdelen/_art_class.scss */
+/* line 32, scss/onderdelen/_art_class.scss */
 .art-c .art-links img {
   height: 201.2px;
   object-fit: cover;
   width: 100%;
 }
 
-/* line 35, scss/onderdelen/_art_class.scss */
+/* line 42, scss/onderdelen/_art_class.scss */
 .art-c .art-rechts p {
   font-weight: 400;
   margin: 0 0 .5em;
@@ -2992,44 +3002,44 @@ img.efbl-loader {
   font-size: .85em;
 }
 
-/* line 41, scss/onderdelen/_art_class.scss */
+/* line 48, scss/onderdelen/_art_class.scss */
 .art-c .art-rechts p a {
   text-decoration: underline;
 }
 
-/* line 46, scss/onderdelen/_art_class.scss */
+/* line 53, scss/onderdelen/_art_class.scss */
 .art-c .art-rechts p:last-child {
   margin-bottom: 0;
 }
 
-/* line 51, scss/onderdelen/_art_class.scss */
+/* line 58, scss/onderdelen/_art_class.scss */
 .art-c time, .art-c .tax {
   font-size: .85rem;
   opacity: 0.8;
 }
 
-/* line 56, scss/onderdelen/_art_class.scss */
+/* line 63, scss/onderdelen/_art_class.scss */
 .art-c.blok .art-rechts {
   padding: 20px;
 }
 
-/* line 60, scss/onderdelen/_art_class.scss */
+/* line 67, scss/onderdelen/_art_class.scss */
 .art-c a:hover {
   text-decoration: none;
 }
 
-/* line 63, scss/onderdelen/_art_class.scss */
+/* line 70, scss/onderdelen/_art_class.scss */
 .art-c h3 {
   margin-top: 0;
 }
 
-/* line 71, scss/onderdelen/_art_class.scss */
+/* line 78, scss/onderdelen/_art_class.scss */
 .art-c.in-lijst {
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-/* line 79, scss/onderdelen/_art_class.scss */
+/* line 86, scss/onderdelen/_art_class.scss */
 .art-lijst {
   display: -ms-flexbox;
   display: flex;
@@ -3038,26 +3048,34 @@ img.efbl-loader {
   -ms-flex-pack: justify;
       justify-content: space-between;
   margin-bottom: -30px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-/* line 84, scss/onderdelen/_art_class.scss */
+/* line 93, scss/onderdelen/_art_class.scss */
 .art-lijst .art-rechts {
   margin-top: 1em;
 }
 
-/* line 87, scss/onderdelen/_art_class.scss */
+/* line 96, scss/onderdelen/_art_class.scss */
 .art-lijst .geen-afb .art-rechts {
   margin-top: 0;
 }
 
-/* line 90, scss/onderdelen/_art_class.scss */
+/* line 99, scss/onderdelen/_art_class.scss */
 .art-lijst .art-c {
-  -ms-flex-preferred-size: calc(33% - 20px);
-      flex-basis: calc(33% - 20px);
+  -ms-flex-preferred-size: calc(33% - 30px);
+      flex-basis: calc(33% - 30px);
   margin-bottom: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  min-width: 240px;
+  -webkit-flex: 1 1 auto;
 }
 
-/* line 95, scss/onderdelen/_art_class.scss */
+/* line 109, scss/onderdelen/_art_class.scss */
 .art-lijst .lees-meer::before {
   content: '';
   display: block;
@@ -3948,7 +3966,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 
 /* line 12, scss/_footer.scss */
 #stek-voet .verpakking {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 /* line 15, scss/_footer.scss */
@@ -3965,80 +3983,100 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 @media (max-width: 900px) {
   /* line 15, scss/_footer.scss */
   #stek-voet .verpakking .neg-marge {
-    -ms-flex-direction: column;
-        flex-direction: column;
-    text-align: center;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    text-align: left;
   }
 }
 
 /* line 24, scss/_footer.scss */
 #stek-voet .verpakking .neg-marge > * {
   margin: 0 12.5px;
-  -ms-flex-positive: 0;
-      flex-grow: 0;
-  width: calc(33.3% - 25px);
-  /* 			&:first-child {
-					margin-left: 0;
-				}
-				&:last-child {
-					margin-right: 0;
-				} */
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  -ms-flex-preferred-size: calc(33.3% - 25px);
+      flex-basis: calc(33.3% - 25px);
+  min-width: 250px;
+  margin-bottom: 25px;
+  -webkit-flex: 1 1 auto;
 }
 
-/* line 43, scss/_footer.scss */
+@media (max-width: 665px) {
+  /* line 12, scss/_footer.scss */
+  #stek-voet .verpakking {
+    margin-bottom: 0;
+  }
+  /* line 36, scss/_footer.scss */
+  #stek-voet .verpakking .neg-marge > * {
+    margin-bottom: 50px;
+  }
+}
+
+/* line 46, scss/_footer.scss */
 #stek-voet .verpakking.widgets {
   margin-bottom: -25px;
 }
 
-/* line 45, scss/_footer.scss */
+/* line 48, scss/_footer.scss */
 #stek-voet .verpakking.widgets section {
   margin-bottom: 25px;
 }
 
-/* line 49, scss/_footer.scss */
+@media (max-width: 665px) {
+  /* line 46, scss/_footer.scss */
+  #stek-voet .verpakking.widgets {
+    margin-bottom: 0;
+  }
+  /* line 53, scss/_footer.scss */
+  #stek-voet .verpakking.widgets .neg-marge > * {
+    margin-bottom: 50px;
+  }
+}
+
+/* line 58, scss/_footer.scss */
 #stek-voet .verpakking.widgets .search-form {
   background-color: transparent;
   padding: 0;
 }
 
-/* line 52, scss/_footer.scss */
+/* line 61, scss/_footer.scss */
 #stek-voet .verpakking.widgets .search-form .search-submit {
   margin-top: 10px;
   margin-left: 0;
 }
 
-/* line 56, scss/_footer.scss */
+/* line 65, scss/_footer.scss */
 #stek-voet .verpakking.widgets .search-form label, #stek-voet .verpakking.widgets .search-form label input {
   display: block;
 }
 
-/* line 61, scss/_footer.scss */
+/* line 70, scss/_footer.scss */
 #stek-voet .verpakking.widgets .textwidget ul li {
   list-style-type: disc;
 }
 
-/* line 64, scss/_footer.scss */
+/* line 73, scss/_footer.scss */
 #stek-voet .verpakking.widgets .textwidget ol li {
   list-style-type: ideograph-numeric;
 }
 
-/* line 68, scss/_footer.scss */
+/* line 77, scss/_footer.scss */
 #stek-voet .verpakking.widgets select {
   height: 27.2px;
 }
 
-/* line 74, scss/_footer.scss */
+/* line 83, scss/_footer.scss */
 .footer-section h3 {
   margin-top: 0;
 }
 
-/* line 77, scss/_footer.scss */
+/* line 86, scss/_footer.scss */
 .footer-section a, .footer-section a:active, .footer-section a:visited {
   color: inherit;
   text-decoration: underline;
 }
 
-/* line 81, scss/_footer.scss */
+/* line 90, scss/_footer.scss */
 .footer-section *:last-child {
   margin-bottom: 0;
 }
@@ -4249,34 +4287,36 @@ video.speelt ~ .vid-onder-buiten .speel-video {
     width: 100%;
     left: 0;
     z-index: 2;
+    overflow: hidden;
   }
-  /* line 116, scss/_nav.scss */
+  /* line 117, scss/_nav.scss */
   .menu-kopmenu-container .menu#menu-kopmenu.horizontaal > li {
     display: block;
   }
-  /* line 118, scss/_nav.scss */
+  /* line 119, scss/_nav.scss */
   .menu-kopmenu-container .menu#menu-kopmenu.horizontaal > li > a {
     padding: 0 .8em;
   }
-  /* line 121, scss/_nav.scss */
+  /* line 122, scss/_nav.scss */
   .menu-kopmenu-container .menu#menu-kopmenu.horizontaal > li a {
     line-height: 40px;
     padding-top: 0;
     padding-bottom: 0;
   }
-  /* line 129, scss/_nav.scss */
+  /* line 130, scss/_nav.scss */
   .menu-kopmenu-container .menu#menu-kopmenu .menu-item-has-children > a i {
     padding: 0 20px;
     margin-left: 10px;
   }
 }
 
-/* line 139, scss/_nav.scss */
+/* line 140, scss/_nav.scss */
 .kopmenu-mobiel {
   line-height: 70px;
   padding: 0 .4em;
   display: block;
   font-family: "PT Serif", serif;
+  margin-right: -20px;
   display: none;
 }
 
@@ -4288,20 +4328,20 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 }
 
 @media (max-width: 900px) {
-  /* line 139, scss/_nav.scss */
+  /* line 140, scss/_nav.scss */
   .kopmenu-mobiel {
     display: block;
   }
 }
 
-/* line 146, scss/_nav.scss */
+/* line 148, scss/_nav.scss */
 .kopmenu-mobiel i {
   position: relative;
   top: 2px;
   margin-left: 10px;
 }
 
-/* line 154, scss/_nav.scss */
+/* line 156, scss/_nav.scss */
 footer .menu a:hover {
   color: #E53C62;
 }
