@@ -1,7 +1,7 @@
 <?php
 
 
-if(!function_exists('kop_links')) : function kop_links() {
+if(!function_exists('ag_kop_links')) : function ag_kop_links() {
 
 	echo "<div class='stek-kop-links'>";
 		logo_ctrl();
@@ -9,11 +9,11 @@ if(!function_exists('kop_links')) : function kop_links() {
 
 } endif;
 
-add_action('kop_links_action', 'kop_links', 10);
+add_action('ag_kop_links_action', 'ag_kop_links', 10);
 
 
 
-if (!function_exists('kop_rechts')) : function kop_rechts () {
+if (!function_exists('ag_kop_rechts')) : function ag_kop_rechts () {
 
 	echo "<div class='stek-kop-rechts'>";
 		kop_menu_ctrl('horizontaal menu');
@@ -22,4 +22,4 @@ if (!function_exists('kop_rechts')) : function kop_rechts () {
 
 } endif;
 
-add_action('kop_rechts_action', 'kop_rechts', 10);
+add_action('ag_kop_rechts_action', 'ag_kop_rechts', 10);

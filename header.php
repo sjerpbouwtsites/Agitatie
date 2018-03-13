@@ -6,8 +6,8 @@
 		<div class='verpakking'>
 
 			<?php
-				do_action('kop_links_action');
-				do_action('kop_rechts_action');
+				do_action('ag_kop_links_action');
+				do_action('ag_kop_rechts_action');
 			?>
 
 		</div><!--verpakking-->
