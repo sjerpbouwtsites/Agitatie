@@ -1,14 +1,5 @@
 <?php
 
-if (!function_exists('kop_rechts')) : function kop_rechts () {
-	echo "<div class='stek-kop-rechts'>";
-		kop_menu_ctrl('horizontaal menu');
-		echo "<a href='#' class='schakel kopmenu-mobiel' data-toon='#menu-kopmenu'>Menu ".mdi('menu', false).mdi('close', false)."</a>";
-	echo "</div>";
-} endif;
-
-add_action('kop_rechts_action', 'kop_rechts');
-
 if (!function_exists('ag_generieke_titel')) : function ag_generieke_titel () {
 
 	global $post;
@@ -27,6 +18,8 @@ if (!function_exists('ag_generieke_titel')) : function ag_generieke_titel () {
 endif;
 
 add_action('ag_pagina_titel', 'ag_generieke_titel', 10);
+
+
 
 if (!function_exists('ag_singular_taxonomieen')) : function ag_singular_taxonomieen () {
 

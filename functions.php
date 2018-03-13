@@ -9,6 +9,8 @@ define('INC_DIR', THEME_DIR . "/inc");
 define('INC_URI', THEME_URI . "/inc");
 define('CTRL_DIR', THEME_DIR . "/ctrl");
 define('CTRL_URI', THEME_URI . "/ctrl");
+define('HOOKS_DIR', THEME_DIR . "/hooks");
+define('HOOKS_URI', THEME_URI . "/hooks");
 
 define('VIEW_DIR', INC_DIR . "/view");
 define('VIEW_URI', INC_URI . "/view");
@@ -42,7 +44,6 @@ $include_funcs = array(
 	'thema-config',
 	'thumbnails',
 	'widgets',
-	'hooks',
 	//'strip_scripts',
 );
 
@@ -62,6 +63,17 @@ $include_ctrl = array(
 $include_ctrl_length = count($include_ctrl);
 for ($i = 0; $i < $include_ctrl_length; $i++) {
 	include CTRL_DIR . "/" . $include_ctrl[$i] . ".php";
+}
+
+//@TODO dit is lelijk
+$include_hooks = array(
+	'header',
+	'singular',
+);
+
+$include_hooks_length = count($include_hooks);
+for ($i = 0; $i < $include_hooks_length; $i++) {
+	include HOOKS_DIR . "/" . $include_hooks[$i] . ".php";
 }
 
 ///////////////////////////////////////////////////////////
