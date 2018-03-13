@@ -3072,10 +3072,16 @@ img.efbl-loader {
   -ms-flex-positive: 1;
       flex-grow: 1;
   min-width: 240px;
-  -webkit-flex: 1 1 auto;
 }
 
-/* line 109, scss/onderdelen/_art_class.scss */
+@media (max-width: 400px) {
+  /* line 99, scss/onderdelen/_art_class.scss */
+  .art-lijst .art-c {
+    -webkit-flex: 1 1 auto;
+  }
+}
+
+/* line 111, scss/onderdelen/_art_class.scss */
 .art-lijst .lees-meer::before {
   content: '';
   display: block;
@@ -3998,7 +4004,21 @@ video.speelt ~ .vid-onder-buiten .speel-video {
       flex-basis: calc(33.3% - 25px);
   min-width: 250px;
   margin-bottom: 25px;
-  -webkit-flex: 1 1 auto;
+}
+
+@media (min-width: 900px) {
+  /* line 24, scss/_footer.scss */
+  #stek-voet .verpakking .neg-marge > * {
+    -ms-flex-positive: 0;
+        flex-grow: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  /* line 24, scss/_footer.scss */
+  #stek-voet .verpakking .neg-marge > * {
+    -webkit-flex: 1 1 auto;
+  }
 }
 
 @media (max-width: 665px) {
@@ -4006,77 +4026,83 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   #stek-voet .verpakking {
     margin-bottom: 0;
   }
-  /* line 36, scss/_footer.scss */
+  /* line 40, scss/_footer.scss */
   #stek-voet .verpakking .neg-marge > * {
     margin-bottom: 50px;
   }
 }
 
-/* line 46, scss/_footer.scss */
+/* line 45, scss/_footer.scss */
+#stek-voet section {
+  padding-left: 5px;
+  border-left: 5px solid #3c3c3c;
+}
+
+/* line 54, scss/_footer.scss */
 #stek-voet .verpakking.widgets {
   margin-bottom: -25px;
 }
 
-/* line 48, scss/_footer.scss */
+/* line 56, scss/_footer.scss */
 #stek-voet .verpakking.widgets section {
   margin-bottom: 25px;
 }
 
 @media (max-width: 665px) {
-  /* line 46, scss/_footer.scss */
+  /* line 54, scss/_footer.scss */
   #stek-voet .verpakking.widgets {
     margin-bottom: 0;
   }
-  /* line 53, scss/_footer.scss */
+  /* line 61, scss/_footer.scss */
   #stek-voet .verpakking.widgets .neg-marge > * {
     margin-bottom: 50px;
   }
 }
 
-/* line 58, scss/_footer.scss */
+/* line 66, scss/_footer.scss */
 #stek-voet .verpakking.widgets .search-form {
   background-color: transparent;
   padding: 0;
 }
 
-/* line 61, scss/_footer.scss */
+/* line 69, scss/_footer.scss */
 #stek-voet .verpakking.widgets .search-form .search-submit {
   margin-top: 10px;
   margin-left: 0;
 }
 
-/* line 65, scss/_footer.scss */
+/* line 73, scss/_footer.scss */
 #stek-voet .verpakking.widgets .search-form label, #stek-voet .verpakking.widgets .search-form label input {
   display: block;
 }
 
-/* line 70, scss/_footer.scss */
+/* line 78, scss/_footer.scss */
 #stek-voet .verpakking.widgets .textwidget ul li {
   list-style-type: disc;
 }
 
-/* line 73, scss/_footer.scss */
+/* line 81, scss/_footer.scss */
 #stek-voet .verpakking.widgets .textwidget ol li {
   list-style-type: ideograph-numeric;
 }
 
-/* line 77, scss/_footer.scss */
+/* line 85, scss/_footer.scss */
 #stek-voet .verpakking.widgets select {
   height: 27.2px;
 }
 
-/* line 83, scss/_footer.scss */
+/* line 91, scss/_footer.scss */
 .footer-section h3 {
   margin-top: 0;
 }
 
-/* line 86, scss/_footer.scss */
+/* line 94, scss/_footer.scss */
 .footer-section a, .footer-section a:active, .footer-section a:visited {
   color: inherit;
   text-decoration: underline;
 }
 
-/* line 90, scss/_footer.scss */
+/* line 98, scss/_footer.scss */
 .footer-section *:last-child {
   margin-bottom: 0;
 }

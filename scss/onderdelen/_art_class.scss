@@ -103,7 +103,9 @@
 		margin-left: 15px;
 		flex-grow: 1;
 		min-width: 240px;
-		-webkit-flex: 1 1 auto;
+		@media (max-width: 400px) {
+			-webkit-flex: 1 1 auto;
+		}
 	}
 	.lees-meer {
 		&::before {
