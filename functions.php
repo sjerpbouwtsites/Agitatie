@@ -5,15 +5,7 @@
 define('SITE_URI', get_site_url());
 define('THEME_DIR', get_template_directory());
 define('THEME_URI', get_template_directory_uri());
-define('INC_DIR', THEME_DIR . "/inc");
-define('INC_URI', THEME_URI . "/inc");
-define('CTRL_DIR', THEME_DIR . "/ctrl");
-define('CTRL_URI', THEME_URI . "/ctrl");
-define('HOOKS_DIR', THEME_DIR . "/hooks");
-define('HOOKS_URI', THEME_URI . "/hooks");
 
-define('VIEW_DIR', INC_DIR . "/view");
-define('VIEW_URI', INC_URI . "/view");
 define('IMG_DIR', THEME_DIR . "/afb");
 define('IMG_URI', THEME_URI . "/afb");
 define('JS_DIR', THEME_DIR . "/js");
@@ -33,48 +25,41 @@ endif;
 
 ///////////////////////////////////////////////////////////
 
-//include al deze bestanaden uit INC_DIR
-$include_funcs = array(
-	"acf",
-	'edit',
-	'gereedschap',
-	"klassen",
-	'models',
-	'posttypes',
-	'thema-config',
-	'thumbnails',
-	'widgets',
-	//'strip_scripts',
+// @TODO conditioneel inladen
+
+$include_boom = array(
+	'inc' => array(
+		"acf",
+		'edit',
+		'gereedschap',
+		"klassen",
+		'models',
+		'posttypes',
+		'thema-config',
+		'thumbnails',
+		'widgets',
+		//'strip_scripts',
+	),
+	'ctrl' => array(
+		'controllers',
+		'archief',
+		'categorie',
+		'singular'
+	),
+	'hooks' => array(
+		'header',
+		'singular',
+	)
+
 );
 
-$include_funcs_length = count($include_funcs);
-for ($i = 0; $i < $include_funcs_length; $i++) {
-	include INC_DIR . "/" . $include_funcs[$i] . ".php";
-}
+foreach ($include_boom as $tak => $map) :
 
-//@TODO dit is lelijk
-$include_ctrl = array(
-	'controllers',
-	'archief',
-	'categorie',
-	'singular'
-);
+	foreach ($map as $bestand) {
+		include THEME_DIR . "/{$tak}/{$bestand}.php";
+	}
 
-$include_ctrl_length = count($include_ctrl);
-for ($i = 0; $i < $include_ctrl_length; $i++) {
-	include CTRL_DIR . "/" . $include_ctrl[$i] . ".php";
-}
-
-//@TODO dit is lelijk
-$include_hooks = array(
-	'header',
-	'singular',
-);
-
-$include_hooks_length = count($include_hooks);
-for ($i = 0; $i < $include_hooks_length; $i++) {
-	include HOOKS_DIR . "/" . $include_hooks[$i] . ".php";
-}
+endforeach; //include boom
 
 ///////////////////////////////////////////////////////////
 
