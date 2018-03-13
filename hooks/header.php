@@ -4,7 +4,7 @@
 if(!function_exists('ag_kop_links')) : function ag_kop_links() {
 
 	echo "<div class='stek-kop-links'>";
-		logo_ctrl();
+		ag_logo_ctrl();
 	echo "</div><!--koplinks-->";
 
 } endif;

@@ -1,7 +1,7 @@
 <?php
 
 // print
-if(!function_exists('logo_ctrl')) : function logo_ctrl($print = true, $heading = true) {
+if(!function_exists('ag_logo_ctrl')) : function ag_logo_ctrl($print = true, $heading = true) {
 	if ($print) {
 		echo logo_model($heading);
 	} else {
