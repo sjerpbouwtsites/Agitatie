@@ -35,7 +35,7 @@ if(!function_exists('agenda_filter_ctrl')) : function agenda_filter_ctrl() {
 } endif;
 
 
-if(!function_exists('kop_menu_ctrl')) :  function kop_menu_ctrl($menu_klasse = ''){
+if(!function_exists('ag_kop_menu_ctrl')) :  function ag_kop_menu_ctrl($menu_klasse = ''){
 
 	$a = array(
 		'menu' 			=> 'kop',

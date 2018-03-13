@@ -16,7 +16,7 @@ add_action('ag_kop_links_action', 'ag_kop_links', 10);
 if (!function_exists('ag_kop_rechts')) : function ag_kop_rechts () {
 
 	echo "<div class='stek-kop-rechts'>";
-		kop_menu_ctrl('horizontaal menu');
+		ag_kop_menu_ctrl('horizontaal menu');
 		echo "<a href='#' class='schakel kopmenu-mobiel' data-toon='#menu-kopmenu'>Menu ".mdi('menu', false).mdi('close', false)."</a>";
 	echo "</div>";
 
