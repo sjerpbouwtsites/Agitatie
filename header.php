@@ -4,13 +4,11 @@
 <header id='stek-kop'>
 	<div class='rel'>
 		<div class='verpakking'>
-			<div class='stek-kop-links'>
 
-				<?php logo_ctrl(); ?>
-
-			</div><!--koplinks-->
-
-			<?php do_action('kop_rechts_action'); ?>
+			<?php
+				do_action('kop_links_action');
+				do_action('kop_rechts_action');
+			?>
 
 		</div><!--verpakking-->
 
