@@ -4216,7 +4216,7 @@ footer .search-form .search-submit {
   background-color: #f5f5f5;
   width: 100%;
   z-index: 2;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 /* line 9, scss/_header.scss */
@@ -4320,7 +4320,6 @@ footer .search-form .search-submit {
 /* line 35, scss/_nav.scss */
 .stek-kop-rechts .menu > li > ul li, .stek-kop-rechts .menu > li > ul a {
   line-height: 1;
-  font-size: 0.8em;
 }
 
 @media (min-width: 900px) {
@@ -4347,7 +4346,7 @@ footer .search-form .search-submit {
 /* line 62, scss/_nav.scss */
 .stek-kop-rechts .menu a {
   line-height: 70px;
-  padding: 0 .4em;
+  padding: 0 .6em;
   display: block;
 }
 
@@ -4442,7 +4441,7 @@ footer .search-form .search-submit {
 /* line 142, scss/_nav.scss */
 .kopmenu-mobiel {
   line-height: 70px;
-  padding: 0 .4em;
+  padding: 0 .6em;
   display: block;
   margin-right: -20px;
   display: none;
