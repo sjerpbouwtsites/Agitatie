@@ -1,9 +1,11 @@
+
 //parent
 #stek-kop {
-	background-color: $donkergrijs;
+	background-color: $wittig;
  	width: 100%;
 	//height: $header-height;
 	z-index: 2;
+	font-size: 2rem;
 	.rel > .verpakking {
 		display: flex;
 		justify-content: space-between;
@@ -43,6 +45,10 @@
 		img {
 			display: block;
 		}
+	}
+
+	.geen-logo {
+		//font-family: $broodletter;
 	}
 
 }

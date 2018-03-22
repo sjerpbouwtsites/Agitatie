@@ -60,7 +60,7 @@ function scroll(e) {
 
 	var scrollNaar;
 
-	//var werkMet = e.target.classList.contains('knop') ? e.target : e.target.parentNode;
+	//var werkMet = e.target.classList.contains('Ag_knop') ? e.target : e.target.parentNode;
 	var werkMet = actieInit(e, 'scroll');
 
 	if (werkMet.hasAttribute('doel')) {

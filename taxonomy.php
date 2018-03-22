@@ -10,7 +10,7 @@ set_query_var('titel_hoog', "<h1>".$post->post_title."</h1>");
 get_template_part('/sja/open-main');
 
 
-categorie_ctrl();
+ag_categorie_ctrl();
 
 
 get_template_part('/sja/sluit-main');

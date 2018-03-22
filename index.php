@@ -6,7 +6,7 @@ get_template_part('/sja/open-main');
 
 if (have_posts()) : while (have_posts()) : the_post();
 
-	print_lijst_ctrl($post, '2', 140);
+	ag_print_lijst_ctrl($post, '2', 140);
 
 endwhile; endif;
 

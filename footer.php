@@ -1,10 +1,3 @@
-<?php // die('nein in footer.php'); ?>
-
-
-
-
-
-<?php $voet_velden = get_field('footervelden', 'option'); if ($voet_velden and count($voet_velden)) : ?>
 <footer id='stek-voet' class='stek-voet'>
 	<div class='verpakking logo-en-tekst'>
 		<div class='neg-marge'>
@@ -12,20 +5,24 @@
 
 		do_action('footer_voor_velden_action');
 
-		foreach ($voet_velden as $v) :
+		$voet_velden = get_field('footervelden', 'option'); if ($voet_velden and count($voet_velden)) :
 
-			if (array_key_exists('titel', $v) and $v['titel'] !== '' ) {
-				echo "<section  class='footer-section'>
-					<h3>{$v['titel']}</h3>
-					".apply_filters('the_content', $v['veld'])."
-				</section>";
-			} else {
-				echo "<div class='footer-section'>
-					".apply_filters('the_content', $v['veld'])."
-				</div>";
-			}
+			foreach ($voet_velden as $v) :
 
-		endforeach;
+				if (array_key_exists('titel', $v) and $v['titel'] !== '' ) {
+					echo "<section  class='footer-section'>
+						<h3>{$v['titel']}</h3>
+						".apply_filters('the_content', $v['veld'])."
+					</section>";
+				} else {
+					echo "<div class='footer-section'>
+						".apply_filters('the_content', $v['veld'])."
+					</div>";
+				}
+
+			endforeach;
+
+		endif;
 
 		do_action('footer_na_velden_action');
 
@@ -38,11 +35,10 @@
 			<?php dynamic_sidebar('footer'); ?>
 		</div>
 	</div>
+
+	<?php get_template_part('sja/footer/colofon'); ?>
+
 </footer>
-<?php
-endif;
-wp_footer();
-?>
 
 <script>
 var BASE_URL = "<?=SITE_URI?>",
@@ -50,7 +46,10 @@ var BASE_URL = "<?=SITE_URI?>",
 	IMG_URL = "<?=IMG_URI?>",
 	AJAX_URL = BASE_URL + "/wp-admin/admin-ajax.php";
 </script>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js">
-  </script>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<?php wp_footer(); ?>
+
 </body>
 </html>

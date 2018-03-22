@@ -1,6 +1,6 @@
 <?php
 
-class Array_constr {
+class Ag_basis_class {
 	function __construct($a = array()) {
 		if (is_array($a)) {
 			foreach ($a as $k=>$v) {
@@ -12,7 +12,7 @@ class Array_constr {
 	}
 }
 
-class Knop extends Array_constr{
+class Ag_knop extends Ag_basis_class{
 
 	public $class, $link, $tekst, $extern, $schakel, $html;
 
@@ -22,9 +22,9 @@ class Knop extends Array_constr{
 	}
 
 	public function nalopen () {
-		if (!cp_truthy('ikoon', $this)) $this->ikoon = "arrow-right-thick";
-		if (!cp_truthy('link', $this)) $this->link = "#";
-		if (!cp_truthy('geen_ikoon', $this)) $this->geen_ikoon = false;
+		if (!ag_cp_truthy('ikoon', $this)) $this->ikoon = "arrow-right-thick";
+		if (!ag_cp_truthy('link', $this)) $this->link = "#";
+		if (!ag_cp_truthy('geen_ikoon', $this)) $this->geen_ikoon = false;
 		$this->class = $this->class . ($this->geen_ikoon ? " geen-ikoon": "");
 		$this->klaar = true;
 	}
@@ -53,7 +53,7 @@ class Knop extends Array_constr{
 	}
 }
 
-class Widget_M extends Array_constr {
+class Ag_Widget_M extends Ag_basis_class {
 
 	public $naam, $verp_open, $verp_sluit, $gemaakt, $css_klassen, $vernietigd;
 
@@ -104,7 +104,7 @@ class Widget_M extends Array_constr {
 	}
 }
 
-class Zijbalk_Posts extends Widget_M {
+class Ag_Zijbalk_Posts extends Ag_Widget_M {
 
 	public function __construct ($a = array()) {
 		parent::__construct($a);
@@ -117,7 +117,7 @@ class Zijbalk_Posts extends Widget_M {
 	}
 }
 
-class Article_c extends Array_constr{
+class Ag_article_c extends Ag_basis_class{
 
 	public $art, $gecontroleerd, $data_src;
 
@@ -140,7 +140,8 @@ class Article_c extends Array_constr{
 			'geen_tekst',
 			'class',
 			'geen_datum',
-			'taxonomieen'
+			'taxonomieen',
+			'korte_titel'
 		);
 
 		foreach ($c as $cc) {
@@ -150,16 +151,22 @@ class Article_c extends Array_constr{
 		$this->zet_permalink();
 		$this->maak_titel();
 
-		$this->htype = cp_truthy('htype',$this) ? $this->htype : "3";
-		$this->exc_lim = cp_truthy('exc_lim',$this) ? $this->exc_lim : "300";
-		$this->afb_formaat = cp_truthy('afb_formaat',$this) ? $this->afb_formaat : "lijst";
+		$this->htype = ag_cp_truthy('htype',$this) ? $this->htype : "3";
+		$this->exc_lim = ag_cp_truthy('exc_lim',$this) ? $this->exc_lim : "300";
+		$this->afb_formaat = ag_cp_truthy('afb_formaat',$this) ? $this->afb_formaat : "lijst";
+
+		$this->gecontroleerd = true;
 	}
 
 	public function maak_titel () {
 		if ($this->is_categorie) {
-			$this->art->post_title = $this->art->cat_name;
+			$this->art->post_title = $this->art->name;
 		} else {
-			$this->art->post_title = beperk_woordental(30, $this->art->post_title);
+			if ($this->korte_titel) {
+				$this->art->post_title = ag_beperk_woordental(30, $this->art->post_title);
+			} else {
+				//goed zo
+			}
 		}
 	}
 
@@ -174,13 +181,22 @@ class Article_c extends Array_constr{
 
 	public function print_afb () {
 		if ($this->is_categorie) {
-			$img_id = get_field('cat_afb', 'category_'.$this->art->term_id);
-			$img = wp_get_attachment_image($img_id, $this->afb_formaat);
+
+			$afb_verz = get_field('cat_afb', 'category_'.$this->art->term_id);
+
+			$img = "<img
+				src='{$afb_verz['sizes']['lijst']}'
+				alt='{$afb_verz['alt']}'
+				height='{$afb_verz['sizes']['lijst-width']}'
+				width='{$afb_verz['sizes']['lijst-height']}'
+			/>";
+
 		} else {
 
-			if (has_post_thumbnail($this->art->id)) {
+			if (has_post_thumbnail($this->art->ID)) {
 				$img = get_the_post_thumbnail($this->art, $this->afb_formaat);
 			} else {
+
 				$img_f = get_field('ta_afbeelding', 'option');
 				$w = $this->afb_formaat.'-width';
 				$h = $this->afb_formaat.'-height';
@@ -200,11 +216,11 @@ class Article_c extends Array_constr{
 	}
 
 	public function maak_tekst (){
-		return "<p class='tekst-zwart'>". maak_excerpt($this->art, $this->exc_lim) . " <span class='lees-meer'> Lees meer.</span></p>";
+		return "<p class='tekst-zwart'>". ag_maak_excerpt($this->art, $this->exc_lim) . "</p>";
 	}
 
 	public function datum() {
-		if ($this->geen_datum) return;
+		if ($this->geen_datum || $this->is_categorie) return;
 
 		echo "<time class='post-datum tekst-zwart'>" . get_the_date(get_option('date_format'), $this->art->ID) . "</time>";
 	}
@@ -237,7 +253,7 @@ class Article_c extends Array_constr{
 		// @TODO meervoud van taxonomieen dient nog correct ingesteld te worden in posttypes.php en die hier uitgedraaid te worden via
 		// https://developer.wordpress.org/reference/functions/get_taxonomy_labels/
 
-		if (!$this->taxonomieen) return;
+		if (!$this->taxonomieen || $this->is_categorie) return;
 
 
 		$tl_str = $this->art->post_type . '-taxlijst';
@@ -293,11 +309,11 @@ class Article_c extends Array_constr{
 
 	}
 
-	public function maak_artikel () {
+	public function maak_artikel ($maak_html = false) {
 
 		if (!$this->gecontroleerd) $this->controleer();
 
-		ob_start();
+		if ($maak_html) ob_start();
 
 		?>
 
@@ -330,17 +346,23 @@ class Article_c extends Array_constr{
 
 		</article>
 		<?php
-		return ob_get_clean();
+
+		if ($maak_html) {
+			$this->html = ob_get_clean();
+		}
+
+
+
 	}
 
 	public function print () {
-		echo $this->maak_artikel();
+		$this->maak_artikel(false);
 	}
 }
 
 
 
-class Agenda extends Array_constr {
+class Ag_agenda extends Ag_basis_class {
 
 	public $omgeving;
 
@@ -440,8 +462,8 @@ class Agenda extends Array_constr {
 	}
 
 	public function nalopen () {
-		if (!cp_truthy('aantal', $this)) $this->aantal = 5;
-		if (!cp_truthy('agenda_link', $this)) $this->agenda_link = get_post_type_archive_link('agenda');
+		if (!ag_cp_truthy('aantal', $this)) $this->aantal = 5;
+		if (!ag_cp_truthy('agenda_link', $this)) $this->agenda_link = get_post_type_archive_link('agenda');
 	}
 
 	public function zet_totaal_aantal() {
@@ -473,7 +495,7 @@ class Agenda extends Array_constr {
 
 		?>
 		<<?=$verpakking_el?> class='agenda <?=$this->omgeving?>'>
-			<?=($this->omgeving==="widget" ? "<h2>Agenda</h2>" : "")?>
+			<?=($this->omgeving==="widget" ? "<h2>Ag_agenda</h2>" : "")?>
 
 			<div class=''>
 				<ul>
@@ -482,7 +504,7 @@ class Agenda extends Array_constr {
 						foreach ($this->agendastukken as $a) :
 
 							if (!$this->is_widget) {
-								$content = maak_excerpt($a, 320);
+								$content = ag_maak_excerpt($a, 320);
 								$this->rechts = "<div class='agenda-rechts'><span>".$content."</span></div>";
 							} else {
 								$this->rechts = '';
@@ -530,12 +552,12 @@ class Agenda extends Array_constr {
 				if ($this->is_widget) {
 					echo "<footer>";
 
-					$agenda_knop = new Knop(array(
+					$agenda_Ag_knop = new Ag_knop(array(
 						'class'=> 'in-kleur',
 						'link' => $this->agenda_link,
 						'tekst'=> 'Hele agenda'
 					));
-					$agenda_knop->print();
+					$agenda_Ag_knop->print();
 					echo "</footer>";
 				}
 
@@ -595,7 +617,7 @@ class Agenda extends Array_constr {
 	}
 }
 
-class Pag_fam extends Zijbalk_Posts{
+class Ag_pag_fam extends Ag_Zijbalk_Posts{
 
 	public $inhoud;
 
@@ -636,7 +658,7 @@ class Pag_fam extends Zijbalk_Posts{
 
 		$hui = ($this->ouder === $post->ID ? 'huidige' : '');
 
-		$art = new Article_c(
+		$art = new Ag_article_c(
 			array(
 				'class' => "in-lijst blok zijbalk $hui",
 				'htype' => 3,
@@ -652,7 +674,7 @@ class Pag_fam extends Zijbalk_Posts{
 
 			$hui = ($k->ID === $post->ID ? 'huidige' : "");
 
-			$art = new Article_c(
+			$art = new Ag_article_c(
 				array(
 					'class' => "in-lijst blok zijbalk $hui",
 					'htype' => 3,
@@ -670,7 +692,7 @@ class Pag_fam extends Zijbalk_Posts{
 	}
 }
 
-class Tax_blok extends Array_constr {
+class Ag_tax_blok extends Ag_basis_class {
 
 	//aantal uitgesloten tax namen, post_tag en post_format
 	public $uitgesloten = array();
@@ -680,12 +702,12 @@ class Tax_blok extends Array_constr {
 	}
 
 	public function nalopen () {
-		if (!cp_truthy('post', $this)) die();
-		if (!cp_truthy('titel', $this)) $this->titel = "";
-		if (!cp_truthy('html', $this)) $this->html = "";
-		if (!cp_truthy('basis', $this)) $this->basis = $this->zet_basis();
-		if (!cp_truthy('reset', $this)) $this->reset = true;
-		if (!cp_truthy('archief', $this)) $this->archief = is_archive();
+		if (!ag_cp_truthy('post', $this)) die();
+		if (!ag_cp_truthy('titel', $this)) $this->titel = "";
+		if (!ag_cp_truthy('html', $this)) $this->html = "";
+		if (!ag_cp_truthy('basis', $this)) $this->basis = $this->zet_basis();
+		if (!ag_cp_truthy('reset', $this)) $this->reset = false;
+		if (!ag_cp_truthy('archief', $this)) $this->archief = is_archive();
 	}
 
 
@@ -795,7 +817,7 @@ class Tax_blok extends Array_constr {
 	}
 
 	public function print() {
-		if (!cp_truthy('html', $this)) {
+		if (!ag_cp_truthy('html', $this)) {
 			$this->maak();
 		}
 		echo $this->html;

@@ -17,7 +17,7 @@
 		@extend .knop;
 	}
 	.active a{
-		//kopie van knop in wit
+		//kopie van Ag_knop in wit
 		background-color: $hoofdkleur;
 		box-shadow: 2px 4px 0 $hoofdkleur_donker;
 		color: white !important;

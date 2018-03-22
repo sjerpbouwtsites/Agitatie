@@ -1,21 +1,6 @@
 <?php
 
-//nee het niet is niet echt mvc. Weet ik. thx. stfu. bai.
-if(!function_exists('logo_model')) : function logo_model($heading) {
-	ob_start();
-	the_custom_logo();
-	$logo = ob_get_clean();
-	$logo = str_replace('</a>', '', $logo);
-
-    $is_front = is_front_page();
-
-    if ($is_front && $heading) $logo = "<h1>" . $logo;
-	$logo .= "</a>";
-    if ($is_front && $heading) $logo .= "</h1>";
-	return $logo;
-} endif;
-
-if(!function_exists('paginering_model')) : function paginering_model() {
+if(!function_exists('ag_paginering_model')) : function ag_paginering_model() {
 
     if( is_singular() && !is_search()) return false;
 
@@ -49,16 +34,16 @@ if(!function_exists('paginering_model')) : function paginering_model() {
 
     $m['pagi_prev_link'] = get_previous_posts_link();
 
-    if ($m['pagi_prev_link']) $m['pagi_prev_link_res'] = appendChildBefore($m['pagi_prev_link'], "<i class='mdi mdi-arrow-left-thick'></i>");
+    if ($m['pagi_prev_link']) $m['pagi_prev_link_res'] = ag_appendChildBefore($m['pagi_prev_link'], "<i class='mdi mdi-arrow-left-thick'></i>");
 
     $m['pagi_volgende_link'] = get_next_posts_link();
 
-    if ($m['pagi_volgende_link']) $m['pagi_volgende_link_res'] = appendChildBefore($m['pagi_volgende_link'], "<i class='mdi mdi-arrow-right-thick'></i>");
+    if ($m['pagi_volgende_link']) $m['pagi_volgende_link_res'] = ag_appendChildBefore($m['pagi_volgende_link'], "<i class='mdi mdi-arrow-right-thick'></i>");
 
     return $m;
 } endif;
 
-if(!function_exists('agenda_filter_model')) : function agenda_filter_model(){
+if(!function_exists('ag_agenda_filter_model')) : function ag_agenda_filter_model(){
 
     $agenda_taxen = get_terms(array('soort', 'locatie'));
     $filters_inst = array();
@@ -120,7 +105,7 @@ if(!function_exists('agenda_filter_model')) : function agenda_filter_model(){
     );
 } endif;
 
-if(!function_exists('agenda_art_meta')) : function agenda_art_meta($post) {
+if(!function_exists('ag_agenda_art_meta')) : function ag_agenda_art_meta($post) {
     ob_start();
     $ID = $post->ID;
 
@@ -137,26 +122,145 @@ if(!function_exists('agenda_art_meta')) : function agenda_art_meta($post) {
 <?php return ob_get_clean();
 } endif;
 
-if(!function_exists('gezocht_naar_tax_waarde_model')) : function gezocht_naar_tax_waarde_model() {
-    $tax_waarde = '';
-    $t = 0;
+if (!function_exists('ag_archief_intro_model')) : function ag_archief_intro_model() {
 
-    //alleen eerste GET pakken
-    if (count($_GET)) : foreach ($_GET as $n => $w) :
+    global $wp_query;
 
-        $tax_waarde = str_replace('-', ' ', $w);
-        if ($t > 0) break;
-        $t++;
-    endforeach; endif;
-    return $tax_waarde;
+    //alleen categorie heeft een intro tekst.
+    if ($wp_query->is_category) {
+
+        return $wp_query->queried_object->description;
+
+    } else {
+        return false;
+    }
+
+
 } endif;
 
-if (!function_exists('archief_intro_model')) : function archief_intro_model($post_type = '', $tax_waarde = '') {
-    //@TODO
-    return false;
+
+if(!function_exists('ag_archief_titel_model')) : function ag_archief_titel_model() {
+
+    global $wp_query;
+
+    $post_type = ag_post_naam_model();
+
+    if ($post_type && $post_type !== '') {
+        $obj = get_post_type_object($post_type);
+        $post_type = $obj->label;
+    } else {
+        return false;
+    }
+
+
+    if ($wp_query->is_date) { //is dit een datum archief?
+
+        $archief_titel = ucfirst($post_type) . " ";
+
+        //als op dag, dan 'van', anders, 'uit'
+        if (array_key_exists('day', $wp_query->query) ) {
+            $archief_titel .= 'van '. $wp_query->query['day'] . " ";
+        } else {
+            $archief_titel .= 'uit ';
+        }
+
+        if (array_key_exists('monthnum', $wp_query->query) ) {
+            switch ($wp_query->query['monthnum']) {
+                case '01':
+                    $archief_titel .= 'januari ';
+                    break;
+                case '02':
+                    $archief_titel .= 'februari ';
+                    break;
+                case '03':
+                    $archief_titel .= 'maart ';
+                    break;
+                case '04':
+                    $archief_titel .= 'april ';
+                    break;
+                case '05':
+                    $archief_titel .= 'mei ';
+                    break;
+                case '06':
+                    $archief_titel .= 'juni ';
+                    break;
+                case '07':
+                    $archief_titel .= 'juli ';
+                    break;
+                case '08':
+                    $archief_titel .= 'augustus ';
+                    break;
+                case '09':
+                    $archief_titel .= 'september ';
+                    break;
+                case '10':
+                    $archief_titel .= 'oktober ';
+                    break;
+                case '11':
+                    $archief_titel .= 'november ';
+                    break;
+                case '12':
+                    $archief_titel .= 'december ';
+                    break;
+                default:
+                    //
+                    break;
+            }
+        }
+
+        $archief_titel .= $wp_query->query['year'];
+
+    } else if (!property_exists($wp_query->queried_object, 'label')) {
+
+        //is dit een taxonomy pagina?
+
+        $tax_naam = $wp_query->queried_object->taxonomy;
+        if ($tax_naam === 'category') $tax_naam = 'categorie';
+        if ($tax_naam === 'post_tag') $tax_naam = 'tag';
+
+        $archief_titel = ucfirst($post_type !== '' ? $post_type : $tax_naam) . ": ".strtolower($wp_query->queried_object->name);
+
+    } else {
+
+        $archief_titel = ($post_type !== '' ? $post_type : $wp_query->queried_object->label)  . ($tax_waarde = gezocht_naar_tax_waarde_model() !== '' ? "<span>".$tax_waarde."</span>" : "");
+
+    }
+
+    return $archief_titel;
+
 } endif;
 
-if (!function_exists('post_naam_model')) : function post_naam_model() {
+
+
+if(!function_exists('ag_archief_sub_tax_model')) : function ag_archief_sub_tax_model() {
+
+    global $wp_query;
+
+    if ($wp_query->is_post_type_archive || $wp_query->is_date) {
+        return false;
+    }
+
+    $kind_verz = array();
+
+    $kinderen = get_term_children($wp_query->queried_object->term_id, $wp_query->queried_object->taxonomy);
+
+    if ($kinderen and count($kinderen)) {
+
+        foreach ($kinderen as $kind) {
+            $kind_verz[] = get_term_by( 'id', $kind, $wp_query->queried_object->taxonomy );
+        }
+
+        return $kind_verz;
+
+    } else {
+        return false;
+    }
+
+} endif;
+
+
+
+if (!function_exists('ag_post_naam_model')) : function ag_post_naam_model() {
     global $wp_query;
 
     //is query op post type?
@@ -164,7 +268,7 @@ if (!function_exists('post_naam_model')) : function post_naam_model() {
         return $wp_query->query['post_type'];
     } else if (count($wp_query->posts)) { //neem aan: query op tax
         return $wp_query->posts[0]->post_type;
-    } else { 
+    } else {
         //lege query
         return false;
     }

@@ -1,9 +1,12 @@
 <?php
-if (!function_exists('archief_generiek_loop')) : function archief_generiek_loop($post, $afb_formaat = 'lijst', $exc_lim_o = false){
+
+
+
+if (!function_exists('ag_archief_generiek_loop')) : function ag_archief_generiek_loop($post, $afb_formaat = 'lijst', $exc_lim_o = false){
 
 	switch (POST_TYPE_NAAM) {
 		default:
-			$m_art = new Article_c( array(
+			$m_art = new Ag_article_c( array(
 				'exc_lim' 		=> $exc_lim_o ? $exc_lim_o : 230,
 				'class'			=> 'in-lijst',
 				'taxonomieen' 	=> true
@@ -18,70 +21,126 @@ if (!function_exists('archief_generiek_loop')) : function archief_generiek_loop(
 
 } endif;
 
-if (!function_exists('archief_intro_ctrl')) : function archief_intro_ctrl($post_type = '', $tax_waarde = '') {
-	if ($archief_intro = archief_intro_model($post_type, $tax_waarde)){
-		echo apply_filters('the_content', $pag_intro);
+
+
+if (!function_exists('ag_archief_intro_ctrl')) : function ag_archief_intro_ctrl() {
+
+	if ($archief_intro = ag_archief_intro_model()){
+		echo "<div class='verpakking verpakking-klein'>";
+		echo apply_filters('the_content', $archief_intro);
+		echo "</div>";
 	}
-} endif;
-
-if (!function_exists('archief_titel_ctrl')) : function archief_titel_ctrl ($post_type = '') {
-
-	global $wp_query;
-
-	if ($post_type !== '') {
-		$obj = get_post_type_object($post_type);
-		$post_type = $obj->label;
-	}
-
-	//is dit een taxonomy pagina?
-	if (!property_exists($wp_query->queried_object, 'label')) {
-
-		$tax_naam = $wp_query->queried_object->taxonomy;
-		if ($tax_naam === 'category') $tax_naam = 'categorie';
-		if ($tax_naam === 'post_tag') $tax_naam = 'tag';
-
-		$archief_titel = ucfirst($post_type !== '' ? $post_type : $tax_naam) . ": ".strtolower($wp_query->queried_object->name);
-
-	} else {
-
-		$archief_titel = ($post_type !== '' ? $post_type : $wp_query->queried_object->label)  . ($tax_waarde = gezocht_naar_tax_waarde_model() !== '' ? "<span>".$tax_waarde."</span>" : "");
-
-	}
-
-	echo "<h1>".$archief_titel."</h1>";
 
 } endif;
 
 
-if(!function_exists('archief_content_ctrl')) : function archief_content_ctrl() {
+
+if(!function_exists('ag_archief_sub_tax_ctrl')) : function ag_archief_sub_tax_ctrl() {
+
+	if ($kinderen = ag_archief_sub_tax_model()) {
+
+		echo "<div class='sub-cat-lijst marginveld'>";
+
+			$vertaal = array(
+				'post_tag' => 'Subtags',
+				'category' => 'Subcategorie&euml;n'
+			);
+
+			$naam = array_key_exists($kinderen[0]->taxonomy, $vertaal) ? $vertaal[($kinderen[0]->taxonomy)] : $kinderen[0]->taxonomy;
+
+
+			echo "<p><strong>$naam:</strong></p>";
+
+			echo "<div class='art-lijst'>";
+
+				foreach ($kinderen as $k) :
+
+					if ($k->count) :
+
+						if (!isset($subcat)) {
+							$subcat = new Ag_article_c( array(
+								'geen_tekst'	=> true,
+								'class'			=> 'in-lijst',
+								'taxonomieen' 	=> false,
+								'is_categorie'	=> true
+							), $k);
+						} else {
+							$subcat->art = $k;
+							$subcat->gecontroleerd = false;
+						}
+
+						$subcat->print();
+
+					endif;
+
+				endforeach;
+
+			echo "</div>";//art lijst
+
+		echo "</div>"; //sub cat lijst
+
+	}
+
+	return !!$kinderen;
+
+} endif;
+
+
+
+if (!function_exists('ag_archief_titel_ctrl')) : function ag_archief_titel_ctrl () {
+
+	if ($archief_titel = ag_archief_titel_model()) {
+		echo "<h1>".$archief_titel."</h1>";
+	}
+
+} endif;
+
+
+
+if(!function_exists('ag_archief_content_ctrl')) : function ag_archief_content_ctrl() {
+
 	global $post;
+
 	echo "<div id='archief-lijst' class='tekstveld art-lijst'>";
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 			//maakt post type objs aan en print @ controllers
-			archief_generiek_loop($post);
+			ag_archief_generiek_loop($post);
 
-		endwhile; else : 
+		endwhile; else :
 
 			get_template_part('sja/niets-gevonden');
 
 		endif;
 	echo "</div>";
+
 } endif;
 
-if(!function_exists('archief_footer_ctrl')) : function archief_footer_ctrl() {
-	//indien er gezocht is op een tax val, geef dan knop terug naar archief algemeen.
-	if ($tax_waarde = gezocht_naar_tax_waarde_model() !== '') :
-		echo "<footer>";
-		$terug = new Knop(array(
+
+
+if(!function_exists('ag_archief_footer_ctrl')) : function ag_archief_footer_ctrl() {
+
+	global $wp_query;
+
+	$vertaal = array(
+		'post'	=> 'berichten',
+		'page'  => 'pagina\'s'
+	);
+
+	if ($wp_query->is_date || $wp_query->is_category) :
+
+		echo "<footer class='archief-footer'>";
+		$terug = new Ag_knop(array(
 			'class' 	=> 'in-wit ikoon-links',
 			'link' 		=> get_post_type_archive_link(POST_TYPE_NAAM),
-			'tekst'		=> 'Alle '.$wp_query->queried_object->label,
+			'tekst'		=> 'Alle '.$vertaal[($wp_query->posts[0]->post_type)],
 			'ikoon'		=> 'arrow-left-thick'
 		));
 
 		$terug->print();
 
 		echo "<footer>";
-	endif; //als tax
+
+	endif; //als category of datum
+
 } endif;

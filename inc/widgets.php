@@ -14,7 +14,7 @@ if(!function_exists('registreer_sidebars')) : function registreer_sidebars(){
 
 //add_action( 'widgets_init', 'registreer_sidebars' );
 
-/*class Agenda_w extends WP_Widget {
+/*class Ag_agenda_w extends WP_Widget {
 
     function __construct() {
 
@@ -34,7 +34,7 @@ if(!function_exists('registreer_sidebars')) : function registreer_sidebars(){
     // Frontend
     public function widget($args, $instance) {
 
-		$agenda = new Agenda(array(
+		$agenda = new Ag_agenda(array(
 			'aantal' => 5,
 			'omgeving' => 'widget'
 		));
@@ -54,13 +54,13 @@ if(!function_exists('registreer_sidebars')) : function registreer_sidebars(){
 	}
 }
 
-class Pag_familie_w extends WP_Widget {
+class Ag_pag_familie_w extends WP_Widget {
 
     function __construct() {
 
     parent::__construct(
         	// Base ID of your widget
-	        'Pag_familie_w',
+	        'Ag_pag_familie_w',
 
 	        // Widget name will appear in UI
 	        __('pagina familie', 'pagina_familie_domain'),
@@ -74,7 +74,7 @@ class Pag_familie_w extends WP_Widget {
     // Frontend
     public function widget($args, $instance) {
 
-    	$fam = new Pag_fam('Lees verder');
+    	$fam = new Ag_pag_fam('Lees verder');
     	$fam->maak();
 		$fam->print();
 

@@ -12,11 +12,11 @@ get_template_part('/sja/open-main');
 
 		<?php
 
-		$afm = agenda_filter_ctrl();
+		$afm = ag_agenda_filter_ctrl();
 
 		if ( have_posts() ) :
 
-			$agenda = new Agenda(array(
+			$agenda = new Ag_agenda(array(
 				'aantal' => 10,
 				'omgeving' => 'pagina'
 			));
@@ -25,7 +25,7 @@ get_template_part('/sja/open-main');
 
 			?>
 
-		<?php paginering_ctrl();
+		<?php ag_paginering_ctrl();
 
 		else :
 
@@ -33,25 +33,25 @@ get_template_part('/sja/open-main');
 
 		endif;
 
-		echo "<div class='knoppen-doos'>";
+		echo "<div class='Ag_knoppen-doos'>";
 
 			$archief = array_key_exists('archief', $_GET);
 			$agenda_link = get_post_type_archive_link('agenda');
 
 			//wat als er uberhaupt geen GET zijn => andere link
-			$archief_knop = new Knop(array(
+			$archief_Ag_knop = new Ag_knop(array(
 				'ikoon'=> ($archief ? "arrow-right-thick"  : "step-backward-2"),
 				'class'=> 'in-kleur '.($archief ? ""  : "ikoon-links"),
 				'link' => $agenda_link . ($archief ? ""  : "?archief=ja"),
 				'tekst'=> $archief ? "normale agenda" : "agenda archief"
 			));
 
-			$archief_knop->print();
+			$archief_Ag_knop->print();
 
-			//als filters actief knop terug naar begin.
+			//als filters actief Ag_knop terug naar begin.
 			if ( $afm['filters_actief'] ) {
 
-				$agenda_begin = new Knop(array(
+				$agenda_begin = new Ag_knop(array(
 					'ikoon' => 'replay',
 					'class'=> 'in-wit',
 					'link' => $agenda_link,

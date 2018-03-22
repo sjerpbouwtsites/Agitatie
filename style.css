@@ -43,7 +43,7 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 
 /* line 19, scss/inst/kleur/_zet-klassen.scss */
 .tekst-hoofdkleur {
-  color: #E53C62;
+  color: #C82449;
 }
 
 /* line 22, scss/inst/kleur/_zet-klassen.scss */
@@ -58,7 +58,7 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 
 /* line 28, scss/inst/kleur/_zet-klassen.scss */
 .tekst-hoofdkleur-donker {
-  color: #e22650;
+  color: #b22041;
 }
 
 /* line 31, scss/inst/kleur/_zet-klassen.scss */
@@ -103,7 +103,7 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 
 /* line 56, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-hoofdkleur {
-  background-color: #E53C62;
+  background-color: #C82449;
 }
 
 /* line 59, scss/inst/kleur/_zet-klassen.scss */
@@ -118,7 +118,7 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 
 /* line 65, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-hoofdkleur-donker {
-  background-color: #e22650;
+  background-color: #b22041;
 }
 
 /* line 68, scss/inst/kleur/_zet-klassen.scss */
@@ -1085,13 +1085,23 @@ html {
 }
 
 /* line 10, scss/_generiek.scss */
+body {
+  background-color: #f7fcf7;
+}
+
+/* line 14, scss/_generiek.scss */
+#primary {
+  min-height: 60vh;
+}
+
+/* line 19, scss/_generiek.scss */
 .klaar::after, .float::after, section::after, article::after {
   content: '';
   display: block;
   clear: both;
 }
 
-/* line 18, scss/_generiek.scss */
+/* line 27, scss/_generiek.scss */
 .verpakking {
   margin: 0 auto;
   padding: 0 20px;
@@ -1100,94 +1110,101 @@ html {
   max-width: 100%;
 }
 
-/* line 25, scss/_generiek.scss */
+/* line 34, scss/_generiek.scss */
 .verpakking-klein {
   width: 760px;
 }
 
 @media (min-width: 900px) {
-  /* line 28, scss/_generiek.scss */
+  /* line 37, scss/_generiek.scss */
   .verpakking-groot .tekst {
     -moz-columns: 2;
          columns: 2;
   }
-  /* line 31, scss/_generiek.scss */
+  /* line 40, scss/_generiek.scss */
   .verpakking-groot .tekst p:first-child {
     margin-top: 0;
   }
-  /* line 34, scss/_generiek.scss */
+  /* line 43, scss/_generiek.scss */
   .verpakking-groot .tekst p:last-child {
     margin-bottom: 0;
   }
 }
 
-/* line 41, scss/_generiek.scss */
-.heeft-padding > *:first-child {
+/* line 48, scss/_generiek.scss */
+.verpakking .verpakking {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 55, scss/_generiek.scss */
+.heeft-padding > *:first-child, .voorpagina main > * > *:first-child {
   margin-top: 0;
 }
 
-/* line 44, scss/_generiek.scss */
-.heeft-padding > *:last-child {
+/* line 58, scss/_generiek.scss */
+.heeft-padding > *:last-child, .voorpagina main > * > *:last-child {
   margin-bottom: 0;
 }
 
-/* line 50, scss/_generiek.scss */
+/* line 64, scss/_generiek.scss */
 .paddingveld {
   padding-top: 25px;
   padding-bottom: 25px;
 }
 
 @media (min-width: 900px) {
-  /* line 50, scss/_generiek.scss */
+  /* line 64, scss/_generiek.scss */
   .paddingveld {
     padding-top: 50px;
     padding-bottom: 50px;
   }
 }
 
-/* line 59, scss/_generiek.scss */
+/* line 73, scss/_generiek.scss */
 .marginveld {
   margin-top: 25px;
   margin-bottom: 25px;
 }
 
 @media (min-width: 900px) {
-  /* line 59, scss/_generiek.scss */
+  /* line 73, scss/_generiek.scss */
   .marginveld {
     margin-top: 50px;
     margin-bottom: 50px;
   }
 }
 
-/* line 66, scss/_generiek.scss */
+/* line 80, scss/_generiek.scss */
 .marginveld.veel {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
 @media (min-width: 900px) {
-  /* line 66, scss/_generiek.scss */
+  /* line 80, scss/_generiek.scss */
   .marginveld.veel {
     margin-top: 100px;
     margin-bottom: 100px;
   }
 }
 
-/* line 76, scss/_generiek.scss */
+/* line 90, scss/_generiek.scss */
 .blok {
   background-color: #fff;
   box-shadow: 0 1px 2px #666;
   color: #272822;
 }
 
-/* line 83, scss/_generiek.scss */
+/* line 97, scss/_generiek.scss */
 ul.reset, ul.reset li {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-/* line 87, scss/_generiek.scss */
+/* line 101, scss/_generiek.scss */
 .post-edit-link {
   position: fixed;
   bottom: 0;
@@ -1201,7 +1218,7 @@ ul.reset, ul.reset li {
   z-index: 20;
 }
 
-/* line 100, scss/_generiek.scss */
+/* line 114, scss/_generiek.scss */
 .screen-reader-text {
   display: none;
 }
@@ -1216,7 +1233,7 @@ body {
 a:hover,
 a:focus,
 a:active {
-  color: #E53C62;
+  color: #C82449;
 }
 
 /* line 14, scss/_generiek-teksten.scss */
@@ -1226,13 +1243,13 @@ a:hover {
 
 /* line 18, scss/_generiek-teksten.scss */
 a, a:visited {
-  color: #E53C62;
+  color: #C82449;
   text-decoration: none;
 }
 
 /* line 23, scss/_generiek-teksten.scss */
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Merriweather", sans-serif;
 }
 
 /* line 28, scss/_generiek-teksten.scss */
@@ -1266,7 +1283,7 @@ h3 {
 
 /* line 47, scss/_generiek-teksten.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Serif", serif;
+  font-family: "Eczar", sans-serif;
   font-weight: 900;
   line-height: 1;
   margin: 1.33em 0 0.67em;
@@ -1278,16 +1295,21 @@ h4, h5, h6 {
 }
 
 /* line 57, scss/_generiek-teksten.scss */
-p, span {
-  line-height: 1.2;
+h1, h2 {
+  letter-spacing: .02em;
 }
 
-/* line 61, scss/_generiek-teksten.scss */
+/* line 62, scss/_generiek-teksten.scss */
+p, span {
+  line-height: 1.45;
+}
+
+/* line 66, scss/_generiek-teksten.scss */
 .bericht-tekst {
   font-size: 1.5em;
 }
 
-/* line 65, scss/_generiek-teksten.scss */
+/* line 70, scss/_generiek-teksten.scss */
 main blockquote {
   line-height: 1.5625em;
   text-transform: none;
@@ -1298,7 +1320,7 @@ main blockquote {
   margin: 0;
 }
 
-/* line 73, scss/_generiek-teksten.scss */
+/* line 78, scss/_generiek-teksten.scss */
 main blockquote p {
   display: inline-block;
   vertical-align: top;
@@ -1307,7 +1329,7 @@ main blockquote p {
   font-size: inherit;
 }
 
-/* line 80, scss/_generiek-teksten.scss */
+/* line 85, scss/_generiek-teksten.scss */
 main blockquote::before {
   content: "\F756";
   display: inline-block;
@@ -2092,7 +2114,7 @@ main blockquote::before {
 /* line 495, scss/ext/_leaflet.scss */
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-  background: #E53C62;
+  background: #C82449;
   color: #fff;
   box-shadow: none;
   font-family: "Asap", sans-serif;
@@ -3081,10 +3103,38 @@ img.efbl-loader {
   }
 }
 
-/* line 111, scss/onderdelen/_art_class.scss */
+@media (min-width: 600px) {
+  /* line 99, scss/onderdelen/_art_class.scss */
+  .art-lijst .art-c {
+    max-width: 50%;
+  }
+}
+
+/* line 113, scss/onderdelen/_art_class.scss */
+.art-lijst .art-c img {
+  transition: 0.2s filter ease-in-out;
+}
+
+/* line 117, scss/onderdelen/_art_class.scss */
+.art-lijst .art-c:hover img {
+  filter: brightness(70%);
+}
+
+/* line 122, scss/onderdelen/_art_class.scss */
+.art-lijst .art-c.geen-afb:hover h3, .art-lijst .art-c.geen-afb:hover p {
+  color: #C82449;
+}
+
+/* line 128, scss/onderdelen/_art_class.scss */
 .art-lijst .lees-meer::before {
   content: '';
   display: block;
+}
+
+/* line 133, scss/onderdelen/_art_class.scss */
+.art-lijst + footer {
+  margin-top: 20px;
+  text-align: right;
 }
 
 /* line 2, scss/onderdelen/_back-to-top.scss */
@@ -3176,7 +3226,7 @@ img.efbl-loader {
   box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-out 0.2s;
   position: relative;
-  color: #E53C62;
+  color: #C82449;
   top: 0;
   font-size: 1rem;
   text-transform: lowercase;
@@ -3192,7 +3242,7 @@ img.efbl-loader {
 
 /* line 24, scss/onderdelen/_knop.scss */
 .knop:hover, .navigation a:hover, #agenda-filter [type='submit']:hover, .search-form .search-submit:hover, .knop:visited, .navigation a:visited, #agenda-filter [type='submit']:visited, .search-form .search-submit:visited, .knop:active, .navigation a:active, #agenda-filter [type='submit']:active, .search-form .search-submit:active, input.wpcf7-submit:hover, input.wpcf7-submit:visited, input.wpcf7-submit:active {
-  color: #E53C62;
+  color: #C82449;
   text-decoration: none;
 }
 
@@ -3230,7 +3280,7 @@ img.efbl-loader {
 
 /* line 55, scss/onderdelen/_knop.scss */
 .knop.in-wit, .navigation a.in-wit, #agenda-filter .in-wit[type='submit'], .search-form .in-wit.search-submit, input.wpcf7-submit.in-wit {
-  background-color: #E53C62;
+  background-color: #C82449;
   box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
   color: white !important;
 }
@@ -3329,14 +3379,14 @@ input.wpcf7-submit {
 
 /* line 19, scss/onderdelen/_paginering.scss */
 .navigation .active a {
-  background-color: #E53C62;
-  box-shadow: 2px 4px 0 #e22650;
+  background-color: #C82449;
+  box-shadow: 2px 4px 0 #b22041;
   color: white !important;
 }
 
 /* line 24, scss/onderdelen/_paginering.scss */
 .navigation .active a:hover {
-  box-shadow: 0.5px 1px 0 #e22650;
+  box-shadow: 0.5px 1px 0 #b22041;
   top: 3px;
 }
 
@@ -3367,39 +3417,40 @@ input.wpcf7-submit {
 
 /* line 2, scss/onderdelen/_tax-blok.scss */
 #tax-blok {
-  background-color: #f5f5f5;
+  background-color: #f1f1f1;
   padding: 20px;
+  margin-top: 50px;
 }
 
-/* line 6, scss/onderdelen/_tax-blok.scss */
+/* line 7, scss/onderdelen/_tax-blok.scss */
 #tax-blok section {
   padding-top: 0;
   padding-bottom: 20px;
 }
 
-/* line 9, scss/onderdelen/_tax-blok.scss */
+/* line 10, scss/onderdelen/_tax-blok.scss */
 #tax-blok section:last-child {
   padding-bottom: 0;
 }
 
-/* line 13, scss/onderdelen/_tax-blok.scss */
+/* line 14, scss/onderdelen/_tax-blok.scss */
 #tax-blok h2 {
   margin-top: 0;
 }
 
-/* line 16, scss/onderdelen/_tax-blok.scss */
+/* line 17, scss/onderdelen/_tax-blok.scss */
 #tax-blok h3 {
   margin-bottom: 0;
 }
 
-/* line 19, scss/onderdelen/_tax-blok.scss */
+/* line 20, scss/onderdelen/_tax-blok.scss */
 #tax-blok ul, #tax-blok li {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-/* line 22, scss/onderdelen/_tax-blok.scss */
+/* line 23, scss/onderdelen/_tax-blok.scss */
 #tax-blok ul {
   -moz-columns: 2;
        columns: 2;
@@ -3408,7 +3459,7 @@ input.wpcf7-submit {
 }
 
 @media (min-width: 600px) {
-  /* line 22, scss/onderdelen/_tax-blok.scss */
+  /* line 23, scss/onderdelen/_tax-blok.scss */
   #tax-blok ul {
     -moz-columns: 3;
          columns: 3;
@@ -3416,7 +3467,7 @@ input.wpcf7-submit {
 }
 
 @media (min-width: 900px) {
-  /* line 22, scss/onderdelen/_tax-blok.scss */
+  /* line 23, scss/onderdelen/_tax-blok.scss */
   #tax-blok ul {
     -moz-columns: 4;
          columns: 4;
@@ -3436,7 +3487,7 @@ input.wpcf7-submit {
   left: 20px;
   bottom: 20px;
   color: #f5f5f5;
-  background-color: #E53C62;
+  background-color: #C82449;
   font-size: 2.5rem;
   padding: .6em 1.2em;
 }
@@ -3482,7 +3533,7 @@ input.wpcf7-submit {
   height: 50vh;
   width: 100%;
   position: relative;
-  /* 			.knop {
+  /* 			.Ag_knop {
 				height: 34px;
 				position: absolute;
 				right: 0;
@@ -3559,7 +3610,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 /* line 7, scss/_agenda.scss */
 #agenda-filter {
   padding: 20px;
-  background-color: #E53C62;
+  background-color: #C82449;
   color: white;
 }
 
@@ -3643,7 +3694,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   border: 0;
   font-size: 12px;
   background-color: #fff;
-  font-family: "Raleway", sans-serif;
+  font-family: "Merriweather", sans-serif;
   font-weight: bold;
   color: #666;
 }
@@ -3774,7 +3825,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   transition: 0.6s width ease-in 0.1s;
   z-index: -1;
   height: calc(100% + 0.5px);
-  background-color: #E53C62;
+  background-color: #C82449;
 }
 
 @media (min-width: 600px) {
@@ -3872,7 +3923,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 }
 
 /* line 219, scss/_agenda.scss */
-.agenda .knoppen-doos {
+.agenda .Ag_knoppen-doos {
   margin-top: 20px;
 }
 
@@ -3892,7 +3943,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 /* line 232, scss/_agenda.scss */
 .agenda-los .agenda-data {
   padding: 20px;
-  background-color: #E53C62;
+  background-color: #C82449;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-direction: column;
@@ -3954,28 +4005,39 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   padding-top: 20px;
 }
 
-/* line 3, scss/_footer.scss */
+/* line 10, scss/_archive.scss */
+.sub-cat-lijst {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+/* line 15, scss/_archive.scss */
+.archief-footer {
+  margin-top: 20px;
+}
+
+/* line 6, scss/_footer.scss */
 #stek-voet {
   color: white;
   font-size: .8em;
-  background-color: #f4cf6a;
-  padding: 50px 0;
+  background-color: #272822;
+  padding: 50px 0 0 0;
   margin-top: 100px;
 }
 
-/* line 9, scss/_footer.scss */
+/* line 12, scss/_footer.scss */
 #stek-voet ul, #stek-voet li, #stek-voet ol {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-/* line 12, scss/_footer.scss */
+/* line 15, scss/_footer.scss */
 #stek-voet .verpakking {
   margin-bottom: 25px;
 }
 
-/* line 15, scss/_footer.scss */
+/* line 18, scss/_footer.scss */
 #stek-voet .verpakking .neg-marge {
   margin: 0 -12.5px;
   display: -ms-flexbox;
@@ -3987,7 +4049,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 }
 
 @media (max-width: 900px) {
-  /* line 15, scss/_footer.scss */
+  /* line 18, scss/_footer.scss */
   #stek-voet .verpakking .neg-marge {
     -ms-flex-direction: row;
         flex-direction: row;
@@ -3995,7 +4057,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   }
 }
 
-/* line 24, scss/_footer.scss */
+/* line 27, scss/_footer.scss */
 #stek-voet .verpakking .neg-marge > * {
   margin: 0 12.5px;
   -ms-flex-positive: 1;
@@ -4007,7 +4069,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 }
 
 @media (min-width: 900px) {
-  /* line 24, scss/_footer.scss */
+  /* line 27, scss/_footer.scss */
   #stek-voet .verpakking .neg-marge > * {
     -ms-flex-positive: 0;
         flex-grow: 0;
@@ -4015,106 +4077,143 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 }
 
 @media (max-width: 400px) {
-  /* line 24, scss/_footer.scss */
+  /* line 27, scss/_footer.scss */
   #stek-voet .verpakking .neg-marge > * {
     -webkit-flex: 1 1 auto;
   }
 }
 
 @media (max-width: 665px) {
-  /* line 12, scss/_footer.scss */
+  /* line 15, scss/_footer.scss */
   #stek-voet .verpakking {
     margin-bottom: 0;
   }
-  /* line 40, scss/_footer.scss */
+  /* line 43, scss/_footer.scss */
   #stek-voet .verpakking .neg-marge > * {
     margin-bottom: 50px;
   }
 }
 
-/* line 45, scss/_footer.scss */
+/* line 48, scss/_footer.scss */
 #stek-voet section {
-  padding-left: 5px;
+  padding-left: 10px;
   border-left: 5px solid #3c3c3c;
 }
 
-/* line 54, scss/_footer.scss */
+/* line 53, scss/_footer.scss */
+#stek-voet .geen-logo {
+  font-size: 5em;
+  color: #f5f5f5;
+  line-height: 1;
+}
+
+/* line 57, scss/_footer.scss */
+#stek-voet .geen-logo:hover {
+  color: #C82449;
+  text-decoration: none;
+}
+
+/* line 65, scss/_footer.scss */
 #stek-voet .verpakking.widgets {
+  margin-bottom: 50px;
+}
+
+/* line 66, scss/_footer.scss */
+#stek-voet .verpakking.widgets .neg-marge {
   margin-bottom: -25px;
 }
 
-/* line 56, scss/_footer.scss */
+/* line 70, scss/_footer.scss */
 #stek-voet .verpakking.widgets section {
   margin-bottom: 25px;
 }
 
 @media (max-width: 665px) {
-  /* line 54, scss/_footer.scss */
+  /* line 65, scss/_footer.scss */
   #stek-voet .verpakking.widgets {
     margin-bottom: 0;
   }
-  /* line 61, scss/_footer.scss */
+  /* line 75, scss/_footer.scss */
   #stek-voet .verpakking.widgets .neg-marge > * {
     margin-bottom: 50px;
   }
 }
 
-/* line 66, scss/_footer.scss */
+/* line 80, scss/_footer.scss */
 #stek-voet .verpakking.widgets .search-form {
   background-color: transparent;
   padding: 0;
 }
 
-/* line 69, scss/_footer.scss */
+/* line 83, scss/_footer.scss */
 #stek-voet .verpakking.widgets .search-form .search-submit {
   margin-top: 10px;
   margin-left: 0;
 }
 
-/* line 73, scss/_footer.scss */
+/* line 87, scss/_footer.scss */
 #stek-voet .verpakking.widgets .search-form label, #stek-voet .verpakking.widgets .search-form label input {
   display: block;
 }
 
-/* line 78, scss/_footer.scss */
+/* line 92, scss/_footer.scss */
 #stek-voet .verpakking.widgets .textwidget ul li {
   list-style-type: disc;
 }
 
-/* line 81, scss/_footer.scss */
+/* line 95, scss/_footer.scss */
 #stek-voet .verpakking.widgets .textwidget ol li {
   list-style-type: ideograph-numeric;
 }
 
-/* line 85, scss/_footer.scss */
+/* line 99, scss/_footer.scss */
 #stek-voet .verpakking.widgets select {
   height: 27.2px;
 }
 
-/* line 91, scss/_footer.scss */
+/* line 105, scss/_footer.scss */
 .footer-section h3 {
   margin-top: 0;
 }
 
-/* line 94, scss/_footer.scss */
+/* line 108, scss/_footer.scss */
 .footer-section a, .footer-section a:active, .footer-section a:visited {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
-/* line 98, scss/_footer.scss */
+/* line 111, scss/_footer.scss */
+.footer-section a:hover, .footer-section a:active:hover, .footer-section a:visited:hover {
+  color: #C82449;
+}
+
+/* line 115, scss/_footer.scss */
 .footer-section *:last-child {
   margin-bottom: 0;
 }
 
-/* line 2, scss/_header.scss */
-#stek-kop {
-  background-color: #272822;
-  width: 100%;
-  z-index: 2;
+/* line 120, scss/_footer.scss */
+footer .search-form .search-submit {
+  color: #272822;
 }
 
-/* line 7, scss/_header.scss */
+/* line 125, scss/_footer.scss */
+.colofon p {
+  margin: 0;
+  padding: 15px;
+  text-align: center;
+  opacity: .6;
+}
+
+/* line 3, scss/_header.scss */
+#stek-kop {
+  background-color: #f5f5f5;
+  width: 100%;
+  z-index: 2;
+  font-size: 2rem;
+}
+
+/* line 9, scss/_header.scss */
 #stek-kop .rel > .verpakking {
   display: -ms-flexbox;
   display: flex;
@@ -4122,7 +4221,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
       justify-content: space-between;
 }
 
-/* line 14, scss/_header.scss */
+/* line 16, scss/_header.scss */
 #stek-kop .stek-kop-links {
   -ms-flex-preferred-size: 210px;
       flex-basis: 210px;
@@ -4134,42 +4233,42 @@ video.speelt ~ .vid-onder-buiten .speel-video {
       justify-content: center;
 }
 
-/* line 19, scss/_header.scss */
+/* line 21, scss/_header.scss */
 #stek-kop .stek-kop-links h1 {
   margin: 0;
 }
 
 @media (max-width: 460px) {
-  /* line 14, scss/_header.scss */
+  /* line 16, scss/_header.scss */
   #stek-kop .stek-kop-links {
     -ms-flex-preferred-size: 120px;
         flex-basis: 120px;
   }
 }
 
-/* line 28, scss/_header.scss */
+/* line 30, scss/_header.scss */
 #stek-kop .stek-kop-rechts {
   padding-left: 50px;
 }
 
 @media (max-width: 600px) {
-  /* line 28, scss/_header.scss */
+  /* line 30, scss/_header.scss */
   #stek-kop .stek-kop-rechts {
     padding-left: 20px;
   }
 }
 
-/* line 36, scss/_header.scss */
+/* line 38, scss/_header.scss */
 #stek-kop .stek-kop-rechts li ul li {
   margin-left: 0;
 }
 
-/* line 41, scss/_header.scss */
+/* line 43, scss/_header.scss */
 #stek-kop .custom-logo-link {
   display: block;
 }
 
-/* line 43, scss/_header.scss */
+/* line 45, scss/_header.scss */
 #stek-kop .custom-logo-link img {
   display: block;
 }
@@ -4188,105 +4287,39 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   list-style-type: none;
 }
 
-/* line 21, scss/_nav.scss */
-.menu#menu-kopmenu {
-  overflow: hidden;
-}
-
-/* line 23, scss/_nav.scss */
-.menu#menu-kopmenu a {
-  line-height: 70px;
-  padding: 0 .4em;
-  display: block;
-  font-family: "PT Serif", serif;
-}
-
-/* line 14, scss/_nav.scss */
-.menu#menu-kopmenu a:hover {
-  background-color: #E53C62;
-  color: white;
-  text-decoration: none;
-}
-
-/* line 27, scss/_nav.scss */
-.menu#menu-kopmenu .sub-menu a {
-  padding: 0.4em .7em;
-}
-
-/* line 30, scss/_nav.scss */
-.menu#menu-kopmenu .sub-menu li {
-  box-sizing: border-box;
-}
-
-/* line 36, scss/_nav.scss */
-.menu#menu-kopmenu.horizontaal li {
-  display: inline-block;
-}
-
-@media (min-width: 900px) {
-  /* line 40, scss/_nav.scss */
-  .menu#menu-kopmenu.horizontaal > li > ul {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 3;
-    min-width: 100%;
-  }
-}
-
-/* line 48, scss/_nav.scss */
-.menu#menu-kopmenu.horizontaal > li > ul li {
-  display: block;
-  min-width: 100%;
-  background-color: white;
-}
-
-@media (max-width: 900px) {
-  /* line 48, scss/_nav.scss */
-  .menu#menu-kopmenu.horizontaal > li > ul li {
-    margin-left: 30px;
-  }
-}
-
-/* line 57, scss/_nav.scss */
-.menu#menu-kopmenu.horizontaal > li:last-child > ul {
-  left: auto;
-  right: 0;
-}
-
-/* line 64, scss/_nav.scss */
-.menu#menu-kopmenu.met-sub {
+/* line 20, scss/_nav.scss */
+.stek-kop-rechts .menu {
   overflow: visible;
 }
 
-/* line 67, scss/_nav.scss */
-.menu#menu-kopmenu.met-sub li {
+/* line 23, scss/_nav.scss */
+.stek-kop-rechts .menu li {
   position: relative;
 }
 
-/* line 69, scss/_nav.scss */
-.menu#menu-kopmenu.met-sub ul {
+/* line 25, scss/_nav.scss */
+.stek-kop-rechts .menu ul {
   display: none;
 }
 
 @media (min-width: 900px) {
-  /* line 72, scss/_nav.scss */
-  .menu#menu-kopmenu.met-sub > li > ul {
+  /* line 28, scss/_nav.scss */
+  .stek-kop-rechts .menu > li > ul {
     position: absolute;
     top: 100%;
     left: 0;
   }
 }
 
-/* line 79, scss/_nav.scss */
-.menu#menu-kopmenu.met-sub > li > ul li, .menu#menu-kopmenu.met-sub > li > ul a {
+/* line 35, scss/_nav.scss */
+.stek-kop-rechts .menu > li > ul li, .stek-kop-rechts .menu > li > ul a {
   line-height: 1;
   font-size: 0.8em;
 }
 
 @media (min-width: 900px) {
-  /* line 86, scss/_nav.scss */
-  .menu#menu-kopmenu.met-sub > li > ul li:hover ul {
+  /* line 42, scss/_nav.scss */
+  .stek-kop-rechts .menu > li > ul li:hover ul {
     display: block;
     right: 100%;
     top: 0;
@@ -4295,81 +4328,144 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 }
 
 @media (min-width: 900px) {
-  /* line 97, scss/_nav.scss */
-  .menu#menu-kopmenu.met-sub > li:hover > ul {
+  /* line 53, scss/_nav.scss */
+  .stek-kop-rechts .menu > li:hover > ul {
     display: block;
   }
-  /* line 99, scss/_nav.scss */
-  .menu#menu-kopmenu.met-sub > li:hover > ul > li:hover > ul {
+  /* line 55, scss/_nav.scss */
+  .stek-kop-rechts .menu > li:hover > ul > li:hover > ul {
     display: block;
   }
 }
 
+/* line 62, scss/_nav.scss */
+.stek-kop-rechts .menu a {
+  line-height: 70px;
+  padding: 0 .4em;
+  display: block;
+}
+
+/* line 13, scss/_nav.scss */
+.stek-kop-rechts .menu a:hover {
+  background-color: #C82449;
+  color: white;
+  text-decoration: none;
+}
+
+/* line 66, scss/_nav.scss */
+.stek-kop-rechts .menu .sub-menu a {
+  padding: 0.4em .7em;
+}
+
+/* line 69, scss/_nav.scss */
+.stek-kop-rechts .menu .sub-menu li {
+  box-sizing: border-box;
+}
+
+/* line 75, scss/_nav.scss */
+.stek-kop-rechts .menu.horizontaal li {
+  display: inline-block;
+}
+
+@media (min-width: 900px) {
+  /* line 79, scss/_nav.scss */
+  .stek-kop-rechts .menu.horizontaal > li > ul {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    min-width: 100%;
+  }
+}
+
+/* line 87, scss/_nav.scss */
+.stek-kop-rechts .menu.horizontaal > li > ul li {
+  display: block;
+  min-width: 100%;
+  background-color: white;
+}
+
 @media (max-width: 900px) {
-  /* line 108, scss/_nav.scss */
-  .menu-kopmenu-container {
+  /* line 87, scss/_nav.scss */
+  .stek-kop-rechts .menu.horizontaal > li > ul li {
+    margin-left: 30px;
+  }
+}
+
+/* line 96, scss/_nav.scss */
+.stek-kop-rechts .menu.horizontaal > li:last-child > ul {
+  left: auto;
+  right: 0;
+}
+
+@media (max-width: 900px) {
+  /* line 106, scss/_nav.scss */
+  .stek-kop-rechts div[class*='menu'] {
     display: none;
     position: absolute;
     width: 100%;
     left: 0;
     z-index: 2;
+    top: 70px;
     overflow: hidden;
-  }
-  /* line 117, scss/_nav.scss */
-  .menu-kopmenu-container .menu#menu-kopmenu.horizontaal > li {
-    display: block;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   /* line 119, scss/_nav.scss */
-  .menu-kopmenu-container .menu#menu-kopmenu.horizontaal > li > a {
+  .stek-kop-rechts div[class*='menu'] .menu.horizontaal > li {
+    display: block;
+  }
+  /* line 121, scss/_nav.scss */
+  .stek-kop-rechts div[class*='menu'] .menu.horizontaal > li > a {
     padding: 0 .8em;
   }
-  /* line 122, scss/_nav.scss */
-  .menu-kopmenu-container .menu#menu-kopmenu.horizontaal > li a {
+  /* line 124, scss/_nav.scss */
+  .stek-kop-rechts div[class*='menu'] .menu.horizontaal > li a {
     line-height: 40px;
     padding-top: 0;
     padding-bottom: 0;
   }
-  /* line 130, scss/_nav.scss */
-  .menu-kopmenu-container .menu#menu-kopmenu .menu-item-has-children > a i {
+  /* line 132, scss/_nav.scss */
+  .stek-kop-rechts div[class*='menu'] .menu .menu-item-has-children > a i {
     padding: 0 20px;
     margin-left: 10px;
   }
 }
 
-/* line 140, scss/_nav.scss */
+/* line 142, scss/_nav.scss */
 .kopmenu-mobiel {
   line-height: 70px;
   padding: 0 .4em;
   display: block;
-  font-family: "PT Serif", serif;
   margin-right: -20px;
   display: none;
 }
 
-/* line 14, scss/_nav.scss */
+/* line 13, scss/_nav.scss */
 .kopmenu-mobiel:hover {
-  background-color: #E53C62;
+  background-color: #C82449;
   color: white;
   text-decoration: none;
 }
 
 @media (max-width: 900px) {
-  /* line 140, scss/_nav.scss */
+  /* line 142, scss/_nav.scss */
   .kopmenu-mobiel {
     display: block;
   }
 }
 
-/* line 148, scss/_nav.scss */
+/* line 150, scss/_nav.scss */
 .kopmenu-mobiel i {
   position: relative;
   top: 2px;
   margin-left: 10px;
 }
 
-/* line 156, scss/_nav.scss */
+/* line 158, scss/_nav.scss */
 footer .menu a:hover {
-  color: #E53C62;
+  color: #C82449;
 }
 
 /* line 3, scss/_single.scss */
@@ -4382,9 +4478,37 @@ footer .menu a:hover {
   opacity: 0.7;
 }
 
+/* line 2, scss/_voorpagina.scss */
+.voorpagina main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+/* line 7, scss/_voorpagina.scss */
+.voorpagina main > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* line 14, scss/_voorpagina.scss */
+.voorpagina .art-lijst .art-c {
+  min-width: 200px;
+}
+
+/* line 16, scss/_voorpagina.scss */
+.voorpagina .art-lijst .art-c img {
+  height: 110px;
+}
+
 /* line 3, scss/_zoeken.scss */
 .search-form {
-  background-color: #E53C62;
+  background-color: #C82449;
   padding: 20px;
   color: white;
   display: inline-block;
@@ -4423,6 +4547,78 @@ footer .menu a:hover {
   margin-left: 10px;
   padding-top: calc(.3em - 1px);
   padding-bottom: calc(.3em - 1px);
+}
+
+/* line 1, scss/_waaier.scss */
+.weetje {
+  -moz-columns: 5;
+       columns: 5;
+}
+
+@media (max-width: 1200px) {
+  /* line 1, scss/_waaier.scss */
+  .weetje {
+    -moz-columns: 4;
+         columns: 4;
+  }
+}
+
+@media (max-width: 900px) {
+  /* line 1, scss/_waaier.scss */
+  .weetje {
+    -moz-columns: 3;
+         columns: 3;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 1, scss/_waaier.scss */
+  .weetje {
+    -moz-columns: 2;
+         columns: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  /* line 1, scss/_waaier.scss */
+  .weetje {
+    -moz-columns: 1;
+         columns: 1;
+  }
+}
+
+/* line 15, scss/_waaier.scss */
+.weetje .weetje-letter {
+  display: block;
+}
+
+/* line 18, scss/_waaier.scss */
+.weetje .index:first-child h3 {
+  margin-top: 0;
+}
+
+/* line 21, scss/_waaier.scss */
+.weetje.gefilterd h3 {
+  margin-top: 0;
+}
+
+/* line 29, scss/_waaier.scss */
+.waaier .index-nav {
+  -ms-flex-order: 1;
+      order: 1;
+  max-width: 750px;
+  margin-bottom: 40px;
+}
+
+/* line 33, scss/_waaier.scss */
+.waaier .index-nav a {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 36, scss/_waaier.scss */
+.waaier .index-nav a span {
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=maps/style.css.map */

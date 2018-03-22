@@ -6,11 +6,11 @@ get_template_part('/sja/open-main');
 
 echo "<article class='bericht'>";
 
-uitgelichte_afbeelding_ctrl();
+ag_uitgelichte_afbeelding_ctrl();
 
 while ( have_posts() ) : the_post();
 	echo "<div class='verpakking verpakking-klein marginveld'>";
-		
+
 		do_action('ag_pagina_titel');
 
 		do_action('ag_pagina_voor_tekst');

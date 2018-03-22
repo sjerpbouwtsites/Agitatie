@@ -3,13 +3,13 @@
 		get_template_part('sja/afb/post-afb-met-desc');
 //		echo "<h1>".get_the_title()."</h1>";
 
-		$verder = new Knop(array(
+		$verder = new Ag_knop(array(
 			'tekst'		=> 'Lees verder',
 			'class'		=> 'schakel scroll',
 			'link'		=> '#single-hoofd'
 		));
 
-/*		echo "<div id='single-knop'>";
+/*		echo "<div id='single-Ag_knop'>";
 			$verder->print();
 		echo "</div>";*/
 	?>

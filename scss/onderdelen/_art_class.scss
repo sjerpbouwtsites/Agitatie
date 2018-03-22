@@ -106,11 +106,32 @@
 		@media (max-width: 400px) {
 			-webkit-flex: 1 1 auto;
 		}
+		@media (min-width: 600px) {
+			max-width: 50%;
+		}
+
+		img {
+			transition: 0.2s filter ease-in-out;
+		}
+		&:hover {
+			img {
+				filter: brightness(70%);
+			}
+		}
+		&.geen-afb:hover {
+			h3, p {
+				color: $hoofdkleur;
+			}
+		}
 	}
 	.lees-meer {
 		&::before {
 			content: '';
 			display: block;
 		}
+	}
+	& + footer {
+		margin-top: 20px;
+		text-align: right;
 	}
 }

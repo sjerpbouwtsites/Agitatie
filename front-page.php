@@ -2,12 +2,14 @@
 
 get_header();
 
-set_query_var('klassen_bij_primary', "voorpagina marginveld");
+set_query_var('klassen_bij_primary', "voorpagina veel marginveld");
 get_template_part('/sja/open-main');
 
 do_action('voorpagina_voor_tekst_action');
 
-tekstveld_ctrl(array(
+set_query_var('geen_margin', true);
+
+ag_tekstveld_ctrl(array(
 	'formaat'		=> 'klein',
 	'titel' 		=> $post->post_title,
 	'titel_el'		=> 'h1'

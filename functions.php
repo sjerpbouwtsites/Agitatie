@@ -29,16 +29,16 @@ endif;
 
 $include_boom = array(
 	'inc' => array(
+		'thema-config', //MOET ALS EERST.
 		"acf",
 		'edit',
 		'gereedschap',
 		"klassen",
 		'models',
 		'posttypes',
-		'thema-config',
 		'thumbnails',
 		'widgets',
-		//'strip_scripts',
+		'strip_scripts',
 	),
 	'ctrl' => array(
 		'controllers',
@@ -49,6 +49,9 @@ $include_boom = array(
 	'hooks' => array(
 		'header',
 		'singular',
+		'voorpagina',
+		'footer',
+		'archief',
 	)
 
 );

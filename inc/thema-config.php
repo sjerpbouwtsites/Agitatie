@@ -1,29 +1,43 @@
 <?php
 
-if ( ! function_exists( 'zet_thema_ondersteuning' ) ) :
+$thema_ondersteuning = array(
+'post-thumbnails',
+'automatic-feed-links',
+'title-tag',
+'html5' => array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption', ),
+'custom-logo' => array(
+	   'height'      => 101,
+	   'width'       => 387,
+	   'flex-width' => true,
+	),
+	'thumbnail_formaten' => array() //in thumbnails
+);
 
-	$thema_ondersteuning = array(
-	'post-thumbnails',
-	'automatic-feed-links',
-	'title-tag',
-	'html5' => array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption', ),
-	'custom-logo' => array(
-		   'height'      => 101,
-		   'width'       => 387,
-		   'flex-width' => true,
-		)
-	);
 
-	global $kind_config;
+if ( ! function_exists( 'agitatie_setup' ) ) :
+	function agitatie_setup() {
 
-	if ($kind_config and count($kind_config)) {
-		foreach ($kind_config as $k=>$w) {
-			$thema_ondersteuning[$k] = $w;
-		}
-	}
-
-	function zet_thema_ondersteuning(){
 		global $thema_ondersteuning;
+		global $kind_menus;
+		global $kind_config;
+
+		register_nav_menus( array(
+			'kop' => esc_html__( 'kop', 'agitatie' ),
+			'voorpagina' => esc_html__( 'voorpagina', 'agitatie' ),
+		) );
+
+
+		if ($kind_menus and count($kind_menus)) : foreach ($kind_menus as $km) :
+			register_nav_menus( array($km => esc_html__( $km, 'agitatie' ),) );
+		endforeach; endif;
+
+
+		if ($kind_config and count($kind_config)) {
+			foreach ($kind_config as $k=>$w) {
+				$thema_ondersteuning[$k] = $w;
+			}
+		}
+
 		if (count($thema_ondersteuning) > 0) {
 			foreach ($thema_ondersteuning as $s=>$w) {
 				if (is_array($w)) {
@@ -33,36 +47,19 @@ if ( ! function_exists( 'zet_thema_ondersteuning' ) ) :
 				}
 			}
 		}
-	}
-endif;
-
-if ( ! function_exists( 'sjerpbouwtsites_setup' ) ) :
-	function sjerpbouwtsites_setup() {
-
-		// @TODO registratie menu's in één functie
-
-		//load_theme_textdomain( 'sjerpbouwtsites', get_template_directory() . '/languages' );
-		zet_thema_ondersteuning();
-		register_nav_menus( array('kop' => esc_html__( 'kop', 'sjerpbouwtsites' ),) );
-		register_nav_menus( array('footer' => esc_html__( 'footer', 'sjerpbouwtsites' ),) );
-
-		global $kind_menus;
-		if ($kind_menus and count($kind_menus)) : foreach ($kind_menus as $km) :
-			register_nav_menus( array($km => esc_html__( $km, 'sjerpbouwtsites' ),) );
-		endforeach; endif;
 
 	}
 
 endif;
 
-add_action( 'after_setup_theme', 'sjerpbouwtsites_setup' );
+add_action( 'after_setup_theme', 'agitatie_setup' );
 
 
-function registreer_sidebars() {
+function ag_registreer_sidebars() {
     register_sidebar( array(
-        'name' 			=> __( 'footer', 'sjerpbouwtsites' ),
+        'name' 			=> __( 'footer', 'agitatie' ),
         'id' 			=> 'footer-sidebar',
-        'description' 	=> __( 'Widgets worden in de footer gezet', 'sjerpbouwtsites' ),
+        'description' 	=> __( 'Widgets worden in de footer gezet', 'agitatie' ),
         'before_widget' => '<section id="%1$s" class="footer-section %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3 class="widgettitle">',
@@ -70,4 +67,4 @@ function registreer_sidebars() {
     ) );
 }
 
-add_action( 'widgets_init', 'registreer_sidebars' );
+add_action( 'widgets_init', 'ag_registreer_sidebars' );

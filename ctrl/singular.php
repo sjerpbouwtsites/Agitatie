@@ -1,9 +1,9 @@
 <?php
 
-if(!function_exists('uitgelichte_afbeelding_ctrl')) : function uitgelichte_afbeelding_ctrl() {
+if(!function_exists('ag_uitgelichte_afbeelding_ctrl')) : function ag_uitgelichte_afbeelding_ctrl() {
 
 	global $post;
-	
+
 	if (has_post_thumbnail($post)) {
 		get_template_part('sja/afb/uitgelichte-afbeelding-buiten');
 	} else {

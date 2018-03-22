@@ -13,7 +13,7 @@ echo "<div class='art-lijst'>";
 
 if (have_posts()) : while (have_posts()) : the_post();
 
-	print_lijst_ctrl($post, '3', 140);
+	ag_print_lijst_ctrl($post, '3', 140);
 
 endwhile; endif;
 
@@ -21,10 +21,10 @@ echo "</div>";//art-lijst
 
 		//@ TODO @OPLEVERING ?
 
-paginering_ctrl();
+ag_paginering_ctrl();
 
 
-$tax_blok = new Tax_blok(array(
+$tax_blok = new Ag_tax_blok(array(
 	'post'		=> $post,
 	'titel'		=> 'Zoek sneller',
 ));

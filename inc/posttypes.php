@@ -27,18 +27,6 @@
 
 if(!function_exists('registreer_posttypes')) : function registreer_posttypes(){
 
-	$project = new Posttype_voorb('project', 'projecten');
-	$project->pas_args_aan(array(
-		'has_archive' => true,
-		'public' => true,
-		'show_in_nav_menus' => true,
-		'menu_icon' => 'dashicons-art',
-	));
-
-	$project->maak_taxonomie('cms');
-	$project->maak_taxonomie('techniek');
-	$project->registreer();
-
 }
 
 endif;

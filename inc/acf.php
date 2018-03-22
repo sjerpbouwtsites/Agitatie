@@ -11,7 +11,6 @@ if( function_exists('acf_add_options_page') ) {
 function my_acf_google_map_api( $api ){
 
 	$api['key'] = 'AIzaSyBDW__wSO7mbHOr5VkRoqNR01dXY2exje0';
-
 	return $api;
 
 }
@@ -19,143 +18,310 @@ function my_acf_google_map_api( $api ){
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 
-if( function_exists('acf_add_local_field_group') ):
-
-acf_add_local_field_group(array(
-	'key' => 'group_5a2a87f4a85e0',
-	'title' => 'Footer',
-	'fields' => array(
-		array(
-			'key' => 'field_5a2a87ff30e07',
-			'label' => 'footervelden',
-			'name' => 'footervelden',
-			'type' => 'repeater',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'collapsed' => '',
-			'min' => 0,
-			'max' => 0,
-			'layout' => 'box',
-			'button_label' => '',
-			'sub_fields' => array(
-				array(
-					'key' => 'field_5a2a881c30e08',
-					'label' => 'titel',
-					'name' => 'titel',
-					'type' => 'text',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'maxlength' => '',
-				),
-				array(
-					'key' => 'field_footer_veld',
-					'label' => 'veld',
-					'name' => 'veld',
-					'type' => 'wysiwyg',
-					'instructions' => '',
-					'required' => 0,
-					'conditional_logic' => 0,
-					'wrapper' => array(
-						'width' => '',
-						'class' => '',
-						'id' => '',
-					),
-					'default_value' => '',
-					'placeholder' => '',
-					'prepend' => '',
-					'append' => '',
-					'maxlength' => '',
-				),
-			),
-		),
-
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => 1,
-	'description' => '',
-));
-
-endif;
-
 
 if( function_exists('acf_add_local_field_group') ):
 
-acf_add_local_field_group(array(
-	'key' => 'group_5a995377a4eee',
-	'title' => 'terugval afbeelding',
-	'fields' => array(
-		array(
-			'key' => 'field_5a995382bd91b',
-			'label' => 'ta afbeelding',
-			'name' => 'ta_afbeelding',
-			'type' => 'image',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'array',
-			'preview_size' => 'thumbnail',
-			'library' => 'all',
-			'min_width' => '',
-			'min_height' => '',
-			'min_size' => '',
-			'max_width' => '',
-			'max_height' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'options_page',
-				'operator' => '==',
-				'value' => 'acf-options',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => 1,
-	'description' => '',
-));
+	ag_acf_footervelden();
+	ag_acf_terugval_afb_optie();
+	ag_acf_cat_afb();
+	ag_acf_waaier();
+	ag_acf_colofon();
 
 endif;
+
+function ag_acf_footervelden() {
+	acf_add_local_field_group(array(
+		'key' => 'group_5a2a87f4a85e0',
+		'title' => 'Footer',
+		'fields' => array(
+			array(
+				'key' => 'field_5a2a87ff30e07',
+				'label' => 'footervelden',
+				'name' => 'footervelden',
+				'type' => 'repeater',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'collapsed' => '',
+				'min' => 0,
+				'max' => 0,
+				'layout' => 'box',
+				'button_label' => '',
+				'sub_fields' => array(
+					array(
+						'key' => 'field_5a2a881c30e08',
+						'label' => 'titel',
+						'name' => 'titel',
+						'type' => 'text',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'maxlength' => '',
+					),
+					array(
+						'key' => 'field_footer_veld',
+						'label' => 'veld',
+						'name' => 'veld',
+						'type' => 'wysiwyg',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'maxlength' => '',
+						'delay' => 1,
+					),
+				),
+			),
+
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
+	));
+}
+
+function ag_acf_terugval_afb_optie() {
+	acf_add_local_field_group(array(
+		'key' => 'group_5a995377a4eee',
+		'title' => 'terugval afbeelding',
+		'fields' => array(
+			array(
+				'key' => 'field_5a995382bd91b',
+				'label' => 'ta afbeelding',
+				'name' => 'ta_afbeelding',
+				'type' => 'image',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'return_format' => 'array',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+				'min_width' => '',
+				'min_height' => '',
+				'min_size' => '',
+				'max_width' => '',
+				'max_height' => '',
+				'max_size' => '',
+				'mime_types' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
+	));
+}
+
+function ag_acf_cat_afb(){
+	acf_add_local_field_group(array(
+		'key' => 'group_5ab227a7cd334',
+		'title' => 'categorie afbeelding',
+		'fields' => array(
+			array(
+				'key' => 'field_5ab227b1bc075',
+				'label' => 'cat afb',
+				'name' => 'cat_afb',
+				'type' => 'image',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'return_format' => 'array',
+				'preview_size' => 'lijst',
+				'library' => 'all',
+				'min_width' => '',
+				'min_height' => '',
+				'min_size' => '',
+				'max_width' => '',
+				'max_height' => '',
+				'max_size' => '',
+				'mime_types' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'taxonomy',
+					'operator' => '==',
+					'value' => 'category',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
+	));
+}
+
+function ag_acf_waaier(){
+
+
+	$sluit_uit_pt = array(
+		'acf-field', 'acf-field-group', 'attachment', 'custom_css', 'customize_changeset', 'nav_menu_item', 'oembed_cache', 'revision', 'wpcf7_contact_form'
+	);
+
+	$posttypes = get_post_types();
+	$pt_prod = array();
+
+	foreach ($posttypes as $pt) {
+		if (!in_array($pt, $sluit_uit_pt)) $pt_prod[$pt] = $pt;
+	}
+
+
+	acf_add_local_field_group(array(
+		'key' => 'group_5aa3f750af1d3',
+		'title' => 'waaier',
+		'fields' => array(
+			array(
+				'key' => 'field_5aa3f7728529b',
+				'label' => 'post type',
+				'name' => 'post_type',
+				'type' => 'select',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'choices' => $pt_prod,
+				'default_value' => array(
+				),
+				'allow_null' => 0,
+				'multiple' => 0,
+				'ui' => 0,
+				'ajax' => 0,
+				'return_format' => 'value',
+				'placeholder' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'waaier.php',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
+	));
+}
+
+function ag_acf_colofon(){
+
+	acf_add_local_field_group(array(
+		'key' => 'group_5ab26c5b0a940',
+		'title' => 'colofon',
+		'fields' => array(
+			array(
+				'key' => 'field_5ab26c619f25a',
+				'label' => 'colofon',
+				'name' => 'colofon',
+				'type' => 'wysiwyg',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+				'delay' => 1,
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'normal',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
+	));
+}

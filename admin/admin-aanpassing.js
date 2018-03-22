@@ -29,7 +29,7 @@ jQuery(function($) {
         isOpGerecht = jQuery('#menu-posts-gerecht.wp-has-current-submenu').length;
         isOpRecensie = jQuery('#menu-posts-grfwp-review.wp-has-current-submenu').length;
 
-		  	if ( isOpOpts || isOpACF || isOpVacature || isOpAgenda || isOpMenu || isOpGerecht || isOpRecensie) {
+		  	if ( isOpOpts || isOpACF || isOpVacature || isOpAg_agenda || isOpMenu || isOpGerecht || isOpRecensie) {
 		  		//
 		  	} else {
 		  		var r = check();
@@ -166,7 +166,7 @@ function check() {
   				if (agendaACFI.val()) agendaDataIngevuld++;
   			});
 
-  		waarden['weinigAgendaData'] = {
+  		waarden['weinigAg_agendaData'] = {
   			verg: 'min',
   			val: agendaDataIngevuld,
   			drempel: 7,

@@ -4,6 +4,15 @@ html {
 	@media (max-width: 900px) {
 		font-size: 14px;
 	}
+
+}
+
+body {
+	background-color: #f7fcf7;
+}
+
+#primary {
+	min-height: 60vh;
 }
 
 .klaar, .float, section, article {
@@ -15,7 +24,7 @@ html {
 }
 
 
-.verpakking{
+.verpakking {
 	margin: 0 auto;
 	padding: 0 20px;
 	box-sizing: border-box;
@@ -35,6 +44,11 @@ html {
 			 	margin-bottom: 0;
 			 }
 		}
+	}
+	.verpakking .verpakking {
+		padding: 0;
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 .heeft-padding {

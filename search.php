@@ -16,7 +16,7 @@ if ($_GET['s'] !== '') :
 
 		while (have_posts()) : the_post();
 
-			$art = new Article_c(
+			$art = new Ag_article_c(
 				array(
 					'class' => "in-lijst",
 					'htype' => 3,
@@ -34,7 +34,7 @@ if ($_GET['s'] !== '') :
 
 		echo "<p>Niets gevonden! Sorry.</p>";
 
-		$voorpagina = new Knop(array(
+		$voorpagina = new Ag_knop(array(
 			'tekst'		=> 'Terug naar voorpagina',
 			'link'		=> SITE_URI,
 			'class'		=> 'in-wit',
@@ -43,7 +43,7 @@ if ($_GET['s'] !== '') :
 
 	endif;
 
-	$r = paginering_ctrl();
+	$r = ag_paginering_ctrl();
 
 endif; //als iets gezocht
 

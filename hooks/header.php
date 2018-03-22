@@ -12,14 +12,13 @@ if(!function_exists('ag_kop_links')) : function ag_kop_links() {
 add_action('ag_kop_links_action', 'ag_kop_links', 10);
 
 
+if (!function_exists('ag_kop_rechts')) : function ag_kop_rechts () { ?>
 
-if (!function_exists('ag_kop_rechts')) : function ag_kop_rechts () {
+	<div class='stek-kop-rechts'>
+		<?php ag_kop_menu_ctrl('horizontaal menu'); ?>
+		<a href='#' class='schakel kopmenu-mobiel' data-toon='.stek-kop-rechts div[class*="menu"]'>Menu <?php ag_mdi('menu', true); ag_mdi('close', true); ?></a>
+	</div>
 
-	echo "<div class='stek-kop-rechts'>";
-		ag_kop_menu_ctrl('horizontaal menu');
-		echo "<a href='#' class='schakel kopmenu-mobiel' data-toon='#menu-kopmenu'>Menu ".mdi('menu', false).mdi('close', false)."</a>";
-	echo "</div>";
-
-} endif;
+<?php } endif;
 
 add_action('ag_kop_rechts_action', 'ag_kop_rechts', 10);

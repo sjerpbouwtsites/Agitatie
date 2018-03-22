@@ -44,7 +44,7 @@ function verschrikkelijkeHacks(){
 
 function videoPlayer () {
 
-	$('video ~ .knop').hover(function(){
+	$('video ~ .Ag_knop').hover(function(){
 		if (this.classList.contains('speel-video')) {
 			this.classList.add('in-wit');
 		} else {

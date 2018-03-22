@@ -1,6 +1,6 @@
 <?php
 
-$btt = new Knop(array(
+$btt = new Ag_knop(array(
 	'tekst'		=> '',
 	'link'		=> '#stek-kop',
 	'ikoon'		=> 'arrow-up-bold-circle',

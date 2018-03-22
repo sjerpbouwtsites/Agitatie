@@ -9,7 +9,7 @@ get_template_part('/sja/open-main');
 <article class='bericht'>
 
 		<?php
-			uitgelichte_afbeelding_ctrl();
+			ag_uitgelichte_afbeelding_ctrl();
 		?>
 
 	<div class='verpakking'>
@@ -24,7 +24,7 @@ get_template_part('/sja/open-main');
 
 			echo "<p>";
 
-			$terug_naar_agenda = new Knop(array(
+			$terug_naar_agenda = new Ag_knop(array(
 				'class' 	=> 'in-wit ikoon-links',
 				'link' 		=> get_post_type_archive_link('agenda'),
 				'tekst'		=> 'Terug naar de agenda',

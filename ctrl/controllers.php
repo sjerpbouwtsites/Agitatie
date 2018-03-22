@@ -1,38 +1,52 @@
 <?php
 
 // print
-if(!function_exists('ag_logo_ctrl')) : function ag_logo_ctrl($print = true, $heading = true) {
-	if ($print) {
-		echo logo_model($heading);
+if(!function_exists('ag_logo_ctrl')) : function ag_logo_ctrl($print = true) {
+
+	if (!has_custom_logo()) {
+
+		echo "<a href='".get_site_url()."' class='custom-logo geen-logo' rel='home' itemprop='url'>";
+		echo get_bloginfo();
+		echo "</a>";
+	}
+	else if ($print) {
+		the_custom_logo();
 	} else {
-		return logo_model($heading);
+		ob_start();
+		the_custom_logo();
+		return  ob_get_clean();
 	}
 } endif;
 
-if(!function_exists('paginering_ctrl')) : function paginering_ctrl() {
 
-	$m = paginering_model();
+
+if(!function_exists('ag_paginering_ctrl')) : function ag_paginering_ctrl() {
+
+	$m = ag_paginering_model();
 
 	if (!$m) {
         return; //zie model
     } else {
-        array_naar_queryvars($m);
+        ag_array_naar_queryvars($m);
         get_template_part('sja/paginering');
     }
     return $m;
 } endif;
 
-if(!function_exists('agenda_filter_ctrl')) : function agenda_filter_ctrl() {
 
-	$m = agenda_filter_model();
 
-	array_naar_queryvars($m);
+if(!function_exists('ag_agenda_filter_ctrl')) : function ag_agenda_filter_ctrl() {
+
+	$m = ag_agenda_filter_model();
+
+	ag_array_naar_queryvars($m);
 
 	get_template_part('sja/agenda-filter');
 
 	return $m;
 
 } endif;
+
 
 
 if(!function_exists('ag_kop_menu_ctrl')) :  function ag_kop_menu_ctrl($menu_klasse = ''){
@@ -50,13 +64,14 @@ if(!function_exists('ag_kop_menu_ctrl')) :  function ag_kop_menu_ctrl($menu_klas
 } endif;
 
 
-if(!function_exists('foto_video_gallery_ctrl')) :  function foto_video_gallery_ctrl($css_class = '', $gallerij = false) {
+
+if(!function_exists('ag_foto_video_gallery_ctrl')) :  function ag_foto_video_gallery_ctrl($css_class = '', $gallerij = false) {
 
 	global $post;
 
 	echo "<div class='foto-video-gallerij $css_class gallerij'>";
 
-		$speelknop = new Knop(array(
+		$speelAg_knop = new Ag_knop(array(
 			'class'		=> 'speel-video',
 			'tekst'		=> 'speel',
 			'ikoon'		=> 'play'
@@ -73,11 +88,11 @@ if(!function_exists('foto_video_gallery_ctrl')) :  function foto_video_gallery_c
 			if ($m === "image/jpeg" || $m === "image/png" || $m === "image/gif") {
 				echo "<img src='{$g['sizes']['medium_large']}' alt='{$g['alt']}' title='{$g['title']}' width='{$g['sizes']['medium_large-width']}' height='{$g['sizes']['medium_large-height']}'/>";
 			} else {
-				array_naar_queryvars(array(
+				ag_array_naar_queryvars(array(
 					'vid'		=> $g,
 					'vid_attr'	=> 'loop',
 					'poster'	=> false,
-					'vid_onder'	=> $speelknop->maak()
+					'vid_onder'	=> $speelAg_knop->maak()
 				));
 				get_template_part('sja/viddoos');
 			}
@@ -89,7 +104,9 @@ if(!function_exists('foto_video_gallery_ctrl')) :  function foto_video_gallery_c
 	echo "</div>";
 } endif;
 
-if(!function_exists('tekstveld_ctrl')) :  function tekstveld_ctrl($invoer = array()){
+
+
+if(!function_exists('ag_tekstveld_ctrl')) :  function ag_tekstveld_ctrl($invoer = array()){
 
 	//als tekst leeg
 	if(!array_key_exists('tekst', $invoer)) {
@@ -139,19 +156,21 @@ if(!function_exists('tekstveld_ctrl')) :  function tekstveld_ctrl($invoer = arra
 
 	$template_args = array_merge($invoer, $toevoeving);
 
-	array_naar_queryvars($template_args);
+	ag_array_naar_queryvars($template_args);
 
 	get_template_part('sja/tekstveld');
 
 
 } endif;
 
-if(!function_exists('print_lijst_ctrl')) : function print_lijst_ctrl($post, $htype = '2', $exc_lim = 140) {
+
+
+if(!function_exists('ag_print_lijst_ctrl')) : function ag_print_lijst_ctrl($post, $htype = '2', $exc_lim = 140) {
 
 	if (!$post) return;
 
 	if (!isset($a)) {
-		$a = new Article_c(array(
+		$a = new Ag_article_c(array(
 			'class' 	=> 'in-lijst',
 			'htype'		=> $htype,
 			'exc_lim'	=> $exc_lim
@@ -164,11 +183,3 @@ if(!function_exists('print_lijst_ctrl')) : function print_lijst_ctrl($post, $hty
 } endif;
 
 
-
-if(!function_exists('footer_voor_velden_ctrl')) : function footer_voor_velden_ctrl() {
-		//
-} endif;
-
-if(!function_exists('footer_na_velden_ctrl')) : function footer_na_velden_ctrl() {
-		//
-} endif;

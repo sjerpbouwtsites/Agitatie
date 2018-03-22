@@ -8,7 +8,7 @@ if (!function_exists('ag_generieke_titel')) : function ag_generieke_titel () {
 	if ($wp_query->is_home) {
 		echo "<h1>".get_the_title( get_option('page_for_posts', true) )."</h1>";
 	} else if ($wp_query->is_search) {
-		echo $_GET['s'] !== '' ? "Je zocht: ".$_GET['s'] : "Wat zoek je?";
+		echo "<h1>".($_GET['s'] !== '' ? "Je zocht: ".$_GET['s'] : "Wat zoek je?")."</h1>";
 	} else {
 		echo "<h1>".$post->post_title."</h1>";
 	}
