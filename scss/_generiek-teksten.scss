@@ -65,6 +65,10 @@ p, span {
 
 .bericht-tekst {
 	font-size: 1.5em;
+	p:first-child::first-letter {
+		initial-letter: 2;
+		-webkit-initial-letter:2;
+	}
 }
 
 main blockquote {

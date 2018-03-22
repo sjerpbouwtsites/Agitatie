@@ -1309,7 +1309,13 @@ p, span {
   font-size: 1.5em;
 }
 
-/* line 70, scss/_generiek-teksten.scss */
+/* line 68, scss/_generiek-teksten.scss */
+.bericht-tekst p:first-child::first-letter {
+  initial-letter: 2;
+  -webkit-initial-letter: 2;
+}
+
+/* line 74, scss/_generiek-teksten.scss */
 main blockquote {
   line-height: 1.5625em;
   text-transform: none;
@@ -1320,7 +1326,7 @@ main blockquote {
   margin: 0;
 }
 
-/* line 78, scss/_generiek-teksten.scss */
+/* line 82, scss/_generiek-teksten.scss */
 main blockquote p {
   display: inline-block;
   vertical-align: top;
@@ -1329,7 +1335,7 @@ main blockquote p {
   font-size: inherit;
 }
 
-/* line 85, scss/_generiek-teksten.scss */
+/* line 89, scss/_generiek-teksten.scss */
 main blockquote::before {
   content: "\F756";
   display: inline-block;
