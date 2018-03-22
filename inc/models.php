@@ -222,7 +222,7 @@ if(!function_exists('ag_archief_titel_model')) : function ag_archief_titel_model
 
     } else {
 
-        $archief_titel = ($post_type !== '' ? $post_type : $wp_query->queried_object->label)  . ($tax_waarde = gezocht_naar_tax_waarde_model() !== '' ? "<span>".$tax_waarde."</span>" : "");
+        $archief_titel = ($post_type !== '' ? $post_type : $wp_query->queried_object->label)  . ($tax_waarde = ag_gezocht_naar_tax_waarde_model() !== '' ? "<span>".$tax_waarde."</span>" : "");
 
     }
 
@@ -230,7 +230,17 @@ if(!function_exists('ag_archief_titel_model')) : function ag_archief_titel_model
 
 } endif;
 
-
+if(!function_exists('ag_gezocht_naar_tax_waarde_model')) : function ag_gezocht_naar_tax_waarde_model() {
+    $tax_waarde = '';
+    $t = 0;
+    //alleen eerste GET pakken
+    if (count($_GET)) : foreach ($_GET as $n => $w) :
+        $tax_waarde = str_replace('-', ' ', $w);
+        if ($t > 0) break;
+        $t++;
+    endforeach; endif;
+    return $tax_waarde;
+} endif;
 
 if(!function_exists('ag_archief_sub_tax_model')) : function ag_archief_sub_tax_model() {
 
