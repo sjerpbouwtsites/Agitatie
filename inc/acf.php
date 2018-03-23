@@ -219,17 +219,6 @@ function ag_acf_cat_afb(){
 function ag_acf_waaier(){
 
 
-	$sluit_uit_pt = array(
-		'acf-field', 'acf-field-group', 'attachment', 'custom_css', 'customize_changeset', 'nav_menu_item', 'oembed_cache', 'revision', 'wpcf7_contact_form'
-	);
-
-	$posttypes = get_post_types();
-	$pt_prod = array();
-
-	foreach ($posttypes as $pt) {
-		if (!in_array($pt, $sluit_uit_pt)) $pt_prod[$pt] = $pt;
-	}
-
 
 	acf_add_local_field_group(array(
 		'key' => 'group_5aa3f750af1d3',
@@ -239,8 +228,8 @@ function ag_acf_waaier(){
 				'key' => 'field_5aa3f7728529b',
 				'label' => 'post type',
 				'name' => 'post_type',
-				'type' => 'select',
-				'instructions' => '',
+				'type' => 'text',
+				'instructions' => 'bericht is post, pagina is page. Vul anderen met hand in.',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
@@ -248,7 +237,6 @@ function ag_acf_waaier(){
 					'class' => '',
 					'id' => '',
 				),
-				'choices' => $pt_prod,
 				'default_value' => array(
 				),
 				'allow_null' => 0,

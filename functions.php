@@ -30,7 +30,6 @@ endif;
 $include_boom = array(
 	'inc' => array(
 		'thema-config', //MOET ALS EERST.
-		"acf",
 		'edit',
 		'gereedschap',
 		"klassen",
@@ -39,6 +38,7 @@ $include_boom = array(
 		'thumbnails',
 		'widgets',
 		'strip_scripts',
+		"acf", //
 	),
 	'ctrl' => array(
 		'controllers',

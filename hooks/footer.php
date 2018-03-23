@@ -1,6 +1,6 @@
 <?php
-function logo_in_footer_hook() {
+if (!function_exists('logo_in_footer_hook')) :function logo_in_footer_hook() {
 	ag_logo_ctrl();
 }
-
-add_action('footer_voor_velden_action','logo_in_footer_hook');
+endif;
+add_action('footer_voor_velden_action','logo_in_footer_hook', 10);
