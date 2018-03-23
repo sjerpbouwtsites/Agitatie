@@ -102,7 +102,7 @@ echo "</div>";//index div
 
 echo "</div>"; //weetje
 
-$tax_blok = new Tax_blok(array(
+$tax_blok = new Ag_tax_blok(array(
 	'post'		=> $post,
 	'titel'		=> 'Zoek specifieker',
 	'reset'		=> false
