@@ -68,6 +68,14 @@ body {
 		padding-top: 50px;
 		padding-bottom: 50px;
 	}
+	&.veel {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		@media (min-width: 900px) {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+	}
 }
 
 .marginveld {

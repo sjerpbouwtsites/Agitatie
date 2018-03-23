@@ -24,6 +24,7 @@ function ag_vp_print_nieuws_hook() {
 			$a->art = $vp_post;
 		}
 
+		$a->gecontroleerd = false;
 		$a->print();
 
 	endforeach; endif;
@@ -45,7 +46,7 @@ function ag_vp_print_nieuws_hook() {
 
 }
 
-add_action('voorpagina_na_tekst_action', 'ag_vp_print_nieuws_hook', 10);
+add_action('voorpagina_na_tekst_action', 'ag_vp_print_nieuws_hook', 20);
 
 
 function ag_vp_print_menu () {
@@ -80,12 +81,12 @@ function ag_vp_print_menu () {
 
 }
 
-add_action('voorpagina_na_tekst_action', 'ag_vp_print_menu', 30);
+add_action('voorpagina_na_tekst_action', 'ag_vp_print_menu', 10);
 
 
 
 
-function ag_vp_print_meer_nieuws_hook() {
+/*function ag_vp_print_meer_nieuws_hook() {
 
 	echo "<section class='vp-nieuws verpakking verpakking-klein'>
 	<h2>Veelgestelde vragen</h2>";
@@ -113,6 +114,7 @@ function ag_vp_print_meer_nieuws_hook() {
 			$a->art = $vp_post;
 		}
 
+		$a->gecontroleerd = false;
 		$a->print();
 
 	endforeach; endif;
@@ -134,4 +136,4 @@ function ag_vp_print_meer_nieuws_hook() {
 
 }
 
-add_action('voorpagina_na_tekst_action', 'ag_vp_print_meer_nieuws_hook', 20);
+add_action('voorpagina_na_tekst_action', 'ag_vp_print_meer_nieuws_hook', 20);*/
