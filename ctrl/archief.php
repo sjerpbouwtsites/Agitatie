@@ -4,15 +4,29 @@
 
 if (!function_exists('ag_archief_generiek_loop')) : function ag_archief_generiek_loop($post, $afb_formaat = 'lijst', $exc_lim_o = false){
 
-	switch (POST_TYPE_NAAM) {
-		default:
-			$m_art = new Ag_article_c( array(
-				'exc_lim' 		=> $exc_lim_o ? $exc_lim_o : 230,
-				'class'			=> 'in-lijst',
-				'taxonomieen' 	=> true
-			), $post);
-			break;
+	//@TODO dit naar functie hierboven
+
+	$basis_array = array(
+		'exc_lim' 		=> $exc_lim_o ? $exc_lim_o : 230,
+		'class'			=> 'in-lijst',
+		'taxonomieen' 	=> true
+	);
+
+	global $kind_config;
+
+	if ($kind_config and
+		array_key_exists('archief', $kind_config) and
+		array_key_exists($post->post_type, $kind_config['archief']) and
+		count($kind_config['archief'][$post->post_type])
+	) {
+
+		foreach ($kind_config['archief'][$post->post_type] as $s => $w) {
+			$basis_array[$s] = $w;
+		}
+
 	}
+
+	$m_art = new Ag_article_c($basis_array, $post);
 
 	if (isset($m_art)) {
 		$m_art->afb_formaat	= $afb_formaat;
