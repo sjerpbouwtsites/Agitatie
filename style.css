@@ -33,7 +33,7 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 
 /* line 13, scss/inst/kleur/_zet-klassen.scss */
 .tekst-donkergrijs {
-  color: #272822;
+  color: #211f1f;
 }
 
 /* line 16, scss/inst/kleur/_zet-klassen.scss */
@@ -43,7 +43,7 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 
 /* line 19, scss/inst/kleur/_zet-klassen.scss */
 .tekst-hoofdkleur {
-  color: #C82449;
+  color: #C82424;
 }
 
 /* line 22, scss/inst/kleur/_zet-klassen.scss */
@@ -93,7 +93,7 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 
 /* line 50, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-donkergrijs {
-  background-color: #272822;
+  background-color: #211f1f;
 }
 
 /* line 53, scss/inst/kleur/_zet-klassen.scss */
@@ -103,7 +103,7 @@ GitHub Theme URI: https://github.com/sjerpbouwtsites/agitatie
 
 /* line 56, scss/inst/kleur/_zet-klassen.scss */
 .achtergrond-hoofdkleur {
-  background-color: #C82449;
+  background-color: #C82424;
 }
 
 /* line 59, scss/inst/kleur/_zet-klassen.scss */
@@ -1208,7 +1208,7 @@ body {
 .blok {
   background-color: #fff;
   box-shadow: 0 1px 2px #666;
-  color: #272822;
+  color: #211f1f;
 }
 
 /* line 105, scss/_generiek.scss */
@@ -1247,7 +1247,7 @@ body {
 a:hover,
 a:focus,
 a:active {
-  color: #C82449;
+  color: #C82424;
 }
 
 /* line 14, scss/_generiek-teksten.scss */
@@ -1257,7 +1257,7 @@ a:hover {
 
 /* line 18, scss/_generiek-teksten.scss */
 a, a:visited {
-  color: #C82449;
+  color: #C82424;
   text-decoration: none;
 }
 
@@ -2134,7 +2134,7 @@ main blockquote::before {
 /* line 495, scss/ext/_leaflet.scss */
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-  background: #C82449;
+  background: #C82424;
   color: #fff;
   box-shadow: none;
   font-family: "Asap", sans-serif;
@@ -3142,7 +3142,7 @@ img.efbl-loader {
 
 /* line 122, scss/onderdelen/_art_class.scss */
 .art-lijst .art-c.geen-afb:hover h3, .art-lijst .art-c.geen-afb:hover p {
-  color: #C82449;
+  color: #C82424;
 }
 
 /* line 128, scss/onderdelen/_art_class.scss */
@@ -3246,7 +3246,7 @@ img.efbl-loader {
   box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-out 0.2s;
   position: relative;
-  color: #C82449;
+  color: #C82424;
   top: 0;
   font-size: 1rem;
   text-transform: lowercase;
@@ -3262,7 +3262,7 @@ img.efbl-loader {
 
 /* line 24, scss/onderdelen/_knop.scss */
 .knop:hover, .navigation a:hover, #agenda-filter [type='submit']:hover, .search-form .search-submit:hover, .knop:visited, .navigation a:visited, #agenda-filter [type='submit']:visited, .search-form .search-submit:visited, .knop:active, .navigation a:active, #agenda-filter [type='submit']:active, .search-form .search-submit:active, input.wpcf7-submit:hover, input.wpcf7-submit:visited, input.wpcf7-submit:active {
-  color: #C82449;
+  color: #C82424;
   text-decoration: none;
 }
 
@@ -3300,7 +3300,7 @@ img.efbl-loader {
 
 /* line 55, scss/onderdelen/_knop.scss */
 .knop.in-wit, .navigation a.in-wit, #agenda-filter .in-wit[type='submit'], .search-form .in-wit.search-submit, input.wpcf7-submit.in-wit {
-  background-color: #C82449;
+  background-color: #C82424;
   box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.4);
   color: white !important;
 }
@@ -3399,7 +3399,7 @@ input.wpcf7-submit {
 
 /* line 19, scss/onderdelen/_paginering.scss */
 .navigation .active a {
-  background-color: #C82449;
+  background-color: #C82424;
   box-shadow: 2px 4px 0 #b22041;
   color: white !important;
 }
@@ -3507,7 +3507,7 @@ input.wpcf7-submit {
   left: 20px;
   bottom: 20px;
   color: #f5f5f5;
-  background-color: #C82449;
+  background-color: #C82424;
   font-size: 2.5rem;
   padding: .6em 1.2em;
 }
@@ -3630,7 +3630,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 /* line 7, scss/_agenda.scss */
 #agenda-filter {
   padding: 20px;
-  background-color: #C82449;
+  background-color: #C82424;
   color: white;
 }
 
@@ -3721,7 +3721,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 
 /* line 73, scss/_agenda.scss */
 #agenda-filter select.geklikt, #agenda-filter select:hover {
-  color: #272822;
+  color: #211f1f;
 }
 
 /* line 76, scss/_agenda.scss */
@@ -3845,7 +3845,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
   transition: 0.6s width ease-in 0.1s;
   z-index: -1;
   height: calc(100% + 0.5px);
-  background-color: #C82449;
+  background-color: #C82424;
 }
 
 @media (min-width: 600px) {
@@ -3963,7 +3963,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 /* line 232, scss/_agenda.scss */
 .agenda-los .agenda-data {
   padding: 20px;
-  background-color: #C82449;
+  background-color: #C82424;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-direction: column;
@@ -4040,7 +4040,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 #stek-voet {
   color: white;
   font-size: .8em;
-  background-color: #272822;
+  background-color: #211f1f;
   padding: 50px 0 0 0;
   margin-top: 100px;
 }
@@ -4129,7 +4129,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 
 /* line 57, scss/_footer.scss */
 #stek-voet .geen-logo:hover {
-  color: #C82449;
+  color: #C82424;
   text-decoration: none;
 }
 
@@ -4204,7 +4204,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 
 /* line 111, scss/_footer.scss */
 .footer-section a:hover, .footer-section a:active:hover, .footer-section a:visited:hover {
-  color: #C82449;
+  color: #C82424;
 }
 
 /* line 115, scss/_footer.scss */
@@ -4214,7 +4214,7 @@ video.speelt ~ .vid-onder-buiten .speel-video {
 
 /* line 120, scss/_footer.scss */
 footer .search-form .search-submit {
-  color: #272822;
+  color: #211f1f;
 }
 
 /* line 125, scss/_footer.scss */
@@ -4366,7 +4366,7 @@ footer .search-form .search-submit {
 
 /* line 13, scss/_nav.scss */
 .stek-kop-rechts .menu a:hover {
-  background-color: #C82449;
+  background-color: #C82424;
   color: white;
   text-decoration: none;
 }
@@ -4463,7 +4463,7 @@ footer .search-form .search-submit {
 
 /* line 13, scss/_nav.scss */
 .kopmenu-mobiel:hover {
-  background-color: #C82449;
+  background-color: #C82424;
   color: white;
   text-decoration: none;
 }
@@ -4484,7 +4484,7 @@ footer .search-form .search-submit {
 
 /* line 158, scss/_nav.scss */
 footer .menu a:hover {
-  color: #C82449;
+  color: #C82424;
 }
 
 /* line 3, scss/_single.scss */
@@ -4520,7 +4520,7 @@ footer .menu a:hover {
 
 /* line 3, scss/_zoeken.scss */
 .search-form {
-  background-color: #C82449;
+  background-color: #C82424;
   padding: 20px;
   color: white;
   display: inline-block;
