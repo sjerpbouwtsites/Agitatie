@@ -10,7 +10,7 @@ $thema_ondersteuning = array(
 	   'width'       => 387,
 	   'flex-width' => true,
 	),
-	'thumbnail_formaten' => array() //in thumbnails
+	'thumbnail_formaten' => array(), //in thumbnails
 	'content_width'		=> 760
 );
 
