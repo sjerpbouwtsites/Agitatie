@@ -11,6 +11,7 @@ $thema_ondersteuning = array(
 	   'flex-width' => true,
 	),
 	'thumbnail_formaten' => array() //in thumbnails
+	'content_width'		=> 760
 );
 
 
@@ -32,8 +33,10 @@ if ( ! function_exists( 'agitatie_setup' ) ) :
 		endforeach; endif;
 
 
-		if ($kind_config and count($kind_config)) {
-			foreach ($kind_config as $k=>$w) {
+		if ($kind_config and
+			array_key_exists('support', $kind_config)  and
+			count($kind_config['support'])) {
+			foreach ($kind_config['support'] as $k=>$w) {
 				$thema_ondersteuning[$k] = $w;
 			}
 		}
@@ -46,6 +49,12 @@ if ( ! function_exists( 'agitatie_setup' ) ) :
 					add_theme_support($w);
 				}
 			}
+		}
+
+		if (array_key_exists('content_width', $kind_config)) {
+			$GLOBALS['content_width'] = $kind_config['content_width'];
+		} else if (array_key_exists('content_width', $thema_ondersteuning)) {
+			$GLOBALS['content_width'] = $thema_ondersteuning['content_width'];
 		}
 
 	}
