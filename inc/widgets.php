@@ -1,16 +1,5 @@
 <?php
 
-if(!function_exists('registreer_sidebars')) : function registreer_sidebars(){
-	register_sidebar(array(
-	    'name'          => __( 'footer' ),
-	    'id'            => 'footer',
-	    'description'   => __( 'Voeg hier widgets toe om ze te laten verschijnen in de footer. Als je niet resultaten ziet van opslaan: herladen'),
-	    'before_widget' => '<section class="widget %2$s">',
-	    'after_widget'  => '</section>',
-	    'before_title'  => '<h3 class="widget-title">',
-	    'after_title'   => '</h3>',
-	));
-} endif;
 
 //add_action( 'widgets_init', 'registreer_sidebars' );
 
