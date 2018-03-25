@@ -3,7 +3,7 @@
 		<div class='neg-marge'>
 		<?php
 
-		do_action('footer_voor_velden_action');
+		do_action('ag_footer_voor_velden_action');
 
 		$voet_velden = get_field('footervelden', 'option'); if ($voet_velden and count($voet_velden)) :
 
@@ -24,19 +24,17 @@
 
 		endif;
 
-		do_action('footer_na_velden_action');
+		do_action('ag_footer_na_velden_action');
 
 		?>
 		</div>
 	</div>
 
-	<div class='verpakking widgets'>
-		<div class='neg-marge'>
-			<?php dynamic_sidebar('footer'); ?>
-		</div>
-	</div>
+	<?php
 
-	<?php get_template_part('sja/footer/colofon'); ?>
+	do_action('ag_footer_widget_action');
+
+	get_template_part('sja/footer/colofon'); ?>
 
 </footer>
 
