@@ -1,5 +1,7 @@
 # bouw
 
+als niet in admin, dan niet laden jetpack widget
+
 # VOLGENDE VERSIES
 
 sticky widgets => ajax

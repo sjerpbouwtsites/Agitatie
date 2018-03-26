@@ -38,6 +38,8 @@ $include_boom = array(
 		'thumbnails',
 		'widgets',
 		'strip_scripts',
+		'widget-conditions',
+		'related-posts',
 		"acf", //
 	),
 	'ctrl' => array(

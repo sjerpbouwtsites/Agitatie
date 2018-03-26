@@ -74,6 +74,17 @@ function ag_registreer_sidebars() {
 		'before_title'  => '<h3 class="widgettitle">',
 		'after_title'   => '</h3>',
     ) );
+
+	register_sidebar(array(
+	    'name'          => __( 'sticky' ),
+	    'id'            => 'sticky-sidebar',
+	    'description'   => __( 'Voeg hier widgets toe om ze te laten verschijnen in de sticky sidebar. Als je niet resultaten ziet van opslaan: herladen'),
+	    'before_widget' => '<section class="widget sticky-widget %2$s">',
+	    'after_widget'  => '</section>',
+	    'before_title'  => '<h3 class="widget-title">',
+	    'after_title'   => '</h3>',
+	));
+
 }
 
 add_action( 'widgets_init', 'ag_registreer_sidebars' );
