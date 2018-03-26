@@ -40,6 +40,7 @@ $include_boom = array(
 		'strip_scripts',
 		'widget-conditions',
 		'related-posts',
+		'sharedaddy',
 		"acf", //
 	),
 	'ctrl' => array(
