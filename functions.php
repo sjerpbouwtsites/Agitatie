@@ -38,10 +38,12 @@ $include_boom = array(
 		'thumbnails',
 		'widgets',
 		'strip_scripts',
+		"acf", //
+	),
+	'jetpack-rip' => array(
 		'widget-conditions',
 		'related-posts',
 		'sharedaddy',
-		"acf", //
 	),
 	'ctrl' => array(
 		'controllers',

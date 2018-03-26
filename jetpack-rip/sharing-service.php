@@ -565,14 +565,15 @@ function sharing_add_footer() {
 			endif;
 		endif;
 
-		wp_enqueue_script( 'sharing-js', THEME_URI . '/js/sharing.js', array(), 4 );
+		wp_enqueue_script( 'sharing-js', THEME_URI . '/js/sharing.js');
+
 		//wp_enqueue_script( 'sharing-js' );
-		$sharing_js_options = array(
+/*		$sharing_js_options = array(
 			'lang'   => get_base_recaptcha_lang_code(),
-			/** This filter is documented in modules/sharedaddy/sharing-service.php */
+			//This filter is documented in modules/sharedaddy/sharing-service.php
 			'counts' => apply_filters( 'jetpack_sharing_counts', true )
 		);
-		wp_localize_script( 'sharing-js', 'sharing_js_options', $sharing_js_options);
+		wp_localize_script( 'sharing-js', 'sharing_js_options', $sharing_js_options);*/
 	}
 	$sharer = new Sharing_Service();
 	$enabled = $sharer->get_blog_services();
@@ -751,9 +752,9 @@ function sharing_display( $text = '', $echo = false ) {
 			$parts[] = $visible;
 			if ( count( $enabled['hidden'] ) > 0 ) {
 				if ( count( $enabled['visible'] ) > 0 )
-					$expand = __( 'More', 'jetpack' );
+					$expand = __( 'Meer', 'jetpack' );
 				else
-					$expand = __( 'Share', 'jetpack' );
+					$expand = __( 'Deel', 'jetpack' );
 				$parts[] = '<li><a href="#" class="sharing-anchor sd-button share-more"><span>'.$expand.'</span></a></li>';
 			}
 
@@ -801,12 +802,7 @@ function sharing_display( $text = '', $echo = false ) {
 			} else {
 				$ver = '20141212';
 			}
-			wp_register_script(
-				'sharing-js',
-				THEME_URI . '/js/sharing.min.js',
-				array( 'jquery' ),
-				$ver
-			);
+			wp_register_script('sharing-js',THEME_URI . '/js/sharing.min.js');
 
 			// Enqueue scripts for the footer
 			add_action( 'wp_footer', 'sharing_add_footer' );

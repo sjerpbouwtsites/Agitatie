@@ -233,8 +233,8 @@ function sharing_init() {
 	//@TODO HACK
 
 //	if ( Jetpack_Options::get_option_and_ensure_autoload( 'sharedaddy_disable_resources', '0' ) ) {
-		add_filter( 'sharing_js', 'sharing_disable_js' );
-		remove_action( 'wp_head', 'sharing_add_header', 1 );
+		/*add_filter( 'sharing_js', 'sharing_disable_js' );
+		remove_action( 'wp_head', 'sharing_add_header', 1 );*/
 //	}
 }
 
