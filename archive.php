@@ -4,10 +4,12 @@ get_header();
 
 define('POST_TYPE_NAAM', ag_post_naam_model());
 
-set_query_var('klassen_bij_primary', "archief verpakking archief-".POST_TYPE_NAAM);
+set_query_var('klassen_bij_primary', "archief archief-".POST_TYPE_NAAM);
 get_template_part('/sja/open-main');
 
-echo "<div class='marginveld veel'>";
+ag_uitgelichte_afbeelding_ctrl();
+
+echo "<div class='marginveld veel verpakking'>";
 
 	do_action('ag_archief_titel_action');
 

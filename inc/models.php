@@ -218,7 +218,14 @@ if(!function_exists('ag_archief_titel_model')) : function ag_archief_titel_model
         if ($tax_naam === 'category') $tax_naam = 'categorie';
         if ($tax_naam === 'post_tag') $tax_naam = 'tag';
 
-        $archief_titel = ucfirst($post_type !== '' ? $post_type : $tax_naam) . ": ".strtolower($wp_query->queried_object->name);
+        //bij post type berichten niet 'berichten' ervoor zetten.
+        if ($post_type === 'Berichten') {
+            $archief_titel = ucfirst($wp_query->queried_object->name);
+        } else {
+            $archief_titel = ucfirst($post_type !== '' ? $post_type : $tax_naam) . ": ".strtolower($wp_query->queried_object->name);
+        }
+
+
 
     } else {
 

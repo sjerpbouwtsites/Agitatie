@@ -99,11 +99,11 @@ function kopmenuSubMobiel() {
 	}
 
 
-	$("#menu-kopmenu .menu-item-has-children > a").each(function(){
+	$("#stek-kop .menu-item-has-children > a").each(function(){
 		$(this).append($("<i class='mdi mdi-plus-circle-outline'></i>"));
 	});
 
-	$("#menu-kopmenu").on('click', 'i', function(e){
+	$("#stek-kop .menu").on('click', 'i', function(e){
 		e.preventDefault();
 		if ($(this).hasClass('mdi-plus-circle-outline')) {
 			$(this).removeClass('mdi-plus-circle-outline');

@@ -2,8 +2,9 @@
 
 als niet in admin, dan niet laden jetpack widget
 
-
 # VOLGENDE VERSIES
+
+uitgelichte afbeelding via fatsoenlijk mvc laten lopen
 
 sticky widgets => ajax
 

@@ -1,17 +1,5 @@
 <?php
 
-if(!function_exists('ag_uitgelichte_afbeelding_ctrl')) : function ag_uitgelichte_afbeelding_ctrl() {
-
-	global $post;
-
-	if (has_post_thumbnail($post)) {
-		get_template_part('sja/afb/uitgelichte-afbeelding-buiten');
-	} else {
-		get_template_part('sja/afb/geen-uitgelichte-afbeelding');
-	}
-
-
-} endif;
 
 if(!function_exists('ag_print_datum_ctrl')) : function ag_print_datum_ctrl() {
 
