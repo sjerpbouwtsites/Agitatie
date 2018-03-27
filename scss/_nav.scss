@@ -64,7 +64,7 @@
 	}
 	.sub-menu {
 		a {
-			padding: 0.4em .7em;
+			padding: 0.6em .7em;
 		}
 		li {
 			box-sizing: border-box;
@@ -90,6 +90,9 @@
 					background-color: white;
 					@media (max-width: 900px) {
 						margin-left: 30px;
+					}
+					li {
+						background-color: rgba($hoofdkleur, 0.1);
 					}
 				}
 			}
@@ -132,6 +135,14 @@
 					& > a i {
 						padding: 0 20px;
 						margin-left: 10px;
+					}
+				}
+			}
+			li {
+				li {
+					text-indent: 20px;
+					li {
+						text-indent: 40px;
 					}
 				}
 			}

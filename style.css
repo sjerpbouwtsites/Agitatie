@@ -4440,7 +4440,7 @@ footer .search-form .search-submit {
 
 /* line 66, scss/_nav.scss */
 .stek-kop-rechts .menu .sub-menu a {
-  padding: 0.4em .7em;
+  padding: 0.6em .7em;
 }
 
 /* line 69, scss/_nav.scss */
@@ -4478,14 +4478,19 @@ footer .search-form .search-submit {
   }
 }
 
-/* line 96, scss/_nav.scss */
+/* line 94, scss/_nav.scss */
+.stek-kop-rechts .menu.horizontaal > li > ul li li {
+  background-color: rgba(200, 36, 36, 0.1);
+}
+
+/* line 99, scss/_nav.scss */
 .stek-kop-rechts .menu.horizontaal > li:last-child > ul {
   left: auto;
   right: 0;
 }
 
 @media (max-width: 900px) {
-  /* line 106, scss/_nav.scss */
+  /* line 109, scss/_nav.scss */
   .stek-kop-rechts div[class*='menu'] {
     display: none;
     position: absolute;
@@ -4498,28 +4503,36 @@ footer .search-form .search-submit {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  /* line 119, scss/_nav.scss */
+  /* line 122, scss/_nav.scss */
   .stek-kop-rechts div[class*='menu'] .menu.horizontaal > li {
     display: block;
   }
-  /* line 121, scss/_nav.scss */
+  /* line 124, scss/_nav.scss */
   .stek-kop-rechts div[class*='menu'] .menu.horizontaal > li > a {
     padding: 0 .8em;
   }
-  /* line 124, scss/_nav.scss */
+  /* line 127, scss/_nav.scss */
   .stek-kop-rechts div[class*='menu'] .menu.horizontaal > li a {
     line-height: 40px;
     padding-top: 0;
     padding-bottom: 0;
   }
-  /* line 132, scss/_nav.scss */
+  /* line 135, scss/_nav.scss */
   .stek-kop-rechts div[class*='menu'] .menu .menu-item-has-children > a i {
     padding: 0 20px;
     margin-left: 10px;
   }
+  /* line 142, scss/_nav.scss */
+  .stek-kop-rechts div[class*='menu'] li li {
+    text-indent: 20px;
+  }
+  /* line 144, scss/_nav.scss */
+  .stek-kop-rechts div[class*='menu'] li li li {
+    text-indent: 40px;
+  }
 }
 
-/* line 142, scss/_nav.scss */
+/* line 153, scss/_nav.scss */
 .kopmenu-mobiel {
   line-height: 70px;
   padding: 0 .6em;
@@ -4536,20 +4549,20 @@ footer .search-form .search-submit {
 }
 
 @media (max-width: 900px) {
-  /* line 142, scss/_nav.scss */
+  /* line 153, scss/_nav.scss */
   .kopmenu-mobiel {
     display: block;
   }
 }
 
-/* line 150, scss/_nav.scss */
+/* line 161, scss/_nav.scss */
 .kopmenu-mobiel i {
   position: relative;
   top: 2px;
   margin-left: 10px;
 }
 
-/* line 158, scss/_nav.scss */
+/* line 169, scss/_nav.scss */
 footer .menu a:hover {
   color: #C82424;
 }
