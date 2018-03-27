@@ -117,6 +117,38 @@ function kopmenuSubMobiel() {
 
 }
 
+function stickySidebar() {
+
+	var kanStickyDoen = body.scrollWidth - 440 > $('div.bericht-tekst').width();
+
+	if (!kanStickyDoen) {
+		return;
+	}
+
+	$sticky = $("#sticky-sidebar");
+	$sticky.css({'opacity':0});
+	$sticky.removeClass('verpakking').removeClass('verpakking-klein');
+
+	var offset = $('div.bericht-tekst').position().top - $("#stek-kop").height();
+
+	var right = ((body.scrollWidth - $('h1').width()) / 2) - 200 - 40; //sticky width plus margin
+
+	$sticky.css({'top': offset + 'px'});
+	$sticky.css({'right': right + 'px'});
+
+	$sticky.height($('div.bericht-tekst').height());
+
+	$('#main').addClass('heeft-sticky').append($sticky);
+
+	$('.related.verpakking').addClass('widget').appendTo(".sticky-binnen");
+
+	setTimeout(function(){
+		$sticky.css({'opacity': 1});
+	}, 2500);
+
+
+}
+
 
 window.onload = function(){
 
@@ -127,6 +159,10 @@ window.onload = function(){
 	verschrikkelijkeHacks();
 
 	artCLinkTrigger();
+
+	if (doc.getElementById('sticky-sidebar')) {
+		stickySidebar();
+	}
 
 	if (doc.querySelector('.carousel')) carouselInit();
 

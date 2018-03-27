@@ -1266,36 +1266,53 @@ body {
   font-family: "Merriweather", sans-serif;
 }
 
-/* line 28, scss/_generiek-teksten.scss */
-h1 {
-  font-size: 4em;
+/* h1 {
+	font-size: 4em;
+	@media (max-width: 900px) {
+		font-size: 3em;
+	}
 }
 
-@media (max-width: 900px) {
-  /* line 28, scss/_generiek-teksten.scss */
-  h1 {
-    font-size: 3em;
-  }
-}
-
-/* line 35, scss/_generiek-teksten.scss */
 h2 {
-  font-size: 2.46em;
+	font-size: 2.46em;
+	@media (max-width: 900px) {
+		font-size: 2em;
+	}
+}
+
+h3 {
+	font-size: 1.33em;
+} */
+/* line 46, scss/_generiek-teksten.scss */
+h1 {
+  font-size: 3.6em;
 }
 
 @media (max-width: 900px) {
-  /* line 35, scss/_generiek-teksten.scss */
-  h2 {
-    font-size: 2em;
+  /* line 46, scss/_generiek-teksten.scss */
+  h1 {
+    font-size: 2.7em;
   }
 }
 
-/* line 42, scss/_generiek-teksten.scss */
-h3 {
-  font-size: 1.33em;
+/* line 53, scss/_generiek-teksten.scss */
+h2 {
+  font-size: 2.22em;
 }
 
-/* line 47, scss/_generiek-teksten.scss */
+@media (max-width: 900px) {
+  /* line 53, scss/_generiek-teksten.scss */
+  h2 {
+    font-size: 1.8em;
+  }
+}
+
+/* line 60, scss/_generiek-teksten.scss */
+h3 {
+  font-size: 1.26em;
+}
+
+/* line 65, scss/_generiek-teksten.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Eczar", sans-serif;
   font-weight: 900;
@@ -1303,33 +1320,33 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1.33em 0 0.67em;
 }
 
-/* line 53, scss/_generiek-teksten.scss */
+/* line 71, scss/_generiek-teksten.scss */
 h4, h5, h6 {
   font-weight: 700;
 }
 
-/* line 57, scss/_generiek-teksten.scss */
+/* line 75, scss/_generiek-teksten.scss */
 h1, h2 {
   letter-spacing: .02em;
 }
 
-/* line 62, scss/_generiek-teksten.scss */
+/* line 80, scss/_generiek-teksten.scss */
 p, span {
   line-height: 1.45;
 }
 
-/* line 66, scss/_generiek-teksten.scss */
+/* line 84, scss/_generiek-teksten.scss */
 .bericht-tekst {
   font-size: 1.5em;
 }
 
-/* line 68, scss/_generiek-teksten.scss */
+/* line 86, scss/_generiek-teksten.scss */
 .bericht-tekst p:first-child::first-letter {
   initial-letter: 2;
   -webkit-initial-letter: 2;
 }
 
-/* line 74, scss/_generiek-teksten.scss */
+/* line 92, scss/_generiek-teksten.scss */
 main blockquote {
   line-height: 1.5625em;
   text-transform: none;
@@ -1340,7 +1357,7 @@ main blockquote {
   margin: 0;
 }
 
-/* line 82, scss/_generiek-teksten.scss */
+/* line 100, scss/_generiek-teksten.scss */
 main blockquote p {
   display: inline-block;
   vertical-align: top;
@@ -1349,7 +1366,7 @@ main blockquote p {
   font-size: inherit;
 }
 
-/* line 89, scss/_generiek-teksten.scss */
+/* line 107, scss/_generiek-teksten.scss */
 main blockquote::before {
   content: "\F756";
   display: inline-block;
@@ -3615,6 +3632,56 @@ video[autoplay].pause ~ .vid-onder-buiten .speel-video {
 /* line 55, scss/onderdelen/_viddoos.scss */
 video.speelt ~ .vid-onder-buiten .speel-video {
   display: none;
+}
+
+/* line 3, scss/widgets/_sticky-sidebar.scss */
+main.heeft-sticky {
+  position: relative;
+}
+
+/* line 5, scss/widgets/_sticky-sidebar.scss */
+main.heeft-sticky #sticky-sidebar {
+  position: absolute;
+  right: 0;
+  width: 200px;
+  transition: 0.4s opacity ease-in-out;
+}
+
+/* line 13, scss/widgets/_sticky-sidebar.scss */
+main.heeft-sticky #sticky-sidebar .widget:first-child h2, main.heeft-sticky #sticky-sidebar .widget:first-child h3 {
+  margin-top: 0;
+}
+
+/* line 17, scss/widgets/_sticky-sidebar.scss */
+main.heeft-sticky #sticky-sidebar .related-posts {
+  display: block;
+}
+
+/* line 20, scss/widgets/_sticky-sidebar.scss */
+main.heeft-sticky #sticky-sidebar .related-post {
+  margin-bottom: 20px;
+}
+
+/* line 22, scss/widgets/_sticky-sidebar.scss */
+main.heeft-sticky #sticky-sidebar .related-post:last-child {
+  margin-bottom: 0;
+}
+
+/* line 26, scss/widgets/_sticky-sidebar.scss */
+main.heeft-sticky #sticky-sidebar .related-post-info {
+  margin-top: 0;
+}
+
+/* line 30, scss/widgets/_sticky-sidebar.scss */
+main.heeft-sticky #sticky-sidebar .related-post-info, main.heeft-sticky #sticky-sidebar .related-post-date {
+  font-size: 12px;
+}
+
+/* line 34, scss/widgets/_sticky-sidebar.scss */
+main.heeft-sticky .sticky-binnen {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40px;
 }
 
 /* line 2, scss/_agenda.scss */
