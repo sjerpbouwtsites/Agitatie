@@ -95,9 +95,9 @@ class Ag_Widget_M extends Ag_basis_class {
 		echo $this->verp_open;
 		echo
 		"<header><h2>{$this->naam}</h2></header>
-			<div class='blok'>
+
 			{$this->inhoud}
-			</div>
+
 		";
 
 		echo $this->verp_sluit;
@@ -660,10 +660,12 @@ class Ag_pag_fam extends Ag_Zijbalk_Posts{
 
 		$art = new Ag_article_c(
 			array(
-				'class' => "in-lijst blok zijbalk $hui",
+				'class' => "in-lijst $hui",
 				'htype' => 3,
 				'geen_tekst' => true,
-				'in_zijbalk' => true
+				'in_zijbalk' => true,
+				'geen_afb'	=> true,
+				'geen_datum'=> true,
 			),
 		get_post($this->ouder));
 
@@ -676,10 +678,11 @@ class Ag_pag_fam extends Ag_Zijbalk_Posts{
 
 			$art = new Ag_article_c(
 				array(
-					'class' => "in-lijst blok zijbalk $hui",
+					'class' => "in-lijst $hui",
 					'htype' => 3,
 					'geen_afb'	=> true,
 					'geen_tekst' => true,
+					'geen_datum'=> true,
 					'in_zijbalk' => true
 				),
 			get_post($k));

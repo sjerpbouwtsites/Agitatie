@@ -1241,83 +1241,101 @@ ul.reset, ul.reset li {
 body {
   color: #252525;
   -webkit-text-size-adjust: 100%;
+  font-kerning: auto;
+  font-variant-ligatures: historical-ligatures;
+  font-variant-numeric: oldstyle-nums;
+  text-rendering: optimizeLegibility;
 }
 
-/* line 8, scss/_generiek-teksten.scss */
+/* line 12, scss/_generiek-teksten.scss */
 a:hover,
 a:focus,
 a:active {
   color: #C82424;
 }
 
-/* line 14, scss/_generiek-teksten.scss */
+/* line 18, scss/_generiek-teksten.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 18, scss/_generiek-teksten.scss */
+/* line 22, scss/_generiek-teksten.scss */
 a, a:visited {
   color: #C82424;
   text-decoration: none;
 }
 
-/* line 23, scss/_generiek-teksten.scss */
+/* line 27, scss/_generiek-teksten.scss */
 body {
   font-family: "Merriweather", sans-serif;
 }
 
-/* h1 {
-	font-size: 4em;
-	@media (max-width: 900px) {
-		font-size: 3em;
-	}
-}
-
-h2 {
-	font-size: 2.46em;
-	@media (max-width: 900px) {
-		font-size: 2em;
-	}
-}
-
-h3 {
-	font-size: 1.33em;
-} */
-/* line 46, scss/_generiek-teksten.scss */
+/* line 32, scss/_generiek-teksten.scss */
 h1 {
   font-size: 3.6em;
 }
 
 @media (max-width: 900px) {
-  /* line 46, scss/_generiek-teksten.scss */
+  /* line 32, scss/_generiek-teksten.scss */
   h1 {
     font-size: 2.7em;
   }
 }
 
-/* line 53, scss/_generiek-teksten.scss */
+@media (max-width: 600px) {
+  /* line 32, scss/_generiek-teksten.scss */
+  h1 {
+    font-size: 2.05em;
+  }
+}
+
+/* line 42, scss/_generiek-teksten.scss */
 h2 {
   font-size: 2.22em;
 }
 
 @media (max-width: 900px) {
-  /* line 53, scss/_generiek-teksten.scss */
+  /* line 42, scss/_generiek-teksten.scss */
   h2 {
     font-size: 1.8em;
   }
 }
 
-/* line 60, scss/_generiek-teksten.scss */
+@media (max-width: 600px) {
+  /* line 42, scss/_generiek-teksten.scss */
+  h2 {
+    font-size: 1.35em;
+  }
+}
+
+/* line 52, scss/_generiek-teksten.scss */
 h3 {
   font-size: 1.26em;
 }
 
-/* line 65, scss/_generiek-teksten.scss */
+@media (max-width: 600px) {
+  /* line 52, scss/_generiek-teksten.scss */
+  h3 {
+    font-size: 1em;
+  }
+}
+
+/* line 61, scss/_generiek-teksten.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Eczar", sans-serif;
   font-weight: 900;
   line-height: 1;
   margin: 1.33em 0 0.67em;
+}
+
+@media (max-width: 600px) {
+  /* line 61, scss/_generiek-teksten.scss */
+  h1, h2, h3, h4, h5, h6 {
+    word-break: normal;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
 }
 
 /* line 71, scss/_generiek-teksten.scss */
@@ -3684,6 +3702,22 @@ main.heeft-sticky .sticky-binnen {
   top: 40px;
 }
 
+/* line 3, scss/widgets/_pag-fam.scss */
+.pag-fam article.huidige a h3, .pag-fam article a:hover h3 {
+  color: #C82424;
+  font-weight: bold;
+}
+
+/* line 8, scss/widgets/_pag-fam.scss */
+.pag-fam article h3 {
+  font-weight: normal;
+}
+
+/* line 12, scss/widgets/_pag-fam.scss */
+.pag-fam article:first-of-type ~ article h3 {
+  text-indent: 20px;
+}
+
 /* line 2, scss/_agenda.scss */
 .agenda .flex {
   display: -ms-flexbox;
@@ -4480,7 +4514,7 @@ footer .search-form .search-submit {
 
 /* line 94, scss/_nav.scss */
 .stek-kop-rechts .menu.horizontaal > li > ul li li {
-  background-color: rgba(200, 36, 36, 0.1);
+  background-color: #fbe0e0;
 }
 
 /* line 99, scss/_nav.scss */

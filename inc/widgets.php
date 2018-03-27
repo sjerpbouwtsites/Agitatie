@@ -41,7 +41,7 @@
 		$instance = array();
 		return $instance;
 	}
-}
+}*/
 
 class Ag_pag_familie_w extends WP_Widget {
 
@@ -83,10 +83,9 @@ class Ag_pag_familie_w extends WP_Widget {
 
 // Register and load the widget
 function widget_wrap() {
-    register_widget( 'agenda_w' );
-    register_widget( 'pag_familie_w' );
+    register_widget( 'ag_pag_familie_w' );
 }
 
 add_action( 'widgets_init', 'widget_wrap' );
-*/
+
 
