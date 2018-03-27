@@ -47,7 +47,7 @@ if (!function_exists('ag_singular_taxonomieen')) : function ag_singular_taxonomi
 
 		$pt_n = (array_key_exists($post->post_type, $vervang) ? $vervang[$post->post_type] : $post->post_type);
 
-		echo "<h2><span>Dit $pt_n zit in:</span></h2>";
+		echo "<h2>Dit $pt_n zit in:</h2>";
 
 		foreach ( $terms as $term ) :
 
