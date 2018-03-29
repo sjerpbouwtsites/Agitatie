@@ -74,7 +74,7 @@ if (!class_exists('Posttype_voorb')) : class Posttype_voorb {
 			'capability_type' 	=> 'post',
 			'hierarchical' 		=> false,
 			'public'			=> true,
-			'has_archive' => true,
+			'has_archive' 		=> $this->meervoud,
 			'supports' => 		array(
 					'title',
 					'editor',
