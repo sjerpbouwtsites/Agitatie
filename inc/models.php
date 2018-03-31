@@ -279,3 +279,22 @@ if (!function_exists('ag_post_naam_model')) : function ag_post_naam_model() {
         return false;
     }
 } endif;
+
+
+if(!function_exists('ag_hero_model')) : function ag_hero_model() {
+
+    global $post;
+
+    if (!$hero_aan = get_field('gebruik_hero', $post->ID)) return false;
+
+    $payoff = get_field('payoff', $post->ID);
+    $call_to_action = get_field('call_to_action', $post->ID);
+
+    $r = array(
+        'payoff' => $payoff ? ($payoff !== '' ? $payoff : '') : '',
+        'call_to_action' => $call_to_action ? ($call_to_action !== '' ? $call_to_action : '') : '',
+    );
+
+    return $r;
+
+} endif;
