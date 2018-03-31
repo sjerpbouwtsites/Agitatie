@@ -8,8 +8,6 @@
 
 				echo "<h1>".get_the_title()."</h1>";
 
-				echo "<script>console.dir(".json_encode($call_to_action).")</script>";
-
 				$cta = new Ag_knop(array(
 					'tekst'		=> $call_to_action['title'],
 					'class'		=> 'link',

@@ -3543,6 +3543,11 @@ input.wpcf7-submit {
   object-fit: cover;
 }
 
+/* line 12, scss/onderdelen/_uitgelichte-afbeelding.scss */
+.uitgelichte-afbeelding-buiten.hero {
+  height: calc(75vh - 70px);
+}
+
 /* line 14, scss/onderdelen/_uitgelichte-afbeelding.scss */
 .uitgelichte-afbeelding-buiten.hero .uitgelichte-afbeelding-binnen {
   position: absolute;
@@ -3562,6 +3567,7 @@ input.wpcf7-submit {
   background-color: #C82424;
   font-size: 2.5rem;
   padding: .6em 1.2em;
+  text-align: center;
   /* 		& + * {
 			position: absolute;
 			right: 20px;
@@ -3572,10 +3578,15 @@ input.wpcf7-submit {
 		} */
 }
 
-/* line 39, scss/onderdelen/_uitgelichte-afbeelding.scss */
+/* line 40, scss/onderdelen/_uitgelichte-afbeelding.scss */
 .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop {
   margin-top: 40px;
   text-align: center;
+}
+
+/* line 43, scss/onderdelen/_uitgelichte-afbeelding.scss */
+.uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .knop, .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .navigation a, .navigation .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop a, .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop #agenda-filter [type='submit'], #agenda-filter .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop [type='submit'], .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .search-form .search-submit, .search-form .uitgelichte-afbeelding-buiten.hero .uitgelichte-afb-knop .search-submit {
+  font-size: 1.6em;
 }
 
 /* line 3, scss/onderdelen/_viddoos.scss */
