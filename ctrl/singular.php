@@ -33,6 +33,8 @@ if(!function_exists('ag_art_meta_ctrl')) : function ag_art_meta_ctrl() {
 
 	global $post;
 
+	if (is_admin()) return;
+
 	if (get_option('page_on_front') == $post->ID) {
 		//voorpagina. geen art meta.
 		return;

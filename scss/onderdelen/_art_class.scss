@@ -55,7 +55,7 @@
 			}
 		}
 	}
-	time, .tax {
+	time, .tax, time ~ span {
 		font-size: .85rem;
 		opacity: 0.8;
 	}

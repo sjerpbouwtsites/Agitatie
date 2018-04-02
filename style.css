@@ -3090,7 +3090,7 @@ img.efbl-loader {
 }
 
 /* line 58, scss/onderdelen/_art_class.scss */
-.art-c time, .art-c .tax {
+.art-c time, .art-c .tax, .art-c time ~ span {
   font-size: .85rem;
   opacity: 0.8;
 }
@@ -3283,7 +3283,7 @@ img.efbl-loader {
   position: relative;
   color: #C82424;
   top: 0;
-  font-size: 1rem;
+  font-size: 1em;
   text-transform: lowercase;
   border-radius: 0;
   font-family: inherit;

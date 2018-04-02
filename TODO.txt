@@ -1,5 +1,10 @@
 # bouw
 
+post type archief pagina krijgt uitgelichte afbeelding van eerste post.
+-> ook corrigeren bij Vloerwerk
+
+
+
 als niet in admin, dan niet laden jetpack widget
 
 # VOLGENDE VERSIES
