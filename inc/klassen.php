@@ -360,8 +360,6 @@ class Ag_article_c extends Ag_basis_class{
 	}
 }
 
-
-
 class Ag_agenda extends Ag_basis_class {
 
 	public $omgeving;
