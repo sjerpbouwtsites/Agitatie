@@ -292,7 +292,7 @@ if(!function_exists('ag_hero_model')) : function ag_hero_model() {
 
     $r = array(
         'payoff' => $payoff ? ($payoff !== '' ? $payoff : '') : '',
-        'call_to_action' => $call_to_action ? ($call_to_action !== '' ? $call_to_action : '') : '',
+        'call_to_action' => $call_to_action ? ($call_to_action !== '' ? $call_to_action : '') : false,
     );
 
     return $r;

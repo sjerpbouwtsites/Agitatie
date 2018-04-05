@@ -5,6 +5,9 @@ if (!function_exists('ag_generieke_titel')) : function ag_generieke_titel () {
 	global $post;
 	global $wp_query;
 
+	//als hero, dan geen titel.
+	if (ag_hero_model()) return;
+
 	if ($wp_query->is_home) {
 		echo "<h1>".get_the_title( get_option('page_for_posts', true) )."</h1>";
 	} else if ($wp_query->is_search) {

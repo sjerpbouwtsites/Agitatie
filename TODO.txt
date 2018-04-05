@@ -3,6 +3,7 @@
 post type archief pagina krijgt uitgelichte afbeelding van eerste post.
 -> ook corrigeren bij Vloerwerk
 
+payoffs & cta op pagina's nalopen
 
 
 als niet in admin, dan niet laden jetpack widget
