@@ -5,6 +5,7 @@ post type archief pagina krijgt uitgelichte afbeelding van eerste post.
 
 payoffs & cta op pagina's nalopen
 
+social media integratie
 
 als niet in admin, dan niet laden jetpack widget
 
@@ -26,7 +27,7 @@ categorie hierarchie
 
 models opsplitsen
 
-kwestie van
+
 
 # vlak voor opleveren
 

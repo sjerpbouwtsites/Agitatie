@@ -39,6 +39,8 @@ if (!function_exists('ag_archief_generiek_loop')) : function ag_archief_generiek
 
 if (!function_exists('ag_archief_intro_ctrl')) : function ag_archief_intro_ctrl() {
 
+	global $wp_query;
+
 	if ($archief_intro = ag_archief_intro_model()){
 		echo "<div class='verpakking verpakking-klein'>";
 		echo apply_filters('the_content', $archief_intro);

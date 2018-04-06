@@ -202,6 +202,13 @@ function ag_acf_cat_afb(){
 				array(
 					'param' => 'taxonomy',
 					'operator' => '==',
+					'value' => 'soort',
+				),
+			),
+			array(
+				array(
+					'param' => 'taxonomy',
+					'operator' => '==',
 					'value' => 'category',
 				),
 			),

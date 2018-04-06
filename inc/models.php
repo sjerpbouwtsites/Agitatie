@@ -126,8 +126,8 @@ if (!function_exists('ag_archief_intro_model')) : function ag_archief_intro_mode
 
     global $wp_query;
 
-    //alleen categorie heeft een intro tekst.
-    if ($wp_query->is_category) {
+
+    if ($wp_query->is_category || $wp_query->queried_object->description !== '') {
 
         return $wp_query->queried_object->description;
 

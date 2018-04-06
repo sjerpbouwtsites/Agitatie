@@ -190,7 +190,7 @@ if(!function_exists('ag_uitgelichte_afbeelding_ctrl')) : function ag_uitgelichte
 	global $post;
 	global $wp_query;
 
-	if ($wp_query->is_archive) {
+	if ($wp_query->is_archive && !$wp_query->is_tax) {
 		//niet op post type archive, alleen category archive
 		return;
 	}

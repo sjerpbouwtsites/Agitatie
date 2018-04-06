@@ -79,18 +79,22 @@ $footerkleur: $donkergrijs;
 				margin-bottom: 50px;
 			}
 		}
-
-		.search-form {
-			background-color: transparent;
-			padding: 0;
-			.search-submit {
-				margin-top: 10px;
-				margin-left: 0;
-			}
-			label, label input {
-				display: block;
-			}
+		.widget_search {
+			//search widget is kort, geen streep over volle lengte.
+			.align-self: flex-start;
 		}
+
+			.search-form {
+				background-color: transparent;
+				padding: 0;
+				.search-submit {
+					margin-top: 10px;
+					margin-left: 0;
+				}
+				label, label input {
+					display: block;
+				}
+			}
 		.textwidget {
 			ul li{
 				list-style-type: disc;

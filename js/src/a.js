@@ -138,6 +138,11 @@ function stickySidebar() {
 			offset -= Number($('h1').css('margin-top').replace('px', ''));
 		}
 
+		if (!offset && offset !== 0) {
+			$sticky.hide();
+			return;
+		}
+
 		var right = ((body.scrollWidth - $('h1').width()) / 2) - 200 - 40; //sticky width plus margin
 
 		$sticky.css({'top': offset + 'px'});

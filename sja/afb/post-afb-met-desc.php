@@ -15,7 +15,9 @@ $img = ob_get_clean();
 
 if ($img !== '') {
 
-	echo ag_voeg_attr_in($img, "itemprop='image'");
+	//echo ag_voeg_attr_in($img, "itemprop='image'");
+
+	echo $img;
 
 	$doc = new DOMDocument();
 	$doc->loadHTML($img);
