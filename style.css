@@ -1338,33 +1338,33 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* line 71, scss/_generiek-teksten.scss */
+/* line 72, scss/_generiek-teksten.scss */
 h4, h5, h6 {
   font-weight: 700;
 }
 
-/* line 75, scss/_generiek-teksten.scss */
+/* line 76, scss/_generiek-teksten.scss */
 h1, h2 {
   letter-spacing: .02em;
 }
 
-/* line 80, scss/_generiek-teksten.scss */
+/* line 81, scss/_generiek-teksten.scss */
 p, span {
   line-height: 1.45;
 }
 
-/* line 84, scss/_generiek-teksten.scss */
+/* line 85, scss/_generiek-teksten.scss */
 .bericht-tekst {
   font-size: 1.5em;
 }
 
-/* line 86, scss/_generiek-teksten.scss */
+/* line 87, scss/_generiek-teksten.scss */
 .bericht-tekst p:first-child::first-letter {
   initial-letter: 2;
   -webkit-initial-letter: 2;
 }
 
-/* line 92, scss/_generiek-teksten.scss */
+/* line 93, scss/_generiek-teksten.scss */
 main blockquote {
   line-height: 1.5625em;
   text-transform: none;
@@ -1375,7 +1375,7 @@ main blockquote {
   margin: 0;
 }
 
-/* line 100, scss/_generiek-teksten.scss */
+/* line 101, scss/_generiek-teksten.scss */
 main blockquote p {
   display: inline-block;
   vertical-align: top;
@@ -1384,7 +1384,7 @@ main blockquote p {
   font-size: inherit;
 }
 
-/* line 107, scss/_generiek-teksten.scss */
+/* line 108, scss/_generiek-teksten.scss */
 main blockquote::before {
   content: "\F756";
   display: inline-block;
@@ -4266,65 +4266,71 @@ main.heeft-sticky .sticky-binnen {
   }
 }
 
-/* line 83, scss/_footer.scss */
+/* line 82, scss/_footer.scss */
+#stek-voet .verpakking.widgets .widget_search {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+/* line 87, scss/_footer.scss */
 #stek-voet .verpakking.widgets .search-form {
   background-color: transparent;
   padding: 0;
 }
 
-/* line 86, scss/_footer.scss */
+/* line 90, scss/_footer.scss */
 #stek-voet .verpakking.widgets .search-form .search-submit {
   margin-top: 10px;
   margin-left: 0;
 }
 
-/* line 90, scss/_footer.scss */
+/* line 94, scss/_footer.scss */
 #stek-voet .verpakking.widgets .search-form label, #stek-voet .verpakking.widgets .search-form label input {
   display: block;
 }
 
-/* line 95, scss/_footer.scss */
+/* line 99, scss/_footer.scss */
 #stek-voet .verpakking.widgets .textwidget ul li {
   list-style-type: disc;
 }
 
-/* line 98, scss/_footer.scss */
+/* line 102, scss/_footer.scss */
 #stek-voet .verpakking.widgets .textwidget ol li {
   list-style-type: ideograph-numeric;
 }
 
-/* line 102, scss/_footer.scss */
+/* line 106, scss/_footer.scss */
 #stek-voet .verpakking.widgets select {
   height: 27.2px;
 }
 
-/* line 108, scss/_footer.scss */
+/* line 112, scss/_footer.scss */
 .footer-section h3 {
   margin-top: 0;
 }
 
-/* line 111, scss/_footer.scss */
+/* line 115, scss/_footer.scss */
 .footer-section a, .footer-section a:active, .footer-section a:visited {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 114, scss/_footer.scss */
+/* line 118, scss/_footer.scss */
 .footer-section a:hover, .footer-section a:active:hover, .footer-section a:visited:hover {
   color: #C82424;
 }
 
-/* line 118, scss/_footer.scss */
+/* line 122, scss/_footer.scss */
 .footer-section *:last-child {
   margin-bottom: 0;
 }
 
-/* line 123, scss/_footer.scss */
+/* line 127, scss/_footer.scss */
 footer .search-form .search-submit {
   color: #211f1f;
 }
 
-/* line 128, scss/_footer.scss */
+/* line 132, scss/_footer.scss */
 .colofon p {
   margin: 0;
   padding: 15px;
@@ -4615,6 +4621,12 @@ footer .menu a:hover {
 /* line 8, scss/_single.scss */
 .bericht-tekst.datum {
   opacity: 0.7;
+}
+
+/* line 13, scss/_single.scss */
+.onder-artikel-taxonomieen h2 {
+  padding-top: .5em;
+  border-top: 5px solid #211f1f;
 }
 
 /* .voorpagina main {

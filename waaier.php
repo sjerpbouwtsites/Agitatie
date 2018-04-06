@@ -10,6 +10,7 @@ if (!$ptn = get_field('post_type') or $ptn === '') {
 	die();
 }
 
+$post_type_obj = get_post_type_object( $ptn);
 
 define('POST_TYPE_NAAM', $ptn);
 
@@ -21,7 +22,7 @@ switch ($ptn) {
 		$ptn_mv = 'Pagina\'s';
 		break;
 	default:
-		$ptn_mv = $ptn.'en';
+		$ptn_mv = $post_type_obj->labels->archives;
 		break;
 }
 
@@ -31,7 +32,7 @@ get_template_part('/sja/open-main');
 
 echo "<div class='marginveld veel'>";
 
-echo "<h1>$ptn_mv</h1>";
+echo "<h1>".ucfirst($ptn_mv)."</h1>";
 
 
 $waaier_q = new WP_query(array(

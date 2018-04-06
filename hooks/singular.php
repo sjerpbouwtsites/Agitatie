@@ -13,7 +13,7 @@ if (!function_exists('ag_generieke_titel')) : function ag_generieke_titel () {
 	} else if ($wp_query->is_search) {
 		echo "<h1>".($_GET['s'] !== '' ? "Je zocht: ".$_GET['s'] : "Wat zoek je?")."</h1>";
 	} else {
-		echo "<h1>".$post->post_title."</h1>";
+		echo "<h1>".ucfirst($post->post_title)."</h1>";
 	}
 
 }
@@ -43,8 +43,18 @@ if (!function_exists('ag_singular_taxonomieen')) : function ag_singular_taxonomi
 		'post'		=> 'bericht'
 	);
 
+	$post_type_obj = get_post_type_object($post->post_type);
+
+	echo "<script>console.dir(".json_encode(array(
+		$post_type_obj,
+		$post,
+		$lijst,
+		$terms
+	)).")</script>";
 
 	if (count($terms)) :
+
+
 
 		echo "<div class='marginveld verpakking bericht-tekst verpakking-klein onder-artikel-taxonomieen'>";
 
