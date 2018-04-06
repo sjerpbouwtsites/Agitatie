@@ -33,6 +33,10 @@
 			font-family: $broodletter;
 			opacity: .8;
 		}
+		@media(max-width: 600px) {
+			font-size: 1.5rem;
+		}
+
 	}
 	.uitgelichte-afb-knop {
 		margin-top: 40px;

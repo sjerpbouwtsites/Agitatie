@@ -1,7 +1,5 @@
 # bouw
 
-social media integratie
-
 als niet in admin, dan niet laden jetpack widget
 
 # VOLGENDE VERSIES

@@ -116,8 +116,23 @@ if (!function_exists('ag_archief_titel_ctrl')) : function ag_archief_titel_ctrl 
 if(!function_exists('ag_archief_content_ctrl')) : function ag_archief_content_ctrl() {
 
 	global $post;
+	global $kind_config;
 
-	echo "<div id='archief-lijst' class='tekstveld art-lijst'>";
+	$extra_class = '';
+
+	if (isset($kind_config) and
+		array_key_exists('archief', $kind_config) and
+		array_key_exists($post->post_type, $kind_config['archief'])
+	) {
+		if ($kind_config['archief'][$post->post_type]['geen_afb']) {
+			$extra_class = 'geen-afb-buiten';
+		}
+	}
+
+	echo "<script>console.dir(".json_encode($kind_config).")</script>";
+
+
+	echo "<div id='archief-lijst' class='tekstveld art-lijst $extra_class'>";
 		if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 			//maakt post type objs aan en print @ controllers

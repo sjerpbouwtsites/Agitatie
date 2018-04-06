@@ -92,7 +92,9 @@
 						margin-left: 30px;
 					}
 					li {
-						background-color: rgb(251, 224, 224);
+						@media (min-width: 900px) {
+							box-shadow: 2px 2px 2px #929292;
+						}
 					}
 				}
 			}
@@ -133,16 +135,22 @@
 				}
 				.menu-item-has-children {
 					& > a i {
-						padding: 0 20px;
-						margin-left: 10px;
+						padding: 0 20px 0 10px;
+						//margin-left: 10px;
 					}
 				}
 			}
 			li {
 				li {
 					text-indent: 20px;
+					i {
+						text-indent: 0;
+					}
 					li {
 						text-indent: 40px;
+						i {
+							text-indent: 0;
+						}
 					}
 				}
 			}
