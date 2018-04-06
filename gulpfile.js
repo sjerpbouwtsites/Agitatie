@@ -1,6 +1,6 @@
 //////////CONFIG //////////////
 
-var DEVELOPMENT = true;
+var DEVELOPMENT = false;
 
 var locs = {
 	js: {

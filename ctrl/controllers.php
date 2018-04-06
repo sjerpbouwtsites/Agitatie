@@ -190,6 +190,11 @@ if(!function_exists('ag_uitgelichte_afbeelding_ctrl')) : function ag_uitgelichte
 	global $post;
 	global $wp_query;
 
+	if ($wp_query->is_archive) {
+		//niet op post type archive, alleen category archive
+		return;
+	}
+
 	//op post met afbeelding
 	if (!$wp_query->is_category and has_post_thumbnail($post)) {
 		get_template_part('sja/afb/uitgelichte-afbeelding-buiten');

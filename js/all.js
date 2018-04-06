@@ -125,26 +125,31 @@ function stickySidebar() {
 		return;
 	}
 
-	$sticky = $("#sticky-sidebar");
-	$sticky.css({'opacity':0});
-	$sticky.removeClass('verpakking').removeClass('verpakking-klein');
-
-	var offset = $('div.bericht-tekst').position().top - $("#stek-kop").height();
-
-	var right = ((body.scrollWidth - $('h1').width()) / 2) - 200 - 40; //sticky width plus margin
-
-	$sticky.css({'top': offset + 'px'});
-	$sticky.css({'right': right + 'px'});
-
-	$sticky.height($('div.bericht-tekst').height());
-
-	$('#main').addClass('heeft-sticky').append($sticky);
-
-	$('.related.verpakking').addClass('widget').appendTo(".sticky-binnen");
-
 	setTimeout(function(){
+
+		$sticky = $("#sticky-sidebar");
+		$sticky.css({'opacity':0});
+		$sticky.removeClass('verpakking').removeClass('verpakking-klein');
+
+		var offset = $('div.bericht-tekst').offset().top - $("#stek-kop").height();
+
+		//als er geen uitgelichte afbeelding is telt de margin van h1 mee.
+		if (!$(".uitgelichte-afbeelding-buiten").length) {
+			offset -= Number($('h1').css('margin-top').replace('px', ''));
+		}
+
+		var right = ((body.scrollWidth - $('h1').width()) / 2) - 200 - 40; //sticky width plus margin
+
+		$sticky.css({'top': offset + 'px'});
+		$sticky.css({'right': right + 'px'});
+
+		$sticky.height($('div.bericht-tekst').height());
+
+		$('#main').addClass('heeft-sticky').append($sticky);
+
+		$('.related.verpakking').addClass('widget').appendTo(".sticky-binnen");
 		$sticky.css({'opacity': 1});
-	}, 2500);
+	}, 500);
 
 
 }

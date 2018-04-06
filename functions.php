@@ -11,8 +11,6 @@ define('IMG_URI', THEME_URI . "/afb");
 define('JS_DIR', THEME_DIR . "/js");
 define('JS_URI', THEME_URI . "/js");
 
-//define( 'GITHUB_UPDATER_OVERRIDE_DOT_ORG', true );
-
 ///////////////////////////////////////////////////////////
 
 if (!function_exists('agitatie_stijl_en_script')) :
