@@ -1,10 +1,5 @@
 # bouw
 
-post type archief pagina krijgt uitgelichte afbeelding van eerste post.
--> ook corrigeren bij Vloerwerk
-
-payoffs & cta op pagina's nalopen
-
 social media integratie
 
 als niet in admin, dan niet laden jetpack widget

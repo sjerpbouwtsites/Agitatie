@@ -92,7 +92,20 @@ if (!function_exists('ag_singular_taxonomieen')) : function ag_singular_taxonomi
 			echo "<p class='tax tekst-zwart'>$p</p>";
 		}
 
-		echo "</div>";
+			echo "<footer>";
+
+			$terug_naar_overzicht = new Ag_knop(array(
+				'link'		=> get_post_type_archive_link( $post->post_type ),
+				'class'		=> 'in-wit ikoon-links',
+				'ikoon'		=> 'arrow-left-thick',
+				'tekst'		=> 'Alle ' .$post_type_obj->labels->name
+			));
+
+			$terug_naar_overzicht->print();
+
+			echo "</footer>";
+
+		echo "</div>"; // onder-bericht-taxonomieen
 
 	endif; //als count terms
 

@@ -3110,13 +3110,21 @@ img.efbl-loader {
   margin-top: 0;
 }
 
-/* line 78, scss/onderdelen/_art_class.scss */
+/* line 76, scss/onderdelen/_art_class.scss */
+.art-c .lees-meer {
+  margin-top: .4em;
+  display: block;
+  font-weight: 600;
+  opacity: .8;
+}
+
+/* line 84, scss/onderdelen/_art_class.scss */
 .art-c.in-lijst {
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-/* line 86, scss/onderdelen/_art_class.scss */
+/* line 92, scss/onderdelen/_art_class.scss */
 .art-lijst {
   display: -ms-flexbox;
   display: flex;
@@ -3129,17 +3137,17 @@ img.efbl-loader {
   margin-right: -15px;
 }
 
-/* line 93, scss/onderdelen/_art_class.scss */
+/* line 99, scss/onderdelen/_art_class.scss */
 .art-lijst .art-rechts {
   margin-top: 1em;
 }
 
-/* line 96, scss/onderdelen/_art_class.scss */
+/* line 102, scss/onderdelen/_art_class.scss */
 .art-lijst .geen-afb .art-rechts {
   margin-top: 0;
 }
 
-/* line 99, scss/onderdelen/_art_class.scss */
+/* line 105, scss/onderdelen/_art_class.scss */
 .art-lijst .art-c {
   -ms-flex-preferred-size: calc(33% - 30px);
       flex-basis: calc(33% - 30px);
@@ -3152,41 +3160,41 @@ img.efbl-loader {
 }
 
 @media (max-width: 400px) {
-  /* line 99, scss/onderdelen/_art_class.scss */
+  /* line 105, scss/onderdelen/_art_class.scss */
   .art-lijst .art-c {
     -webkit-flex: 1 1 auto;
   }
 }
 
 @media (min-width: 600px) {
-  /* line 99, scss/onderdelen/_art_class.scss */
+  /* line 105, scss/onderdelen/_art_class.scss */
   .art-lijst .art-c {
     max-width: 50%;
   }
 }
 
-/* line 113, scss/onderdelen/_art_class.scss */
+/* line 119, scss/onderdelen/_art_class.scss */
 .art-lijst .art-c img {
   transition: 0.2s filter ease-in-out;
 }
 
-/* line 117, scss/onderdelen/_art_class.scss */
+/* line 123, scss/onderdelen/_art_class.scss */
 .art-lijst .art-c:hover img {
   filter: brightness(70%);
 }
 
-/* line 122, scss/onderdelen/_art_class.scss */
+/* line 128, scss/onderdelen/_art_class.scss */
 .art-lijst .art-c.geen-afb:hover h3, .art-lijst .art-c.geen-afb:hover p {
   color: #C82424;
 }
 
-/* line 128, scss/onderdelen/_art_class.scss */
+/* line 134, scss/onderdelen/_art_class.scss */
 .art-lijst .lees-meer::before {
   content: '';
   display: block;
 }
 
-/* line 133, scss/onderdelen/_art_class.scss */
+/* line 139, scss/onderdelen/_art_class.scss */
 .art-lijst + footer {
   margin-top: 20px;
   text-align: right;
@@ -4627,6 +4635,12 @@ footer .menu a:hover {
 .onder-artikel-taxonomieen h2 {
   padding-top: .5em;
   border-top: 5px solid #211f1f;
+}
+
+/* line 17, scss/_single.scss */
+.onder-artikel-taxonomieen footer {
+  margin-top: 30px;
+  text-align: right;
 }
 
 /* .voorpagina main {
