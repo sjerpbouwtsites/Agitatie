@@ -36,7 +36,7 @@ add_action('init', 'registreer_posttypes');
 
 if (!class_exists('Posttype_voorb')) : class Posttype_voorb {
 
-	function __construct($enkelvoud, $meervoud = ''){
+	function __construct($enkelvoud, $meervoud = '', $overschrijven = array()){
 
 		if (empty($meervoud)) {
 			$meervoud = $enkelvoud . 'en';
@@ -59,6 +59,12 @@ if (!class_exists('Posttype_voorb')) : class Posttype_voorb {
 			'parent_item_colon' => ''
 		);
 
+		if (count($overschrijven) and array_key_exists('termen', $overschrijven)) {
+			foreach ($overschrijven['termen'] as $term => $waarde) {
+				$this->termen[$term] = $waarde;
+			}
+		}
+
 		$this->args = array(
 			'labels' 			=> $this->termen,
 			'description'		=> 'De ' . $this->meervoud . '.',
@@ -74,7 +80,7 @@ if (!class_exists('Posttype_voorb')) : class Posttype_voorb {
 			'capability_type' 	=> 'post',
 			'hierarchical' 		=> false,
 			'public'			=> true,
-			'has_archive' => true,
+			'has_archive' 		=> $this->meervoud,
 			'supports' => 		array(
 					'title',
 					'editor',

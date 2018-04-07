@@ -5,12 +5,15 @@ if (!function_exists('ag_generieke_titel')) : function ag_generieke_titel () {
 	global $post;
 	global $wp_query;
 
+	//als hero, dan geen titel.
+	if (ag_hero_model()) return;
+
 	if ($wp_query->is_home) {
 		echo "<h1>".get_the_title( get_option('page_for_posts', true) )."</h1>";
 	} else if ($wp_query->is_search) {
 		echo "<h1>".($_GET['s'] !== '' ? "Je zocht: ".$_GET['s'] : "Wat zoek je?")."</h1>";
 	} else {
-		echo "<h1>".$post->post_title."</h1>";
+		echo "<h1>".ucfirst($post->post_title)."</h1>";
 	}
 
 }
@@ -40,6 +43,7 @@ if (!function_exists('ag_singular_taxonomieen')) : function ag_singular_taxonomi
 		'post'		=> 'bericht'
 	);
 
+	$post_type_obj = get_post_type_object($post->post_type);
 
 	if (count($terms)) :
 
@@ -47,7 +51,15 @@ if (!function_exists('ag_singular_taxonomieen')) : function ag_singular_taxonomi
 
 		$pt_n = (array_key_exists($post->post_type, $vervang) ? $vervang[$post->post_type] : $post->post_type);
 
-		echo "<h2>Dit $pt_n zit in:</h2>";
+		//als deze/dit  expliciet is ingesteld in de post type, zit het in labels->edit_item;
+		//kijk of deze er in zit, anders altijd dit.
+		if (strpos($post_type_obj->labels->edit_item, 'deze')) {
+			$aanwijswoord = 'Deze';
+		} else {
+			$aanwijswoord = 'Dit';
+		}
+
+		echo "<h2>$aanwijswoord $pt_n zit in:</h2>";
 
 		foreach ( $terms as $term ) :
 
@@ -80,7 +92,20 @@ if (!function_exists('ag_singular_taxonomieen')) : function ag_singular_taxonomi
 			echo "<p class='tax tekst-zwart'>$p</p>";
 		}
 
-		echo "</div>";
+			echo "<footer>";
+
+			$terug_naar_overzicht = new Ag_knop(array(
+				'link'		=> get_post_type_archive_link( $post->post_type ),
+				'class'		=> 'in-wit ikoon-links',
+				'ikoon'		=> 'arrow-left-thick',
+				'tekst'		=> 'Alle ' .$post_type_obj->labels->name
+			));
+
+			$terug_naar_overzicht->print();
+
+			echo "</footer>";
+
+		echo "</div>"; // onder-bericht-taxonomieen
 
 	endif; //als count terms
 

@@ -216,7 +216,12 @@ class Ag_article_c extends Ag_basis_class{
 	}
 
 	public function maak_tekst (){
-		return "<p class='tekst-zwart'>". ag_maak_excerpt($this->art, $this->exc_lim) . "</p>";
+		return "<p class='tekst-zwart'>". ag_maak_excerpt($this->art, $this->exc_lim) .
+
+		//als geen afbeelding, dan pijltje achter tekst zodat klikbaarheid duidelijker is.
+		($this->geen_afb ? "<span class='lees-meer'>Meer ".ag_mdi('arrow-right-bold-circle', false) . "</span>" : '') .
+
+		"</p>";
 	}
 
 	public function datum() {
@@ -287,12 +292,25 @@ class Ag_article_c extends Ag_basis_class{
 
 			if (count($print_ar)) {
 
-				foreach ($print_ar as $tax_naam => $tax_waarden) {
+				$teller = 0;
+
+				foreach ($print_ar as $tax_naam => $tax_waarden) :
 
 					if ($tax_naam === 'category') $tax_naam = 'categorie';
 
-					echo "<span class='tax tekst-zwart'> - ". strtolower(implode(', ', $tax_waarden)) . "</span>";
-				}
+					//als geen datum, dan eerste tax waarde geen streepje links.
+
+					$str = "- ";
+
+					if ($this->geen_datum && $teller < 1) {
+						$str = "";
+						$teller++;
+					}
+
+					echo "<span class='tax tekst-zwart'> $str". strtolower(implode(', ', $tax_waarden)) . "</span>";
+
+
+				endforeach; //iedere print_ar
 			}
 		endif; //als count terms
 
@@ -359,8 +377,6 @@ class Ag_article_c extends Ag_basis_class{
 		$this->maak_artikel(false);
 	}
 }
-
-
 
 class Ag_agenda extends Ag_basis_class {
 

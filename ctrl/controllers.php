@@ -190,11 +190,25 @@ if(!function_exists('ag_uitgelichte_afbeelding_ctrl')) : function ag_uitgelichte
 	global $post;
 	global $wp_query;
 
+<<<<<<< HEAD
 	if ($wp_query->is_archive) {
+=======
+	if ($wp_query->is_archive && !$wp_query->is_tax) {
+>>>>>>> f1d90567e61b88ad8e682acb1955fbafd516c993
 		//niet op post type archive, alleen category archive
 		return;
 	}
 
+<<<<<<< HEAD
+=======
+	if (!$hero_ar = ag_hero_model()) {
+		set_query_var('heeft_hero', $hero_ar);
+	} else {
+		$hero_ar['heeft_hero'] = true;
+		ag_array_naar_queryvars($hero_ar);
+	}
+
+>>>>>>> f1d90567e61b88ad8e682acb1955fbafd516c993
 	//op post met afbeelding
 	if (!$wp_query->is_category and has_post_thumbnail($post)) {
 		get_template_part('sja/afb/uitgelichte-afbeelding-buiten');

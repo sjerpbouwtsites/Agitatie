@@ -1,5 +1,5 @@
 <?php
-/*
+
 // Callback function to insert 'styleselect' into the $buttons array
 function my_mce_buttons_2( $buttons ) {
 	array_unshift( $buttons, 'styleselect' );
@@ -13,17 +13,12 @@ function my_mce_before_init_insert_formats( $init_array ) {
     $style_formats = array(
         // Each array child is a format with it's own settings
         array(
-            'title' => 'link CTA',
-            'block' => 'span',
-            'classes' => 'cta link-cta',
+            'title' => 'knop',
+            'inline' => 'a',
+            'selector'=> 'a',
+            'classes' => 'knop in-wit uit-mce',
             'wrapper' => true,
         ),
-        array(
-            'title' => 'scroll CTA',
-            'block' => 'span',
-            'classes' => 'cta scroll-cta',
-            'wrapper' => true,
-        )
 
    );
     // Insert the array, JSON ENCODED, into 'style_formats'
@@ -33,7 +28,7 @@ function my_mce_before_init_insert_formats( $init_array ) {
 
 }
 
-add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );*/
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 
 /*
 add_filter('wp_handle_upload_prefilter','tc_handle_upload_prefilter');

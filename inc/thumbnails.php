@@ -30,7 +30,10 @@ if(!function_exists('thumbnail_init')) : function thumbnail_init() {
         'portfolio'                 => mk_tmb_frm( 'portfolio', 600, 600),
     );
 
-    $thumbnail_formaten = array_merge($thumbnail_formaten, $kind_thumbs);
+    if ($kind_thumbs) {
+        $thumbnail_formaten = array_merge($thumbnail_formaten, $kind_thumbs);
+    }
+
 
     foreach ($thumbnail_formaten as $tf) {
         add_image_size($tf['naam'], $tf['breedte'], $tf['hoogte'], $tf['crop']);

@@ -51,11 +51,15 @@ if ( ! function_exists( 'agitatie_setup' ) ) :
 			}
 		}
 
-		if (array_key_exists('content_width', $kind_config)) {
-			$GLOBALS['content_width'] = $kind_config['content_width'];
-		} else if (array_key_exists('content_width', $thema_ondersteuning)) {
-			$GLOBALS['content_width'] = $thema_ondersteuning['content_width'];
+		if ($kind_config) {
+			if (array_key_exists('content_width', $kind_config)) {
+				$GLOBALS['content_width'] = $kind_config['content_width'];
+			} else if (array_key_exists('content_width', $thema_ondersteuning)) {
+				$GLOBALS['content_width'] = $thema_ondersteuning['content_width'];
+			}
 		}
+
+
 
 	}
 
