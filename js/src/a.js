@@ -138,7 +138,7 @@ function stickySidebar() {
 			offset -= Number($('h1').css('margin-top').replace('px', ''));
 		}
 
-		var right = ((body.scrollWidth - $('h1').width()) / 2) - 200 - 40; //sticky width plus margin
+		var right = ((body.scrollWidth -  $('.bericht-tekst').first().width()) / 2) - 200 - 40; //sticky width plus margin
 
 		$sticky.css({'top': offset + 'px'});
 		$sticky.css({'right': right + 'px'});
