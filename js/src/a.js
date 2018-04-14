@@ -155,6 +155,15 @@ function stickySidebar() {
 }
 
 
+function legeArtMetaEruit() {
+	var artMeta = document.querySelector('.art-meta');
+	if (artMeta) {
+		if (!artMeta.children.length) {
+			artMeta.style.display = 'none';
+		}
+	}
+}
+
 window.onload = function(){
 
 	init();
@@ -180,6 +189,7 @@ window.onload = function(){
 
 	kopmenuSubMobiel();
 
+	legeArtMetaEruit();
 
 };
 

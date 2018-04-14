@@ -79,8 +79,8 @@ $footerkleur: $donkergrijs;
 				margin-bottom: 50px;
 			}
 		}
-		.widget_search {
-			//search widget is kort, geen streep over volle lengte.
+		.widget_search, .widget_archive {
+			//deze widgets zijn kort, geen streep over volle lengte.
 			align-self: flex-start;
 		}
 
