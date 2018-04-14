@@ -49,8 +49,6 @@ var BASE_URL = "<?=SITE_URI?>",
 
 <?php wp_footer();
 
-echo "<script>console.dir(".json_encode($wp_query).")</script>";
-
 ?>
 
 
