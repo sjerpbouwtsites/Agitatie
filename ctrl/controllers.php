@@ -59,6 +59,8 @@ if(!function_exists('ag_kop_menu_ctrl')) :  function ag_kop_menu_ctrl($menu_klas
 		$a['menu_class'] = $menu_klasse;
 	}
 
+	echo "<script>console.dir(".json_encode($a).")</script>";
+
 	wp_nav_menu($a);
 
 } endif;

@@ -47,7 +47,10 @@ var BASE_URL = "<?=SITE_URI?>",
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-<?php wp_footer(); ?>
+<?php wp_footer();
+
+?>
+
 
 </body>
 </html>

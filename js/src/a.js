@@ -138,7 +138,7 @@ function stickySidebar() {
 			offset -= Number($('h1').css('margin-top').replace('px', ''));
 		}
 
-		var right = ((body.scrollWidth - $('h1').width()) / 2) - 200 - 40; //sticky width plus margin
+		var right = ((body.scrollWidth -  $('.bericht-tekst').first().width()) / 2) - 200 - 40; //sticky width plus margin
 
 		$sticky.css({'top': offset + 'px'});
 		$sticky.css({'right': right + 'px'});
@@ -154,6 +154,15 @@ function stickySidebar() {
 
 }
 
+
+function legeArtMetaEruit() {
+	var artMeta = document.querySelector('.art-meta');
+	if (artMeta) {
+		if (!artMeta.children.length) {
+			artMeta.style.display = 'none';
+		}
+	}
+}
 
 window.onload = function(){
 
@@ -180,6 +189,7 @@ window.onload = function(){
 
 	kopmenuSubMobiel();
 
+	legeArtMetaEruit();
 
 };
 
